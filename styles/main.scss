@@ -1,4 +1,9 @@
-body{
-  background-color: blue;
-  min-width: 100%;
-}
+//layout setups
+
+@import "_misc/mixins.scss";
+@import "_misc/font.scss";
+@import "_misc/setup.scss";
+
+// components, page
+
+@import "sections/components.scss"
