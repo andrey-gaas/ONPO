@@ -18,11 +18,14 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          MiniCssExtractPlugin.loader, 
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
+          MiniCssExtractPlugin.loader,
+          "css-loader?url=false",
+          {
+            loader:"sass-loader",
+            options: {
+              sourceMap: true,
+            }  
+          }
         ],
       },{
         test: /\.(ttf|eot|svg|png|jpg|gif|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,

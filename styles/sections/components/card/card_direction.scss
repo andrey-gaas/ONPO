@@ -1,0 +1,26 @@
+article.card_dirction{
+  display: flex;
+  border-radius: $bd_rad;
+  padding: 19px;
+  background-color: $black_color;
+  max-width: 500px;
+  height: 355px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .3s;
+  &:hover{
+    background-color: $primary_color;
+    background: linear-gradient(0deg, rgba(255, 22, 93, 0.8), rgba(255, 22, 93, 0.8)), url('/image/123.png');
+  }
+  &>.title{
+    color: $white_color;
+    font-size: $fz_lgs;
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+  
+  &>button.button{
+
+  }
+}
