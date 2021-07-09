@@ -18,12 +18,13 @@ for(let key in PARAMS){
 }
 
 router.get('/', (req, res) => {
-  fetch(`http://moodle/webservice/rest/server.php?${TOKEN}&${FORMAT}&${FUNCTION}${paramsStr}`)
-    .then( res => res.json() )
-    .then( data => {
-      console.log(`http://moodle/webservice/rest/server.php?${TOKEN}&${FORMAT}&${FUNCTION}${paramsStr}`)
-      res.render('home', { text: JSON.stringify(data) 
-    })} )
+  res.render('home')
+  // fetch(`http://moodle/webservice/rest/server.php?${TOKEN}&${FORMAT}&${FUNCTION}${paramsStr}`)
+  //   .then( res => res.json() )
+  //   .then( data => {
+  //     console.log(`http://moodle/webservice/rest/server.php?${TOKEN}&${FORMAT}&${FUNCTION}${paramsStr}`)
+  //     res.render('home', { text: JSON.stringify(data) 
+  //   })} )
 });
 
 module.exports = router;
