@@ -1,10 +1,29 @@
 // params
-$red_color: #FF165D;
+
+//colors
+$primary_color: #FF165D;
 $white_color: #FFFFFF;
 $black_color: #252A34;
-$beige_color: #F9F3F3;
-$birch_color: #3EC1D3;
-$beige_dark_color: #BDBDBD;
+$bg_color: #F9F3F3;
+$accent_color: #3EC1D3;
+$gray_light_color: #BDBDBD;
+
+//font size
+
+$fz_sm: 14px;
+$fz_md: 16px; 
+$fz_lg: 28px; 
+$fz_xl: 38px; 
+$fz_xxl: 78px; 
+
+//shadows 
+
+$shadow_sm: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+$shadow_md:0px 20px 50px rgba(0, 0, 0, 0.1);
+
+//border-radius
+
+$bd_rad: 30px;
 
 // styles
 *{
@@ -15,4 +34,5 @@ $beige_dark_color: #BDBDBD;
 body{
   font-family: Gotham;
   font-weight: normal;
+  background-color: $bg_color;
 }
