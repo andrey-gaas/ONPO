@@ -1,2 +1,141 @@
+.button{
+  display: flex;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: $bd_rad;
+  font-weight: bold;
+  height: 60px;
+  width: 120px;
+  color: $black_color;
+  border: 1px solid $primary_color;
+  cursor:pointer;
+  align-items: center;
+  justify-content: center;
+  transition:all .1s;
+  background-color: $white_color;
+
+  &:hover{
+    background-color: $primary_color;
+    color: $white_color;
+  }
+  &.color_transparent{
+    background-color: transparent;
+    border: 1px solid $white_color;
+    color: $white_color;
+    
+    &:hover{
+      border: 1px solid $primary_color;
+      background-color: $primary_color;
+      color: $white_color;
+    }
+  }
+
+  &.size_md{
+    width: 240px;
+  }
+  &.size_lg{
+    width: 330px;
+  }
+}
+
+article.card {
+  background-color: $white_color;
+  border-radius: 30px;
+  overflow: hidden;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    height: 300px;
+    background-size: cover;
+
+    & > .type {
+      padding: 10px;
+      font-size: $fz_md;
+      background-color: $accent_color;
+      color: $white_color;
+      border-radius: 20px;
+    }
+
+    & > .discount {
+      margin-top: 22px;
+      padding: 10px;
+      font-size: $fz_sm;
+      background-color: $white_color;
+      border-radius: 20px;
+    }
+  }
+
+  .description {
+    padding: 20px;
+
+    & > .title {
+      font-size: $fz_md;
+      line-height: 25px;
+    }
+
+    & > .review {
+      display: flex;
+      margin-top: 20px;
+
+      .stars {
+        display: flex;
+
+        & > div {
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+          background-color: $primary_color;
+        }
+      }
+
+      & > .quantity a {
+        color: $black_color;
+      }
+    }
+
+    .info {
+      margin-top: 25px;
+      padding: 25px 0;
+      border-top: 1px solid $gray_light_color;
+      border-bottom: 1px solid $gray_light_color;
+
+      & > .item {
+        display: flex;
+        align-items: center;
+        margin-top: 23px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        & > .icon {
+          width: 33px;
+          height: 33px;
+          background-color: $primary_color;
+        }
+
+        & > .text {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+
+    & > .price {
+      font-weight: bold;
+      font-size: $fz_xl;
+    }
+  }
+}
 @import './components/button.scss';
 @import './components/card/card_direction.scss';
