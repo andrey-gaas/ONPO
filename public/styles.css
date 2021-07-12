@@ -183,8 +183,6 @@ article.card .footer > .price {
 }
 
 .component_header {
-  display: flex;
-  align-items: center;
   padding: 20px 16px;
   background-color: #FFFFFF;
 }
@@ -195,8 +193,12 @@ article.card .footer > .price {
 }
 @media screen and (min-width: 1280px) {
   .component_header {
-    padding: 20px 60px;
+    padding: 20px 0;
   }
+}
+.component_header .container {
+  display: flex;
+  align-items: center;
 }
 .component_header .logo {
   width: 40px;
@@ -306,5 +308,20 @@ article.card .footer > .price {
 @media screen and (min-width: 1280px) {
   .component_header .button {
     display: block;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 96%;
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1080px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    width: 1440px;
   }
 }

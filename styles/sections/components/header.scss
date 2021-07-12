@@ -1,6 +1,4 @@
 .component_header {
-  display: flex;
-  align-items: center;
   padding: 20px 16px;
   background-color: $white-color;
 
@@ -9,7 +7,12 @@
   }
 
   @include laptop {
-    padding: 20px 60px;
+    padding: 20px 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
   }
 
   .logo {

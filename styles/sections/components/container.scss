@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  width: 96%;
+
+  @include laptop {
+    width: 1080px
+  }
+
+  @include desktop {
+    width: 1440px;
+  }
+}
