@@ -1,6 +1,37 @@
 <div class="container">
-  <div style="display: flex;">
 
+  <header class="component_header">
+    <a href="/">
+      <img class="logo" src="/image/logo.svg" alt="" />
+    </a>
+
+    <nav class="menu">
+      <a href="/">Образование</a>
+      <a href="/">Преподаватели</a>
+      <a href="/">Об организации</a>
+    </nav>
+
+    <div class="search">
+      <img class="icon" src="/image/icons/search.svg" alt="" />
+      <input type="text" class="input">
+    </div>
+
+    <button class="button">Войти</button>
+
+    <div class="icons">
+      <button class="button-icon laptop-hide">
+        <img src="/image/icons/search.svg" alt="" />
+      </button>
+      <button class="button-icon laptop-hide">
+        <img src="/image/icons/logout.svg" alt="" />
+      </button>
+      <button class="button-icon">
+        <img src="/image/icons/menu.svg" alt="" />
+      </button>
+    </div>
+  </header>
+
+  {{!-- <div style="display: flex;">
     {{#each courses}}
       <div style="width: 450px; margin: 20px;">
         <article class="card">
@@ -64,6 +95,6 @@
     {{/each}}
 
   </div>
-  <button class="button size_lg">Првиет</button>
-  {{> card_direction}}
+  <button class="button size_lg">Првиет</button> --}}
+  {{!-- {{> card_direction}} --}}
 </div>

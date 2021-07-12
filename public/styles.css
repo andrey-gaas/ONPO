@@ -181,3 +181,130 @@ article.card .footer > .price {
   font-weight: bold;
   font-size: 38px;
 }
+
+.component_header {
+  display: flex;
+  align-items: center;
+  padding: 20px 16px;
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .component_header {
+    padding: 20px 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .component_header {
+    padding: 20px 60px;
+  }
+}
+.component_header .logo {
+  width: 40px;
+  height: 40px;
+}
+@media screen and (min-width: 768px) {
+  .component_header .logo {
+    height: 60px;
+    width: 60px;
+  }
+}
+.component_header .menu {
+  display: none;
+  margin-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .component_header .menu {
+    display: block;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .component_header .menu {
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .component_header .menu {
+    margin-left: 80px;
+  }
+}
+.component_header .menu a {
+  margin-left: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #252A34;
+}
+.component_header .menu a:first-child {
+  margin-left: 0;
+}
+@media screen and (min-width: 1280px) {
+  .component_header .menu a {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .component_header .menu a {
+    margin-left: 40px;
+  }
+}
+.component_header .icons {
+  margin-left: auto;
+}
+@media screen and (min-width: 1280px) {
+  .component_header .icons {
+    margin-left: 80px;
+  }
+}
+.component_header .icons .button-icon {
+  margin: 0 12px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 1280px) {
+  .component_header .icons .button-icon.laptop-hide {
+    display: none;
+  }
+}
+.component_header .icons .button-icon img {
+  width: 20px;
+  height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .component_header .icons .button-icon img {
+    height: 23px;
+    width: 23px;
+  }
+}
+.component_header .search {
+  display: none;
+  margin-left: auto;
+  width: 210px;
+  color: #BDBDBD;
+  border-bottom: 1px solid;
+}
+@media screen and (min-width: 1280px) {
+  .component_header .search {
+    display: flex;
+  }
+}
+.component_header .search .icon {
+  width: 15px;
+  height: 15px;
+}
+.component_header .search .input {
+  flex-grow: 1;
+  padding: 0 0 5px 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+.component_header .button {
+  display: none;
+  margin-left: 80px;
+}
+@media screen and (min-width: 1280px) {
+  .component_header .button {
+    display: block;
+  }
+}
