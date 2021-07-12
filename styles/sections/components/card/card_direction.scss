@@ -1,27 +1,32 @@
 article.card_dirction{
-  display: flex;
+  display: inline-flex;
   border-radius: $bd_rad;
-  padding: 19px;
-  background-color: $black_color;
-  //background: linear-gradient(0deg, , $black_color), url('/image/123.png');
-  max-width: 500px;
-  height: 355px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 3.3s;
-  &:hover{
-    //background-color: rgba(255, 22, 93, 0.8);
-    background: linear-gradient(0deg, rgba(255, 22, 93, 0.8), rgba(255, 22, 93, 0.8)), url('/image/123.png');
-  }
-  &>.title{
+  background-image: url('/image/123.png');
+  cursor: pointer;
+  & .title{
     color: $white_color;
     font-size: $fz_lgs;
     text-transform: uppercase;
     line-height: 1.6;
   }
-  
-  &>button.button{
+  & .bgc_wrap{
+    display: flex;
+    border-radius: $bd_rad;
+    padding: 19px;
+    min-width: 343px;
+    min-height: 355px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all .3s;
+    background-color: $black_color;
 
+    &:hover{
+      background-color:rgba(255, 22, 93, 0.8) ;
+    }
+  }
+  & .fix_center{
+    height: 60px;
   }
 }

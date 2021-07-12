@@ -11,10 +11,19 @@
   cursor:pointer;
   align-items: center;
   justify-content: center;
-  transition:all .1s;
+  transition:all .2s;
   background-color: $white_color;
 
   &:hover{
+    background-color: $primary_color;
+    color: $white_color;
+  }
+  &.hover_white:hover{
+    background-color: $white_color;
+    color: $black_color;
+  }
+  &.hover_transparent:hover{
+    border: 1px solid $primary_color;
     background-color: $primary_color;
     color: $white_color;
   }
@@ -22,13 +31,8 @@
     background-color: transparent;
     border: 1px solid $white_color;
     color: $white_color;
-    
-    &:hover{
-      border: 1px solid $primary_color;
-      background-color: $primary_color;
-      color: $white_color;
-    }
   }
+
 
   &.size_md{
     width: 240px;
