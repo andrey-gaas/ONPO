@@ -274,6 +274,125 @@ article.card_teacher .education_list .education_item .item {
   font-weight: bold;
 }
 
+article.card_cubs {
+  display: flex;
+  background: #FFFFFF;
+  min-height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  article.card_cubs {
+    border-radius: 30px;
+  }
+}
+article.card_cubs .cub {
+  min-width: 72px;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (min-width: 768px) {
+  article.card_cubs .cub {
+    min-width: 245px;
+    background-size: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  article.card_cubs .cub {
+    min-width: 80px;
+    background-size: 60px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  article.card_cubs .cub {
+    min-width: 160px;
+    background-size: 100px;
+  }
+}
+article.card_cubs .cub.red {
+  background-color: #FF165D;
+  background-image: url("/image/cub_black.png");
+}
+article.card_cubs .cub.blue {
+  background-color: #3EC1D3;
+  background-image: url("/image/cub_yellow.png");
+}
+article.card_cubs .cub.black {
+  background-color: #252A34;
+  background-image: url("/image/cub_black.png");
+}
+article.card_cubs .content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px;
+}
+@media screen and (min-width: 768px) {
+  article.card_cubs .content {
+    padding: 20px;
+  }
+}
+article.card_cubs .content .title {
+  font-weight: bold;
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  article.card_cubs .content .title {
+    font-size: 16px;
+  }
+}
+article.card_cubs .content .text {
+  margin-top: 10px;
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  article.card_cubs .content .text {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  article.card_cubs .content .text {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+}
+article.card_cubs .content .bottom-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+article.card_cubs .content .bottom-container .price {
+  align-self: flex-end;
+  font-size: 12px;
+  font-weight: bold;
+  color: #3EC1D3;
+}
+@media screen and (min-width: 768px) {
+  article.card_cubs .content .bottom-container .price {
+    font-size: 16px;
+  }
+}
+article.card_cubs .content .bottom-container .card_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+}
+@media screen and (min-width: 768px) {
+  article.card_cubs .content .bottom-container .card_button {
+    width: 60px;
+    height: 60px;
+  }
+}
+article.card_cubs .content .bottom-container .card_button img {
+  width: 10px;
+}
+
 .component_header {
   padding: 20px 16px;
   background-color: #FFFFFF;

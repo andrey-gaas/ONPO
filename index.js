@@ -16,6 +16,7 @@ app.use(express.static('public'));
 
 // ROUTES
 app.use('/', require('./routes/home'));
+app.use('/dron', require('./routes/dron'));
 
 const PORT = 3002;
 
