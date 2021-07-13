@@ -1,8 +1,7 @@
 article.card_dirction{
   display: inline-flex;
-  border-radius: $bd_rad;
+  border-radius: $bd_rad_sm;
   background-image: url('/image/123.png');
-  cursor: pointer;
   & .title{
     color: $white_color;
     font-size: $fz_lgs;
@@ -11,14 +10,13 @@ article.card_dirction{
   }
   & .bgc_wrap{
     display: flex;
-    border-radius: $bd_rad;
+    border-radius: $bd_rad_sm;
     padding: 19px;
     min-width: 343px;
     min-height: 355px;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    cursor: pointer;
     transition: all .3s;
     background-color: $black_color;
 

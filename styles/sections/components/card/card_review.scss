@@ -1,18 +1,14 @@
-article.card_teacher{
+article.card_review{
   display: flex;
   flex-direction: column;
   min-width: 343px;
   padding: 10px;
-  padding-bottom: 19px;
   background-color: $white_color;
   border-radius: $bd_rad_sm;
   //
   width: 343px;
   //
 
-  & button{
-    margin: 0 auto ;
-  }
   & .person{
     display: flex;
     align-items: center;
@@ -35,18 +31,19 @@ article.card_teacher{
 
       & .last_name{
         font-weight: bold;
-        line-height: 22px;
+        line-height: 157%;
       }
       & .first_name{
-        line-height: 22px;
+        line-height: 157%;
         margin-bottom: 10px;
       }
       & .position{
+        line-height: 157%;
         color: $gray_light_color;
       }
     }
   }
-  & .course_list{
+  & .course{
     display: flex;
     flex-direction: column;
     padding: 10px 0;
@@ -65,32 +62,58 @@ article.card_teacher{
         content: "";
         display: block;
         position: absolute;
+        background-image: url(image/icons/course_flag.svg);
+        background-size: cover;
         left: 4px;
         top: 50%;
         transform: translateY(-50%);
-        background-image: url(image/icons/course_flag.svg);
-        background-size: cover;
+        //background-color: $primary_color;
         width: 11px;
         height: 15px;
-        
+
+      }
+    }
+    & .stars_list{
+      display: flex;
+
+      & .star{
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+
+        & img{
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
-  & .education_list{
+  & .review{
     padding: 10px 0;
-    margin-bottom: 30px;
+    padding-right: 20px;
+    margin-bottom: 54px;
 
-    
-    
-    & .education_item{
+    & .review_text{
       font-size: $fz_sm;
-      margin-bottom: 14px;
-      &:last-child{
-        margin-bottom: 0;
-      }
+      line-height: 157%;
+    }
+  }
+  & .review_status{
+    display: flex;
+    justify-content: space-between;
 
-      & .item{
-        font-weight: bold;
+    font-size: $fz_sm;
+    line-height: 152%;
+    
+    & .date{
+      color:$gray_light_color
+    }
+
+    & .like{
+      display: flex;
+
+      & .icon_review_fire{
+        margin-right: 10px;
       }
     }
   }
