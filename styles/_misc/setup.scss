@@ -10,6 +10,7 @@ $gray_light_color: #BDBDBD;
 
 //font size
 
+$fz_xsm: 12px;
 $fz_sm: 14px;
 $fz_md: 16px; 
 $fz_lgs: 22px;
@@ -36,4 +37,8 @@ body{
   font-family: Gotham;
   font-weight: normal;
   background-color: $bg_color;
+}
+
+ul,li{
+  list-style: none;
 }

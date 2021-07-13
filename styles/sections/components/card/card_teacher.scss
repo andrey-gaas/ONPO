@@ -1,0 +1,95 @@
+article.card_teacher{
+  display: flex;
+  flex-direction: column;
+  min-width: 343px;
+  padding: 10px;
+  padding-bottom: 19px;
+  background-color: $white_color;
+  border-radius: $bd_rad;
+  //
+  width: 343px;
+  margin-left: 100px;
+  //
+
+  & button{
+    margin: 0 auto ;
+  }
+  & .person{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray_light_color;
+
+    & .img_block{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: gray;
+      flex-shrink: 0;
+    }
+
+    & .full_name{
+      padding-left: 10px;
+      display: flex;
+      flex-direction: column;
+      font-size: $fz_sm;
+
+      & .last_name{
+        font-weight: bold;
+        line-height: 22px;
+      }
+      & .first_name{
+        line-height: 22px;
+        margin-bottom: 10px;
+      }
+      & .position{
+        color: $gray_light_color;
+      }
+    }
+  }
+  & .course_list{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray_light_color;
+
+    & .course_item{
+      position: relative;
+      padding-left: 30px;
+      font-size: $fz_sm;
+      line-height: 135%;
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        background-color: $primary_color;
+        width: 11px;
+        height: 15px;
+        left: 14px;
+      }
+    }
+  }
+  & .education_list{
+    padding: 10px 0;
+    margin-bottom: 30px;
+
+    
+    
+    & .education_item{
+      font-size: $fz_sm;
+      margin-bottom: 14px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      & .item{
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 .button{
   display: flex;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: $fz_sm;
+  line-height: $fz_sm;
   border-radius: $bd_rad;
   font-weight: bold;
   height: 60px;
@@ -36,6 +36,9 @@
 
   &.size_md{
     width: 240px;
+  }
+  &.size_mds{
+    width: 162px;
   }
   &.size_lg{
     width: 330px;
