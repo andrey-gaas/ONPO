@@ -8,3 +8,8 @@
 
 @import "sections/components.scss";
 
+.test{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
