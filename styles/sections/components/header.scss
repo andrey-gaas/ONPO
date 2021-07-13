@@ -1,0 +1,129 @@
+.component_header {
+  padding: 20px 16px;
+  background-color: $white-color;
+
+  @include tablets {
+    padding: 20px 40px;
+  }
+
+  @include laptop {
+    padding: 20px 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+
+    @include tablets {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  .menu {
+    display: none;
+    margin-left: 20px;
+    
+    @include tablets {
+      display: block;
+    }
+
+    @include laptop {
+      margin-left: 40px;
+    }
+
+    @include desktop {
+      margin-left: 80px;
+    }
+
+    a {
+      margin-left: 20px;
+      font-size: $fz_sm;
+      text-decoration: none;
+      color: $black_color;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      @include laptop {
+        font-size: $fz_md;
+      }
+
+      @include desktop {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .icons {
+    margin-left: auto;
+
+    @include laptop {
+      margin-left: 80px;
+    }
+    
+    .button-icon {
+      margin: 0 12px;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      &.laptop-hide {
+        @include laptop {
+          display: none;
+        }
+      }
+  
+      img {
+        width: 20px;
+        height: 20px;
+
+        @include tablets {
+          height: 23px;
+          width: 23px;
+        }
+      }
+    }
+  }
+
+  .search {
+    display: none;
+    margin-left: auto;
+    width: 210px;
+    color: $gray_light_color;
+    border-bottom: 1px solid;
+
+    @include laptop {
+      display: flex;
+    }
+
+    .icon {
+      width: 15px;
+      height: 15px;
+    }
+
+    .input {
+      flex-grow: 1;
+      padding: 0 0 5px 10px;
+      font-size: $fz_md;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .button {
+    display: none;
+    margin-left: 80px;
+    
+    @include laptop {
+      display: block;
+    }
+  }
+}

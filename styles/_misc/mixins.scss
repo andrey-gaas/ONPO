@@ -80,13 +80,13 @@
 
 
 @mixin desktop {
-	@media screen and (min-width: 1200px) {
+	@media screen and (min-width: 1920px) {
 		@content;
 	}
 }
 
 @mixin laptop {
-	@media screen and (min-width: 992px) {
+	@media screen and (min-width: 1280px) {
 		@content;
 	}
 }
