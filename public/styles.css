@@ -322,7 +322,7 @@ article.card_dirction .fix_center {
     font-size: 22px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1520px) {
   .card_for .top-content h1 {
     font-size: 28px;
   }
@@ -343,7 +343,7 @@ article.card_dirction .fix_center {
     margin-top: 20px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1520px) {
   .card_for .text {
     font-size: 16px;
     line-height: 26px;
@@ -706,7 +706,7 @@ article.card_organizer .contact .email::before {
     line-height: 32px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1520px) {
   .card_advantages h1 {
     font-size: 28px;
     line-height: 44px;
@@ -724,7 +724,7 @@ article.card_organizer .contact .email::before {
     line-height: 22px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1520px) {
   .card_advantages p {
     margin-top: 20px;
     font-size: 16px;
