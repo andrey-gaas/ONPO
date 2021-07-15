@@ -551,6 +551,16 @@ article.card_teacher .education_list .education_item .item {
 article.card_teacher .button {
   margin: auto;
 }
+@media screen and (min-width: 768px) {
+  article.card_teacher .button {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  article.card_teacher .button {
+    font-size: 16px;
+  }
+}
 
 article.card_organizer {
   display: flex;

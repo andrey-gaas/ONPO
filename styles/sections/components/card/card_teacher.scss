@@ -116,5 +116,12 @@ article.card_teacher{
   }
   & .button{
     margin: auto;
+
+    @include tablets{
+      font-size: $fz_sm;
+    }
+    @include laptop{
+      font-size: $fz_md;
+    }
   }
 }

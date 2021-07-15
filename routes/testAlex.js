@@ -75,6 +75,28 @@ const teacher = [{
     form:'Онлайн / Оффлайн',
     experience:'7 лет'
   }
+},{
+  id:'3',
+  name:"сабина", 
+  surname:"Тихомирова", 
+  middlename:"Ильинична", 
+  position:'Доктор педагогических наук', 
+  img:'/image/oraganizators/1.png',
+  courses:[{
+    title:'Библиографическое описание. Общие требования и правила составления',
+    href:"#0"
+  },{
+    title:'Современные инфокоммуникационные технологии. Технологии «ИРБИС»',
+    href:"#1"
+  },{
+    title:'Культурно-досуговая деятельность библиотек в современных социокультурных условиях',
+    href:"#2"
+  }],
+  status:{
+    education:'ОМГПУ, ОМГУПС',
+    form:'Онлайн / Оффлайн',
+    experience:'7 лет'
+  }
 }]
 router.get('/', (req, res) => {
     res.render('testAlex', { reviews, direction, organizators, teacher,

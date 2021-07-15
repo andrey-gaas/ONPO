@@ -10,26 +10,21 @@
     </div>
   </div>
   {{getCoursesList courses}}
-  {{!-- <ul class="course_list">
-    <li class="course_item">Библиографическое описание. Общие требования и правила составления</li>
-    <li class="course_item">Современные инфокоммуникационные технологии. Технологии «ИРБИС»</li>
-    <li class="course_item">Культурно-досуговая деятельность библиотек в современных социокультурных условиях</li>
-  </ul> --}}
   <ul class="education_list">
     <li class="education_item">
       <span class="item">Образование</span>
       -
-      <span class="status">ОМГПУ, ОМГУПС</span>
+      <span class="status">{{status.education}}</span>
     </li>
     <li class="education_item">
       <span class="item">Стаж</span>
       -
-      <span class="status">7 лет</span>
+      <span class="status">{{status.experience}}</span>
     </li>
     <li class="education_item">
       <span class="item">Форма обучения</span>
       -
-      <span class="status">Онлайн / Оффлайн</span>
+      <span class="status">{{status.form}}</span>
     </li>
   </ul>
   <a href="#{{id}}" class="button size_norm">Подробнее</a>
