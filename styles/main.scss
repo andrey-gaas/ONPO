@@ -14,7 +14,28 @@
   flex-direction: column;
   padding: 20px;
 
-  & div{
+  &>div{
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
   }
+}
+.size_text_m{
+  height: 20px;
+  font-size: 16px;
+  &::before{
+    display: block;
+    content: "Mobile";
+    @include tablets{
+      content: "Tablet";
+    }
+    @include laptop {
+      content: "Laptop";
+    }
+    @include desktop {
+      content: "desector";
+    }
+  }
+  
 }

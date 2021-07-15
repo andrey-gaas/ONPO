@@ -3,13 +3,37 @@ article.card_dirction{
   border-radius: $bd_rad_sm;
   box-shadow: $shadow_sm;
   width: 343px;
-  flex-grow: 1;
+  background-size: cover;
+  @include tablets{
+    height: 495px;
+    width: 334px;
+  }
+  @include laptop{
+    height: 564px;
+    width: 373px;
+  }
+  @include desktop{
+    width: 453px;
+    height: 650px;
+  }
+
   & .title{
     color: $white_color;
     font-size: $fz_lgs;
     text-transform: uppercase;
     line-height: 1.6;
     text-align: center;
+
+    @include tablets{
+      font-size: $fz_lgm;
+    }
+
+    @include laptop{
+      font-size: $fz_lgm;
+    }
+    @include desktop{
+      font-size: $fz_lg;
+    }
   }
   & .bgc_wrap{
     display: flex;

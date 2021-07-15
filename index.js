@@ -40,6 +40,14 @@ hbs.handlebars.helpers.getStars = val => {
   res+='</ul>'
   return new hbs.handlebars.SafeString(res)
 },
+hbs.handlebars.helpers.getCoursesList = courses => {
+  res = '<ul class="course_list">'
+  for(let cours of courses){
+    res+=`<a href="${cours.href}" class="course_item">${cours.title}</a>`
+  }
+  res+='</ul>'
+  return new hbs.handlebars.SafeString(res)
+},
 
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');

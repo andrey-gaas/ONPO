@@ -1,4 +1,5 @@
 <div class="test">
+  <span class="size_text_m"></span>
   <div>
     {{#each this.organizators}}
       {{>card_organizer this}}
@@ -15,7 +16,9 @@
     {{/each}}
   </div>
   <div>
-    {{> card_teacher}}
+    {{#each this.teacher}}
+      {{> card_teacher this}}
+    {{/each}}
   </div>
 
 </div>

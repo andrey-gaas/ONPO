@@ -1,11 +1,10 @@
 .button{
   display: flex;
   font-size: $fz_sm;
-  line-height: $fz_sm;
   border-radius: $bd_rad;
   font-weight: bold;
   height: 60px;
-  width: 120px;
+  width: 100%;
   color: $black_color;
   border: 1px solid $primary_color;
   text-decoration: none;
@@ -34,14 +33,16 @@
     color: $white_color;
   }
 
+  @include tablets{
+    font-size: $fz_md;
+  }
 
-  &.size_md{
-    width: 240px;
-  }
-  &.size_mds{
+  &.size_norm{
     width: 162px;
+
+    @include tablets{
+      width: 240px;
+    }
   }
-  &.size_lg{
-    width: 330px;
-  }
+
 }

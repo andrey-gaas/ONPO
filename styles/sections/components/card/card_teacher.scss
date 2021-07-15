@@ -1,7 +1,6 @@
 article.card_teacher{
   display: flex;
   flex-direction: column;
-  min-width: 343px;
   padding: 10px;
   padding-bottom: 19px;
   background-color: $white_color;
@@ -10,7 +9,15 @@ article.card_teacher{
   //
   width: 343px;
   //
-
+  @include tablets{
+    width: 334px;
+  }
+  @include laptop{
+    width: 373px;
+  }
+  @include desktop{
+    width: 453px;
+  }
   & button{
     margin: 0 auto ;
   }
@@ -26,6 +33,16 @@ article.card_teacher{
       border-radius: 50%;
       background-color: gray;
       flex-shrink: 0;
+      overflow: hidden;
+      
+      &>img{
+        height: 100%;
+        width: 100%;
+      }
+      @include laptop{
+        width: 100px;
+        height: 100px;
+      }
     }
 
     & .full_name{
@@ -59,6 +76,8 @@ article.card_teacher{
       font-size: $fz_sm;
       line-height: 135%;
       margin-bottom: 10px;
+      color: $black_color;
+      text-decoration: none;
       &:last-child{
         margin-bottom: 0;
       }
@@ -94,5 +113,8 @@ article.card_teacher{
         font-weight: bold;
       }
     }
+  }
+  & .button{
+    margin: auto;
   }
 }

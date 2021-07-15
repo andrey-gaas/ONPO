@@ -32,11 +32,10 @@ ul, li {
 .button {
   display: flex;
   font-size: 14px;
-  line-height: 14px;
   border-radius: 30px;
   font-weight: bold;
   height: 60px;
-  width: 120px;
+  width: 100%;
   color: #252A34;
   border: 1px solid #FF165D;
   text-decoration: none;
@@ -64,14 +63,18 @@ ul, li {
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
 }
-.button.size_md {
-  width: 240px;
+@media screen and (min-width: 768px) {
+  .button {
+    font-size: 16px;
+  }
 }
-.button.size_mds {
+.button.size_norm {
   width: 162px;
 }
-.button.size_lg {
-  width: 330px;
+@media screen and (min-width: 768px) {
+  .button.size_norm {
+    width: 240px;
+  }
 }
 
 .component_header {
@@ -116,7 +119,7 @@ ul, li {
     margin-left: 40px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1520px) {
   .component_header .menu {
     margin-left: 80px;
   }
@@ -135,7 +138,7 @@ ul, li {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1520px) {
   .component_header .menu a {
     margin-left: 40px;
   }
@@ -212,7 +215,7 @@ ul, li {
     width: 1080px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1520px) {
   .container {
     width: 1440px;
   }
@@ -223,7 +226,25 @@ article.card_dirction {
   border-radius: 15px;
   box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
   width: 343px;
-  flex-grow: 1;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  article.card_dirction {
+    height: 495px;
+    width: 334px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  article.card_dirction {
+    height: 564px;
+    width: 373px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  article.card_dirction {
+    width: 453px;
+    height: 650px;
+  }
 }
 article.card_dirction .title {
   color: #FFFFFF;
@@ -231,6 +252,21 @@ article.card_dirction .title {
   text-transform: uppercase;
   line-height: 1.6;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  article.card_dirction .title {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  article.card_dirction .title {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  article.card_dirction .title {
+    font-size: 28px;
+  }
 }
 article.card_dirction .bgc_wrap {
   display: flex;
@@ -339,13 +375,27 @@ article.card .footer > .price {
 article.card_teacher {
   display: flex;
   flex-direction: column;
-  min-width: 343px;
   padding: 10px;
   padding-bottom: 19px;
   background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
   width: 343px;
+}
+@media screen and (min-width: 768px) {
+  article.card_teacher {
+    width: 334px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  article.card_teacher {
+    width: 373px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  article.card_teacher {
+    width: 453px;
+  }
 }
 article.card_teacher button {
   margin: 0 auto;
@@ -362,6 +412,17 @@ article.card_teacher .person .img_block {
   border-radius: 50%;
   background-color: gray;
   flex-shrink: 0;
+  overflow: hidden;
+}
+article.card_teacher .person .img_block > img {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 1280px) {
+  article.card_teacher .person .img_block {
+    width: 100px;
+    height: 100px;
+  }
 }
 article.card_teacher .person .full_name {
   padding-left: 10px;
@@ -392,6 +453,8 @@ article.card_teacher .course_list .course_item {
   font-size: 14px;
   line-height: 135%;
   margin-bottom: 10px;
+  color: #252A34;
+  text-decoration: none;
 }
 article.card_teacher .course_list .course_item:last-child {
   margin-bottom: 0;
@@ -422,6 +485,9 @@ article.card_teacher .education_list .education_item:last-child {
 article.card_teacher .education_list .education_item .item {
   font-weight: bold;
 }
+article.card_teacher .button {
+  margin: auto;
+}
 
 article.card_organizer {
   display: flex;
@@ -433,12 +499,32 @@ article.card_organizer {
   padding: 20px;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  article.card_organizer {
+    width: 334px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  article.card_organizer {
+    width: 275px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  article.card_organizer {
+    width: 330px;
+  }
+}
 article.card_organizer .img_block {
+  display: flex;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin-bottom: 10px;
   background-color: #FFFFFF;
+}
+article.card_organizer .img_block > img {
+  width: 100%;
+  height: 100%;
 }
 article.card_organizer .person {
   display: flex;
@@ -467,6 +553,16 @@ article.card_organizer .person .position {
   line-height: 157%;
   font-weight: bold;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1280px) {
+  article.card_organizer .person .position {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  article.card_organizer .person .position {
+    font-size: 14px;
+  }
 }
 article.card_organizer .contact {
   display: inline-flex;
@@ -531,7 +627,7 @@ article.card_cubs .cub {
     background-size: 60px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1520px) {
   article.card_cubs .cub {
     min-width: 160px;
     background-size: 100px;
@@ -579,7 +675,7 @@ article.card_cubs .content .text {
     font-size: 14px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1520px) {
   article.card_cubs .content .text {
     margin-top: 20px;
     font-size: 16px;
@@ -623,12 +719,26 @@ article.card_cubs .content .bottom-container .card_button img {
 article.card_review {
   display: flex;
   flex-direction: column;
-  min-width: 343px;
   padding: 10px;
   background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
   width: 343px;
+}
+@media screen and (min-width: 768px) {
+  article.card_review {
+    width: 334px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  article.card_review {
+    width: 373px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  article.card_review {
+    width: 453px;
+  }
 }
 article.card_review .person {
   display: flex;
@@ -640,14 +750,34 @@ article.card_review .person .img_block {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  overflow: hidden;
   background-color: gray;
   flex-shrink: 0;
 }
+article.card_review .person .img_block > img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+@media screen and (min-width: 1280px) {
+  article.card_review .person .img_block {
+    width: 100px;
+    height: 100px;
+  }
+}
 article.card_review .person .full_name {
   padding-left: 10px;
+  padding-right: 30px;
   display: flex;
   flex-direction: column;
   font-size: 14px;
+}
+@media screen and (min-width: 1280px) {
+  article.card_review .person .full_name {
+    font-size: 16px;
+    padding-left: 20px;
+  }
 }
 article.card_review .person .full_name .last_name {
   font-weight: bold;
@@ -686,8 +816,8 @@ article.card_review .course .course_item::after {
   left: 4px;
   top: 50%;
   transform: translateY(-50%);
-  width: 11px;
-  height: 15px;
+  width: 12px;
+  height: 16px;
 }
 article.card_review .course .stars_list {
   display: flex;
@@ -696,6 +826,12 @@ article.card_review .course .stars_list .star {
   margin-right: 10px;
   width: 15px;
   height: 15px;
+}
+@media screen and (min-width: 1280px) {
+  article.card_review .course .stars_list .star {
+    height: 20px;
+    width: 20px;
+  }
 }
 article.card_review .course .stars_list .star img {
   width: 100%;
@@ -713,7 +849,7 @@ article.card_review .review .review_text {
 article.card_review .review_status {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 152%;
 }
 article.card_review .review_status .date {
@@ -724,6 +860,7 @@ article.card_review .review_status .like {
 }
 article.card_review .review_status .like .icon_review_fire {
   margin-right: 10px;
+  display: flex;
 }
 
 .test {
@@ -732,6 +869,33 @@ article.card_review .review_status .like .icon_review_fire {
   flex-direction: column;
   padding: 20px;
 }
-.test div {
+.test > div {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.size_text_m {
+  height: 20px;
+  font-size: 16px;
+}
+.size_text_m::before {
+  display: block;
+  content: "Mobile";
+}
+@media screen and (min-width: 768px) {
+  .size_text_m::before {
+    content: "Tablet";
+  }
+}
+@media screen and (min-width: 1280px) {
+  .size_text_m::before {
+    content: "Laptop";
+  }
+}
+@media screen and (min-width: 1520px) {
+  .size_text_m::before {
+    content: "desector";
+  }
 }

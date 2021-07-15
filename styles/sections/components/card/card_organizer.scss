@@ -8,12 +8,30 @@ article.card_organizer{
   padding: 20px;
   align-items: center;
 
+  @include tablets{
+    width: 334px;
+  }
+
+  @include laptop{
+    width: 275px;
+  }
+
+  @include desktop{
+    width: 330px;
+  }
+
   & .img_block{
+    display: flex;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
     background-color: $white_color;
+
+    &>img{
+      width: 100%;
+      height: 100%;
+    }
   }
 
   & .person{
@@ -45,6 +63,13 @@ article.card_organizer{
       line-height: 157%;
       font-weight: bold;
       margin-bottom: 20px;
+
+      @include laptop{
+        font-size: $fz_xsm;
+      }
+      @include desktop{
+        font-size: $fz_sm;
+      }
     }
   }
 

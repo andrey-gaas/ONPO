@@ -1,19 +1,20 @@
 <article class="card_teacher">
   <div class="person">
     <div class="img_block">
-      <img src="" alt="" class="img">
+      <img src="{{img}}" alt="{{surname}} {{name}} {{middlename}}" class="img">
     </div>
     <div class="full_name">
-      <span class="last_name">Тихомирова</span><br/>
-      <span class="first_name">Сабина Ильинична</span>
-      <span class="position">Кандидат педагогичкских наук</span>
+      <span class="last_name">{{surname}}</span><br/>
+      <span class="first_name">{{name}} {{middlename}}</span>
+      <span class="position">{{position}}</span>
     </div>
   </div>
-  <ul class="course_list">
+  {{getCoursesList courses}}
+  {{!-- <ul class="course_list">
     <li class="course_item">Библиографическое описание. Общие требования и правила составления</li>
     <li class="course_item">Современные инфокоммуникационные технологии. Технологии «ИРБИС»</li>
     <li class="course_item">Культурно-досуговая деятельность библиотек в современных социокультурных условиях</li>
-  </ul>
+  </ul> --}}
   <ul class="education_list">
     <li class="education_item">
       <span class="item">Образование</span>
@@ -31,5 +32,5 @@
       <span class="status">Онлайн / Оффлайн</span>
     </li>
   </ul>
-  <button class="button size_mds">Подробнее</button>
+  <a href="#{{id}}" class="button size_norm">Подробнее</a>
 </article>
