@@ -55,6 +55,7 @@ const organizators =[{
 
 router.get('/', (req, res) => {
     res.render('testAlex', { reviews, direction, organizators, 
+    title: 'Страница с какой',
     helpers:{
       stringify: str => JSON.stringify(str),
     }});

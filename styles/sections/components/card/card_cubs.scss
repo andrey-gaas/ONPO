@@ -1,0 +1,121 @@
+article.card_cubs {
+  display: flex;
+  background: $white_color;
+  min-height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+
+  @include tablets {
+    border-radius: 30px;
+  }
+
+  .cub {
+    min-width: 72px;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include tablets {
+      min-width: 245px;
+      background-size: 100px;
+    }
+
+    @include laptop {
+      min-width: 80px;
+      background-size: 60px;
+    }
+
+    @include desktop {
+      min-width: 160px;
+      background-size: 100px;
+    }
+
+    &.red {
+      background-color: $primary_color;
+      background-image: url('/image/cub_black.png');
+    }
+
+    &.blue {
+      background-color: $accent_color;
+      background-image: url('/image/cub_yellow.png');
+    }
+
+    &.black {
+      background-color: $black_color;
+      background-image: url('/image/cub_black.png');
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px;
+
+    @include tablets {
+      padding: 20px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: $fz_xsm;
+
+      @include tablets {
+        font-size: $fz_md;
+      }
+    }
+
+    .text {
+      margin-top: 10px;
+      font-size: $fz_xsm;
+
+      @include tablets {
+        margin-top: 20px;
+        font-size: $fz_sm;
+      }
+
+      @include desktop {
+        margin-top: 20px;
+        font-size: $fz_md;
+      }
+    }
+
+    .bottom-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+
+      .price {
+        align-self: flex-end;
+        font-size: $fz_xsm;
+        font-weight: bold;
+        color: $accent_color;
+
+        @include tablets {
+          font-size: $fz_md;
+        }
+      }
+
+      .card_button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $white_color;
+        border: none;
+        cursor: pointer;
+        box-shadow:
+          0px 4px 6px -4px rgba(24, 39, 75, 0.12),
+          0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+
+        @include tablets {
+          width: 60px;
+          height: 60px;
+        }
+
+        img {
+          width: 10px;
+        }
+      }
+    }
+  }
+}

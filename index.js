@@ -49,6 +49,7 @@ app.use(express.static('public'));
 
 // ROUTES
 app.use('/', require('./routes/home'));
+app.use('/dron', require('./routes/dron'));
 app.use('/test', require('./routes/testAlex'));
 
 const PORT = 3002;
