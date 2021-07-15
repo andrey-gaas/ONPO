@@ -1,0 +1,61 @@
+.card_for {
+  padding: 10px;
+  background-color: $white_color;
+  border-radius: 15px;
+  box-shadow:
+    0px 4px 6px -4px rgba(24, 39, 75, 0.12),
+    0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+
+  @include tablets {
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .top-content {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 60px;
+
+      @include laptop {
+        width: 100px;
+      }
+    }
+
+    h1 {
+      margin-left: 10px;
+      font-size: $fz_md;
+      text-transform: uppercase;
+
+      @include laptop {
+        margin-left: 20px;
+        font-size: $fz_lgs;
+      }
+
+      @include desktop {
+        font-size: $fz_lg;
+      }
+    }
+  }
+
+  .text {
+    margin-top: 14px;
+    font-size: $fz_xsm;
+    line-height: 20px;
+
+    @include tablets {
+      font-size: $fz_sm;
+      line-height: 22px;
+    }
+
+    @include laptop {
+      margin-top: 20px;
+    }
+
+    @include desktop {
+      font-size: $fz_md;
+      line-height: 26px;
+    }
+  }
+}

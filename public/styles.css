@@ -287,6 +287,69 @@ article.card_dirction .fix_center {
   height: 60px;
 }
 
+.card_for {
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+}
+@media screen and (min-width: 768px) {
+  .card_for {
+    padding: 20px;
+    border-radius: 30px;
+  }
+}
+.card_for .top-content {
+  display: flex;
+  align-items: center;
+}
+.card_for .top-content img {
+  width: 60px;
+}
+@media screen and (min-width: 1280px) {
+  .card_for .top-content img {
+    width: 100px;
+  }
+}
+.card_for .top-content h1 {
+  margin-left: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1280px) {
+  .card_for .top-content h1 {
+    margin-left: 20px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .card_for .top-content h1 {
+    font-size: 28px;
+  }
+}
+.card_for .text {
+  margin-top: 14px;
+  font-size: 12px;
+  line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .card_for .text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card_for .text {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .card_for .text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
 article.card {
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -595,6 +658,78 @@ article.card_organizer .contact .phone::before {
 article.card_organizer .contact .email::before {
   width: 18px;
   background-image: url(/image/icons/email.svg);
+}
+
+.card_advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+}
+@media screen and (min-width: 768px) {
+  .card_advantages {
+    padding: 20px;
+    border-radius: 30px;
+  }
+}
+.card_advantages img {
+  width: 33px;
+}
+@media screen and (min-width: 768px) {
+  .card_advantages img {
+    width: 50px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card_advantages img {
+    width: 66px;
+  }
+}
+.card_advantages h1 {
+  margin-top: 23px;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .card_advantages h1 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card_advantages h1 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .card_advantages h1 {
+    font-size: 28px;
+    line-height: 44px;
+  }
+}
+.card_advantages p {
+  display: none;
+  margin-top: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .card_advantages p {
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .card_advantages p {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 
 article.card_cubs {
