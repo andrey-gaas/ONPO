@@ -1,6 +1,7 @@
 article.card {
   background-color: $white_color;
   border-radius: $bd_rad_sm;
+  box-shadow: $shadow_sm;
   overflow: hidden;
 
   .header {

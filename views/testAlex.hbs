@@ -1,5 +1,21 @@
 <div class="test">
-  {{> card_direction}}
-  {{> card_review}}
-  {{> card_teacher}}
+  <div>
+    {{#each this.organizators}}
+      {{>card_organizer this}}
+    {{/each}}
+  </div>
+  <div>
+    {{#each this.direction}}
+      {{> card_direction this}}
+    {{/each}}
+  </div>
+  <div>
+    {{#each this.reviews}}
+      {{>card_review this}}
+    {{/each}}
+  </div>
+  <div>
+    {{> card_teacher}}
+  </div>
+
 </div>
