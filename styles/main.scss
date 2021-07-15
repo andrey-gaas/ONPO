@@ -11,5 +11,10 @@
 .test{
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   padding: 20px;
+
+  & div{
+    display: flex;
+  }
 }
