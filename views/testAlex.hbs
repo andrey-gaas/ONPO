@@ -1,24 +1,35 @@
 <div class="test">
-  <span class="size_text_m"></span>
-  <div>
-    {{#each this.organizators}}
-      {{>card_organizer this}}
-    {{/each}}
-  </div>
-  <div>
-    {{#each this.direction}}
-      {{> card_direction this}}
-    {{/each}}
-  </div>
-  <div>
-    {{#each this.reviews}}
-      {{>card_review this}}
-    {{/each}}
-  </div>
-  <div>
-    {{#each this.teacher}}
-      {{> card_teacher this}}
-    {{/each}}
+  <div class="container">
+
+    <span class="size_text_m"></span>
+    <div>
+      {{#each this.organizators}}
+        {{>card_organizer this}}
+      {{/each}}
+    </div>
   </div>
 
+  {{>carusel carusel}}
+  <div class="container">
+
+    {{!-- <button id="addimg">adsf</button>
+    <div class="addimg"></div> --}}
+
+    <div>
+      {{#each this.direction}}
+        {{> card_direction this}}
+      {{/each}}
+    </div>
+    <div>
+      {{#each this.reviews}}
+        {{>card_review this}}
+      {{/each}}
+    </div>
+    <div>
+      {{#each this.teacher}}
+        {{> card_teacher this}}
+      {{/each}}
+    </div>
+
+  </div>
 </div>

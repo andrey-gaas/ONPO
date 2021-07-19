@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   entry: './styles.js',
   output: {
-    //filename: '',
+    filename: 'mscr.js',
     path: path.resolve(__dirname, 'public'),
   },
   watchOptions: {

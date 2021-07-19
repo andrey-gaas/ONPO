@@ -1,9 +1,18 @@
 .container {
   margin: 0 auto;
-  width: 96%;
+  width: 91.6%;
+
+  @include tablets {
+    width: 688px;
+    min-width: 688px;
+    max-width: 848px;
+
+  }
 
   @include laptop {
-    width: 1080px
+    min-width: unset;
+    max-width: unset;
+    width: 1160px
   }
 
   @include desktop {

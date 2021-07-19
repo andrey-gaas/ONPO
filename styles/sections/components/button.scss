@@ -13,7 +13,9 @@
   justify-content: center;
   transition:all .2s;
   background-color: $white_color;
-
+  @include tablets{
+    font-size: $fz_md;
+  }
   &:hover{
     background-color: $primary_color;
     color: $white_color;
@@ -30,6 +32,10 @@
   &.color_transparent{
     background-color: transparent;
     border: 1px solid $white_color;
+    color: $white_color;
+  }
+  &.color_red{
+    background-color: $primary_color;
     color: $white_color;
   }
 

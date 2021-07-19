@@ -40,6 +40,11 @@ body{
   font-family: Gotham;
   font-weight: normal;
   background-color: $bg_color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  
 }
 
 ul,li{

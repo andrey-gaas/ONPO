@@ -23,7 +23,8 @@ const hbs = exphbs.create({
 
 // console.log(hbs.handlebars)
 hbs.handlebars.helpers.toHTML = html => new hbs.handlebars.SafeString(html),
-hbs.handlebars.helpers.getStars = val => {
+
+hbs.handlebars.helpers.getStarsReview = val => {
   let fullStars = Math.floor(val/2)
   let halfStars = val%2
   let emptyStars = Math.floor( (10-val) / 2)
@@ -40,12 +41,55 @@ hbs.handlebars.helpers.getStars = val => {
   res+='</ul>'
   return new hbs.handlebars.SafeString(res)
 },
+
+hbs.handlebars.helpers.getStarsCourse = arrReview => {
+  let stars = arrReview.reduce( (acc, val) => acc+val.review, 0 )
+  stars/=arrReview.length
+  stars*=2
+  stars=Math.ceil(stars/2)
+  return hbs.handlebars.helpers.getStarsReview(stars)
+}
+
 hbs.handlebars.helpers.getCoursesList = courses => {
   res = '<ul class="course_list">'
   for(let cours of courses){
     res+=`<a href="${cours.href}" class="course_item">${cours.title}</a>`
   }
   res+='</ul>'
+  return new hbs.handlebars.SafeString(res)
+}
+
+hbs.handlebars.helpers.getCaruselList = caruselList => {
+  res = ''
+  for(let item of caruselList){
+    if(item.type = 'course'){
+      res+=`
+        <div class="swiper-slide"><div class="container">
+
+        <div class="slide_course">
+          <div class="top">
+            <div class="course">
+              <div class="title">${item.data.title}</div>
+              <div class="description">${item.data.description}</div>
+              <div class="date">
+                <span class="start"><span class="bold">Старт</span> - ${item.data.start}</span>
+                <span class="hours"><span class="bold">Количество часов</span> - ${item.data.hours}</span>
+                <span class="period"><span class="bold">Срок обучения</span> - ${item.data.period}</span>
+              </div>
+              <div class="review">
+                ${ hbs.handlebars.helpers.getStarsCourse(item.data.review) }
+                <div class="count">(${item.data.review.length} отзыва)</div>
+              </div>
+            </div>
+            <div class="price">₽ ${item.data.price}</div>
+          </div>
+          <a href="${item.data.id}" class="button color_red size_norm">Подробнее</a>
+        </div>
+
+        </div></div>
+      `
+    }
+  }
   return new hbs.handlebars.SafeString(res)
 },
 

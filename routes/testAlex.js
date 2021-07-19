@@ -98,9 +98,39 @@ const teacher = [{
     experience:'7 лет'
   }
 }]
+
+const carusel = [{
+  type:'course',
+  data:{
+    id:'#21',
+    review:[
+      {id:1, review:5}, {id:1, review:6}, {id:1, review:5}
+    ],
+    title:'Цифровые инструменты и сервисы в современной библиотеке',
+    start:'1 сентября 2021 года',
+    hours: "252 часа",
+    period: '3 месяца',
+    price: 5990,
+    description:'Медиабизнес, как принято считать, раскручивает культурный опрос. Создание приверженного покупателя, анализируя результаты рекламной кампании, переворачивает жизненный цикл продукции. '
+  }
+},{
+  type:'course',
+  data:{
+    id:'#22',
+    review:[
+      {id:1, review:5}, {id:1, review:10}, {id:1, review:10}, {id:1, review:6}, {id:1, review:5}
+    ],
+    title:'Цифровые оболчки для управления данными',
+    start:'1 сентября 2021 года',
+    hours: "300 часа",
+    period: '4 месяца',
+    price: 65000,
+    description:'Медиабизнес, как принято считать, раскручивает культурный опрос. Создание приверженного переворачивает жизненный цикл продукции. '
+  }
+}]
 router.get('/', (req, res) => {
-    res.render('testAlex', { reviews, direction, organizators, teacher,
-    title: 'Страница с какой',
+    res.render('testAlex', { reviews, direction, organizators, teacher, carusel, 
+    title: 'Лёхина страница',
     helpers:{
       stringify: str => JSON.stringify(str),
     }});
