@@ -1,5 +1,6 @@
 {{> head }}
 <body>
+  <div></div>
   <header class="component_header">
     <div class="container">
       <a href="/">
@@ -20,17 +21,39 @@
       
       <button class="button size_norm">Войти</button>
 
-
       <div class="icons">
         <button class="button-icon laptop-hide">
-          <img src="/image/icons/search.svg" alt="" />
+          <img src="/image/icons/search.svg" alt="Search" />
         </button>
         <button class="button-icon laptop-hide">
-          <img src="/image/icons/logout.svg" alt="" />
+          <img src="/image/icons/logout.svg" alt="Logaut" />
         </button>
-        <button class="button-icon">
-          <img src="/image/icons/menu.svg" alt="" />
+        <button class="button-icon" id="show_menu">
+          <img src="/image/icons/menu.svg" alt="Menu" />
         </button>
+      </div>
+    </div>
+    <div class="drop_menu_mobile" id="drop_menu_mobile">
+      <div class="container">
+        <div class="top">
+          <div class="logo">
+            <img src="/image/white_logo.svg" alt="Logo" />
+          </div>
+          <div class="exit">
+            <button id="hide_menu"></button>
+          </div>
+        </div>
+        <ul class="linc_list">
+          <a href="/" class="linc big">Главная</a>
+          <a href="/" class="linc big">КАТАЛОГ ПРОГРАММ</a>
+          <a href="/" class="linc big">ОБРАЗОВАТЕЛЬНЫЕ ПРОГРАММЫ</a>
+          <a href="/" class="linc">Аспирантура</a>
+          <a href="/" class="linc">Повышение квалификации</a>
+          <a href="/" class="linc">Профессиональная переподготовка</a>
+          <a href="/" class="linc big">ПРЕПОДАВАТЕЛИ</a>
+          <a href="/" class="linc big">ОТЗЫВЫ</a>
+          <a href="/" class="linc big">СВЕДЕНИЯ ОБ ОРГАНИЗАЦИИ</a>
+        </ul>
       </div>
     </div>
   </header>

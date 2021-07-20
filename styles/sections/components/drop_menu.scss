@@ -1,0 +1,163 @@
+.component_header {
+  .drop_menu_mobile{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $primary_color;
+    z-index: 20;
+    padding: 20px 0;
+    transition: .5s all;
+    
+    @include tablets{
+      width: unset;
+      min-height: unset;
+      background-color: $white_color;
+      width: 311px;
+      left: unset;
+      right: calc(50vw - 353px);
+      top: calc(100% + 20px);
+      border-radius: $bd_rad;
+      border-top-right-radius: 0;
+      box-shadow: $shadow_md;
+      padding: 20px;
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: 0 0;
+    }
+    
+    @include laptop{
+      width: 350px;
+      right: calc(50vw - 595px);
+    }
+    
+    @include desktop{
+      right: calc(50vw - 735px);
+    }
+
+    &.activ{
+      left: 0;
+      @include tablets{
+        left: unset;
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+
+    &>.container{
+      display: flex;
+      flex-direction: column;
+      align-items: unset;
+
+      @include tablets{
+        width: 100%;
+        max-width: unset;
+        min-width: unset;
+      }
+
+      .top{
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 5px;
+
+        @include tablets{
+          display: none;
+        }
+
+        .logo{
+          width: 40px;
+          height: 40px;
+          
+          &>img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .exit{
+          width: 20px;
+          height: 20px;
+          border-radius: 10%;
+          overflow: hidden;
+
+          button{
+            position: relative;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            display: block;
+            cursor:pointer;
+
+            &::before{
+              display: block;
+              content: "";
+              position: absolute;
+              height: 100%;
+              width: 3px;
+              background-color: $white_color;
+              transform: rotate(45deg);
+              top: 0;
+              right: 50%;
+            }
+            &::after{
+              display: block;
+              content: "";
+              position: absolute;
+              height: 100%;
+              width: 3px;
+              right: 0;
+              background-color: $white_color;
+              transform: rotate(-45deg);
+              top: 0;
+              right: 50%;
+            }
+          }
+        }
+      }
+      .linc_list{
+        display: flex;
+        flex-direction: column;
+        
+        a.linc{
+          @include tablets{
+            color: $black_color;
+            font-size: $fz_sm;
+            margin-bottom: 0;
+            margin-top: 14px;
+          }
+          @include laptop{
+            font-size: $fz_md;
+          }
+          
+          font-size: $fz_md;
+          line-height: 160%;
+          margin-bottom: 20px;
+          color:$white_color;
+          text-decoration: none;
+
+          &:last-child{
+            margin-bottom: 0;
+          }
+
+          &.big{
+            font-weight: bold;
+            text-transform: uppercase;
+
+            @include tablets{
+
+              margin-top: 40px;
+              &:first-child{
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

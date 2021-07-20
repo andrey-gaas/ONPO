@@ -23,6 +23,30 @@ window.onload = () => {
     },
   });
 
+  let closeBtn = document.querySelector('#hide_menu')
+  let openBtn = document.querySelector('#show_menu')
+  let menuMobile = document.querySelector('#drop_menu_mobile')
+
+  openBtn.addEventListener( 'click', () => {
+    menuMobile.classList.toggle('activ')
+  } )
+  closeBtn.addEventListener( 'click', () => {
+    menuMobile.classList.remove('activ')
+  } )
+
+  
+};
+
+
+// function doExec(){
+//   var block=document.createElement('div');
+//   block.id='workimage';
+//   var image=document.createElement('img');
+//   image.src='http://javascript.ru/forum/images/ca_serenity/misc/logo.gif';
+//   block.appendChild(image);
+//   var obj=document.getElementById('img_container');
+//   obj.appendChild(block);
+// }
 
   // let btn = document.querySelector('#addimg')
   // let div = document.querySelector('.addimg')
@@ -35,14 +59,3 @@ window.onload = () => {
   //   arr.push(img)
   //   //div.appendChild(img)
   // }
-};
-
-// function doExec(){
-//   var block=document.createElement('div');
-//   block.id='workimage';
-//   var image=document.createElement('img');
-//   image.src='http://javascript.ru/forum/images/ca_serenity/misc/logo.gif';
-//   block.appendChild(image);
-//   var obj=document.getElementById('img_container');
-//   obj.appendChild(block);
-// }

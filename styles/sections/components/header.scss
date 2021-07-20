@@ -1,9 +1,15 @@
 .component_header {
-  padding: 20px 16px;
+  padding: 20px 0px;
   background-color: $white-color;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: $shadow_sm;
+  z-index: 10;
 
   @include tablets {
-    padding: 20px 40px;
+    padding: 20px 0;
   }
 
   @include laptop {
@@ -63,13 +69,22 @@
 
   .icons {
     margin-left: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    padding-right: 7px;
+    padding-left: 3px;
 
     @include laptop {
       margin-left: 80px;
     }
+    @include laptop{
+      width: 35px;
+    }
     
     .button-icon {
-      margin: 0 12px;
+      //margin: 0 12px;
       background: none;
       border: none;
       outline: none;
@@ -91,6 +106,7 @@
         }
       }
     }
+
   }
 
   .search {
