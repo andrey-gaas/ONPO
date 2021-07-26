@@ -15,9 +15,11 @@ article.card_review{
 
   @include laptop{
     width: 373px;
+    padding: 20px;
   }
   @include desktop{
     width: 453px;
+    
   }
   
   & .person{
@@ -25,7 +27,9 @@ article.card_review{
     align-items: center;
     padding-bottom: 10px;
     border-bottom: 1px solid $gray_light_color;
-
+    @include desktop{
+      padding-bottom: 20px;
+    }
     & .img_block{
       width: 60px;
       height: 60px;
@@ -52,6 +56,7 @@ article.card_review{
       display: flex;
       flex-direction: column;
       font-size: $fz_sm;
+      justify-content: center;
 
       @include laptop{
         font-size: $fz_md;
@@ -60,15 +65,19 @@ article.card_review{
 
       & .last_name{
         font-weight: bold;
-        line-height: 157%;
+        line-height: 160%;
       }
       & .first_name{
-        line-height: 157%;
+        line-height: 160%;
         margin-bottom: 10px;
       }
       & .position{
-        line-height: 157%;
+        line-height: 160%;
         color: $gray_light_color;
+
+        @include laptop{
+          font-size: $fz_sm;
+        }
       }
     }
   }
@@ -78,26 +87,38 @@ article.card_review{
     padding: 10px 0;
     border-bottom: 1px solid $gray_light_color;
 
+    @include desktop{
+      padding: 20px 0;
+    }
+
     & .course_item{
       position: relative;
       padding-left: 30px;
       font-size: $fz_sm;
       line-height: 135%;
       margin-bottom: 10px;
+      font-weight: bold;
       &:last-child{
         margin-bottom: 0;
       }
+      @include desktop{
+        font-size: $fz_md;
+        margin-bottom: 20px;
+        padding-right: 20px;
+      }
+      
       &::after{
         content: "";
         display: block;
         position: absolute;
         background-image: url(image/icons/course_flag.svg);
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         left: 4px;
         top: 50%;
         transform: translateY(-50%);
         //background-color: $primary_color;
-        width: 12px;
+        width: 13px;
         height: 16px;
 
       }
@@ -125,11 +146,15 @@ article.card_review{
   & .review{
     padding: 10px 0;
     padding-right: 20px;
-    margin-bottom: 54px;
+    margin-bottom: 50px;
 
     & .review_text{
       font-size: $fz_sm;
       line-height: 157%;
+
+      @include desktop{
+        font-size: $fz_md;
+      }
     }
   }
   & .review_status{

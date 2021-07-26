@@ -13,6 +13,7 @@ article.card_teacher{
     width: 334px;
   }
   @include laptop{
+    padding: 20px;
     width: 373px;
   }
   @include desktop{
@@ -49,7 +50,13 @@ article.card_teacher{
       padding-left: 10px;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       font-size: $fz_sm;
+
+      @include laptop{
+        font-size: $fz_md;
+        padding-right: 25px;
+      }
 
       & .last_name{
         font-weight: bold;
@@ -61,6 +68,10 @@ article.card_teacher{
       }
       & .position{
         color: $gray_light_color;
+
+        @include laptop{
+          font-size: $fz_sm;
+        }
       }
     }
   }
@@ -78,6 +89,14 @@ article.card_teacher{
       margin-bottom: 10px;
       color: $black_color;
       text-decoration: none;
+
+      @include laptop{
+        padding-right: 10px;
+      }
+      @include desktop{
+        padding-right: 30px;
+      }
+
       &:last-child{
         margin-bottom: 0;
       }
@@ -89,8 +108,9 @@ article.card_teacher{
         top: 50%;
         transform: translateY(-50%);
         background-image: url(image/icons/course_flag.svg);
-        background-size: cover;
-        width: 11px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 12px;
         height: 15px;
         
       }
@@ -100,7 +120,9 @@ article.card_teacher{
     padding: 10px 0;
     margin-bottom: 30px;
 
-    
+    @include tablets{
+      margin-bottom: 40px;
+    }
     
     & .education_item{
       font-size: $fz_sm;

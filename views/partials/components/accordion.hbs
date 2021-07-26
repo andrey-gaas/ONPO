@@ -1,0 +1,15 @@
+<ul class="accordion_list">
+  {{#each this}}
+    <li class="accordion_item">
+      <div class="top">
+        <span class="title">
+          {{this.title}}
+        </span>
+        <button id="toggle_show"></button>
+      </div>
+      <div class="text_wrap">
+        <p class="text">{{this.text}}</p>
+      </div>
+    </li>
+  {{/each}}
+</ul>

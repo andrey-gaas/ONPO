@@ -271,7 +271,9 @@
       font-weight: bold;
       font-size: 16px;
       line-height: 160%;
-
+      &>span{
+        font-family: "Gotham bold";
+      }
       @include tablets{
         font-size: $fz_lg;
       }

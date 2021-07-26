@@ -3,52 +3,113 @@ article.card {
   border-radius: $bd_rad_sm;
   box-shadow: $shadow_sm;
   overflow: hidden;
+  width: 100%;
 
+  @include tablets{
+    width: 334px;
+  }
+  @include laptop{
+    width: 373px;
+    display: flex;
+    flex-direction: column;
+  }
+  @include desktop{
+    width: 453px;
+  }
   .header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
-    height: 300px;
+    padding: 10px;
+    height: 200px;
     background-size: cover;
+    @include laptop{
+      padding: 20px;
+    }
+    @include desktop {
+      height: 300px;
+    }
 
     & > .type {
       padding: 10px;
-      font-size: $fz_md;
+      font-size: $fz_sm;
+      line-height: 160%;
       background-color: $accent_color;
       color: $white_color;
       border-radius: 20px;
+      font-weight: bold;
+      font-family: 'Gotham bold';
     }
 
     & > .discount {
       margin-top: 22px;
       padding: 10px;
       font-size: $fz_sm;
+      line-height: 160%;
       background-color: $white_color;
       border-radius: 20px;
     }
   }
 
   .description {
-    padding: 20px;
+    padding: 0 10px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+
+    @include laptop{
+      padding: 0 20px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    
 
     & > .title {
-      font-size: $fz_md;
+      font-size: $fz_sm;
+      line-height: 160%;
+
       line-height: 25px;
+      @include laptop{
+        font-size: 15px;
+      }
     }
 
     & > .review {
       display: flex;
-      margin-top: 20px;
+      align-items: center;
+      margin-top: 10px;
+      font-size: $fz_sm;
+      line-height: 160%;
+      @include tablets{
+        font-size: 15px;
+      }
+      @include laptop{
+        font-size: 16px;
+      }
+      @include desktop{
+        margin-top: 20px;
+      }
 
       .stars {
         display: flex;
+        align-items: center;
+        padding-bottom: 2px;
+
+        @include laptop{
+          padding-bottom: 4px;
+        }
 
         & > div {
           margin-right: 10px;
-          width: 20px;
-          height: 20px;
-          background-color: $primary_color;
+          width: 15px;
+          height: 15px;
+          background-image: url(image/icons/star_fill.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          @include laptop{
+            width: 20px;
+            height: 20px;
+          }
         }
       }
 
@@ -58,43 +119,100 @@ article.card {
     }
 
     .info {
-      margin-top: 25px;
-      padding: 25px 0;
+      margin-top: 10px;
+      padding: 10px 0;
       border-top: 1px solid $gray_light_color;
       border-bottom: 1px solid $gray_light_color;
-
+      @include desktop{
+        margin-top: 20px;
+        padding: 25px 0;
+      }
       & > .item {
         display: flex;
         align-items: center;
-        margin-top: 23px;
-
+        margin-top: 10px;
+        font-size: $fz_xsm;
+        line-height: 160%;
+        
+        @include tablets{
+          font-size: 13px;
+        }
+        @include laptop{
+          font-size: $fz_md;
+        }
+        @include desktop{
+          margin-top: 25px;
+        }
         &:first-child {
           margin-top: 0;
         }
 
         & > .icon {
-          width: 33px;
-          height: 33px;
-          background-color: $primary_color;
+          width: 17px;
+          height: 17px;
+
+          @include tablets{
+            width: 25px;
+            height: 25px;
+          }
+          @include laptop{
+            width: 33px;
+            height: 33px;
+          }
+
+          &>img{
+            width: 100%;
+            height: 100%;
+          }
         }
 
         & > .text {
-          margin-left: 25px;
+          margin-left: 7px;
+          @include tablets{
+            margin-left: 12px;
+          }
+          @include laptop{
+            margin-right: 27px;
+          }
+
         }
       }
     }
   }
 
-  .footer {
+  .course_footer {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    padding: 20px;
+    padding: 0 10px 20px 10px;
+
+    @include laptop{
+      flex-grow: 2;
+      justify-content: flex-end;
+    }
+
+    @include desktop{
+      flex-direction: row;
+      padding: 0 20px 20px 20px;
+      justify-content: space-between;
+    }
 
     & > .price {
+      font-size: $fz_lg;
+      margin-bottom: 20px;
+      line-height: 160%;
       font-weight: bold;
-      font-size: $fz_xl;
+      @include laptop{
+        margin-bottom: 40px;
+      }
+      @include desktop{
+        font-size: $fz_xl;
+        margin-bottom: 0;
+      }
+      &>span{
+        font-family: "Gotham bold";
+      }
     }
   }
 }

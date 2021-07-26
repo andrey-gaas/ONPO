@@ -1,0 +1,57 @@
+<article class="card" data-filter="{{#each categories}}{{this}} {{/each}}">
+    <header class="header" style="background-image: url({{this.image}})">
+      <div class="type">{{this.type}}</div>
+      <div class="discount">{{this.discount}}</div>
+    </header>
+    <section class="description">
+      <h1 class="title">{{#each categories}}{{this}} {{/each}}{{this.title}}</h1>
+
+      <div class="review">
+        <div class="stars">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="quantity">
+          (<a href="#">{{this.reviews.length}} отзыва</a>)
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="item">
+          <div class="icon">
+            <img src="/image/icons/bulb_primary.svg" alt="calendar">
+          </div>
+          <div class="text">
+            <strong>Старт</strong>
+            -
+            {{this.start}}
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon"><img src="/image/icons/clock_primary.svg" alt="calendar"></div>
+          <div class="text">
+            <strong>Количество часов</strong>
+            -
+            {{this.hours}}
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon"><img src="/image/icons/calendar_primary.svg" alt="calendar"></div>
+          <div class="text">
+            <strong>Срок обучения</strong> - {{this.term}}
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="course_footer">
+      <span class="price">
+        <span>&#8381;</span> {{this.price}} 
+      </span>
+      <button class="button size_norm">Подробнее</button>
+    </footer>
+</article> 

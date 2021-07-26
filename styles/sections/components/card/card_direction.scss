@@ -2,7 +2,7 @@ article.card_dirction{
   display: inline-flex;
   border-radius: $bd_rad_sm;
   box-shadow: $shadow_sm;
-  width: 343px;
+  width: 100%;
   background-size: cover;
   @include tablets{
     height: 495px;

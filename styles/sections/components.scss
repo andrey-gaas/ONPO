@@ -5,6 +5,7 @@
 @import './components/container.scss';
 @import './components/footer.scss';
 @import './components/carusel.scss';
+@import './components/accordion.scss';
 
 //card
 @import './components/card/card_direction.scss';
@@ -15,4 +16,12 @@
 @import './components/card/card_advantages.scss';
 @import './components/card/card_cubs.scss';
 @import './components/card/card_review.scss';
+
+//article
+
+@import './article/article_home_direction.scss';
+
+//sections
+
+@import './sections/section_education.scss';
 

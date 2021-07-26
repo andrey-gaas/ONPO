@@ -9,14 +9,16 @@
 
 @font-face {
 	font-family: 'Gotham';
+	// src: url(/font/MyFont-Bold.otf);
 	src: url(/font/Inter-SemiBold.woff2);
+	src: url(/font/GothamPro-Bold.woff2);
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Gotham bold';
-	src: url(/font/GothamPro-Bold.woff2);
+	src: url(/font/Inter-SemiBold.woff2);
 	font-weight: bold;
 	font-style: normal;
 }

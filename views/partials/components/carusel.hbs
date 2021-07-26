@@ -1,0 +1,36 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      {{#each this}}
+      <div class="swiper-slide"><div class="container">
+
+        <div class="slide_course">
+          <div class="top">
+            <div class="course">
+              <div class="title">{{this.data.title}}</div>
+              <div class="description">{{this.data.description}}</div>
+              <div class="date">
+                <span class="start"><span class="bold">Старт</span> - {{this.data.start}}</span>
+                <span class="hours"><span class="bold">Количество часов</span> - {{this.data.hours}}</span>
+                <span class="period"><span class="bold">Срок обучения</span> - {{this.data.period}}</span>
+              </div>
+              <div class="review">
+                {{ getStarsCourse this.data.review}}
+                <div class="count">({{this.data.review.length}} отзыва)</div>
+              </div>
+            </div>
+            <div class="price"><span>₽</span> {{this.data.price}}</div>
+          </div>
+          <a href="{{item.data.id}}" class="button color_red size_norm">Подробнее</a>
+        </div>
+
+        </div></div>
+      {{/each}}
+    </div>
+    <div class="pagination_wrapper">
+      <div class="swiper-button-prev"></div>
+
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>

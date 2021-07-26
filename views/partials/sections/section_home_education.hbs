@@ -1,0 +1,44 @@
+
+<section class="home_section_direction">
+  <div class="container">
+    <h1 class="title">
+      образование
+    </h1>
+
+    <article class="article_home_courses">
+      <div class="filter">
+        <button class="btn_filter_control btn_back"></button>
+        <div class="slider">
+          <ul class="filter_list">
+            <button class="filter_item active" data-filter="all">
+              Все программы
+            </button>
+            <button class="filter_item" data-filter="pop">
+              Популярные программы
+            </button>
+            <button class="filter_item" data-filter="best">
+              Ближайшие программы
+            </button>
+            <button class="filter_item" data-filter="asp">
+              Аспирантура
+            </button>
+            <button class="filter_item" data-filter="up">
+              Повышение квалификации
+            </button>
+            <button class="filter_item" data-filter="re">
+              Профессиональная переподготовка
+            </button>
+          </ul>
+        </div>
+        <button class="btn_filter_control btn_next"></button>
+      </div>
+      {{#each courses}}
+        {{>cards/card_course this}}
+      {{/each}}
+      <div class="button_wrpa">
+        <a href="#2" class="button size_norm color_red">Показать больше</a>
+      </div>
+    </article>
+    {{>article/article_home_direction direction}}
+  </div>
+</section>
