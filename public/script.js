@@ -118,17 +118,24 @@ window.onload = () => {
   filterBtnControlBack.addEventListener('click', () => slideFilter(1))
   filterBtnControlNext.addEventListener('click', () => slideFilter(-1))
 
-  let fnFitler = (e, touchEnd, touchMove) => {
+  let fnFitler = (eve, touchEnd, touchMove) => {
+
+    function getEvent(){
+      return (event.type.search('touch') !== -1) ? event.touches[0] : event;
+    }
+    
+    let e = getEvent()
     let shiftX = e.clientX;
     
 
     let maxScrol = filter.parentNode.offsetWidth - filter.offsetWidth
-    let leftStart = filter.style.left.slice(0, -2)
+    let leftStart = +filter.style.left.slice(0, -2)
 
-    let onMouseMove = e => {
+    let onMouseMove = () => {
+      let e = getEvent()
       filter.style.left = (+leftStart) + (e.pageX - shiftX )+ 'px';
     }
-
+  
     document.addEventListener(touchEnd, () => {
         if(filter.style.left.slice(0, -2) > 0){
           filter.style.transition = '.2s left'
@@ -185,9 +192,15 @@ window.onload = () => {
     }
   }
 
-  filter.onpointerdown = e => { fnFitler(e, 'pointerup', 'pointermove') }
+  filter.onmousedown = e => { fnFitler(e, 'mouseup', 'mousemove') }
+  filter.ontouchstart = e => { fnFitler(e, 'touchend', 'touchmove') }
 };
 
+// touchend
+
+// touchcancel
+
+// touchmove
 
 // function doExec(){
 //   var block=document.createElement('div');
