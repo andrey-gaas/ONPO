@@ -70,18 +70,6 @@ window.onload = () => {
 
   //filter
 
-  let chekIncludeCategorie = (card, dataFilter)=>{
-    let dataset = card.dataset.filter
-    let res = false
-    //console.log(dataset);
-    for(let elem of dataFilter){
-      if(dataset.includes(elem)){
-        res = true
-      }
-    }
-    return res
-  }
-
   let filterBtnList = document.querySelectorAll('.filter_list .filter_item')
   let filterCardList = document.querySelectorAll('.article_home_courses .card')
   let filter = document.querySelector('.filter_list')
@@ -97,7 +85,6 @@ window.onload = () => {
     
     left+= (direction*250)
     
-
     if(left > 0){
       filter.style.transition = '.15s left'
       filter.style.left = left + 'px'
@@ -131,8 +118,7 @@ window.onload = () => {
   filterBtnControlBack.addEventListener('click', () => slideFilter(1))
   filterBtnControlNext.addEventListener('click', () => slideFilter(-1))
 
-  filter.onmousedown = e => {
-    //console.log(fitlerBtn, filterCardList);
+  let fnFitler = (e, touchEnd, touchMove) => {
     let shiftX = e.clientX;
     
 
@@ -143,7 +129,7 @@ window.onload = () => {
       filter.style.left = (+leftStart) + (e.pageX - shiftX )+ 'px';
     }
 
-    document.addEventListener('mouseup', () => {
+    document.addEventListener(touchEnd, () => {
         if(filter.style.left.slice(0, -2) > 0){
           filter.style.transition = '.2s left'
           filter.style.left = '0px'
@@ -154,19 +140,18 @@ window.onload = () => {
           filter.style.left = maxScrol + 'px'
           setTimeout( ()=>{filter.style.transition = null}, 200)
         }
-        document.removeEventListener('mousemove', onMouseMove);
-        document.onmouseup = null;
+        document.removeEventListener( touchMove, onMouseMove);
+        document[( 'on'+touchEnd )] = null;
     });
 
-    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener(touchMove, onMouseMove);
 
     //btn filter
     if(e.target.nodeName === "BUTTON"){
-      e.target.onmouseup = e => {
+      e.target[( 'on'+touchEnd )] = e => {
         if((shiftX - e.clientX)**2 <= 225){
           
           let targetFilter = e.target.dataset.filter
-          //let indexElem = filterDate.indexOf(targetFilter)
           
           filterBtnList.forEach( item => {
             item.classList.remove('active')
@@ -195,25 +180,12 @@ window.onload = () => {
             }
             filterDate = targetFilter
           }
-            // if( indexElem === -1){
-
-            //   filterDate.push(targetFilter)
-            // }else{
-            //   filterDate.splice( indexElem, 1)
-            // }
-
-            // filterCardList.forEach( item => {
-            //   if(chekIncludeCategorie(item,filterDate )){
-            //     item.style.display = ''
-            //   }else{
-            //     item.style.display = 'none'
-            //   }
-            // })
         }
       }
     }
   }
 
+  filter.onpointerdown = e => { fnFitler(e, 'pointerup', 'pointermove') }
 };
 
 
