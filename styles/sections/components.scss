@@ -16,6 +16,7 @@
 @import './components/card/card_advantages.scss';
 @import './components/card/card_cubs.scss';
 @import './components/card/card_review.scss';
+@import './components/card/card_format.scss';
 
 //article
 
@@ -23,5 +24,7 @@
 
 //sections
 
+@import './sections/section_home_main.scss';
 @import './sections/section_education.scss';
+@import './sections/section_home_faq.scss';
 

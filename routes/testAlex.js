@@ -148,9 +148,8 @@ const accordion = [{
 router.get('/', (req, res) => {
     res.render('testAlex', { reviews, direction, organizators, teacher, carusel, accordion,
     title: 'Лёхина страница',
-    helpers:{
-      stringify: str => JSON.stringify(str),
-    }});
+    
+    });
 });
 
 module.exports = router;

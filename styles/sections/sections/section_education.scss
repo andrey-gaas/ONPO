@@ -1,26 +1,143 @@
 section.home_section_direction{
   margin-bottom: 100px;
+
+  @include tablets{
+    margin-bottom: 120px;
+  }
+  @include laptop{
+    margin-bottom: 160px;
+  }
+
   .container>.title{
-    text-transform: uppercase;
-    font-size: $fz_lg;
-    font-weight: bold;
-    line-height: 160%;
     margin-bottom: 20px;
+
+    @include laptop{
+      margin-bottom: 40px;
+    }
+  }
+
+  .article_home_format{
+    margin-bottom: 100px;
+
+    @include tablets{
+      margin-bottom: 120px;
+    }
+    @include laptop{
+      margin-bottom: 160px;
+    }
+    &>.title{
+      margin-bottom: 10px;
+      @include tablets{
+        margin-bottom: 20px;
+      }
+      @include laptop{
+        margin-bottom: 40px;
+      }
+    }
+    &>.text{
+      color: $black_color;
+      font-size: $fz_sm;
+      line-height: 160%;
+      margin-bottom: 20px;
+
+      @include tablets {
+        width: 60%;
+        font-size: $fz_md;
+      }
+      @include laptop{
+        width: 50%;
+        font-size: 20px;
+        margin-bottom: 40px;
+      }
+    }
+
+    &>.card_list{
+      display: flex;
+      flex-direction: column;
+      
+      @include tablets{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: -20px;
+        margin-right: -20px;
+      }
+      @include desktop{
+        margin-right: -40px;
+        margin-bottom: -40px;
+      }
+
+
+      .card_item{
+        margin-bottom: 20px;
+        display: flex;
+        @include tablets{
+          margin-right: 20px;
+        }
+        @include desktop{
+          margin-right: 40px;
+          margin-bottom: 40px;
+        }
+
+        &:last-child{
+          margin-bottom: 0;
+          @include tablets{
+            margin-bottom: 20px;
+          }
+          @include desktop{
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
   }
 
   .article_home_courses{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 100px;
-    @include laptop{
-      justify-content: flex-start;
-      margin-right: -20px;
-    }
-    @include desktop{
-      margin-right: -40px;
-    }
+    
+    
+    &>.courses_list{
+      display: none;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      @include tablets{
+        display: flex;
+        margin-right: -20px;
+        justify-content: flex-start;
+      }
+      @include laptop{
+        margin-bottom: 40px;
+        margin-right: -20px;
+      }
+      @include desktop{
+        margin-right: -40px;
+        margin-bottom: 20px;
+      }
 
+      .courses_item{
+        display: flex;
+        margin-bottom: 20px;
+
+        @include tablets{
+          margin-right: 20px;
+        }
+        @include desktop{
+          margin-right: 40px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+    .title{
+      margin-bottom: 10px;
+      @include tablets{
+        margin-bottom: 20px;
+      }
+      @include laptop{
+        margin-bottom: 40px;
+      }
+
+    }
     .filter{
       width: 100%;
       display: flex;
@@ -132,13 +249,28 @@ section.home_section_direction{
     
     &>.button_wrpa{
       width: 100%;
-      margin-top: 20px;
       display: flex;
       justify-content: center;
-      @include laptop{
-        margin-right: 20px;
-        margin-top: 40px;
-      }
+    }
+  }
+  .home_carusel_wrpa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablets{
+      display: none;
+    }
+  }
+  .cr_list{
+    display: none !important;
+    @include tablets{
+      display: flex !important;
+    }
+  }
+  .cr_cor{
+    display: flex !important;
+    @include tablets{
+      display: none !important;
     }
   }
 }

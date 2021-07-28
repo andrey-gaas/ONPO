@@ -50,6 +50,7 @@
         }
         @include laptop{
           width: 1000px;
+          font-size: $fz_md;
         }
       }
 
@@ -101,6 +102,7 @@
         @include laptop{
           width: 700px;
           padding-bottom: 20px;
+          font-size: $fz_md;
         }
       }
     }

@@ -1,11 +1,29 @@
 
 <section class="home_section_direction">
   <div class="container">
-    <h1 class="title">
+    <h1 class="title home_title">
       образование
     </h1>
-
+    {{>article/article_home_direction direction}}
+    <article class="article_home_format">
+      <h2 class="title home_subtitle">
+        Формат обучения
+      </h2>
+      <div class="text">
+        <p>Создание приверженного покупателя, анализируя результаты рекламной кампании, переворачивает жизненный цикл продукции.</p>
+      </div>
+      <ul class="card_list">
+      {{#each format}}
+        <li class="card_item">
+          {{>cards/card_format this}}
+        </li>
+      {{/each}}
+      </ul>
+    </article>
     <article class="article_home_courses">
+      <h2 class="title home_subtitle">
+        образовательные программы
+      </h2>
       <div class="filter">
         <button class="btn_filter_control btn_back"></button>
         <div class="slider">
@@ -32,13 +50,40 @@
         </div>
         <button class="btn_filter_control btn_next"></button>
       </div>
-      {{#each courses}}
-        {{>cards/card_course this}}
-      {{/each}}
-      <div class="button_wrpa">
+
+      <ul class="courses_list">
+        {{#each courses}}
+          <li class="courses_item">
+            {{>cards/card_course this}}
+          </li>
+        {{/each}}
+      </ul>
+      <div class="button_wrpa cr_list">
         <a href="#2" class="button size_norm color_red">Показать больше</a>
       </div>
     </article>
-    {{>article/article_home_direction direction}}
+  </div>
+  <div class="home_carusel_wrpa">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {{#each courses}}
+        <div class="swiper-slide"><div class="container">
+
+          {{>cards/card_course this}}
+
+          </div></div>
+        {{/each}}
+      </div>
+      <div class="pagination_wrapper">
+        <div class="swiper-button-prev"></div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <div class="button_wrpa cr_cor">
+      <a href="#2" class="button size_norm color_red">Показать больше</a>
+    </div>
   </div>
 </section>

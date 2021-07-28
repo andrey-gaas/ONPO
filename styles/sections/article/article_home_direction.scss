@@ -1,4 +1,12 @@
 article.section_direction{
+  margin-bottom: 100px;
+  @include tablets{
+    margin-bottom: 120px;
+  }
+  @include laptop {
+    margin-bottom: 160px;
+  }
+  
   &>.title{
     font-size: $fz_lgs;
     text-transform: uppercase;
@@ -6,12 +14,30 @@ article.section_direction{
     line-height: 160%;
     margin-bottom: 10px;
 
+    @include tablets{
+      font-size: $fz_lg;
+      margin-bottom: 20px;
+    }
+    @include laptop{
+      font-size: $fz_xl;
+      margin-bottom: 40px;
+    }
   }
 
   &>.text{
+    color: $black_color;
     font-size: $fz_sm;
     line-height: 160%;
     margin-bottom: 20px;
+
+    @include tablets{
+      width: 60%;
+      margin-bottom: 20px;
+    }
+    @include laptop{
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
   }
 
   &>.conteiner{

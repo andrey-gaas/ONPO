@@ -1,0 +1,99 @@
+section.section_main{
+  margin-top: 40px;
+  margin-bottom: 100px;
+  
+  @include tablets{
+    margin-bottom: 120px;
+  }
+  @include laptop{
+    margin-bottom: 160px;
+  }
+  &>.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @include laptop{
+      height: 540px;
+    }
+    @include desktop{
+      height: 700px;
+      justify-content: center;
+    }
+  }
+  .title{
+    margin-bottom: 20px;
+    color: $black_color;
+    font-size: $fz_lg;
+    line-height: 160%;
+    @include tablets{
+      font-size: $fz_mxl;
+    }
+    @include laptop{
+      font-size: $fz_xl;
+      width: 570px;
+      margin-right: 20px;
+    }
+    @include desktop{
+      font-size: $fz_mxl;
+      width: 700px;
+    }
+  }
+  .main_img{
+    height: 173px;
+    width: 100%;
+    border-radius: $bd_rad_sm;
+    margin-bottom: 20px;
+    background-image: url('/image/main_section.png');
+    background-size: cover;
+    background-position: center 35%;
+    @include tablets{
+      height: 334px;
+      border-radius: $bd_rad;
+    }
+    @include laptop{
+      display: flex;
+      width: 570px;
+      height: 540px;
+      order: 5;
+      margin-bottom: 0;
+    }
+    @include desktop{
+      width: 700px;
+      height: 700px;
+    }
+  }
+  .text{
+    margin-bottom: 40px;
+    color: $black_color;
+    font-size: $fz_sm;
+    line-height: 160%;
+
+    @include tablets{
+      font-size: $fz_md;
+    }
+    @include laptop{
+      width: 570px;
+    }
+    @include desktop{
+      width: 700px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .button_wrap{
+    display: flex;
+    @include laptop{
+      width: 570px;
+    }
+    @include desktop{
+      width: 700px;
+    }
+    a:first-child{
+      margin-right: 20px;
+      @include tablets{
+        margin-right: 40px;
+      }
+    }
+    //justify-content: space-between;
+  }
+}

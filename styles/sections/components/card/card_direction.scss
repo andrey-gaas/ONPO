@@ -23,7 +23,7 @@ article.card_dirction{
     text-transform: uppercase;
     line-height: 1.6;
     text-align: center;
-
+    font-family: 'Gotham bold';
     @include tablets{
       font-size: $fz_lgm;
     }

@@ -1,7 +1,6 @@
 import Swiper from "/swiper.js";
-
 window.onload = () => {
-  const swiper = new Swiper(".swiper-container", {
+  let swipers = new Swiper(".swiper-container", {
     // Optional parameters
     direction: "horizontal",
     slidesPerView: 1,
@@ -22,7 +21,9 @@ window.onload = () => {
     scrollbar: {
       el: ".swiper-scrollbar",
     },
-  });
+  })
+
+  let swipert = swipers[1]
 
   //drop menu
   let closeBtn = document.querySelector('#hide_menu')
@@ -71,15 +72,26 @@ window.onload = () => {
   //filter
 
   let filterBtnList = document.querySelectorAll('.filter_list .filter_item')
-  let filterCardList = document.querySelectorAll('.article_home_courses .card')
+  let filterCardList = document.querySelectorAll('.card_courses_filter')
   let filter = document.querySelector('.filter_list')
   let filterDate = 'all'
+
+  filterCardList.forEach(item => {
+    if(item.parentNode.parentNode.parentNode.className === "swiper-wrapper"){
+      item.swipertWrap = '<div class="swiper-slide">'+item.parentNode.parentNode.innerHTML+'</div>'
+    }
+  })
 
   if(filter.style.left === ''){
     filter.style.left = '0px'
   }
 
+  let isBtnControlWorks = false
+
   let slideFilter = direction => {
+    if(isBtnControlWorks){ return }
+    isBtnControlWorks = true
+
     let left = +filter.style.left.slice(0, -2)
     let maxScrol = filter.parentNode.offsetWidth - filter.offsetWidth
     
@@ -92,6 +104,7 @@ window.onload = () => {
         filter.style.left = '0px'
         setTimeout( ()=> {
           filter.style.transition = null
+          isBtnControlWorks = false
         }, 150)
       }, 150)
       return
@@ -104,13 +117,17 @@ window.onload = () => {
         filter.style.left = maxScrol + 'px'
         setTimeout( ()=> {
           filter.style.transition = null
+          isBtnControlWorks = false
         }, 150)
       }, 150)
       return
     }
     filter.style.transition = '.2s left'
     filter.style.left = left + 'px'
-    setTimeout( ()=>{filter.style.transition = null}, 200)
+    setTimeout( ()=>{
+      isBtnControlWorks = false
+      filter.style.transition = null
+    }, 200)
   }
   let filterBtnControlBack = document.querySelector('.btn_back.btn_filter_control')
   let filterBtnControlNext = document.querySelector('.btn_next.btn_filter_control')
@@ -126,6 +143,7 @@ window.onload = () => {
     
     let e = getEvent()
     let shiftX = e.clientX;
+    let shiftY = e.clientY;
     
 
     let maxScrol = filter.parentNode.offsetWidth - filter.offsetWidth
@@ -135,23 +153,42 @@ window.onload = () => {
       let e = getEvent()
       filter.style.left = (+leftStart) + (e.pageX - shiftX )+ 'px';
     }
-  
-    document.addEventListener(touchEnd, () => {
-        if(filter.style.left.slice(0, -2) > 0){
-          filter.style.transition = '.2s left'
-          filter.style.left = '0px'
-          setTimeout( ()=>{filter.style.transition = null}, 200)
-        }
-        if(filter.style.left.slice(0, -2) < maxScrol){
-          filter.style.transition = '.2s left'
-          filter.style.left = maxScrol + 'px'
-          setTimeout( ()=>{filter.style.transition = null}, 200)
-        }
-        document.removeEventListener( touchMove, onMouseMove);
-        document[( 'on'+touchEnd )] = null;
-    });
 
-    document.addEventListener(touchMove, onMouseMove);
+    let stopMove = () => {
+      if(filter.style.left.slice(0, -2) > 0){
+        filter.style.transition = '.2s left'
+        filter.style.left = '0px'
+        setTimeout( ()=>{filter.style.transition = null}, 200)
+      }
+      if(filter.style.left.slice(0, -2) < maxScrol){
+        filter.style.transition = '.2s left'
+        filter.style.left = maxScrol + 'px'
+        setTimeout( ()=>{filter.style.transition = null}, 200)
+      }
+      document.body.classList.remove('overflow_hidden')
+      document.removeEventListener( touchMove, onMouseMove);
+      document.removeEventListener( touchMove, checkUpDownScroll);
+      document[( 'on'+touchEnd )] = null;
+    }
+    document.addEventListener(touchEnd, stopMove);
+
+    let checkUpDownScroll = () =>{
+      document.removeEventListener( touchMove, checkUpDownScroll);
+      let e = getEvent()
+      let X =  e.clientX - shiftX
+      let Y =  e.clientY - shiftY
+
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // код для мобильных устройств
+        if( ((X/Y) * (X/Y)) > 1){
+          document.body.classList.add('overflow_hidden')
+          document.addEventListener(touchMove, onMouseMove);
+        }
+      }else{
+        document.addEventListener(touchMove, onMouseMove);
+      }
+    }
+    document.addEventListener(touchMove, checkUpDownScroll);
 
     //btn filter
     if(e.target.nodeName === "BUTTON"){
@@ -165,28 +202,40 @@ window.onload = () => {
           })
           e.target.classList.toggle('active')
           
+          swipert.removeAllSlides()
+
           if(filterDate === targetFilter){
             filterDate = ''
             filterCardList.forEach(item => {
-              item.style.display = 'none'
+              item.parentNode.style.display = 'none'
             })
             e.target.classList.toggle('active')
           }else{
             if(targetFilter === 'all'){
               filterCardList.forEach(item => {
-                item.style.display = ''
+                item.parentNode.style.display = ''
+                if(item.swipertWrap){
+                  swipert.appendSlide (item.swipertWrap )
+                }
               })
             }else{
               filterCardList.forEach(item => {
                 if(item.dataset.filter.includes(targetFilter)){
-                  item.style.display = ''
+                  item.parentNode.style.display = ''
+
+                  if(item.swipertWrap){
+                    swipert.appendSlide (item.swipertWrap )
+                  }
                 }else{
-                  item.style.display = 'none'
+                  item.parentNode.style.display = 'none'
                 }
               })
             }
             filterDate = targetFilter
           }
+
+          //swipert.virtual.update()
+          
         }
       }
     }
@@ -201,25 +250,3 @@ window.onload = () => {
 // touchcancel
 
 // touchmove
-
-// function doExec(){
-//   var block=document.createElement('div');
-//   block.id='workimage';
-//   var image=document.createElement('img');
-//   image.src='http://javascript.ru/forum/images/ca_serenity/misc/logo.gif';
-//   block.appendChild(image);
-//   var obj=document.getElementById('img_container');
-//   obj.appendChild(block);
-// }
-
-  // let btn = document.querySelector('#addimg')
-  // let div = document.querySelector('.addimg')
-  // let arr = []
-  // console.log(btn, div);
-  // btn.onclick = ()=>{
-  //   console.log('click')
-  //   let img = document.createElement('img')
-  //   img.src = "https://cdn-images-1.medium.com/max/914/1*Cc17I5suUcQuka6bG3d2rQ.png"
-  //   arr.push(img)
-  //   //div.appendChild(img)
-  // }

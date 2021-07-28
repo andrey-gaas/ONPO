@@ -3,14 +3,22 @@
   min-height: 390px;
   display: flex;
   flex-wrap: wrap;
-  background-color: gray;
   overflow: hidden;
   position: relative;
-  background-image: url(/image/carusel_bg.png);
   background-size: cover;
   background-position: center;
-  margin-bottom: 100px;
   
+  &.bg_image{
+    background-image: url(/image/carusel_bg.png);
+    margin-bottom: 100px;
+  
+    @include tablets{
+      margin-bottom: 120px;
+    }
+    @include laptop{
+      margin-bottom: 160px;
+    }
+  }
   @include tablets{
     min-height: 447px;
   }
@@ -21,7 +29,7 @@
 }
 .swiper-slide{
   height: 100%;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,6 +37,7 @@
   &>.container.container{
     margin-bottom: 0;
   }
+
 }
 .pagination_wrapper{
   display: flex;
@@ -40,6 +49,9 @@
   @include tablets{
     height: 60px;
     margin-top: 40px;
+  }
+  @include laptop{
+    margin-bottom: 40px;
   }
 }
 
@@ -108,12 +120,17 @@
 }
 
 .slide_course{
+  // background-image: url(/image/carusel_bg.png);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 310px;
   padding-top: 20px;
+
+  @include desktop{
+    padding-top: 40px;
+  }
   & .top{
     margin-bottom: 40px;
     display: flex;
@@ -146,6 +163,7 @@
 
         @include laptop{
           width: 668px;
+          margin-bottom: 20px;
         }
         @include desktop{
           font-size: $fz_xl;
@@ -190,8 +208,14 @@
             margin-bottom: 18px;
             line-height: 25px;
           }
+          @include laptop{
+            margin-bottom: 25px;
+            line-height: 33px;
+            padding-left: 50px;
+          }
           @include desktop{
             font-size: $fz_md;
+            margin-bottom: 45px;
           }
 
           &:last-child{
@@ -217,6 +241,10 @@
               width: 25px;
               height: 25px;
             }
+            @include laptop{
+              width: 33px;
+              height: 33px;
+            }
           }
         }
         & .start::before{
@@ -240,6 +268,12 @@
             width: 15px;
             height: 15px;
             margin-right: 10px;
+
+            @include laptop{
+              &:last-child{
+                margin-right: 20px;
+              }
+            }
             @include desktop{
               width: 20px;
               height: 20px;

@@ -1,0 +1,17 @@
+section.section_home_faq{
+  margin-bottom: 100px;
+
+  @include tablets{
+    margin-bottom: 120px;
+  }
+  @include laptop{
+    margin-bottom: 160px;
+  }
+  
+  &>.container>.title{
+    margin-bottom: 20px;
+    @include laptop{
+      margin-bottom: 40px;
+    }
+  }
+}

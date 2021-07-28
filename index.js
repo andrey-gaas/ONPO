@@ -8,6 +8,8 @@ const hbs = exphbs.create({
   extname: 'hbs',
   
   helpers: {
+    stringify: str => JSON.stringify(str),
+    addOne: val => ++val,
     getName: obj=> `${obj.surname} ${obj.name[0].toUpperCase()}. ${obj.middlename?obj.middlename[0].toUpperCase()+'.' : "" }`,
     getDate: time => {
       let date = new Date(time)

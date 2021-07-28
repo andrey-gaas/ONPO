@@ -6,12 +6,7 @@ footer.footer{
   background-color: $black_color;
   color:$white_color;
   align-items: center;
-  @include tablets{
-    margin-top: 120px;
-  }
-  @include laptop{
-    margin-top: 160px;
-  }
+ 
 
   & .logo{
     width: 40px;

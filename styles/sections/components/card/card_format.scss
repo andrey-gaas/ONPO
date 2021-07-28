@@ -1,0 +1,94 @@
+article.card_format{
+  width: 100%;
+  min-height: 169px;
+  border-radius: $bd_rad_sm;
+  display: flex;
+  background-color: $white_color ;
+  overflow: hidden;
+  box-shadow: $shadow_sm;
+
+
+  @include tablets{
+    width: 334px;
+    //height: 212px;
+    border-radius: $bd_rad;
+  }
+  @include laptop{
+    width: 373px;
+  }
+  @include desktop{
+    width: 453px;
+    //height: 242px;
+  }
+
+  .right{
+    width: 90px;
+    background-color: $accent_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    
+    @include tablets{
+      width: 80px;
+    }
+    @include laptop{
+      width: 100px;
+    }
+    @include desktop{
+      width: 160px;
+    }
+    .index{
+      border-radius: 50%;
+      background-color: $white_color;
+      color: $primary_color;
+      font-size: $fz_lg;
+      box-shadow: $shadow_sm ;
+      font-weight: bold;
+      height: 60px;
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include laptop{
+        width: 80px;
+        height: 80px;
+      }
+      @include desktop{
+        width: 100px;
+        height: 100px;
+        font-size: $fz_xl;
+      }
+    }
+  }
+
+  .left{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablets{
+      padding: 20px;
+    }
+
+    .title{
+      text-transform: uppercase;
+      font-size: $fz_md;
+      font-weight: bold;
+      margin-bottom: 10px;
+      line-height: 160%;
+      @include desktop{
+        margin-bottom: 20px;
+      }
+    }
+    .text{
+      line-height: 160%;
+      font-size: $fz_sm;
+
+      @include laptop{
+        font-size: $fz_md;
+      }
+      
+    }
+  }
+}
