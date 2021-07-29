@@ -1,0 +1,82 @@
+section.home_form{
+  background-color: $black_color;
+  color: $white_color;
+  padding: 20px 0;
+  margin-bottom: 100px;
+
+  @include tablets{
+    margin-bottom: 120px;
+  }
+  @include laptop{
+    margin-bottom: 160px;
+  }
+
+  .container{
+    .title{
+      color: $white_color;
+      margin-bottom: 20px;
+      @include tablets{
+        width: 460px;
+      }
+      @include laptop{
+        width: 620px;
+        margin-bottom: 40px;
+      }
+      @include desktop{
+        width: 833px;
+      }
+    }
+    form{
+      
+      @include laptop{
+        width: 570px;
+        margin: 0 auto;
+      }
+      @include desktop{
+        width: 700px;
+        margin: 0 auto;
+      }
+
+      .form_input{
+        border-bottom: 1px solid $white_color ;
+        margin-bottom: 20px;
+
+        input{
+          width: 100%;
+          border:none;
+          outline: none;
+          background: transparent;
+          box-shadow: none;
+          color: $white_color;
+          font-family: "Gotham";
+          font-size: $fz_sm;
+          line-height: 160%;
+          margin-bottom: 5px;
+          padding-right: 25px;
+
+          @include tablets{
+            font-size: $fz_md;
+          }
+
+          &::placeholder{
+            color: $white_color;
+            opacity: 1;
+            transition: .3;
+          }
+          &:focus::placeholder{
+            color: transparent;
+          }
+
+          &::-webkit-input-placeholder {color:$white_color;}
+          &::-moz-placeholder          {color:$white_color;}/* Firefox 19+ */
+          &:-moz-placeholder           {color:$white_color;}/* Firefox 18- */
+          &:-ms-input-placeholder      {color:$white_color;}
+        }
+      }
+      &>.button{
+        margin: 40px auto 0 auto;
+      }
+    }
+    
+  }
+}
