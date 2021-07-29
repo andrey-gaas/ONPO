@@ -1,6 +1,6 @@
 import Swiper from "/swiper.js";
 window.onload = () => {
-  let swipers = new Swiper(".swiper-container", {
+  let homeMainCorusel = new Swiper(".home_main_corusel", {
     // Optional parameters
     direction: "horizontal",
     slidesPerView: 1,
@@ -17,13 +17,34 @@ window.onload = () => {
       prevEl: ".swiper-button-prev",
     },
 
-    // And if we need scrollbar
+    // And if we need scrollbar 
     scrollbar: {
       el: ".swiper-scrollbar",
     },
   })
 
-  let swipert = swipers[1]
+  let homeCourseCorusel = new Swiper(".home_courses_swiper_container", {
+    // Optional parameters
+    direction: "horizontal",
+    slidesPerView: 1,
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // And if we need scrollbar home_courses_swiper_container
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  })
 
   //drop menu
   let closeBtn = document.querySelector('#hide_menu')
@@ -78,7 +99,7 @@ window.onload = () => {
 
   filterCardList.forEach(item => {
     if(item.parentNode.parentNode.parentNode.className === "swiper-wrapper"){
-      item.swipertWrap = '<div class="swiper-slide">'+item.parentNode.parentNode.innerHTML+'</div>'
+      item.swiperWrap = '<div class="swiper-slide">'+item.parentNode.parentNode.innerHTML+'</div>'
     }
   })
 
@@ -202,7 +223,7 @@ window.onload = () => {
           })
           e.target.classList.toggle('active')
           
-          swipert.removeAllSlides()
+          homeCourseCorusel.removeAllSlides()
 
           if(filterDate === targetFilter){
             filterDate = ''
@@ -214,8 +235,8 @@ window.onload = () => {
             if(targetFilter === 'all'){
               filterCardList.forEach(item => {
                 item.parentNode.style.display = ''
-                if(item.swipertWrap){
-                  swipert.appendSlide (item.swipertWrap )
+                if(item.swiperWrap){
+                  homeCourseCorusel.appendSlide (item.swiperWrap )
                 }
               })
             }else{
@@ -223,8 +244,8 @@ window.onload = () => {
                 if(item.dataset.filter.includes(targetFilter)){
                   item.parentNode.style.display = ''
 
-                  if(item.swipertWrap){
-                    swipert.appendSlide (item.swipertWrap )
+                  if(item.swiperWrap){
+                    homeCourseCorusel.appendSlide (item.swiperWrap )
                   }
                 }else{
                   item.parentNode.style.display = 'none'

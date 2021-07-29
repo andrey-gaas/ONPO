@@ -176,8 +176,45 @@ router.get('/', (req, res) => {
         description:'Медиабизнес, как принято считать, раскручивает культурный опрос. Создание приверженного переворачивает жизненный цикл продукции. '
       }
     }]
+    const organizators =[{
+      name: 'Ирина',
+      surname: 'Гузенок',
+      middlename: 'Валерьевна',
+      position:'Заведующий отделом непрерывного профессионального образования',
+      education:'Кандидат технических наук',
+      phone:'(383) 373-06-58',
+      email:'guzenok@gpntbsib.ru',
+      image: '1.png'
+    },{
+      name: 'Екатерина',
+      surname: 'Туманик',
+      middlename: 'Николаевна',
+      position:'Заведующий отделом непрерывного профессионального образования',
+      education:'Кандидат технических наук',
+      phone:'(383) 373-06-58',
+      email:'tumanik@gpntbsib.ru',
+      image: '2.png'
+    },{
+      name: 'Ирина',
+      surname: 'Гузенок',
+      middlename: 'Валерьевна',
+      position:'Заведующий отделом непрерывного профессионального образования',
+      education:'Кандидат технических наук',
+      phone:'(383) 373-06-58',
+      email:'guzenok@gpntbsib.ru',
+      image: '1.png'
+    },{
+      name: 'Екатерина',
+      surname: 'Туманик',
+      middlename: 'Николаевна',
+      position:'Заведующий отделом непрерывного профессионального образования',
+      education:'Кандидат технических наук',
+      phone:'(383) 373-06-58',
+      email:'tumanik@gpntbsib.ru',
+      image: '2.png'
+    }]
 
-    res.render('home', { courses, direction, format, accordion, carusel });
+    res.render('home', { courses, direction, format, accordion, carusel, organizators, });
 });
 
 module.exports = router;

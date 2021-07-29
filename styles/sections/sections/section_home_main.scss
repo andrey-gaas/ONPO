@@ -82,6 +82,8 @@ section.section_main{
 
   .button_wrap{
     display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
     @include laptop{
       width: 570px;
     }
@@ -90,6 +92,7 @@ section.section_main{
     }
     a:first-child{
       margin-right: 20px;
+      margin-bottom: 15px;
       @include tablets{
         margin-right: 40px;
       }

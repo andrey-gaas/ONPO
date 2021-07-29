@@ -1,0 +1,69 @@
+<section class="home_info">
+  <div class="container">
+    <h1 class="home_title title">СВЕДЕНИЯ О СТРУКТУРНОМ ПОДРАЗДЕЛЕНИИ</h1>
+    <article class="organizators">
+      <h2 class="home_subtitle title">отдел непрерывного профессионального образования</h2>
+      <div class="text">
+        <p>Создание приверженного покупателя, анализируя результаты рекламной кампании, переворачивает жизненный цикл продукции.</p>
+      </div>
+      <ul class="organizator_list">
+        {{#each this}}
+          <li class="organizator_item">
+            {{> cards/card_organizer this}}
+          </li>
+        {{/each}}
+      </ul>
+      <a href="" class="button size_norm linck">Подробнее</a>
+    </article>
+    <article class="contact">
+      <h2 class="home_subtitle title">Контакты</h2>
+      <div class="wrap_mab_date">
+        <h3 class="subtitle">отдел непрерывного профессионального образования</h3>
+        <div class="date">
+          <div class="addres">
+            <span>ул. Восход, 15, Новосибирск, Новосибирская обл., 630102</span>
+          </div>
+          <ul class="time_work">
+            <li class="time_work_item">
+              <span class="day">среда</span>
+              <span class="time">09:00 — 19:00</span>
+            </li>
+            <li class="time_work_item">
+              <span class="day">четверг</span>
+              <span class="time">09:00 — 19:00</span>
+            </li>
+            <li class="time_work_item">
+              <span class="day">пятница</span>
+              <span class="time">09:00 — 19:00</span>
+            </li>
+            <li class="time_work_item">
+              <span class="day">суббота</span>
+              <span class="time">10:00 — 19:00</span>
+            </li>
+            <li class="time_work_item">
+              <span class="day">воскресенье</span>
+              <span class="time free_day">выходной</span>
+            </li>
+            <li class="time_work_item">
+              <span class="day">понедельник</span>
+              <span class="time free_day">выходной</span>
+            </li>
+            <li class="time_work_item">
+              <span class="day">вторник</span>
+              <span class="time">09:00 — 19:00</span>
+            </li>
+          </ul>
+          <div class="phone">
+            <span>(383) 373-06-58</span>
+          </div>
+          <div class="mail">
+            <span>guzenok@gpntbsib.ru</span>
+          </div>
+        </div>
+        <div class="map">
+          <div class="geo_label"><span>Восход, 15</span></div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

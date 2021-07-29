@@ -1,0 +1,259 @@
+section.home_info{
+  margin-bottom: 100px;
+  @include tablets{
+    margin-bottom: 120px;
+  }
+  @include laptop{
+    margin-bottom: 160px;
+  }
+  .container{
+
+    &>.title{
+      margin-bottom: 20px;
+      @include laptop{
+        margin-bottom: 40px;
+      }
+    }
+
+    .organizators{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 100px;
+      @include tablets{
+        margin-bottom: 120px;
+      }
+      @include laptop{
+        margin-bottom: 160px;
+      }
+
+      &>.title{
+        margin-bottom: 10px;
+        @include tablets{
+          margin-bottom: 20px;
+        }
+        @include laptop{
+          width: 100%;
+          margin-bottom: 40px;
+        }
+        
+      }
+      &>.text{
+        font-size: $fz_sm;
+        line-height: 160%;
+        margin-bottom: 20px;
+        width: 100%;
+
+        @include laptop{
+          font-size: 20px;
+          margin-bottom: 40px;
+        }
+        @include desktop{
+          font-size: 28px;
+        }
+        p{
+          @include tablets{
+            width: 423px;
+          }
+          @include laptop{
+            width: 570px;
+          }
+          @include desktop{
+            width: 823px;
+          }
+        }
+      }
+
+      .organizator_list{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        width: 100%;
+        @include tablets{
+          margin-right: -20px;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: unset;
+        }
+        @include laptop{
+          width: 100%;
+          margin-bottom: 60px;
+          margin-right: 0;
+          justify-content: space-between;
+        }
+        
+        .organizator_item{
+          margin-bottom: 20px;
+          @include tablets{
+            margin-right: 20px;
+          }
+          @include laptop{
+            margin-right: 0;
+            margin-bottom: 0;
+            
+          }
+        }
+      }
+    }
+    .contact{
+      &>.title{
+        margin-bottom: 20px;
+        @include laptop{
+          margin-bottom: 40px;
+        }
+      }
+      
+      .wrap_mab_date{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        @include tablets{
+          height: 406px;
+        }
+        @include laptop{
+          flex-direction: column;
+          height: unset;
+          max-height: 650px;
+        }
+        &>.subtitle{
+          margin-bottom: 20px;
+          font-weight: bold;
+          font-size: $fz_md;
+          text-transform: uppercase;
+          line-height: 160%;
+  
+          @include tablets{
+            font-size: $fz_lg;
+          }
+          @include laptop{
+            width: 453px;
+          }
+          @include desktop{
+            margin-bottom: 40px;
+          }
+        }
+        .date{
+          font-size: $fz_md;
+          line-height: 160%;
+          max-width: 400px;
+
+          @include tablets{
+            width: 334px;
+          }
+          .addres,.time_work,.phone,.mail{
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            &::before{
+              display: block;
+              position: absolute;
+              content: "";
+              width: 16px;
+              height: 16px;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+            }
+          }
+          .addres::before{
+            background-image: url(image/icons/geo_accent.svg);
+          }
+          .time_work::before{
+            background-image: url(image/icons/clock_accent.svg);
+          }
+          .phone::before{
+            background-image: url(image/icons/phone_accent.svg);
+          }
+          .mail::before{
+            background-image: url(image/icons/mail_accent.svg);
+          }
+          .mail{
+            @include tablets{
+              margin-bottom: 0;
+            }
+          }
+          .time_work{
+            .time_work_item{
+              margin-bottom: 10px;
+              display: flex;
+              justify-content: space-between;
+              .day{
+                font-weight: bold;
+              }
+              .time{
+                width: 120px;
+              }
+              .free_day{
+                color: $primary_color;
+              }
+            }
+          } 
+          
+        }
+        .map{
+          position: relative;
+          width: 100%;
+          height: 250px;
+          border-radius: $bd_rad_sm;
+          box-shadow: $shadow_sm;
+          background-image: url(image/map.png);
+          background-size: 180%;
+          background-position: 60% 40%;
+          @include tablets{
+            width: 334px;
+            height: 406px;
+            background-size: 250%;
+            background-position: 65% 40%;
+            margin-left: 20px;
+          }
+          @include laptop{
+            width: 668px;
+            height: 606px;
+            margin-left: 39px;
+            background-size: cover;
+          }
+          @include desktop{
+            width: 823px;
+            height: 626px;
+            margin-left: 165px;
+          }
+          .geo_label{
+            position: absolute;
+            padding-left: 30px;
+            top: 42%;
+            left: 59%;
+
+            @include tablets{
+              top: 42%;
+              left: 53%;
+            }
+            @include laptop{
+              top: 41%;
+              left: 59%;
+            }
+
+            
+            &::before{
+              display: block;
+              position: absolute;
+              content: "";
+              width: 16px;
+              height: 16px;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+              background-image: url(image/icons/geo_accent.svg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

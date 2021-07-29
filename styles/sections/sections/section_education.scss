@@ -130,6 +130,7 @@ section.home_section_direction{
     }
     .title{
       margin-bottom: 10px;
+      
       @include tablets{
         margin-bottom: 20px;
       }
@@ -143,12 +144,32 @@ section.home_section_direction{
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
-
+      position: relative;
+      margin-top: 43px;
       @include tablets{
         margin-right: 20px;
         margin-bottom: 40px;
+        margin-top: 0;
       }
       
+      .text_filter{
+        position: absolute;
+        right: 0;
+        bottom: calc(100% + 20px);
+        color: $black_color;
+        font-size: $fz_sm;
+        font-weight: bold;
+        line-height: 160%;
+        border-bottom: 1px solid $primary_color;
+
+        @include tablets{
+          font-size: $fz_md;
+        }
+        @include laptop{
+          bottom: calc(100% + 40px);
+        }
+      }
+
       .slider{
         position: relative;
         overflow: hidden;
