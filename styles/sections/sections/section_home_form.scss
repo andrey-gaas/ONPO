@@ -85,6 +85,9 @@ section.home_form{
               padding-right: 10px;
               .dropdown_item{
                 margin-bottom: 10px;
+                @include tablets{
+                  margin-bottom: 15px;
+                }
                 display: flex;
                 position: relative;
                 cursor: pointer;
@@ -104,6 +107,10 @@ section.home_form{
                   padding-right: 30px;
                   cursor: pointer;
                   width: 100%;
+
+                  @include tablets{
+                    font-size: $fz_md;
+                  }
                   &::after{
                     display: block;
                     position: absolute;
@@ -114,6 +121,11 @@ section.home_form{
                     height: 14px;
                     border: 2px solid $gray_light_color;
                     border-radius: 5px;
+                    @include tablets{
+                      width: 16px;
+                      height: 16px;
+                      top: calc(50% - 9px);
+                    }
                   }
                   &::before{
                     display: block;
@@ -128,6 +140,12 @@ section.home_form{
                     right: 9px;
                     opacity: 0;
                     transition: .2s all;
+                    @include tablets{
+                      width: 7px;
+                      height: 10px;
+                      top: calc(50% - 7px);
+                      right: 9px;
+                    }
                   }
                 }
               }

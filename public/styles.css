@@ -2403,7 +2403,7 @@ section.section_main .button_wrap {
   }
 }
 section.section_main .button_wrap a:first-child {
-  margin-right: 20px;
+  margin-right: 5px;
   margin-bottom: 15px;
 }
 @media screen and (min-width: 728px) {
@@ -2868,6 +2868,11 @@ section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .d
   position: relative;
   cursor: pointer;
 }
+@media screen and (min-width: 728px) {
+  section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item {
+    margin-bottom: 15px;
+  }
+}
 section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item input {
   position: absolute;
   opacity: 0;
@@ -2884,6 +2889,11 @@ section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .d
   cursor: pointer;
   width: 100%;
 }
+@media screen and (min-width: 728px) {
+  section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label {
+    font-size: 16px;
+  }
+}
 section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::after {
   display: block;
   position: absolute;
@@ -2894,6 +2904,13 @@ section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .d
   height: 14px;
   border: 2px solid #BDBDBD;
   border-radius: 5px;
+}
+@media screen and (min-width: 728px) {
+  section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::after {
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 9px);
+  }
 }
 section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::before {
   display: block;
@@ -2908,6 +2925,14 @@ section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .d
   right: 9px;
   opacity: 0;
   transition: 0.2s all;
+}
+@media screen and (min-width: 728px) {
+  section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::before {
+    width: 7px;
+    height: 10px;
+    top: calc(50% - 7px);
+    right: 9px;
+  }
 }
 section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar {
   /* 1 - скроллбар */
