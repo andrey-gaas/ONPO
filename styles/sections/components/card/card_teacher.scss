@@ -7,7 +7,7 @@ article.card_teacher{
   border-radius: $bd_rad_sm;
   box-shadow: $shadow_sm;
   //
-  width: 343px;
+  width: 100%;
   //
   @include tablets{
     width: 334px;

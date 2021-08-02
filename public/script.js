@@ -54,6 +54,7 @@ let initFormSelect = (formWithSelect) =>{
   }
 }
 
+
 window.onload = () => {
   //init selec
   let formApplication = document.querySelector('.home_form_application')
@@ -61,6 +62,29 @@ window.onload = () => {
 
   //init swiper item
   let homeMainCorusel = new Swiper(".home_main_corusel", {
+    // Optional parameters
+    direction: "horizontal",
+    slidesPerView: 1,
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // And if we need scrollbar 
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  })
+
+  let homeDeffCorusel = new Swiper(".home_deff_corusel", {
     // Optional parameters
     direction: "horizontal",
     slidesPerView: 1,
@@ -324,7 +348,116 @@ window.onload = () => {
 
   filter.onmousedown = e => { fnFitler(e, 'mouseup', 'mousemove') }
   filter.ontouchstart = e => { fnFitler(e, 'touchend', 'touchmove') }
+
+  //media
+
+  const mediaQueryTablet = window.matchMedia('(min-width: 728px)')
+  const mediaQueryTabletMax = window.matchMedia('(max-width: 1199px)')
+  const mediaQueryLaptop = window.matchMedia('(min-width: 1200px)')
+  const mediaQueryMobileMax = window.matchMedia('(max-width: 727px)')
+
+  function mediaMobile(e){
+    if (e.matches) {
+      console.log('Mobile');
+      homeDeffCorusel.destroy(true, true)
+      homeDeffCorusel = new Swiper(".home_deff_corusel", {
+        // Optional parameters
+        direction: "horizontal",
+        slidesPerView: 1,
+        loop: true,
+    
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+    
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    
+        // And if we need scrollbar 
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      })
+    }
+  }
+
+  function mediaTablet(e){
+    if (e.matches) {
+      console.log('tablet');
+      homeDeffCorusel.destroy(true, true)
+      homeDeffCorusel = new Swiper(".home_deff_corusel", {
+        // Optional parameters
+        direction: "horizontal",
+        slidesPerView: 2,
+        loop: true,
+    
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+    
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    
+        // And if we need scrollbar 
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      })
+    }
+  }
+
+  function mediaLaptop(e){
+    if (e.matches) {
+      console.log('laptop');
+      homeDeffCorusel.destroy(true, true)
+      homeDeffCorusel = new Swiper(".home_deff_corusel", {
+        // Optional parameters
+        direction: "horizontal",
+        slidesPerView: 3,
+        loop: true,
+    
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+    
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    
+        // And if we need scrollbar 
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      })
+    }
+  }
+
+  
+
+  mediaQueryTablet.addListener(mediaTablet)
+  mediaTablet(mediaQueryTablet)
+  mediaQueryTabletMax.addListener(mediaTablet)
+  mediaTablet(mediaQueryTabletMax)
+  
+  mediaQueryLaptop.addListener(mediaLaptop)
+  mediaLaptop(mediaQueryLaptop)
+
+  mediaQueryMobileMax.addListener(mediaMobile)
+  mediaMobile(mediaQueryMobileMax)
 };
+
+
 
 // touchend
 

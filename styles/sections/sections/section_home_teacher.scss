@@ -1,0 +1,45 @@
+section.home_teacher{
+  margin-bottom: 100px;
+  @include tablets{
+    margin-bottom: 120px;
+  }
+  @include laptop{
+    margin-bottom: 160px;
+  }
+  .container{
+    &>.title{
+      margin-bottom: 20px;
+    }
+    &>.button{
+      margin: 0 auto;
+    }
+  }
+  .container_out{
+    display: block;
+    width: 100%;
+    margin: unset;
+    margin-bottom: 20px;
+    @include tablets{
+      width: 704px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    @include laptop{
+      min-width: unset;
+      max-width: unset;
+      width: 1180px
+    }
+    @include desktop {
+      width: 1478px;
+    }
+  }
+  .container_iner{
+    margin: 0 auto;
+    width: 91.6%;
+    @include tablets{
+      display: block;
+      width: unset;
+      margin: unset;
+    }
+  }
+}
