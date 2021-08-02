@@ -14,13 +14,32 @@ let chekParentsNode = (parent, cls)=>{
 
 }
 let initFormSelect = (formWithSelect) =>{
+  let selectCourse = []
+
   formWithSelect.onclick = e => {
     
     if(e.target.classList.contains('select_input')){
       e.stopPropagation()
-
+      let selectInput = e.target
       let wrap = e.target.parentNode.querySelector('.wrap_castom_scrollbar')
-      wrap.onclick = e => {e.stopPropagation()}
+
+      wrap.onclick = e => {
+        e.stopPropagation()
+        if(e.target.nodeName === 'LABEL'){
+          if(selectCourse.indexOf(e.target.innerText) !== -1){
+            selectCourse.splice( selectCourse.indexOf(e.target.innerText), 1)
+            console.log('splice');
+          }else{
+            selectCourse.push(e.target.innerText)
+          }
+          if(selectCourse.length === 0){
+            selectInput.innerHTML = 'Наименование образовательной прогрммы'
+          }else{
+            selectInput.innerHTML = selectCourse
+          }
+        }
+
+      }
 
       let closeSelectWindow = ()=>{
         console.log('document');
