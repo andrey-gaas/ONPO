@@ -312,3 +312,37 @@ window.onload = () => {
 // touchcancel
 
 // touchmove
+
+// sending an application
+document.getElementById('send-application').onsubmit = function sendApplication(event) {
+  event.preventDefault();
+
+  const form = event.target;
+
+  let programList = [...document.querySelectorAll('#send-application .dropdown_list input')];
+  programList = programList
+    .filter(program => program.checked)
+    .map(program => program.name);
+
+  const data = JSON.stringify({
+    name: form.name.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    location: form.location.value,
+    programList: programList,
+    educationForm: form.form_of_education.value,
+    wishes: form.wishes.value,
+  });
+  
+  // XHR
+  console.log(data);
+  const xhr = new XMLHttpRequest();
+  xhr.open('post', '/api/application');
+  xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+  xhr.send(data);
+
+  xhr.onload = function() {
+    console.log(xhr.status);
+    console.log(xhr.responseText);
+  }
+}

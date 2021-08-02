@@ -66,11 +66,13 @@ app.set('view engine', 'hbs');
 app.set('views', 'views');
 
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 // ROUTES
 app.use('/', require('./routes/home'));
 app.use('/dron', require('./routes/dron'));
 app.use('/test', require('./routes/testAlex'));
+app.use('/api', require('./routes/api'));
 
 const PORT = 3002;
 
