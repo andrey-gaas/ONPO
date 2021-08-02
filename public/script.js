@@ -1,5 +1,46 @@
 import Swiper from "/swiper.js";
+
+
+let chekParentsNode = (parent, cls)=>{
+  if(parent && parent.classList){
+    if(parent.classList.contains(cls)){
+      return true
+    }else{
+      return chekParentsNode(parent.parentNode, cls)
+    }
+  }else{
+    return false
+  }
+
+}
+let initFormSelect = (formWithSelect) =>{
+  formWithSelect.onclick = e => {
+    
+    if(e.target.classList.contains('select_input')){
+      e.stopPropagation()
+
+      let wrap = e.target.parentNode.querySelector('.wrap_castom_scrollbar')
+      wrap.onclick = e => {e.stopPropagation()}
+
+      let closeSelectWindow = ()=>{
+        console.log('document');
+        wrap.onclick = null
+        document.removeEventListener('click', closeSelectWindow)
+        e.target.parentNode.classList.remove('active')
+      }
+      document.addEventListener('click', closeSelectWindow)
+      e.target.parentNode.classList.toggle('active')
+    }
+  
+  }
+}
+
 window.onload = () => {
+  //init selec
+  let formApplication = document.querySelector('.home_form_application')
+  initFormSelect(formApplication)
+
+  //init swiper item
   let homeMainCorusel = new Swiper(".home_main_corusel", {
     // Optional parameters
     direction: "horizontal",

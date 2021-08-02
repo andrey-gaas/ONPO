@@ -1,15 +1,66 @@
 <section class="home_form">
   <div class="container">
     <h1 class="home_title title">оставьте заявку</br> на обучение</h1>
-    <form action="">
+    <form action="" class="home_form_application">
       <div class="form_input">
-        <input type="text" name="name" id="input_name" placeholder="Как к вам обращатся">
+        <input type="text" name="name" id="input_name" placeholder="Фамилия, имя, отчество">
       </div>
       <div class="form_input">
-        <input type="text" name="email" id="input_name" placeholder="E-mail">
+        <input type="text" name="email" id="input_name1" placeholder="E-mail">
       </div>
       <div class="form_input">
-        <input type="text" name="phone" id="input_name" placeholder="Контактный номер телефона">
+        <input type="text" name="phone" id="input_name2" placeholder="Контактный номер телефона">
+      </div>
+      <div class="form_input dropdown">
+        <input type="text" name="phone" id="input_name3" placeholder="Место жительства">
+      </div>
+      <div class="form_input dropdown">
+        {{!-- <input type="text" name="phone" id="input_name" placeholder="Наименование образовательной прогрммы"> --}}
+        <div class="select_input">Наименование образовательной прогрммы</div>
+        <div class="wrap_castom_scrollbar">
+          <ul class="dropdown_list">
+            <li class="dropdown_item">
+              <input type="checkbox" class="custom-checkbox" id="course1" name="happy" value="yes">
+              <label for="course1">Делопроизводство. Организация документирования управленческой деятельности в организации</label>
+            </li>
+            <li class="dropdown_item">
+              <input type="checkbox" class="custom-checkbox" id="course2" name="happy" value="yes">
+              <label for="course2">Культурно-досуговая деятельность библиотек в современных социокультурных условиях</label>
+            </li>
+            <li class="dropdown_item">
+              <input type="checkbox" class="custom-checkbox" id="course3" name="happy" value="yes">
+              <label for="course3">Современные инфокоммуникационные технологии. Технологии «ИРБИС»</label>
+            </li>
+            <li class="dropdown_item">
+              <input type="checkbox" class="custom-checkbox" id="course4" name="happy" value="yes">
+              <label for="course4">Современные инфокоммуникационные технологии. Технологии «ИРБИС»</label>
+            </li>
+            <li class="dropdown_item">
+              <input type="checkbox" class="custom-checkbox" id="course5" name="happy" value="yes">
+              <label for="course5">Современные инфокоммуникационные технологии. Технологии «ИРБИС»</label>
+            </li>
+            <li class="dropdown_item">
+              <input type="checkbox" class="custom-checkbox" id="course6" name="happy" value="yes">
+              <label for="course6">Современные инфокоммуникационные технологии. Технологии «ИРБИС»</label>
+            </li>
+            <li class="dropdown_item">
+              <input type="checkbox" class="custom-checkbox" id="course7" name="happy" value="yes">
+              <label for="course7">Современные инфокоммуникационные технологии. Технологии «ИРБИС»</label>
+            </li>
+            {{!-- <div class="castom_scroll">
+              <div class="slider"></div>
+            </div> --}}
+          </ul>
+        </div>
+      </div>
+      <div class="form_input dropdown">
+        <input type="text" name="phone" id="input_name4" placeholder="Форма обучения">
+      </div>
+      <div class="form_input">
+        <input type="text" name="phone" id="input_name5" placeholder="Пожелания">
+      </div>
+      <div class="agreement">
+        <p>Нажимая на кнопку, вы соглашаетесь c условиями предоставления услуг, политикой конфиденциальности и обработкой персональных данных.</p>
       </div>
       <button class="button size_norm color_red">
         Оставить заявку
