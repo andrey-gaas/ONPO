@@ -30,7 +30,6 @@ const reviews = [{
   stars: 6,
   date: 1626101542620,
   likes: [12, 11,3,2,5,12 ,2],
-
 }]
 
 const organizators =[{
@@ -148,7 +147,7 @@ const accordion = [{
 router.get('/', (req, res) => {
     res.render('testAlex', { reviews, direction, organizators, teacher, carusel, accordion,
     title: 'Лёхина страница',
-    
+
     });
 });
 

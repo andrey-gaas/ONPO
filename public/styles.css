@@ -1896,7 +1896,7 @@ article.card_review {
   background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
-  width: 343px;
+  width: 100%;
 }
 @media screen and (min-width: 728px) {
   article.card_review {
@@ -3166,7 +3166,7 @@ section.home_info .container .contact .wrap_mab_date {
 }
 @media screen and (min-width: 728px) {
   section.home_info .container .contact .wrap_mab_date {
-    height: 406px;
+    height: 520px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -3374,6 +3374,62 @@ section.home_teacher .container_iner {
 }
 @media screen and (min-width: 728px) {
   section.home_teacher .container_iner {
+    display: block;
+    width: unset;
+    margin: unset;
+  }
+}
+
+section.home_review {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 728px) {
+  section.home_review {
+    margin-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.home_review {
+    margin-bottom: 160px;
+  }
+}
+section.home_review .container > .title {
+  margin-bottom: 20px;
+}
+section.home_review .container > .button {
+  margin: 0 auto;
+}
+section.home_review .container_out {
+  display: block;
+  width: 100%;
+  margin: unset;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 728px) {
+  section.home_review .container_out {
+    width: 704px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.home_review .container_out {
+    min-width: unset;
+    max-width: unset;
+    width: 1180px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  section.home_review .container_out {
+    width: 1478px;
+  }
+}
+section.home_review .container_iner {
+  margin: 0 auto;
+  width: 91.6%;
+}
+@media screen and (min-width: 728px) {
+  section.home_review .container_iner {
     display: block;
     width: unset;
     margin: unset;

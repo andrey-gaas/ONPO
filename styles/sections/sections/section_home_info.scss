@@ -109,7 +109,7 @@ section.home_info{
         flex-wrap: wrap;
 
         @include tablets{
-          height: 406px;
+          height: 520px;
         }
         @include laptop{
           flex-direction: column;

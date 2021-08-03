@@ -358,8 +358,11 @@ window.onload = () => {
 
   function mediaMobile(e){
     if (e.matches) {
-      console.log('Mobile');
-      homeDeffCorusel.destroy(true, true)
+      console.log('Mobile', homeDeffCorusel);
+      
+      for(let i = 0; i < homeDeffCorusel.length; i++){
+        homeDeffCorusel[i].destroy(true, true)
+      }
       homeDeffCorusel = new Swiper(".home_deff_corusel", {
         // Optional parameters
         direction: "horizontal",
@@ -388,7 +391,9 @@ window.onload = () => {
   function mediaTablet(e){
     if (e.matches) {
       console.log('tablet');
-      homeDeffCorusel.destroy(true, true)
+      for(let i = 0; i < homeDeffCorusel.length; i++){
+        homeDeffCorusel[i].destroy(true, true)
+      }
       homeDeffCorusel = new Swiper(".home_deff_corusel", {
         // Optional parameters
         direction: "horizontal",
@@ -417,7 +422,9 @@ window.onload = () => {
   function mediaLaptop(e){
     if (e.matches) {
       console.log('laptop');
-      homeDeffCorusel.destroy(true, true)
+      for(let i = 0; i < homeDeffCorusel.length; i++){
+        homeDeffCorusel[i].destroy(true, true)
+      }
       homeDeffCorusel = new Swiper(".home_deff_corusel", {
         // Optional parameters
         direction: "horizontal",
@@ -464,37 +471,3 @@ window.onload = () => {
 // touchcancel
 
 // touchmove
-
-// sending an application
-document.getElementById('send-application').onsubmit = function sendApplication(event) {
-  event.preventDefault();
-
-  const form = event.target;
-
-  let programList = [...document.querySelectorAll('#send-application .dropdown_list input')];
-  programList = programList
-    .filter(program => program.checked)
-    .map(program => program.name);
-
-  const data = JSON.stringify({
-    name: form.name.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    location: form.location.value,
-    programList: programList,
-    educationForm: form.form_of_education.value,
-    wishes: form.wishes.value,
-  });
-  
-  // XHR
-  console.log(data);
-  const xhr = new XMLHttpRequest();
-  xhr.open('post', '/api/application');
-  xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-  xhr.send(data);
-
-  xhr.onload = function() {
-    console.log(xhr.status);
-    console.log(xhr.responseText);
-  }
-}
