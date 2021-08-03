@@ -351,6 +351,7 @@ router.get('/', (req, res) => {
       courses, direction, format, 
       accordion, carusel, organizators, 
       teacher, reviews,
+      script: 'main.js',
     });
 });
 
