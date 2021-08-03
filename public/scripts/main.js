@@ -466,7 +466,7 @@ window.onload = () => {
 // touchmove
 
 // sending an application
-document.getElementById('send-application').onsubmit = function sendApplication(event) {
+/* document.getElementById('send-application').onsubmit = function sendApplication(event) {
   event.preventDefault();
 
   const form = event.target;
@@ -498,3 +498,4 @@ document.getElementById('send-application').onsubmit = function sendApplication(
     console.log(xhr.responseText);
   }
 }
+ */

@@ -307,6 +307,7 @@ router.get('/', (req, res) => {
       courses, direction, format, 
       accordion, carusel, organizators, 
       teacher,
+      script: 'main.js',
     });
 });
 
