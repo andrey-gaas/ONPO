@@ -1,0 +1,67 @@
+#page_catalog {
+  & > .title{
+    margin-top: 40px;
+    font-size: $fz_lg;
+    line-height: 160%;
+    color: $black_color;
+
+    @include tablets{
+      font-size: $fz_mxl;
+    }
+    @include laptop{
+      font-size: $fz_xl;
+    }
+    @include desktop{
+      font-size: $fz_mxl;
+    }
+  }
+
+  .filter {
+    margin-top: 20px;
+
+    @include laptop{
+      margin-top: 40px;
+    }
+    @include desktop{
+      margin-top: 60px;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+
+    @include tablets {
+      flex-direction: row;
+      margin-right: -20px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-content: stretch;
+    }
+    @include desktop{
+      margin-right: -40px;
+    }
+
+    .card_wrapper {
+      margin-top: 40px;
+      @include tablets {
+        margin-right: 20px;
+        width: 333px;
+      }
+
+      @include laptop{
+        width: 373px;
+      }
+
+      @include desktop{
+        width: 453px;
+        margin-right: 40px;
+      }
+
+      .card {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

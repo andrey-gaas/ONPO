@@ -214,29 +214,32 @@ export function initCoruselDefoult(selectCorusel){
 }
 
 export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCards, selectFilterBtnList){
+  let homeCourseCorusel = document.querySelector(selectSlide)
+  if(homeCourseCorusel){
 
-  let homeCourseCorusel = new Swiper(selectSlide, {
-    // Optional parameters
-    direction: "horizontal",
-    slidesPerView: 1,
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-      el: ".swiper-pagination",
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    // And if we need scrollbar home_courses_swiper_container
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-  })
+    homeCourseCorusel = new Swiper(selectSlide, {
+      // Optional parameters
+      direction: "horizontal",
+      slidesPerView: 1,
+      loop: true,
+  
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+      },
+  
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  
+      // And if we need scrollbar home_courses_swiper_container
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    })
+  }
 
   //filter
 
@@ -370,8 +373,9 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
             item.classList.remove('active')
           })
           e.target.classList.toggle('active')
-          
-          homeCourseCorusel.removeAllSlides()
+          if(homeCourseCorusel){
+            homeCourseCorusel.removeAllSlides()
+          }
 
           if(filterDate === targetFilter){
             filterDate = ''

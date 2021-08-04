@@ -352,6 +352,7 @@ router.get('/', (req, res) => {
       accordion, carusel, organizators, 
       teacher, reviews,
       script: 'main.js',
+      title: 'Образовательные программы ГПНТБ СО РАН',
     });
 });
 

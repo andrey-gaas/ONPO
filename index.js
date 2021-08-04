@@ -70,8 +70,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // ROUTES
 app.use('/', require('./routes/home'));
-app.use('/program', require('./routes/program'));
 app.use('/api', require('./routes/api'));
+app.use('/catalog', require('./routes/catalog'));
 
 // TEST ROUTES
 app.use('/dron', require('./routes/dron'));

@@ -1,3 +1,6 @@
+//pages
+@import './pages/catalog.scss';
+
 //components
 @import './components/button.scss';
 @import './components/header.scss';
@@ -6,6 +9,8 @@
 @import './components/footer.scss';
 @import './components/carusel.scss';
 @import './components/accordion.scss';
+@import './components/filter.scss';
+@import './components/form.scss';
 
 //card
 @import './components/card/card_direction.scss';
@@ -27,7 +32,6 @@
 @import './sections/section_home_main.scss';
 @import './sections/section_education.scss';
 @import './sections/section_home_faq.scss';
-@import './sections/section_home_form.scss';
 @import './sections/section_home_info.scss';
 @import './sections/section_home_teacher.scss';
 @import './sections/section_home_review.scss';

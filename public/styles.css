@@ -98,6 +98,83 @@ h2.home_subtitle {
   }
 }
 
+#page_catalog > .title {
+  margin-top: 40px;
+  font-size: 28px;
+  line-height: 160%;
+  color: #252A34;
+}
+@media screen and (min-width: 728px) {
+  #page_catalog > .title {
+    font-size: 58px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_catalog > .title {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_catalog > .title {
+    font-size: 58px;
+  }
+}
+#page_catalog .filter {
+  margin-top: 20px;
+}
+@media screen and (min-width: 1200px) {
+  #page_catalog .filter {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_catalog .filter {
+    margin-top: 60px;
+  }
+}
+#page_catalog .list {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 728px) {
+  #page_catalog .list {
+    flex-direction: row;
+    margin-right: -20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_catalog .list {
+    margin-right: -40px;
+  }
+}
+#page_catalog .list .card_wrapper {
+  margin-top: 40px;
+}
+@media screen and (min-width: 728px) {
+  #page_catalog .list .card_wrapper {
+    margin-right: 20px;
+    width: 333px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_catalog .list .card_wrapper {
+    width: 373px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_catalog .list .card_wrapper {
+    width: 453px;
+    margin-right: 40px;
+  }
+}
+#page_catalog .list .card_wrapper .card {
+  width: 100%;
+  height: 100%;
+}
+
 .button {
   display: flex;
   font-size: 14px;
@@ -1059,6 +1136,401 @@ footer.footer .arrow_up {
     padding-bottom: 20px;
     font-size: 16px;
   }
+}
+
+.filter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: 43px;
+}
+@media screen and (min-width: 728px) {
+  .filter {
+    margin-right: 20px;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+}
+.filter .text_filter {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 20px);
+  color: #252A34;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 160%;
+  border-bottom: 1px solid #FF165D;
+}
+@media screen and (min-width: 728px) {
+  .filter .text_filter {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter .text_filter {
+    bottom: calc(100% + 40px);
+  }
+}
+.filter .slider {
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+  flex-grow: 1;
+}
+@media screen and (min-width: 728px) {
+  .filter .slider {
+    height: 60px;
+    margin: 0 10px;
+  }
+}
+.filter .slider .filter_list {
+  display: flex;
+  position: absolute;
+  left: 0;
+  user-select: none;
+}
+.filter .slider .filter_list .filter_item {
+  background-color: transparent;
+  font-family: "Gotham";
+  outline: none;
+  cursor: pointer;
+  padding: 0 10px;
+  height: 40px;
+  margin-right: 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #252A34;
+  border: 1px solid #FF165D;
+  border-radius: 30px;
+  white-space: nowrap;
+  transition: background-color 0.3s, color 0.3s;
+}
+.filter .slider .filter_list .filter_item.active {
+  background-color: #FF165D;
+  color: #FFFFFF;
+}
+.filter .slider .filter_list .filter_item:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 728px) {
+  .filter .slider .filter_list .filter_item {
+    height: 60px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 728px) {
+  .filter .slider .filter_list {
+    height: 60px;
+  }
+}
+.filter .btn_next, .filter .btn_back {
+  display: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+  background-color: #FFFFFF;
+  border: none;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.filter .btn_next::before, .filter .btn_back::before {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #252A34;
+  border-right: 2px solid #252A34;
+  width: 10px;
+  height: 10px;
+}
+@media screen and (min-width: 728px) {
+  .filter .btn_next, .filter .btn_back {
+    display: flex;
+  }
+}
+.filter .btn_next::before {
+  transform: translateX(-2px) rotate(-45deg);
+}
+.filter .btn_back::before {
+  transform: translateX(2px) rotate(135deg);
+}
+
+.application-form-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 728px) {
+  .application-form-container {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .application-form-container {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  .application-form-container {
+    margin-top: 180px;
+  }
+}
+
+section.application-form {
+  background-color: #252A34;
+  color: #FFFFFF;
+  padding: 20px 0;
+}
+section.application-form .container .title {
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 728px) {
+  section.application-form .container .title {
+    width: 460px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.application-form .container .title {
+    width: 620px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  section.application-form .container .title {
+    width: 833px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.application-form .container form {
+    width: 570px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1520px) {
+  section.application-form .container form {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+section.application-form .container form .form_input {
+  border-bottom: 1px solid #FFFFFF;
+  margin-bottom: 20px;
+  position: relative;
+}
+section.application-form .container form .form_input.dropdown > input:focus::placeholder {
+  color: #FFFFFF;
+}
+section.application-form .container form .form_input.dropdown::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  right: 7px;
+  top: calc(50% - 6px);
+  transform: rotate(45deg);
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+  color: #252A34;
+  padding: 10px;
+  padding-right: 10px;
+  transition: 0.3s all;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list {
+  max-height: 200px;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item {
+  margin-bottom: 10px;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (min-width: 728px) {
+  section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item {
+    margin-bottom: 15px;
+  }
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item input {
+  position: absolute;
+  opacity: 0;
+  left: -10000px;
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item input:checked + label::before {
+  opacity: 1;
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label {
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  padding-right: 30px;
+  cursor: pointer;
+  width: 100%;
+}
+@media screen and (min-width: 728px) {
+  section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label {
+    font-size: 16px;
+  }
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::after {
+  display: block;
+  position: absolute;
+  content: "";
+  right: 4px;
+  top: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  border: 2px solid #BDBDBD;
+  border-radius: 5px;
+}
+@media screen and (min-width: 728px) {
+  section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::after {
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 9px);
+  }
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 8px;
+  border-bottom: 2px solid #3EC1D3;
+  border-right: 2px solid #3EC1D3;
+  transform: rotate(45deg);
+  top: calc(50% - 5px);
+  right: 9px;
+  opacity: 0;
+  transition: 0.2s all;
+}
+@media screen and (min-width: 728px) {
+  section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::before {
+    width: 7px;
+    height: 10px;
+    top: calc(50% - 7px);
+    right: 9px;
+  }
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar {
+  /* 1 - скроллбар */
+  width: 4px;
+  height: calc(100% - 30px);
+  position: absolute;
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  top: 15px;
+  right: 6px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-button {
+  /* 2 - кнопка */
+  height: 0;
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-track {
+  /* 3 - трек */
+  width: 4px;
+  height: calc(100% - 30px);
+  position: absolute;
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  top: 15px;
+  right: 6px;
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-track-piece {
+  /* 4 - видимая часть трека */
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-thumb {
+  /* 5 - ползунок */
+  background-color: #FF165D;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-corner {
+  /* 6 - уголок */
+}
+section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-resizer {
+  /* 7 - изменение размеров */
+}
+section.application-form .container form .form_input.active > .wrap_castom_scrollbar {
+  opacity: 1;
+  transform: scaleY(1);
+}
+section.application-form .container form .form_input input, section.application-form .container form .form_input .select_input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+  color: #FFFFFF;
+  font-family: "Gotham";
+  font-size: 12px;
+  line-height: 160%;
+  margin-bottom: 5px;
+  padding-right: 25px;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+@media screen and (min-width: 728px) {
+  section.application-form .container form .form_input input, section.application-form .container form .form_input .select_input {
+    font-size: 16px;
+  }
+}
+section.application-form .container form .form_input input::placeholder, section.application-form .container form .form_input .select_input::placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+  transition: 0.3;
+}
+section.application-form .container form .form_input input:focus::placeholder, section.application-form .container form .form_input .select_input:focus::placeholder {
+  color: transparent;
+}
+section.application-form .container form .form_input input::-webkit-input-placeholder, section.application-form .container form .form_input .select_input::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+section.application-form .container form .form_input input::-moz-placeholder, section.application-form .container form .form_input .select_input::-moz-placeholder {
+  color: #FFFFFF;
+}
+section.application-form .container form .form_input input:-moz-placeholder, section.application-form .container form .form_input .select_input:-moz-placeholder {
+  color: #FFFFFF;
+}
+section.application-form .container form .form_input input:-ms-input-placeholder, section.application-form .container form .form_input .select_input:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+section.application-form .container form .agreement {
+  font-size: 12px;
+}
+@media screen and (min-width: 728px) {
+  section.application-form .container form .agreement {
+    font-size: 16px;
+  }
+}
+section.application-form .container form > .button {
+  margin: 40px auto 0 auto;
 }
 
 article.card_dirction {
@@ -2581,127 +3053,6 @@ section.home_section_direction .article_home_courses .title {
     margin-bottom: 40px;
   }
 }
-section.home_section_direction .article_home_courses .filter {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  position: relative;
-  margin-top: 43px;
-}
-@media screen and (min-width: 728px) {
-  section.home_section_direction .article_home_courses .filter {
-    margin-right: 20px;
-    margin-bottom: 40px;
-    margin-top: 0;
-  }
-}
-section.home_section_direction .article_home_courses .filter .text_filter {
-  position: absolute;
-  right: 0;
-  bottom: calc(100% + 20px);
-  color: #252A34;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 160%;
-  border-bottom: 1px solid #FF165D;
-}
-@media screen and (min-width: 728px) {
-  section.home_section_direction .article_home_courses .filter .text_filter {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  section.home_section_direction .article_home_courses .filter .text_filter {
-    bottom: calc(100% + 40px);
-  }
-}
-section.home_section_direction .article_home_courses .filter .slider {
-  position: relative;
-  overflow: hidden;
-  height: 40px;
-  flex-grow: 1;
-}
-@media screen and (min-width: 728px) {
-  section.home_section_direction .article_home_courses .filter .slider {
-    height: 60px;
-    margin: 0 10px;
-  }
-}
-section.home_section_direction .article_home_courses .filter .slider .filter_list {
-  display: flex;
-  position: absolute;
-  left: 0;
-  user-select: none;
-}
-section.home_section_direction .article_home_courses .filter .slider .filter_list .filter_item {
-  background-color: transparent;
-  font-family: "Gotham";
-  outline: none;
-  cursor: pointer;
-  padding: 0 10px;
-  height: 40px;
-  margin-right: 20px;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #252A34;
-  border: 1px solid #FF165D;
-  border-radius: 30px;
-  white-space: nowrap;
-  transition: background-color 0.3s, color 0.3s;
-}
-section.home_section_direction .article_home_courses .filter .slider .filter_list .filter_item.active {
-  background-color: #FF165D;
-  color: #FFFFFF;
-}
-section.home_section_direction .article_home_courses .filter .slider .filter_list .filter_item:last-child {
-  margin-right: 0;
-}
-@media screen and (min-width: 728px) {
-  section.home_section_direction .article_home_courses .filter .slider .filter_list .filter_item {
-    height: 60px;
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 728px) {
-  section.home_section_direction .article_home_courses .filter .slider .filter_list {
-    height: 60px;
-  }
-}
-section.home_section_direction .article_home_courses .filter .btn_next, section.home_section_direction .article_home_courses .filter .btn_back {
-  display: none;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
-  background-color: #FFFFFF;
-  border: none;
-  outline: none;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-section.home_section_direction .article_home_courses .filter .btn_next::before, section.home_section_direction .article_home_courses .filter .btn_back::before {
-  display: block;
-  content: "";
-  border-bottom: 2px solid #252A34;
-  border-right: 2px solid #252A34;
-  width: 10px;
-  height: 10px;
-}
-@media screen and (min-width: 728px) {
-  section.home_section_direction .article_home_courses .filter .btn_next, section.home_section_direction .article_home_courses .filter .btn_back {
-    display: flex;
-  }
-}
-section.home_section_direction .article_home_courses .filter .btn_next::before {
-  transform: translateX(-2px) rotate(-45deg);
-}
-section.home_section_direction .article_home_courses .filter .btn_back::before {
-  transform: translateX(2px) rotate(135deg);
-}
 section.home_section_direction .article_home_courses > article {
   margin-bottom: 20px;
 }
@@ -2768,268 +3119,6 @@ section.section_home_faq > .container > .title {
   section.section_home_faq > .container > .title {
     margin-bottom: 40px;
   }
-}
-
-section.home_form {
-  background-color: #252A34;
-  color: #FFFFFF;
-  padding: 20px 0;
-  margin-bottom: 100px;
-}
-@media screen and (min-width: 728px) {
-  section.home_form {
-    margin-bottom: 120px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  section.home_form {
-    margin-bottom: 160px;
-  }
-}
-section.home_form .container .title {
-  color: #FFFFFF;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 728px) {
-  section.home_form .container .title {
-    width: 460px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  section.home_form .container .title {
-    width: 620px;
-    margin-bottom: 40px;
-  }
-}
-@media screen and (min-width: 1520px) {
-  section.home_form .container .title {
-    width: 833px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  section.home_form .container form {
-    width: 570px;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 1520px) {
-  section.home_form .container form {
-    width: 700px;
-    margin: 0 auto;
-  }
-}
-section.home_form .container form .form_input {
-  border-bottom: 1px solid #FFFFFF;
-  margin-bottom: 20px;
-  position: relative;
-}
-section.home_form .container form .form_input.dropdown > input:focus::placeholder {
-  color: #FFFFFF;
-}
-section.home_form .container form .form_input.dropdown::after {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-bottom: 1px solid #FFFFFF;
-  border-right: 1px solid #FFFFFF;
-  right: 7px;
-  top: calc(50% - 6px);
-  transform: rotate(45deg);
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar {
-  display: block;
-  position: absolute;
-  overflow: hidden;
-  z-index: 2;
-  right: 0;
-  top: calc(100% + 10px);
-  width: 100%;
-  background-color: #FFFFFF;
-  border-radius: 15px;
-  box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
-  color: #252A34;
-  padding: 10px;
-  padding-right: 10px;
-  transition: 0.3s all;
-  opacity: 0;
-  transform: scaleY(0);
-  transform-origin: 0 0;
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list {
-  max-height: 200px;
-  overflow-y: scroll;
-  padding-right: 10px;
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item {
-  margin-bottom: 10px;
-  display: flex;
-  position: relative;
-  cursor: pointer;
-}
-@media screen and (min-width: 728px) {
-  section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item {
-    margin-bottom: 15px;
-  }
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item input {
-  position: absolute;
-  opacity: 0;
-  left: -10000px;
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item input:checked + label::before {
-  opacity: 1;
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label {
-  font-size: 12px;
-  font-weight: bold;
-  position: relative;
-  padding-right: 30px;
-  cursor: pointer;
-  width: 100%;
-}
-@media screen and (min-width: 728px) {
-  section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label {
-    font-size: 16px;
-  }
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::after {
-  display: block;
-  position: absolute;
-  content: "";
-  right: 4px;
-  top: calc(50% - 7px);
-  width: 14px;
-  height: 14px;
-  border: 2px solid #BDBDBD;
-  border-radius: 5px;
-}
-@media screen and (min-width: 728px) {
-  section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::after {
-    width: 16px;
-    height: 16px;
-    top: calc(50% - 9px);
-  }
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::before {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 6px;
-  height: 8px;
-  border-bottom: 2px solid #3EC1D3;
-  border-right: 2px solid #3EC1D3;
-  transform: rotate(45deg);
-  top: calc(50% - 5px);
-  right: 9px;
-  opacity: 0;
-  transition: 0.2s all;
-}
-@media screen and (min-width: 728px) {
-  section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::before {
-    width: 7px;
-    height: 10px;
-    top: calc(50% - 7px);
-    right: 9px;
-  }
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar {
-  /* 1 - скроллбар */
-  width: 4px;
-  height: calc(100% - 30px);
-  position: absolute;
-  border-radius: 10px;
-  background-color: #e5e5e5;
-  top: 15px;
-  right: 6px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-button {
-  /* 2 - кнопка */
-  height: 0;
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-track {
-  /* 3 - трек */
-  width: 4px;
-  height: calc(100% - 30px);
-  position: absolute;
-  border-radius: 10px;
-  background-color: #e5e5e5;
-  top: 15px;
-  right: 6px;
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-track-piece {
-  /* 4 - видимая часть трека */
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-thumb {
-  /* 5 - ползунок */
-  background-color: #FF165D;
-  width: 100%;
-  height: 50px;
-  border-radius: 10px;
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-corner {
-  /* 6 - уголок */
-}
-section.home_form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-resizer {
-  /* 7 - изменение размеров */
-}
-section.home_form .container form .form_input.active > .wrap_castom_scrollbar {
-  opacity: 1;
-  transform: scaleY(1);
-}
-section.home_form .container form .form_input input, section.home_form .container form .form_input .select_input {
-  width: 100%;
-  border: none;
-  outline: none;
-  background: transparent;
-  box-shadow: none;
-  color: #FFFFFF;
-  font-family: "Gotham";
-  font-size: 12px;
-  line-height: 160%;
-  margin-bottom: 5px;
-  padding-right: 25px;
-  /* Firefox 19+ */
-  /* Firefox 18- */
-}
-@media screen and (min-width: 728px) {
-  section.home_form .container form .form_input input, section.home_form .container form .form_input .select_input {
-    font-size: 16px;
-  }
-}
-section.home_form .container form .form_input input::placeholder, section.home_form .container form .form_input .select_input::placeholder {
-  color: #FFFFFF;
-  opacity: 1;
-  transition: 0.3;
-}
-section.home_form .container form .form_input input:focus::placeholder, section.home_form .container form .form_input .select_input:focus::placeholder {
-  color: transparent;
-}
-section.home_form .container form .form_input input::-webkit-input-placeholder, section.home_form .container form .form_input .select_input::-webkit-input-placeholder {
-  color: #FFFFFF;
-}
-section.home_form .container form .form_input input::-moz-placeholder, section.home_form .container form .form_input .select_input::-moz-placeholder {
-  color: #FFFFFF;
-}
-section.home_form .container form .form_input input:-moz-placeholder, section.home_form .container form .form_input .select_input:-moz-placeholder {
-  color: #FFFFFF;
-}
-section.home_form .container form .form_input input:-ms-input-placeholder, section.home_form .container form .form_input .select_input:-ms-input-placeholder {
-  color: #FFFFFF;
-}
-section.home_form .container form .agreement {
-  font-size: 12px;
-}
-@media screen and (min-width: 728px) {
-  section.home_form .container form .agreement {
-    font-size: 16px;
-  }
-}
-section.home_form .container form > .button {
-  margin: 40px auto 0 auto;
 }
 
 section.home_info {
@@ -3380,19 +3469,6 @@ section.home_teacher .container_iner {
   }
 }
 
-section.home_review {
-  margin-bottom: 100px;
-}
-@media screen and (min-width: 728px) {
-  section.home_review {
-    margin-bottom: 120px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  section.home_review {
-    margin-bottom: 160px;
-  }
-}
 section.home_review .container > .title {
   margin-bottom: 20px;
 }

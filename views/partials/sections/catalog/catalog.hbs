@@ -1,0 +1,11 @@
+<div class="container" id="page_catalog">
+  <h1 class="title">КАТАЛОГ ОБРАЗОВАТЕЛЬНЫХ <br />ПРОГРАММ</h1>
+  {{>components/filter}}
+  <div class="list">
+    {{#each courses}}
+      <div class="card_wrapper">
+        {{>cards/card_course this}}
+      </div>
+    {{/each}}
+  </div>
+</div>
