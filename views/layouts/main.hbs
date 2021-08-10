@@ -7,12 +7,18 @@
         <img class="logo" src="/image/logo.svg" alt="" />
       </a>
 
-      <nav class="menu">
-        <a href="/">Образование</a>
-        <a href="/">Преподаватели</a>
-        <a href="/">Об организации</a>
-        <a href="/test">TEST</a>
-      </nav>
+      {{#if menu}}
+        <nav class="menu">
+          <a href="/">Образование</a>
+          <a href="/">Преподаватели</a>
+          <a href="/">Об организации</a>
+          <a href="/test">TEST</a>
+        </nav>
+      {{/if}}
+
+      {{#if headerTitle}}
+        <h2 class="header-title">{{headerTitle}}</h2>
+      {{/if}}
 
       <div class="search">
         <img class="icon" src="/image/icons/search.svg" alt="" />
@@ -45,7 +51,7 @@
         </div>
         <ul class="linc_list">
           <a href="/" class="linc big">Главная</a>
-          <a href="/" class="linc big">КАТАЛОГ ПРОГРАММ</a>
+          <a href="/catalog" class="linc big">КАТАЛОГ ПРОГРАММ</a>
           <a href="/" class="linc big">ОБРАЗОВАТЕЛЬНЫЕ ПРОГРАММЫ</a>
           <a href="/" class="linc">Аспирантура</a>
           <a href="/" class="linc">Повышение квалификации</a>

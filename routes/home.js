@@ -348,9 +348,15 @@ router.get('/', (req, res) => {
     }]
 
     res.render('home', { 
-      courses, direction, format, 
-      accordion, carusel, organizators, 
-      teacher, reviews,
+      courses,
+      direction,
+      format, 
+      accordion,
+      carusel,
+      organizators, 
+      teacher, 
+      reviews,
+      menu: true,
       script: 'main.js',
       title: 'Образовательные программы ГПНТБ СО РАН',
     });

@@ -266,6 +266,33 @@ h2.home_subtitle {
     width: 60px;
   }
 }
+.component_header .header-title {
+  display: none;
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #252A34;
+}
+@media screen and (min-width: 728px) {
+  .component_header .header-title {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .component_header .header-title {
+    margin-left: 40px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  .component_header .header-title {
+    margin-left: 80px;
+    font-size: 28px;
+    line-height: 44px;
+  }
+}
 .component_header .menu {
   display: none;
   margin-left: 20px;
@@ -1910,7 +1937,7 @@ article.card_teacher {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  padding-bottom: 19px;
+  padding-bottom: 20px;
   background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);

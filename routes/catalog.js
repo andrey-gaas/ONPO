@@ -79,6 +79,7 @@ router.get('/', (req, res) => {
 	res.render('catalog', {
 		title: 'Каталог образовательных программ',
 		script: 'catalog.js',
+		headerTitle: 'Образовательные программы',
 		courses,
 	});
 });
