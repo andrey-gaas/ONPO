@@ -1,0 +1,363 @@
+#page_graduate {
+  & h1.title{
+    margin-top: 40px;
+    font-size: $fz_lg;
+    line-height: 160%;
+    color: $black_color;
+
+    @include tablets{
+      font-size: $fz_mxl;
+    }
+    @include laptop{
+      font-size: $fz_xl;
+    }
+    @include desktop{
+      font-size: $fz_mxl;
+    }
+  }
+
+  .description-page {
+    margin-top: 20px;
+    font-size: $fz_sm;
+    line-height: $fz_lgs;
+
+    @include tablets{
+      width: 70%;
+      font-size: $fz_md;
+      line-height: $fz_lgm;
+    }
+    @include laptop{
+      font-size: 20px;
+      line-height: 32px;
+    }
+    @include desktop{
+      margin-top: 40px;
+      font-size: $fz_lg;
+      line-height: 44px;
+    }
+  }
+
+  .special-offer-container {
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: rgba(255, 22, 93, .8);
+    background-image: url(/image/special-offer-1.png);
+    background-size: cover;
+
+    @include laptop{
+      padding: 40px 0;
+    }
+
+    
+
+    & > .container {
+      display: flex;
+      flex-direction: column;
+
+      @include laptop {
+        flex-direction: row;
+      }
+    }
+
+    .description {
+
+      &-container {
+        @include laptop{
+          width: 70%;
+        }
+      }
+
+      &-title {
+        font-size: $fz_md;
+        line-height: $fz_lgm;
+        font-weight: 700;
+        color: $white_color;
+
+        @include tablets {
+          font-size: $fz_lg;
+          line-height: 44px;
+        }
+
+        @include desktop {
+          font-size: $fz_xl;
+          line-height: 60px;
+        }
+      }
+
+      &-text {
+        margin-top: 10px;
+        font-size: $fz_xsm;
+        line-height: $fz_lgs;
+        color: $white_color;
+
+        @include tablets {
+          margin-top: 20px;
+          width: 70%;
+          font-size: $fz_sm;
+          line-height: $fz_lgs;
+        }
+
+        @include laptop {
+          font-size: $fz_lgs;
+          line-height: 32px;
+        }
+
+        @include desktop {
+          font-size: $fz_lg;
+          line-height: 44px;
+        }
+      }
+    }
+
+    .button-container {
+      align-self: center;
+      margin-top: 40px;
+      width: 162px;
+
+      @include tablets {
+        align-self: flex-end;
+        width: 240px;
+      }
+    }
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+
+    @include tablets {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 120px;
+    }
+
+    @include laptop {
+      margin-top: 80px;
+    }
+
+    @include desktop {
+      margin-top: 160px;
+    }
+
+    &:first-child {
+      margin-top: 40px;
+
+      @include tablets {
+        margin-top: 60px;
+      }
+
+      @include laptop {
+        margin-top: 80px;
+      }
+
+      @include desktop {
+        margin-top: 80px;
+      }
+    }
+
+    .navigation {
+      display: none;
+
+      @include tablets {
+        display: block;
+        width: 220px;
+      }
+
+      @include laptop {
+        width: 250px;
+      }
+
+      @include desktop {
+        width: 320px;
+      }
+
+      li {
+        position: relative;
+        margin-top: 20px;
+        font-size: $fz_xsm;
+        line-height: $fz_lgs;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: -20px;
+          top: calc(50% - 5px);
+          width: 10px;
+          height: 10px;
+          background-color: $primary_color;
+          border-radius: 50%;
+        }
+
+        a {
+          text-decoration: none;
+          color: $black_color;
+        }
+
+        &.active {
+          font-weight: bold;
+        }
+
+        @include laptop {
+          margin-top: 40px;
+          font-size: $fz_sm;
+        }
+
+        @include desktop {
+          font-size: $fz_md;
+          line-height: $fz_lgm;
+        }
+      }
+    }
+
+    .links-block {
+      @include tablets {
+        width: 450px;
+      }
+      @include laptop {
+        width: 770px;
+      }
+      @include desktop {
+        width: 950px;
+      }
+    }
+
+    .title {
+      font-size: $fz_md;
+      line-height: $fz_lgm;
+
+      @include laptop {
+        font-size: $fz_lg;
+        line-height: 44px;
+      }
+    }
+
+    .list-container {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: $white_color;
+      border-radius: 15px;
+
+      @include tablets {
+        padding: 20px 10px;
+        border-radius: 30px;
+      }
+
+      @include laptop {
+        padding: 20px;
+      }
+
+      @include desktop {
+        margin-top: 40px;
+        padding: 40px;
+      }
+
+      li {
+        margin-top: 10px;
+        margin-left: 20px;
+        list-style-type: disc;
+        font-size: $fz_sm;
+        line-height: $fz_lgs;
+        color: $blue_color;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        @include laptop {
+          font-size: $fz_md;
+          line-height: $fz_lgm;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $blue_color;
+      }
+    }
+  }
+
+  .graduate-container {
+    margin: 100px 0;
+    background-color: $black_color;
+    color: #fff;
+
+    @include tablets {
+      margin: 120px 0;
+    }
+
+    @include laptop {
+      margin: 160px 0;
+    }
+
+    .container {
+      padding: 20px 0;
+
+      @include laptop {
+        padding: 40px 0;
+      }
+    }
+
+    .block {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      @include tablets {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .title {
+      font-size: $fz_lgs;
+      line-height: $fz_xl;
+      text-transform: uppercase;
+
+      @include tablets {
+        font-size: $fz_lg;
+        line-height: 44px;
+      }
+
+      @include laptop {
+        font-size: $fz_xl;
+        line-height: 60px;
+      }
+
+      @include desktop {
+        font-size: $fz_mxl;
+        line-height: 92px;
+      }
+    }
+
+    .card_organizer {
+      margin-top: 20px;
+
+      @include tablets {
+        margin: 0;
+      }
+    }
+
+    .button-container {
+      margin-top: 40px;
+      width: 160px;
+      align-self: center;
+
+      @include tablets {
+        position: absolute;
+        bottom: 0;
+        width: 240px;
+      }
+
+      @include laptop {
+        position: static;
+        align-self: flex-end;
+      }
+    }
+  }
+}

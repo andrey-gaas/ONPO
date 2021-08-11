@@ -46,6 +46,8 @@ article.card_organizer{
       font-size: $fz_md;
       line-height: 157%;
       margin-bottom: 10px;
+      color: $black_color;
+
       & .surname{
         font-weight: bold;
       }
@@ -63,6 +65,7 @@ article.card_organizer{
       line-height: 157%;
       font-weight: bold;
       margin-bottom: 20px;
+      color: $black_color;
 
       @include laptop{
         font-size: $fz_xsm;
@@ -78,6 +81,7 @@ article.card_organizer{
     flex-direction: column;
     font-size: $fz_md;
     line-height: 160%;
+    color: $black_color;
     &>div{
       position: relative;
       padding-left: 28px;

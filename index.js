@@ -72,6 +72,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', require('./routes/home'));
 app.use('/api', require('./routes/api'));
 app.use('/catalog', require('./routes/catalog'));
+app.use('/graduate', require('./routes/graduate'));
 
 // TEST ROUTES
 app.use('/dron', require('./routes/dron'));
