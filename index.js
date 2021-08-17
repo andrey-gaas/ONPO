@@ -73,6 +73,7 @@ app.use('/', require('./routes/home'));
 app.use('/api', require('./routes/api'));
 app.use('/catalog', require('./routes/catalog'));
 app.use('/graduate', require('./routes/graduate'));
+app.use('/training', require('./routes/training'));
 
 // TEST ROUTES
 app.use('/dron', require('./routes/dron'));

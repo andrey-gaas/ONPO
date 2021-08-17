@@ -1,0 +1,24 @@
+<div class="container teachers-container">
+  <h2 class="title">
+    Преподователи
+  </h2>
+
+  <div class="teachers carousel">
+    <div class="teachers-list carousel-list">
+      {{#each teachers}}
+        {{>cards/card_teacher this}}
+      {{/each}}
+    </div>
+    <div class="controls">
+      <div class="swiper-button-prev"></div>
+
+      <div class="pagination"></div>
+
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button class="button color_red">Показать больше</button>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container rewiews-container">
+  <h2 class="title">
+    Отзывы
+  </h2>
+
+  <div class="reviews carousel">
+    <div class="reviews-list carousel-list">
+      {{#each reviews}}
+        {{>cards/card_review this}}
+      {{/each}}
+    </div>
+    <div class="controls">
+      <div class="swiper-button-prev"></div>
+
+      <div class="pagination"></div>
+
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button class="button color_red">Показать больше</button>
+  </div>
+</div>

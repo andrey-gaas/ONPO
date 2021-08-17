@@ -1,7 +1,9 @@
 <article class="card card_courses_filter" data-filter="{{#each categories}}{{this}} {{/each}}">
     <header class="header" style="background-image: url({{this.image}})">
       <div class="type">{{this.type}}</div>
+      {{#if this.discount}}
       <div class="discount">{{this.discount}}</div>
+      {{/if}}
     </header>
     <section class="description">
       <h1 class="title">{{#each categories}}{{this}} {{/each}}{{this.title}}</h1>

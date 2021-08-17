@@ -1,0 +1,13 @@
+<div class="container list-container">
+  <h2 class="title">
+    Дополнительные профессиональные программы<br />
+    повышения квалификации
+  </h2>
+  <div class="list">
+    {{#each courses}}
+      <div class="card_wrapper">
+        {{>cards/card_course this}}
+      </div>
+    {{/each}}
+  </div>
+</div>
