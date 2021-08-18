@@ -5,9 +5,10 @@ const router = Router();
 
 router.get('/', (req, res) => {
 
-	res.render('retraining', {
-		title: 'Программы профессиональной подготовки',
-		script: 'retraining.js',
+	res.render('courses', {
+		title: 'Программы профессиональной переподготовки',
+		description: 'Создание приверженного покупателя, анализируя результаты рекламной кампании, переворачивает жизненный цикл продукции.',
+		script: 'courses.js',
 		headerTitle: 'Образовательные программы',
 		courses,
 		teachers,

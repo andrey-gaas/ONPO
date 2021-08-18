@@ -1,4 +1,4 @@
-#page_retraining {
+#courses {
   & > .container > h1.title{
     margin-top: 40px;
     font-size: $fz_lg;
@@ -9,6 +9,7 @@
       font-size: $fz_mxl;
     }
     @include laptop{
+      width: 70%;
       font-size: $fz_xl;
     }
     @include desktop{
