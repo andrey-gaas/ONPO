@@ -74,6 +74,7 @@ app.use('/api', require('./routes/api'));
 app.use('/catalog', require('./routes/catalog'));
 app.use('/graduate', require('./routes/graduate'));
 app.use('/training', require('./routes/training'));
+app.use('/retraining', require('./routes/retraining'));
 
 // TEST ROUTES
 app.use('/dron', require('./routes/dron'));
