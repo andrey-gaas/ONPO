@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 		description: 'Создание приверженного покупателя, анализируя результаты рекламной кампании, переворачивает жизненный цикл продукции.',
 		script: 'courses.js',
 		headerTitle: 'Образовательные программы',
-		courses,
+		courses: courses.filter(course => course.type === 'Профессиональная переподготовка'),
 		teachers,
 		reviews,
 	});
