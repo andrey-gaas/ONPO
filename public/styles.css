@@ -972,6 +972,76 @@ h2.home_subtitle {
   }
 }
 
+#teachers > .container > h1.title {
+  margin-top: 40px;
+  font-size: 28px;
+  line-height: 160%;
+  color: #252A34;
+}
+@media screen and (min-width: 728px) {
+  #teachers > .container > h1.title {
+    font-size: 58px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teachers > .container > h1.title {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #teachers > .container > h1.title {
+    font-size: 58px;
+  }
+}
+#teachers .teachers-list .filter {
+  margin-top: 10px;
+}
+@media screen and (min-width: 728px) {
+  #teachers .teachers-list .filter {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teachers .teachers-list .filter {
+    margin-top: 40px;
+  }
+}
+#teachers .teachers-list .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 728px) {
+  #teachers .teachers-list .list {
+    margin-right: -20px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #teachers .teachers-list .list {
+    margin-right: -40px;
+  }
+}
+#teachers .teachers-list .card_teacher {
+  margin-top: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 728px) {
+  #teachers .teachers-list .card_teacher {
+    margin-right: 20px;
+    width: 334px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teachers .teachers-list .card_teacher {
+    width: 373px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #teachers .teachers-list .card_teacher {
+    margin-right: 40px;
+    width: 453px;
+  }
+}
+
 .button {
   display: flex;
   font-size: 14px;

@@ -1,4 +1,4 @@
-<article class="card_teacher">
+<article class="card_teacher" {{#if categories}} data-filter="{{#each categories}}{{this}}{{/each}}"  {{/if}}>
   <div class="person vcard">
     <div class="img_block">
       <img src="{{img}}" alt="{{surname}} {{name}} {{middlename}}" class="img photo">

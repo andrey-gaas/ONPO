@@ -1,0 +1,65 @@
+#teachers {
+  & > .container > h1.title{
+    margin-top: 40px;
+    font-size: $fz_lg;
+    line-height: 160%;
+    color: $black_color;
+
+    @include tablets{
+      font-size: $fz_mxl;
+    }
+    @include laptop{
+      font-size: $fz_xl;
+    }
+    @include desktop{
+      font-size: $fz_mxl;
+    }
+  }
+
+  .teachers-list {
+
+    .filter {
+      margin-top: 10px;
+  
+      @include tablets {
+        margin-top: 20px;
+      }
+  
+      @include laptop {
+        margin-top: 40px;
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include tablets {
+        margin-right: -20px;
+      }
+
+      @include desktop {
+        margin-right: -40px;
+      }
+    }
+
+    .card_teacher {
+      margin-top: 20px;
+      width: 100%;
+
+      @include tablets {
+        margin-right: 20px;
+        width: 334px;
+      }
+
+      @include laptop {
+        width: 373px;
+      }
+
+      @include desktop {
+        margin-right: 40px;
+        width: 453px;
+      }
+    }
+  }
+}

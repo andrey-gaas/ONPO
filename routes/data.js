@@ -51,12 +51,41 @@ exports.reviews = [
 
 exports.teachers = [
   {
-    id: 1,
-    name:"3 сабина", 
+    id: 0,
+    name:"Cабина", 
     surname:"Тихомирова", 
     middlename:"Ильинична", 
     position:'Доктор педагогических наук', 
     img:'/image/oraganizators/1.png',
+    categories: ['graduate'],
+    courses: [
+      {
+        title:'Библиографическое описание. Общие требования и правила составления',
+        href:"#0"
+      },
+      {
+        title:'Современные инфокоммуникационные технологии. Технологии «ИРБИС»',
+        href:"#1"
+      },
+      {
+        title:'Культурно-досуговая деятельность библиотек в современных социокультурных условиях',
+        href:"#2"
+      }
+    ],
+    status: {
+      education:'ОМГПУ, ОМГУПС',
+      form:'Онлайн / Оффлайн',
+      experience:'7 лет'
+    },
+  },
+  {
+    id: 1,
+    name:"Ольга", 
+    surname:"Ивановна", 
+    middlename:"Александровна", 
+    position:'Доктор педагогических наук', 
+    img:'/image/oraganizators/1.png',
+    categories: ['graduate'],
     courses: [
       {
         title:'Библиографическое описание. Общие требования и правила составления',
@@ -79,11 +108,12 @@ exports.teachers = [
   },
   {
     id: 2,
-    name:"3 сабина", 
-    surname:"Тихомирова", 
-    middlename:"Ильинична", 
-    position:'Доктор педагогических наук', 
-    img:'/image/oraganizators/1.png',
+    name:"Алексей", 
+    surname:"Нуждин", 
+    middlename:"Иванович", 
+    position:'Юный падаван', 
+    img:'/image/321.jpg',
+    categories: ['training'],
     courses: [
       {
         title:'Библиографическое описание. Общие требования и правила составления',
@@ -106,11 +136,12 @@ exports.teachers = [
   },
   {
     id: 3,
-    name:"3 сабина", 
-    surname:"Тихомирова", 
-    middlename:"Ильинична", 
-    position:'Доктор педагогических наук', 
-    img:'/image/oraganizators/1.png',
+    name:"Андрей", 
+    surname:"Гаас", 
+    middlename:"Александрович", 
+    position:'Доктор Фулл-Стакерских наук', 
+    img:'/image/123.jpg',
+    categories: ['training'],
     courses: [
       {
         title:'Библиографическое описание. Общие требования и правила составления',
@@ -133,11 +164,40 @@ exports.teachers = [
   },
   {
     id: 4,
-    name:"3 сабина", 
+    name:"Cабина", 
     surname:"Тихомирова", 
     middlename:"Ильинична", 
     position:'Доктор педагогических наук', 
     img:'/image/oraganizators/1.png',
+    categories: ['retraining'],
+    courses: [
+      {
+        title:'Библиографическое описание. Общие требования и правила составления',
+        href:"#0"
+      },
+      {
+        title:'Современные инфокоммуникационные технологии. Технологии «ИРБИС»',
+        href:"#1"
+      },
+      {
+        title:'Культурно-досуговая деятельность библиотек в современных социокультурных условиях',
+        href:"#2"
+      }
+    ],
+    status: {
+      education:'ОМГПУ, ОМГУПС',
+      form:'Онлайн / Оффлайн',
+      experience:'7 лет'
+    },
+  },
+  {
+    id: 5,
+    name:"Cабина", 
+    surname:"Тихомирова", 
+    middlename:"Ильинична", 
+    position:'Доктор педагогических наук', 
+    img:'/image/oraganizators/1.png',
+    categories: ['retraining'],
     courses: [
       {
         title:'Библиографическое описание. Общие требования и правила составления',
