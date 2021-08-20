@@ -1,0 +1,19 @@
+#course {
+  & > .container > h1.title{
+    margin-top: 40px;
+    font-size: $fz_lg;
+    line-height: 160%;
+    color: $black_color;
+
+    @include tablets{
+      font-size: $fz_mxl;
+    }
+    @include laptop{
+      width: 70%;
+      font-size: $fz_xl;
+    }
+    @include desktop{
+      font-size: $fz_mxl;
+    }
+  }
+}

@@ -949,6 +949,29 @@ h2.home_subtitle {
   }
 }
 
+#course > .container > h1.title {
+  margin-top: 40px;
+  font-size: 28px;
+  line-height: 160%;
+  color: #252A34;
+}
+@media screen and (min-width: 728px) {
+  #course > .container > h1.title {
+    font-size: 58px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #course > .container > h1.title {
+    width: 70%;
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #course > .container > h1.title {
+    font-size: 58px;
+  }
+}
+
 .button {
   display: flex;
   font-size: 14px;

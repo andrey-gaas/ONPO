@@ -3,16 +3,17 @@ const { courses, teachers, reviews } = require('./data');
 
 const router = Router();
 
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
+	const course = courses.find(course => course.id === +req.params.id);
+	const type = course.type === 'Повышение квалификации' ?
+		'Программы повышения квалификации' : 'Программы профессиональной переподготовки';
 
-	res.render('courses', {
-		title: 'Библиографическое описание. Общие требования и правила составления',
-		type: 'Создание приверженного покупателя, анализируя результаты рекламной кампании, переворачивает жизненный цикл продукции.',
-		script: 'courses.js',
+	res.render('course', {
+		title: course.title,
+		type,
+		script: 'course.js',
 		headerTitle: 'Образовательные программы',
-		courses,
-		teachers,
-		reviews,
+		course,
 	});
 });
 
