@@ -1256,6 +1256,373 @@ h2.home_subtitle {
   list-style: disc;
 }
 
+#reviews > .container > h1.title {
+  margin-top: 40px;
+  font-size: 28px;
+  line-height: 160%;
+  color: #252A34;
+}
+@media screen and (min-width: 728px) {
+  #reviews > .container > h1.title {
+    font-size: 58px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #reviews > .container > h1.title {
+    width: 70%;
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #reviews > .container > h1.title {
+    font-size: 58px;
+  }
+}
+#reviews .reviews-list .filter {
+  margin-top: 10px;
+}
+@media screen and (min-width: 728px) {
+  #reviews .reviews-list .filter {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #reviews .reviews-list .filter {
+    margin-top: 40px;
+  }
+}
+#reviews .reviews-list .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 728px) {
+  #reviews .reviews-list .list {
+    margin-right: -20px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #reviews .reviews-list .list {
+    margin-right: -40px;
+  }
+}
+#reviews .reviews-list .card_review {
+  margin-top: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 728px) {
+  #reviews .reviews-list .card_review {
+    margin-right: 20px;
+    width: 334px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #reviews .reviews-list .card_review {
+    width: 373px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #reviews .reviews-list .card_review {
+    margin-right: 40px;
+    width: 453px;
+  }
+}
+#reviews .form-container {
+  margin: 100px 0;
+  padding: 20px 0;
+  color: #FFFFFF;
+  background-color: #252A34;
+}
+@media screen and (min-width: 728px) {
+  #reviews .form-container {
+    margin: 120px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #reviews .form-container {
+    margin: 160px 0;
+    padding: 40px 0;
+  }
+}
+#reviews .form-container .title {
+  font-size: 28px;
+  line-height: 160%;
+}
+@media screen and (min-width: 728px) {
+  #reviews .form-container .title {
+    width: 40%;
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #reviews .form-container .title {
+    width: 50%;
+    font-size: 58px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #reviews .form-container .title {
+    width: 50%;
+    font-size: 78px;
+  }
+}
+#reviews .form-container .form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1200px) {
+  #reviews .form-container .form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 570px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #reviews .form-container .form {
+    width: 700px;
+  }
+}
+#reviews .form-container .form .form_input {
+  border-bottom: 1px solid #FFFFFF;
+  margin-bottom: 20px;
+  position: relative;
+}
+#reviews .form-container .form .form_input.dropdown > input:focus::placeholder {
+  color: #FFFFFF;
+}
+#reviews .form-container .form .form_input.dropdown::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  right: 7px;
+  top: calc(50% - 6px);
+  transform: rotate(45deg);
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+  color: #252A34;
+  padding: 10px;
+  padding-right: 10px;
+  transition: 0.3s all;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list {
+  max-height: 200px;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item {
+  margin-bottom: 10px;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (min-width: 728px) {
+  #reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item {
+    margin-bottom: 15px;
+  }
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item input {
+  position: absolute;
+  opacity: 0;
+  left: -10000px;
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item input:checked + label::before {
+  opacity: 1;
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label {
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  padding-right: 30px;
+  cursor: pointer;
+  width: 100%;
+}
+@media screen and (min-width: 728px) {
+  #reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label {
+    font-size: 16px;
+  }
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::after {
+  display: block;
+  position: absolute;
+  content: "";
+  right: 4px;
+  top: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  border: 2px solid #BDBDBD;
+  border-radius: 5px;
+}
+@media screen and (min-width: 728px) {
+  #reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::after {
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 9px);
+  }
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 8px;
+  border-bottom: 2px solid #3EC1D3;
+  border-right: 2px solid #3EC1D3;
+  transform: rotate(45deg);
+  top: calc(50% - 5px);
+  right: 9px;
+  opacity: 0;
+  transition: 0.2s all;
+}
+@media screen and (min-width: 728px) {
+  #reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label::before {
+    width: 7px;
+    height: 10px;
+    top: calc(50% - 7px);
+    right: 9px;
+  }
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar {
+  /* 1 - скроллбар */
+  width: 4px;
+  height: calc(100% - 30px);
+  position: absolute;
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  top: 15px;
+  right: 6px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-button {
+  /* 2 - кнопка */
+  height: 0;
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-track {
+  /* 3 - трек */
+  width: 4px;
+  height: calc(100% - 30px);
+  position: absolute;
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  top: 15px;
+  right: 6px;
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-track-piece {
+  /* 4 - видимая часть трека */
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-thumb {
+  /* 5 - ползунок */
+  background-color: #FF165D;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-corner {
+  /* 6 - уголок */
+}
+#reviews .form-container .form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-resizer {
+  /* 7 - изменение размеров */
+}
+#reviews .form-container .form .form_input.active > .wrap_castom_scrollbar {
+  opacity: 1;
+  transform: scaleY(1);
+}
+#reviews .form-container .form .form_input input, #reviews .form-container .form .form_input .select_input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+  color: #FFFFFF;
+  font-family: "Gotham";
+  font-size: 12px;
+  line-height: 160%;
+  margin-bottom: 5px;
+  padding-right: 25px;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+@media screen and (min-width: 728px) {
+  #reviews .form-container .form .form_input input, #reviews .form-container .form .form_input .select_input {
+    font-size: 16px;
+  }
+}
+#reviews .form-container .form .form_input input::placeholder, #reviews .form-container .form .form_input .select_input::placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+  transition: 0.3;
+}
+#reviews .form-container .form .form_input input:focus::placeholder, #reviews .form-container .form .form_input .select_input:focus::placeholder {
+  color: transparent;
+}
+#reviews .form-container .form .form_input input::-webkit-input-placeholder, #reviews .form-container .form .form_input .select_input::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+#reviews .form-container .form .form_input input::-moz-placeholder, #reviews .form-container .form .form_input .select_input::-moz-placeholder {
+  color: #FFFFFF;
+}
+#reviews .form-container .form .form_input input:-moz-placeholder, #reviews .form-container .form .form_input .select_input:-moz-placeholder {
+  color: #FFFFFF;
+}
+#reviews .form-container .form .form_input input:-ms-input-placeholder, #reviews .form-container .form .form_input .select_input:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+#reviews .form-container .grade div {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+@media screen and (min-width: 728px) {
+  #reviews .form-container .grade div {
+    font-size: 16px;
+  }
+}
+#reviews .form-container .grade .star {
+  width: 15px;
+  height: 15px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  background-image: url(/image/icons/star_empty.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 1200px) {
+  #reviews .form-container .grade .star {
+    width: 20px;
+    height: 20px;
+  }
+}
+#reviews .form-container .grade .star.active {
+  background-image: url(/image/icons/star_fill.svg);
+}
+#reviews .form-container .button-container {
+  align-self: center;
+  margin-top: 40px;
+  width: 170px;
+}
+@media screen and (min-width: 728px) {
+  #reviews .form-container .button-container {
+    width: 240px;
+  }
+}
+
 .button {
   display: flex;
   font-size: 14px;
