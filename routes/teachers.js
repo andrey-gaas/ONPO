@@ -13,5 +13,17 @@ router.get('/', (req,  res) => {
 	});
 });
 
+router.get('/:id', (req, res) => {
+	const { id } = req.params;
+	const teacher = teachers.find(t => t.id === +id);
+
+	res.render('teacher', {
+		title: `${teacher.surname} ${teacher.name} ${teacher.middlename}`,
+		script: 'teacher.js',
+		headerTitle: 'Преподаватели',
+		teacher,
+	});
+});
+
 module.exports = router;
  

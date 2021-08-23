@@ -54,8 +54,10 @@ exports.teachers = [
     id: 0,
     name:"Cабина", 
     surname:"Тихомирова", 
-    middlename:"Ильинична", 
-    position:'Доктор педагогических наук', 
+    middlename:"Ильинична",
+    placeWork: 'ГПНТБ СО РАН',
+    position:'Доктор педагогических наук',
+    experience: '10 лет', 
     img:'/image/oraganizators/1.png',
     categories: ['graduate'],
     courses: [
@@ -77,13 +79,16 @@ exports.teachers = [
       form:'Онлайн / Оффлайн',
       experience:'7 лет'
     },
+    description: '<h1>Заголовок</h1><ol><li>test</li><li><b>test</b></li></ol><ul><li>test</li><li><b>test</b></li> </ul>',
   },
   {
     id: 1,
     name:"Ольга", 
     surname:"Ивановна", 
     middlename:"Александровна", 
-    position:'Доктор педагогических наук', 
+    placeWork: 'ГПНТБ СО РАН',
+    position:'Доктор педагогических наук',
+    experience: '10 лет', 
     img:'/image/oraganizators/1.png',
     categories: ['graduate'],
     courses: [
@@ -105,12 +110,15 @@ exports.teachers = [
       form:'Онлайн / Оффлайн',
       experience:'7 лет'
     },
+    description: '<h1>Заголовок</h1><ol><li>test</li><li><b>test</b></li></ol><ul><li>test</li><li><b>test</b></li> </ul>',
   },
   {
     id: 2,
     name:"Алексей", 
     surname:"Нуждин", 
-    middlename:"Иванович", 
+    middlename:"Иванович",
+    placeWork: 'ГПНТБ СО РАН',
+    experience: '1 год', 
     position:'Юный падаван', 
     img:'/image/321.jpg',
     categories: ['training'],
@@ -133,13 +141,16 @@ exports.teachers = [
       form:'Онлайн / Оффлайн',
       experience:'7 лет'
     },
+    description: '<h1>Заголовок</h1><ol><li>test</li><li><b>test</b></li></ol><ul><li>test</li><li><b>test</b></li> </ul>',
   },
   {
     id: 3,
     name:"Андрей", 
     surname:"Гаас", 
     middlename:"Александрович", 
+    placeWork: 'ГПНТБ СО РАН',
     position:'Доктор Фулл-Стакерских наук', 
+    experience: '100 лет', 
     img:'/image/123.jpg',
     categories: ['training'],
     courses: [
@@ -161,13 +172,16 @@ exports.teachers = [
       form:'Онлайн / Оффлайн',
       experience:'7 лет'
     },
+    description: '<h1>Заголовок</h1><ol><li>test</li><li><b>test</b></li></ol><ul><li>test</li><li><b>test</b></li> </ul>',
   },
   {
     id: 4,
     name:"Cабина", 
     surname:"Тихомирова", 
     middlename:"Ильинична", 
-    position:'Доктор педагогических наук', 
+    placeWork: 'ГПНТБ СО РАН',
+    position:'Доктор педагогических наук',
+    experience: '10 лет', 
     img:'/image/oraganizators/1.png',
     categories: ['retraining'],
     courses: [
@@ -189,13 +203,16 @@ exports.teachers = [
       form:'Онлайн / Оффлайн',
       experience:'7 лет'
     },
+    description: '<h1>Заголовок</h1><ol><li>test</li><li><b>test</b></li></ol><ul><li>test</li><li><b>test</b></li> </ul>',
   },
   {
     id: 5,
     name:"Cабина", 
     surname:"Тихомирова", 
     middlename:"Ильинична", 
-    position:'Доктор педагогических наук', 
+    placeWork: 'ГПНТБ СО РАН',
+    position:'Доктор педагогических наук',
+    experience: '10 лет', 
     img:'/image/oraganizators/1.png',
     categories: ['retraining'],
     courses: [
@@ -217,6 +234,7 @@ exports.teachers = [
       form:'Онлайн / Оффлайн',
       experience:'7 лет'
     },
+    description: '<h1>Заголовок</h1><ol><li>test</li><li><b>test</b></li></ol><ul><li>test</li><li><b>test</b></li> </ul>',
   },
 ];
 

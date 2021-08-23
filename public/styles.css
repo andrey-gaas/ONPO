@@ -1042,6 +1042,220 @@ h2.home_subtitle {
   }
 }
 
+#teacher .paper {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+}
+@media screen and (min-width: 728px) {
+  #teacher .paper {
+    padding: 20px;
+    border-radius: 30px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #teacher .paper {
+    padding: 40px;
+  }
+}
+#teacher .info-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 728px) {
+  #teacher .info-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+#teacher .info-container .info__photo {
+  border-radius: 15px;
+}
+@media screen and (min-width: 728px) {
+  #teacher .info-container .info__photo {
+    width: 226px;
+    border-radius: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teacher .info-container .info__photo {
+    width: 453px;
+    border-radius: 30px;
+  }
+}
+@media screen and (min-width: 728px) {
+  #teacher .info-container .info__description {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teacher .info-container .info__description {
+    margin-left: 40px;
+  }
+}
+#teacher .info-container .fullname {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 160%;
+}
+@media screen and (min-width: 728px) {
+  #teacher .info-container .fullname {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teacher .info-container .fullname {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #teacher .info-container .fullname {
+    font-size: 28px;
+  }
+}
+#teacher .info-container .fullname .surname {
+  font-size: 22px;
+  font-weight: bold;
+}
+@media screen and (min-width: 728px) {
+  #teacher .info-container .fullname .surname {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teacher .info-container .fullname .surname {
+    font-size: 38px;
+  }
+}
+#teacher .info-container .fullname .name {
+  margin-top: 10px;
+}
+#teacher .info-container .courses {
+  margin-top: 20px;
+}
+@media screen and (min-width: 1200px) {
+  #teacher .info-container .courses {
+    margin-top: 40px;
+  }
+}
+#teacher .info-container .courses li {
+  position: relative;
+  margin-top: 15px;
+  padding-left: 30px;
+}
+#teacher .info-container .courses li::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 8px);
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(image/icons/course_flag.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#teacher .info-container .courses li a {
+  color: #252A34;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 160%;
+}
+@media screen and (min-width: 728px) {
+  #teacher .info-container .courses li a {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teacher .info-container .courses li a {
+    font-size: 16px;
+  }
+}
+#teacher .info-container .info {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 160%;
+}
+@media screen and (min-width: 728px) {
+  #teacher .info-container .info {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teacher .info-container .info {
+    margin-top: 40px;
+  }
+}
+#teacher .info-container .info div {
+  margin-top: 10px;
+}
+#teacher .description {
+  margin-top: 40px;
+}
+@media screen and (min-width: 728px) {
+  #teacher .description {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teacher .description {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #teacher .description {
+    margin-top: 80px;
+  }
+}
+#teacher .description h1 {
+  font-size: 16px;
+  text-align: center;
+}
+@media screen and (min-width: 728px) {
+  #teacher .description h1 {
+    font-size: 28px;
+  }
+}
+#teacher .description ol, #teacher .description ul {
+  margin-top: 20px;
+}
+@media screen and (min-width: 1520px) {
+  #teacher .description ol, #teacher .description ul {
+    margin-top: 40px;
+  }
+}
+#teacher .description ol li, #teacher .description ul li {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 12px;
+}
+@media screen and (min-width: 728px) {
+  #teacher .description ol li, #teacher .description ul li {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teacher .description ol li, #teacher .description ul li {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #teacher .description ol li, #teacher .description ul li {
+    margin-top: 20px;
+  }
+}
+#teacher .description ol li {
+  list-style: decimal;
+}
+#teacher .description ul li {
+  list-style: disc;
+}
+
 .button {
   display: flex;
   font-size: 14px;

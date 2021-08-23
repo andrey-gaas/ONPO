@@ -1,0 +1,38 @@
+<div id="teacher">
+  <div class="container">
+    <div class="paper">
+      <div class="info-container">
+        <img src="{{teacher.img}}" alt="{{title}}" class="info__photo" />
+        <div class="info__description">
+          <div class="fullname">
+            <div class="surname">{{teacher.surname}}</div>
+            <div class="name">{{teacher.name}} {{teacher.middlename}}</div>
+          </div>
+          
+          <ul class="courses">
+            {{#each teacher.courses}}
+              <li>
+                <a href="{{this.href}}" class="course">{{this.title}}</a>
+              </li>
+            {{/each}}
+          </ul>
+
+          <div class="info">
+            <div>
+              <strong>Образование</strong> - {{teacher.status.education}}
+            </div>
+            <div>
+              <strong>Место работы</strong> - {{teacher.placeWork}}
+            </div>
+            <div>
+              <strong>Должность</strong> - {{teacher.position}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        {{{teacher.description}}}
+      </div>
+    </div>
+  </div>
+</div>
