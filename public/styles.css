@@ -1623,6 +1623,561 @@ h2.home_subtitle {
   }
 }
 
+#structure .head > .container > .title {
+  margin-top: 40px;
+  font-size: 22px;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 728px) {
+  #structure .head > .container > .title {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .head > .container > .title {
+    font-size: 58px;
+  }
+}
+#structure .head .description {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 160%;
+}
+@media screen and (min-width: 728px) {
+  #structure .head .description {
+    width: 423px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .head .description {
+    margin-top: 40px;
+    width: 570px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #structure .head .description {
+    width: 823px;
+    font-size: 28px;
+  }
+}
+#structure .head .organizers {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+@media screen and (min-width: 728px) {
+  #structure .head .organizers {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .head .organizers {
+    flex-wrap: nowrap;
+    margin-top: 40px;
+  }
+}
+#structure .head .organizers .card_organizer {
+  margin-top: 20px;
+}
+@media screen and (min-width: 728px) {
+  #structure .head .organizers .card_organizer {
+    width: 334px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .head .organizers .card_organizer {
+    width: 275px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #structure .head .organizers .card_organizer {
+    width: 330px;
+  }
+}
+#structure .photo-background {
+  margin-top: 40px;
+  height: 200px;
+  background-image: url(/image/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 728px) {
+  #structure .photo-background {
+    margin-top: 80px;
+    height: 316px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .photo-background {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #structure .photo-background {
+    height: 600px;
+  }
+}
+#structure .information {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+@media screen and (min-width: 728px) {
+  #structure .information {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 80px;
+  }
+}
+#structure .information .links-container {
+  display: none;
+}
+@media screen and (min-width: 728px) {
+  #structure .information .links-container {
+    display: block;
+    width: 230px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .information .links-container {
+    width: 310px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #structure .information .links-container {
+    width: 380px;
+  }
+}
+#structure .information .links-container li {
+  position: relative;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+#structure .information .links-container li:first-child {
+  margin-top: 0;
+}
+#structure .information .links-container li::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #FF165D;
+  border-radius: 50%;
+}
+#structure .information .links-container a {
+  text-decoration: none;
+  color: #252A34;
+}
+#structure .information .links-container a.active {
+  font-weight: bold;
+}
+#structure .information .info-container {
+  margin-left: auto;
+  width: 100%;
+}
+@media screen and (min-width: 728px) {
+  #structure .information .info-container {
+    width: 420px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .information .info-container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #structure .information .info-container {
+    width: 946px;
+  }
+}
+#structure .information .info-container h2.title {
+  margin-top: 100px;
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+#structure .information .info-container h2.title:first-child {
+  margin-top: 0;
+}
+@media screen and (min-width: 728px) {
+  #structure .information .info-container h2.title {
+    margin-top: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .information .info-container h2.title {
+    margin-top: 160px;
+    font-size: 28px;
+  }
+}
+#structure .information .info-container .paper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+@media screen and (min-width: 728px) {
+  #structure .information .info-container .paper {
+    padding: 20px 10px;
+    border-radius: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .information .info-container .paper {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #structure .information .info-container .paper {
+    margin-top: 40px;
+    padding: 40px;
+  }
+}
+#structure .information .info-container .paper a {
+  color: #2F80ED;
+  text-decoration: none;
+}
+#structure .information .info-container .text {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 160%;
+}
+#structure .information .info-container .text:first-child {
+  margin-top: 0;
+}
+@media screen and (min-width: 728px) {
+  #structure .information .info-container .text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #structure .information .info-container .text {
+    font-size: 16px;
+  }
+}
+#structure .information .info-container .text a {
+  color: #2F80ED;
+  text-decoration: none;
+}
+#structure .information .info-container .subtitle {
+  margin-top: 40px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 728px) {
+  #structure .information .info-container .subtitle {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .information .info-container .subtitle {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #structure .information .info-container .subtitle {
+    margin-top: 80px;
+    font-size: 28px;
+  }
+}
+#structure .information .info-container .subtitle:first-child {
+  margin-top: 0;
+}
+#structure .information .info-container .list {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+#structure .information .info-container .list:first-child {
+  margin-top: 0;
+}
+#structure .information .info-container .list li {
+  margin-top: 10px;
+  font-size: 12px;
+  list-style-type: disc;
+  color: #2F80ED;
+}
+#structure .information .info-container .list li:first-child {
+  margin-top: 0;
+}
+@media screen and (min-width: 728px) {
+  #structure .information .info-container .list li {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #structure .information .info-container .list li {
+    font-size: 16px;
+  }
+}
+#structure .information .info-container .buttons-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1200px) {
+  #structure .information .info-container .buttons-container {
+    flex-direction: row;
+  }
+}
+#structure .information .info-container .buttons-container .button {
+  margin-top: 20px;
+}
+#structure .information .info-container .buttons-container .button:first-child {
+  margin-top: 0;
+}
+@media screen and (min-width: 728px) {
+  #structure .information .info-container .buttons-container .button {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .information .info-container .buttons-container .button {
+    margin-top: 0;
+    margin-left: 40px;
+    width: 330px;
+  }
+  #structure .information .info-container .buttons-container .button:first-child {
+    margin-left: 0;
+  }
+}
+#structure .information .info-container .right-button {
+  align-self: flex-end;
+  margin-top: 40px;
+  width: 162px;
+}
+@media screen and (min-width: 728px) {
+  #structure .information .info-container .right-button {
+    width: 240px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .information .info-container .right-button {
+    align-self: flex-start;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #structure .information .info-container .right-button {
+    align-self: flex-end;
+    margin-top: 60px;
+  }
+}
+#structure .contacts {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 728px) {
+  #structure .contacts {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .contacts {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
+}
+#structure .contacts h2.title {
+  font-size: 22px;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 728px) {
+  #structure .contacts h2.title {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .contacts h2.title {
+    font-size: 38px;
+  }
+}
+#structure .contacts .grid {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+@media screen and (min-width: 728px) {
+  #structure .contacts .grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+#structure .contacts .work-schedule {
+  margin-top: 20px;
+}
+@media screen and (min-width: 728px) {
+  #structure .contacts .work-schedule {
+    margin-top: 40px;
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .contacts .work-schedule {
+    width: 450px;
+  }
+}
+#structure .contacts h3.title {
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 728px) {
+  #structure .contacts h3.title {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .contacts h3.title {
+    font-size: 28px;
+  }
+}
+#structure .contacts .address {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 160%;
+  font-style: normal;
+}
+#structure .contacts .address::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 17px;
+  background-image: url(image/icons/geo_accent.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 728px) {
+  #structure .contacts .address {
+    margin-top: 40px;
+  }
+}
+#structure .contacts .schedule {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+#structure .contacts .schedule::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 17px;
+  background-image: url(image/icons/clock_accent.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#structure .contacts .schedule div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 160%;
+}
+#structure .contacts .schedule span {
+  width: 125px;
+}
+#structure .contacts .schedule span.red {
+  color: red;
+}
+#structure .contacts .phone {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+#structure .contacts .phone::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 17px;
+  background-image: url(image/icons/phone.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#structure .contacts .phone a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #252A34;
+}
+#structure .contacts .email {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+#structure .contacts .email::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 17px;
+  background-image: url(image/icons/email.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#structure .contacts .email a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #252A34;
+}
+#structure .contacts .map {
+  margin-top: 20px;
+  min-height: 250px;
+  background-image: url(/image/address-map.png);
+  background-repeat: no-repeat;
+  background-position: -145px -60px;
+  background-size: 150%;
+  border-radius: 15px;
+}
+@media screen and (min-width: 728px) {
+  #structure .contacts .map {
+    width: 334px;
+    background-size: 200%;
+    background-position: -230px 15px;
+    border-radius: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .contacts .map {
+    width: 668px;
+    background-size: 120%;
+    background-position: -120px -42px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #structure .contacts .map {
+    width: 823px;
+    background-size: 100%;
+    background-position: 0px -8px;
+  }
+}
+
 .button {
   display: flex;
   font-size: 14px;

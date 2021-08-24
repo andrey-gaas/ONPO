@@ -78,6 +78,7 @@ app.use('/retraining', require('./routes/retraining'));
 app.use('/course', require('./routes/course'));
 app.use('/teachers', require('./routes/teachers'));
 app.use('/reviews', require('./routes/reviews'));
+app.use('/structure', require('./routes/structure'));
 
 // TEST ROUTES
 app.use('/dron', require('./routes/dron'));
