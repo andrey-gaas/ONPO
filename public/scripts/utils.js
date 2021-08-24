@@ -247,6 +247,7 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
   let filterCardList = document.querySelectorAll(selectFilerCards)
   let filter = document.querySelector(selectFilter)
   let filterDate = 'all'
+  let isFilterWidthBig = (filter.clientWidth > filter.parentNode.clientWidth)
 
   filterCardList.forEach(item => {
     if(item.parentNode.parentNode.parentNode.className === "swiper-wrapper"){
@@ -261,7 +262,7 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
   let isBtnControlWorks = false
 
   let slideFilter = direction => {
-    if(isBtnControlWorks){ return }
+    if(isBtnControlWorks || !isFilterWidthBig){ return }
     isBtnControlWorks = true
 
     let left = +filter.style.left.slice(0, -2)
@@ -301,8 +302,11 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
       filter.style.transition = null
     }, 200)
   }
+
+
   let filterBtnControlBack = document.querySelector('.btn_back.btn_filter_control')
   let filterBtnControlNext = document.querySelector('.btn_next.btn_filter_control')
+
 
   filterBtnControlBack.addEventListener('click', () => slideFilter(1))
   filterBtnControlNext.addEventListener('click', () => slideFilter(-1))
@@ -342,7 +346,10 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
       document.removeEventListener( touchMove, checkUpDownScroll);
       document[( 'on'+touchEnd )] = null;
     }
-    document.addEventListener(touchEnd, stopMove);
+
+    if(isFilterWidthBig){
+      document.addEventListener(touchEnd, stopMove);
+    }
 
     let checkUpDownScroll = () =>{
       document.removeEventListener( touchMove, checkUpDownScroll);
@@ -360,7 +367,10 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
         document.addEventListener(touchMove, onMouseMove);
       }
     }
-    document.addEventListener(touchMove, checkUpDownScroll);
+
+    if(isFilterWidthBig){
+      document.addEventListener(touchMove, checkUpDownScroll);
+    }
 
     //btn filter
     if(e.target.nodeName === "BUTTON"){
@@ -414,6 +424,52 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
     }
   }
 
+
+  
   filter.onmousedown = e => { fnFitler(e, 'mouseup', 'mousemove') }
   filter.ontouchstart = e => { fnFitler(e, 'touchend', 'touchmove') }
+  
+
+  const mediaQueryTablet = window.matchMedia('(min-width: 728px)')
+  const mediaQueryTabletMax = window.matchMedia('(max-width: 1199px)')
+  const mediaQueryLaptop = window.matchMedia('(min-width: 1200px)')
+  const mediaQueryMobileMax = window.matchMedia('(max-width: 727px)')
+
+  function mediaMobile(e){
+    if (e.matches) {
+      isFilterWidthBig = (filter.clientWidth > filter.parentNode.clientWidth)
+      filter.style.transition = '.2s left'
+      filter.style.left = '0px'
+      setTimeout( ()=>{filter.style.transition = null}, 200)
+    }
+  }
+
+  function mediaTablet(e){
+    if (e.matches) {
+      isFilterWidthBig = (filter.clientWidth > filter.parentNode.clientWidth)
+      filter.style.transition = '.2s left'
+      filter.style.left = '0px'
+      setTimeout( ()=>{filter.style.transition = null}, 200)
+    }
+  }
+
+  function mediaLaptop(e){
+    if (e.matches) {
+      isFilterWidthBig = (filter.clientWidth > filter.parentNode.clientWidth)
+      filter.style.transition = '.2s left'
+      filter.style.left = '0px'
+      setTimeout( ()=>{filter.style.transition = null}, 200)
+    }
+  }
+
+  mediaQueryTablet.addListener(mediaTablet)
+  mediaTablet(mediaQueryTablet)
+  mediaQueryTabletMax.addListener(mediaTablet)
+  mediaTablet(mediaQueryTabletMax)
+  
+  mediaQueryLaptop.addListener(mediaLaptop)
+  mediaLaptop(mediaQueryLaptop)
+
+  mediaQueryMobileMax.addListener(mediaMobile)
+  mediaMobile(mediaQueryMobileMax)
 }
