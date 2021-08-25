@@ -14,6 +14,8 @@ router.get('/:id', (req, res) => {
 		script: 'course.js',
 		headerTitle: 'Образовательные программы',
 		course,
+		teachers: [teachers[0], teachers[1]],
+		reviews: [reviews[0], reviews[1]],
 	});
 });
 

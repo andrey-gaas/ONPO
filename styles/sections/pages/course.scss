@@ -16,4 +16,713 @@
       font-size: $fz_mxl;
     }
   }
+
+  h2.title {
+    margin-top: 100px;
+    font-size: $fz_lgs;
+    line-height: 160%;
+    text-transform: uppercase;
+
+    @include tablets {
+      margin-top: 120px;
+      font-size: $fz_lg;
+    }
+
+    @include laptop {
+      margin-top: 160px;
+      font-size: $fz_xl;
+    }
+  }
+
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: $white_color;
+    border-radius: 15px;
+
+    @include tablets{
+      padding: 20px;
+      border-radius: 30px;
+    }
+
+    @include laptop{
+      margin-top: 40px;
+    }
+
+    @include desktop{
+      padding: 40px;
+    }
+
+    h2.title {
+      margin-top: 0;
+      font-size: $fz_md;
+      line-height: 160%;
+      text-transform: uppercase;
+
+      @include tablets {
+        font-size: $fz_lg;
+      }
+
+      @include desktop {
+        font-size: $fz_xl;
+      }
+    }
+
+    .info-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+
+      @include tablets {
+        margin-top: 20px;
+      }
+
+      @include laptop{
+        flex-direction: row;
+      }
+
+      .info-1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include laptop {
+          min-width: 452px;
+        }
+
+        @include desktop {
+          min-width: 537px;
+        }
+
+        .photo {
+          position: relative;
+          width: 100%;
+
+          img {
+            width: 100%;
+            border-radius: 15px;
+
+            @include tablets {
+              border-radius: 30px;
+            }
+          }
+
+          span {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: block;
+            padding: 10px;
+            font-size: $fz_xsm;
+            color: $white_color;
+            background-color: $accent_color;
+            border-radius: 30px;
+
+            @include tablets {
+              top: 20px;
+              left: 20px;
+              font-size: $fz_sm;
+            }
+
+            @include desktop {
+              font-size: $fz_md;
+            }
+          }
+        }
+
+        .price-and-stars {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-top: 10px;
+
+          @include tablets {
+            flex-direction: row;
+          }
+        }
+
+        .stars {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+
+          @include tablets {
+            margin-left: auto;
+          }
+
+          div {
+            margin-left: 10px;
+            width: 17px;
+            height: 15px;
+            background-image: url(/image/icons/star_fill.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            @include laptop {
+              width: 22px;
+              height: 20px;
+            }
+          }
+
+          span {
+            margin-left: 10px;
+            font-size: $fz_sm;
+
+            @include laptop {
+              display: none;
+            }
+          }
+        }
+
+        .price {
+          font-family: "Gotham bold";
+          font-size: $fz_lg;
+          line-height: 160%;
+
+          @include tablets {
+            font-size: $fz_xl;
+          }
+        }
+      }
+
+      .info-2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        font-size: $fz_xsm;
+        line-height: 160%;
+
+        @include tablets {
+          font-size: $fz_sm;
+        }
+
+        @include laptop {
+          margin-top: 0;
+          margin-left: 20px;
+        }
+
+        @include desktop {
+          font-size: $fz_md;
+        }
+
+        p {
+          margin-top: 20px;
+        }
+
+        .links {
+          margin-top: 20px;
+        }
+
+        a {
+          display: block;
+          margin-top: 10px;
+          color: $blue_color;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .time-info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      font-size: $fz_xsm;
+
+      @include tablets {
+        font-size: $fz_sm;
+      }
+
+      @include laptop {
+        margin-top: 40px;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: $fz_md;
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+
+        @include tablets {
+          margin-top: 20px;
+        }
+      }
+
+      .icon {
+        width: 18px;
+        
+        @include tablets {
+          width: 25px;
+          height: 25px;
+        }
+        
+        @include laptop {
+          width: 33px;
+          height: 33px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text {
+        margin-left: 10px;
+      }
+    }
+
+    .specification {
+      margin-top: 40px;
+      font-size: $fz_xsm;
+      line-height: 160%;
+
+      @include tablets {
+        font-size: $fz_sm;
+      }
+
+      @include laptop {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+        font-size: $fz_md;
+      }
+
+      @include desktop {
+        margin-top: 80px;
+      }
+
+      h1 {
+        margin-top: 40px;
+        font-size: $fz_md;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        @include tablets {
+          font-size: $fz_lg;
+        }
+
+        @include desktop {
+          margin-top: 80px;
+        }
+      }
+
+      p, li {
+        margin-top: 20px;
+      }
+
+      li {
+        margin-left: 10px;
+        padding-left: 10px;
+      }
+
+      ul li {
+        list-style-type: disc;
+      }
+
+      ol li {
+        list-style-type: decimal;
+        color: $primary_color;
+
+        p, b {
+          color: $black_color;
+        }
+      }
+    }
+
+    .button-container {
+      align-self: center;
+      margin-top: 40px;
+      width: 162px;
+
+      @include tablets {
+        width: 240px;
+      }
+
+      @include laptop {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  .approach {
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin-right: -20px;
+
+      @include laptop {
+        flex-wrap: nowrap;
+      }
+
+      @include desktop {
+        margin-right: -40px;
+      }
+    }
+
+    .card_advantages {
+      margin-top: 20px;
+      margin-right: 20px;
+      width: 154px;
+
+      @include tablets {
+        width: 334px;
+      }
+
+      @include laptop {
+        width: 275px;
+      }
+
+      @include desktop {
+        margin-right: 40px;
+        margin-top: 40px;
+        width: 330px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+  
+  .learning-map {
+    .map {
+      
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin-right: -20px;
+
+      @include laptop {
+        flex-wrap: nowrap;
+      }
+
+      @include desktop {
+        margin-right: -40px;
+      }
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      margin-right: 20px;
+      padding: 20px 10px;
+      background-color: $white_color;
+      border-radius: 15px;
+      width: 100%;
+
+      @include tablets {
+        border-radius: 30px; 
+        width: 334px;
+      }
+
+      @include laptop {
+        width: 275px;
+      }
+
+      @include desktop {
+        margin-right: 40px;
+        margin-top: 40px;
+        width: 330px;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        font-size: $fz_lg;
+        background-color: $accent_color;
+        border-radius: 50%;
+        color: $white_color;
+
+        @include tablets {
+          width: 100px;
+          height: 100px;
+          font-size: $fz_xl;
+        }
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: $fz_xsm;
+        text-align: center;
+
+        @include tablets {
+          margin-top: 20px;
+          font-size: $fz_sm;
+        }
+
+        @include desktop {
+          font-size: $fz_md;
+        }
+      }
+    }
+  }
+  
+  .document {
+    margin-top: 40px;
+    padding: 20px;
+    line-height: 160%;
+    text-align: center;
+    background-color: $white_color;
+    border-radius: 15px;
+
+    @include tablets {
+      width: 334px;
+      margin: 20px auto 0;
+      border-radius: 30px;
+    }
+
+    @include laptop {
+      width: 374px;
+      margin-top: 40px;
+    }
+
+    @include desktop {
+      width: 454px;
+    }
+
+    h3 {
+      font-size: $fz_xsm;
+
+      @include tablets {
+        font-size: $fz_sm;
+      }
+
+      @include desktop {
+        font-size: $fz_md;
+      }
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: $fz_xsm;
+
+      @include laptop {
+        font-size: $fz_sm;
+      }
+
+      @include desktop {
+        font-size: $fz_md;
+      }
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      height: 300px;
+      font-size: $fz_lg;
+      text-transform: uppercase;
+      color: $white_color;
+      background-color: $gray_light_color;
+      border-radius: 60px;
+
+      @include desktop {
+        height: 500px;
+      }
+    }
+  }
+
+  .teachers {
+
+    .teachers-list {
+      margin-right: -20px;
+    }
+
+    .carousel {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+
+      @include tablets {
+        display: none;
+      }
+      
+
+    .card_teacher {
+      margin-right: 20px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      align-self: center;
+    }
+  
+    .pagination ul {
+      display: flex;
+  
+      li {
+        position: relative;
+        display: block;
+        margin-left: 20px;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: $gray_light_color;
+        
+        & > button {
+          display: none;
+        }
+  
+        &:last-child{
+          margin-right: 20px;
+        }
+  
+        &.slick-active {
+          background-color: $primary_color;
+        }
+      }
+    }
+    }
+
+    .list {
+      display: none;
+      margin-top: 20px;
+      margin-right: -20px;
+
+      @include tablets {
+        display: flex;
+      }
+
+      @include laptop {
+        margin-top: 40px;
+      }
+
+      @include desktop {
+        margin-right: -40px;
+      }
+
+      .card_teacher {
+        margin-right: 20px;
+        width: 334px;
+
+        @include laptop {
+          width: 373px;
+        }
+
+        @include desktop {
+          margin-right: 40px;
+          width: 453px;
+        }
+      }
+    }
+  }
+
+  .reviews {
+
+    .reviews-list {
+      margin-right: -20px;
+    }
+
+    .carousel {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+
+      @include tablets {
+        display: none;
+      }
+      
+
+    .card_review {
+      margin-right: 20px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      align-self: center;
+    }
+  
+    .pagination ul {
+      display: flex;
+  
+      li {
+        position: relative;
+        display: block;
+        margin-left: 20px;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: $gray_light_color;
+        
+        & > button {
+          display: none;
+        }
+  
+        &:last-child{
+          margin-right: 20px;
+        }
+  
+        &.slick-active {
+          background-color: $primary_color;
+        }
+      }
+    }
+    }
+
+    .list {
+      display: none;
+      margin-top: 20px;
+      margin-right: -20px;
+
+      @include tablets {
+        display: flex;
+      }
+
+      @include laptop {
+        margin-top: 40px;
+      }
+
+      @include desktop {
+        margin-right: -40px;
+      }
+
+      .card_review {
+        margin-right: 20px;
+        width: 334px;
+
+        @include laptop {
+          width: 373px;
+        }
+
+        @include desktop {
+          margin-right: 40px;
+          width: 453px;
+        }
+      }
+    }
+  }
+
+  .form-container {
+    margin: 100px 0;
+
+    @include tablets {
+      margin: 120px 0;
+    }
+
+    @include laptop {
+      margin: 160px 0;
+    }
+  }
 }
