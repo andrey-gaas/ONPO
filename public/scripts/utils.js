@@ -331,6 +331,7 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
     }
 
     let stopMove = () => {
+      //console.log(maxScrol);
       if(filter.style.left.slice(0, -2) > 0){
         filter.style.transition = '.2s left'
         filter.style.left = '0px'
@@ -339,10 +340,12 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
       if(filter.style.left.slice(0, -2) < maxScrol){
         filter.style.transition = '.2s left'
         filter.style.left = maxScrol + 'px'
+        console.log(maxScrol);
         setTimeout( ()=>{filter.style.transition = null}, 200)
       }
       document.body.classList.remove('overflow_hidden')
       document.removeEventListener( touchMove, onMouseMove);
+      document.removeEventListener( touchEnd, stopMove);
       document.removeEventListener( touchMove, checkUpDownScroll);
       document[( 'on'+touchEnd )] = null;
     }
