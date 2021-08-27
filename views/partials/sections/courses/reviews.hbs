@@ -1,24 +1,32 @@
-<div class="container rewiews-container">
-  <h2 class="title">
-    Отзывы
-  </h2>
+<div class="rewiews-container margin_bottom">
+  <div class="container container_from_title">
+    <h2 class="title">
+      Отзывы
+    </h2>
+  </div>
 
-  <div class="reviews carousel">
-    <div class="reviews-list carousel-list">
-      {{#each reviews}}
-        {{>cards/card_review this}}
-      {{/each}}
-    </div>
-    <div class="controls">
-      <div class="swiper-button-prev"></div>
+  <div class="container_out">
+    <div class="swiper-container swiper__corusel">
+      <div class="swiper-wrapper">
+        {{#each reviews}}
+        <div class="swiper-slide">
+          <div class="container_iner">
+            {{>cards/card_review this}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      <div class="pagination_wrapper">
+        <div class="swiper-button-prev"></div>
 
-      <div class="pagination"></div>
+        <div class="swiper-pagination"></div>
 
-      <div class="swiper-button-next"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </div>
   </div>
 
-  <div class="button-container">
-    <button class="button color_red">Показать больше</button>
+  <div class="container container_from_button">
+    <a href="/reviews" class="button color_red size_norm">Показать больше</a>
   </div>
 </div>

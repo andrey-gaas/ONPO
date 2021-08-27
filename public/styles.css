@@ -175,6 +175,79 @@ h2.home_subtitle {
   height: 100%;
 }
 
+#page_graduate .section_container {
+  position: relative;
+}
+#page_graduate .navigation {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .navigation {
+    display: block;
+    width: 240px;
+    left: calc(50% - 344px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .navigation {
+    width: 275px;
+    left: calc(50% - 576px);
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .navigation {
+    width: 330px;
+    left: calc(50% - 716px);
+  }
+}
+#page_graduate .navigation .navigation__list {
+  padding-left: 20px;
+  position: sticky;
+  top: 130px;
+}
+#page_graduate .navigation li {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 22px;
+}
+#page_graduate .navigation li:first-child {
+  margin-top: 0;
+}
+#page_graduate .navigation li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -20px;
+  top: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  background-color: #FF165D;
+  border-radius: 50%;
+}
+#page_graduate .navigation li a {
+  display: block;
+  text-decoration: none;
+  color: #252A34;
+}
+#page_graduate .navigation li.active {
+  font-weight: bold;
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .navigation li {
+    margin-top: 40px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .navigation li {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
 #page_graduate h1.title {
   margin-top: 40px;
   font-size: 28px;
@@ -309,8 +382,8 @@ h2.home_subtitle {
 }
 @media screen and (min-width: 728px) {
   #page_graduate .content-container {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
     margin-top: 120px;
   }
 }
@@ -342,67 +415,9 @@ h2.home_subtitle {
     margin-top: 80px;
   }
 }
-#page_graduate .content-container .navigation {
-  display: none;
-}
-@media screen and (min-width: 728px) {
-  #page_graduate .content-container .navigation {
-    display: block;
-    width: 220px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #page_graduate .content-container .navigation {
-    width: 250px;
-  }
-}
-@media screen and (min-width: 1520px) {
-  #page_graduate .content-container .navigation {
-    width: 320px;
-  }
-}
-#page_graduate .content-container .navigation li {
-  position: relative;
-  margin-top: 20px;
-  font-size: 12px;
-  line-height: 22px;
-}
-#page_graduate .content-container .navigation li:first-child {
-  margin-top: 0;
-}
-#page_graduate .content-container .navigation li::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -20px;
-  top: calc(50% - 5px);
-  width: 10px;
-  height: 10px;
-  background-color: #FF165D;
-  border-radius: 50%;
-}
-#page_graduate .content-container .navigation li a {
-  text-decoration: none;
-  color: #252A34;
-}
-#page_graduate .content-container .navigation li.active {
-  font-weight: bold;
-}
-@media screen and (min-width: 1200px) {
-  #page_graduate .content-container .navigation li {
-    margin-top: 40px;
-    font-size: 14px;
-  }
-}
-@media screen and (min-width: 1520px) {
-  #page_graduate .content-container .navigation li {
-    font-size: 16px;
-    line-height: 25px;
-  }
-}
 @media screen and (min-width: 728px) {
   #page_graduate .content-container .links-block {
-    width: 450px;
+    width: 422px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -553,6 +568,24 @@ h2.home_subtitle {
   }
 }
 
+#courses .margin_bottom {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 728px) {
+  #courses .margin_bottom {
+    margin-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #courses .margin_bottom {
+    margin-bottom: 160px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #courses .margin_bottom {
+    margin-bottom: 180px;
+  }
+}
 #courses > .container > h1.title {
   margin-top: 40px;
   font-size: 28px;
@@ -745,27 +778,81 @@ h2.home_subtitle {
   display: flex;
   flex-direction: column;
 }
-#courses .teachers-container > h2.title {
+#courses .teachers-container .container_from_title {
+  margin-bottom: 40px;
+}
+#courses .teachers-container .container_from_title > h2.title {
+  font-size: 28px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 728px) {
+  #courses .teachers-container .container_from_title > h2.title {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #courses .teachers-container .container_from_title > h2.title {
+    font-size: 58px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #courses .teachers-container .container_from_title > h2.title {
+    font-size: 78px;
+  }
+}
+#courses .teachers-container .container_from_button {
+  display: flex;
+  justify-content: center;
+}
+#courses .teachers-container .container_out {
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 728px) {
+  #courses .teachers-container .container_out {
+    width: 704px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #courses .teachers-container .container_out {
+    width: 1180px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #courses .teachers-container .container_out {
+    width: 1478px;
+  }
+}
+#courses .teachers-container .container_out .container_iner {
+  width: 91.6%;
+}
+@media screen and (min-width: 728px) {
+  #courses .teachers-container .container_out .container_iner {
+    width: 100%;
+  }
+}
+#courses .teachers-container .container > h2.title {
   margin-top: 40px;
   font-size: 28px;
   line-height: 44px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 728px) {
-  #courses .teachers-container > h2.title {
+  #courses .teachers-container .container > h2.title {
     font-size: 38px;
     line-height: 58px;
   }
 }
 @media screen and (min-width: 1200px) {
-  #courses .teachers-container > h2.title {
+  #courses .teachers-container .container > h2.title {
     margin-top: 80px;
     font-size: 58px;
     line-height: 92px;
   }
 }
 @media screen and (min-width: 1520px) {
-  #courses .teachers-container > h2.title {
+  #courses .teachers-container .container > h2.title {
     font-size: 78px;
     line-height: 124px;
   }
@@ -779,7 +866,13 @@ h2.home_subtitle {
 }
 #courses .card_teacher,
 #courses .card_review {
-  margin: 0 20px;
+  margin: 0 10px;
+}
+@media screen and (min-width: 1520px) {
+  #courses .card_teacher,
+#courses .card_review {
+    margin: 0 20px;
+  }
 }
 #courses .controls {
   display: flex;
@@ -832,29 +925,58 @@ h2.home_subtitle {
   display: flex;
   flex-direction: column;
 }
-#courses .rewiews-container > h2.title {
-  margin-top: 40px;
+#courses .rewiews-container .container_from_title {
+  margin-bottom: 40px;
+}
+#courses .rewiews-container .container_from_title > h2.title {
   font-size: 28px;
-  line-height: 44px;
+  line-height: 100%;
   text-transform: uppercase;
 }
 @media screen and (min-width: 728px) {
-  #courses .rewiews-container > h2.title {
+  #courses .rewiews-container .container_from_title > h2.title {
     font-size: 38px;
-    line-height: 58px;
   }
 }
 @media screen and (min-width: 1200px) {
-  #courses .rewiews-container > h2.title {
-    margin-top: 80px;
+  #courses .rewiews-container .container_from_title > h2.title {
     font-size: 58px;
-    line-height: 92px;
   }
 }
 @media screen and (min-width: 1520px) {
-  #courses .rewiews-container > h2.title {
+  #courses .rewiews-container .container_from_title > h2.title {
     font-size: 78px;
-    line-height: 124px;
+  }
+}
+#courses .rewiews-container .container_from_button {
+  display: flex;
+  justify-content: center;
+}
+#courses .rewiews-container .container_out {
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 728px) {
+  #courses .rewiews-container .container_out {
+    width: 704px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #courses .rewiews-container .container_out {
+    width: 1180px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #courses .rewiews-container .container_out {
+    width: 1478px;
+  }
+}
+#courses .rewiews-container .container_out .container_iner {
+  width: 91.6%;
+}
+@media screen and (min-width: 728px) {
+  #courses .rewiews-container .container_out .container_iner {
+    width: 100%;
   }
 }
 #courses .learning-map {

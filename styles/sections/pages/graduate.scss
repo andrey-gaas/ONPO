@@ -1,4 +1,78 @@
 #page_graduate {
+  .section_container{
+    position: relative;
+  }
+  .navigation {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    //left: calc(50% - 355px);
+
+    @include tablets {
+      display: block;
+      width: 240px;
+      left: calc(50% - 344px);
+    }
+
+    @include laptop {
+      width: 275px;
+      left: calc(50% - 576px);
+    }
+
+    @include desktop {
+      width: 330px;
+      left: calc(50% - 716px);
+    }
+    .navigation__list{
+      padding-left: 20px;
+      position: sticky;
+      top: 130px;
+    }
+    li {
+      position: relative;
+      margin-top: 20px;
+      font-size: $fz_xsm;
+      line-height: $fz_lgs;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -20px;
+        top: calc(50% - 5px);
+        width: 10px;
+        height: 10px;
+        background-color: $primary_color;
+        border-radius: 50%;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: $black_color;
+      }
+
+      &.active {
+        font-weight: bold;
+      }
+
+      @include laptop {
+        margin-top: 40px;
+        font-size: $fz_sm;
+      }
+
+      @include desktop {
+        font-size: $fz_md;
+        line-height: $fz_lgm;
+      }
+    }
+  }
+
   & h1.title{
     margin-top: 40px;
     font-size: $fz_lg;
@@ -124,11 +198,13 @@
   .content-container {
     display: flex;
     flex-direction: column;
+    
     margin-top: 100px;
 
     @include tablets {
-      flex-direction: row;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-end;
+      //justify-content: space-between;
       margin-top: 120px;
     }
 
@@ -156,68 +232,9 @@
       }
     }
 
-    .navigation {
-      display: none;
-
-      @include tablets {
-        display: block;
-        width: 220px;
-      }
-
-      @include laptop {
-        width: 250px;
-      }
-
-      @include desktop {
-        width: 320px;
-      }
-
-      li {
-        position: relative;
-        margin-top: 20px;
-        font-size: $fz_xsm;
-        line-height: $fz_lgs;
-
-        &:first-child {
-          margin-top: 0;
-        }
-
-        &::after {
-          content: '';
-          display: block;
-          position: absolute;
-          left: -20px;
-          top: calc(50% - 5px);
-          width: 10px;
-          height: 10px;
-          background-color: $primary_color;
-          border-radius: 50%;
-        }
-
-        a {
-          text-decoration: none;
-          color: $black_color;
-        }
-
-        &.active {
-          font-weight: bold;
-        }
-
-        @include laptop {
-          margin-top: 40px;
-          font-size: $fz_sm;
-        }
-
-        @include desktop {
-          font-size: $fz_md;
-          line-height: $fz_lgm;
-        }
-      }
-    }
-
     .links-block {
       @include tablets {
-        width: 450px;
+        width: 422px;
       }
       @include laptop {
         width: 770px;

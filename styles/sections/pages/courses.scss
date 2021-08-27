@@ -1,4 +1,16 @@
 #courses {
+  .margin_bottom{
+    margin-bottom: 100px;
+    @include tablets{
+      margin-bottom: 120px;
+    }
+    @include laptop{
+      margin-bottom: 160px;
+    }
+    @include desktop{
+      margin-bottom: 180px;
+    }
+  }
   & > .container > h1.title{
     margin-top: 40px;
     font-size: $fz_lg;
@@ -183,7 +195,56 @@
     display: flex;
     flex-direction: column;
 
-    & > h2.title {
+    .container_from_title{
+      margin-bottom: 40px;
+      @include laptop{
+      }
+      & > h2.title {
+        font-size: $fz_lg;
+        line-height: 100%;
+        text-transform: uppercase;
+        @include tablets {
+          font-size: $fz_xl;
+          //line-height: $fz_mxl;
+        }
+  
+        @include laptop {
+          font-size: $fz_mxl;
+          //line-height: 92px;
+        }
+  
+        @include desktop {
+          font-size: $fz_xxl;
+          //line-height: 124px;
+        }
+      }
+    }
+    .container_from_button{
+      display: flex;
+      justify-content: center;
+    }
+    .container_out{
+      
+      width: 100%;
+      margin: 0 auto;
+      @include tablets{
+        width: 704px;
+      }
+      @include laptop{
+        width: 1180px;
+      }
+      @include desktop{
+        width: 1478px;
+      }
+
+      .container_iner{
+        width: 91.6%;
+        @include tablets{
+          width: 100%;
+        }
+      }
+    }
+    & .container > h2.title {
       margin-top: 40px;
       font-size: $fz_lg;
       line-height: 44px;
@@ -219,7 +280,11 @@
 
   .card_teacher,
   .card_review {
-    margin: 0 20px;
+    margin: 0 10px;
+
+    @include desktop{
+      margin: 0 20px;
+    }
   }
 
   .controls {
@@ -276,29 +341,58 @@
   .rewiews-container {
     display: flex;
     flex-direction: column;
-
-    & > h2.title {
-      margin-top: 40px;
-      font-size: $fz_lg;
-      line-height: 44px;
-      text-transform: uppercase;
-
-      @include tablets {
-        font-size: $fz_xl;
-        line-height: $fz_mxl;
+    .container_from_title{
+      margin-bottom: 40px;
+      
+      @include laptop{
       }
-
-      @include laptop {
-        margin-top: 80px;
-        font-size: $fz_mxl;
-        line-height: 92px;
-      }
-
-      @include desktop {
-        font-size: $fz_xxl;
-        line-height: 124px;
+      & > h2.title {
+        font-size: $fz_lg;
+        line-height: 100%;
+        text-transform: uppercase;
+  
+        @include tablets {
+          font-size: $fz_xl;
+          //line-height: $fz_mxl;
+        }
+  
+        @include laptop {
+          font-size: $fz_mxl;
+          //line-height: 92px;
+        }
+  
+        @include desktop {
+          font-size: $fz_xxl;
+         // line-height: 124px;
+        }
       }
     }
+    .container_from_button{
+      display: flex;
+      justify-content: center;
+    }
+    .container_out{
+      
+      width: 100%;
+      margin: 0 auto;
+      @include tablets{
+        width: 704px;
+      }
+      @include laptop{
+        width: 1180px;
+      }
+      @include desktop{
+        width: 1478px;
+      }
+
+      .container_iner{
+        width: 91.6%;
+        @include tablets{
+          width: 100%;
+        }
+      }
+    }
+    
   }
 
   .learning-map {

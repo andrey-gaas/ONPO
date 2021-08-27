@@ -106,7 +106,7 @@ export function initCoruselDefoult(selectCorusel){
       }else{
         homeDeffCorusel.destroy(true, true)
       }
-      homeDeffCorusel = new Swiper(".home_deff_corusel", {
+      homeDeffCorusel = new Swiper(selectCorusel, {
         // Optional parameters
         direction: "horizontal",
         slidesPerView: 1,
@@ -140,7 +140,8 @@ export function initCoruselDefoult(selectCorusel){
       }else{
         homeDeffCorusel.destroy(true, true)
       }
-      homeDeffCorusel = new Swiper(".home_deff_corusel", {
+      console.log('tablet');
+      homeDeffCorusel = new Swiper(selectCorusel, {
         // Optional parameters
         direction: "horizontal",
         slidesPerView: 2,
@@ -174,7 +175,8 @@ export function initCoruselDefoult(selectCorusel){
       }else{
         homeDeffCorusel.destroy(true, true)
       }
-      homeDeffCorusel = new Swiper(".home_deff_corusel", {
+      console.log('laptop');
+      homeDeffCorusel = new Swiper(selectCorusel, {
         // Optional parameters
         direction: "horizontal",
         slidesPerView: 3,
@@ -331,7 +333,6 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
     }
 
     let stopMove = () => {
-      //console.log(maxScrol);
       if(filter.style.left.slice(0, -2) > 0){
         filter.style.transition = '.2s left'
         filter.style.left = '0px'
@@ -340,7 +341,6 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
       if(filter.style.left.slice(0, -2) < maxScrol){
         filter.style.transition = '.2s left'
         filter.style.left = maxScrol + 'px'
-        console.log(maxScrol);
         setTimeout( ()=>{filter.style.transition = null}, 200)
       }
       document.body.classList.remove('overflow_hidden')

@@ -1,24 +1,28 @@
-<div class="container teachers-container">
-  <h2 class="title">
-    Преподователи
-  </h2>
+<div class="teachers-container margin_bottom">
+  <div class="container container_from_title">
+    <h2 class="home_title title">Преподаватели</h2>
+  </div>
+  <div class="container_out">
+    <div class="swiper-container swiper__corusel">
+      <div class="swiper-wrapper">
+        {{#each teachers}}
+        <div class="swiper-slide">
+          <div class="container_iner">
+            {{>cards/card_teacher this}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      <div class="pagination_wrapper">
+        <div class="swiper-button-prev"></div>
 
-  <div class="teachers carousel">
-    <div class="teachers-list carousel-list">
-      {{#each teachers}}
-        {{>cards/card_teacher this}}
-      {{/each}}
-    </div>
-    <div class="controls">
-      <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
 
-      <div class="pagination"></div>
-
-      <div class="swiper-button-next"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </div>
   </div>
-
-  <div class="button-container">
-    <button class="button color_red">Показать больше</button>
+  <div class="container container_from_button">
+    <a href='/teachers' class="button color_red size_norm">Показать больше</a>
   </div>
 </div>

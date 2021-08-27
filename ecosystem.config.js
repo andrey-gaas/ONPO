@@ -1,10 +1,8 @@
 module.exports = {
   apps : [{
+    name: "onpo",
     script: 'index.js',
     watch: '.'
-  }, {
-    script: './service-worker/',
-    watch: ['./service-worker']
   }],
 
   deploy : {
