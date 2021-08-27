@@ -1,0 +1,20 @@
+<h2 class="title">Преподаватели</h2>
+<div class="teachers">
+
+  <div class="carousel">
+    <div class="teachers-list carousel-list">
+      {{#each teachers}}
+        {{>cards/card_teacher this}}
+      {{/each}}
+    </div>
+    <div class="controls">
+      <div class="pagination"></div>
+    </div>
+  </div>
+
+  <div class="list">
+    {{#each teachers}}
+      {{>cards/card_teacher this}}
+    {{/each}}
+  </div>
+</div>

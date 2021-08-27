@@ -258,7 +258,7 @@ exports.courses = [
     price: '7500',
     image: 'https://cdnimg.rg.ru/img/content/186/45/44/iStock-949118068_d_850.jpg',
     categories: ['asp', 'up', 're'],
-    specification: '<h1>Заголовок</h1><ol><li>test</li><li><b>test</b></li></ol><ul><li>test</li><li><b>test</b></li> </ul>',
+    specification: '<h1>Заголовок</h1><ol><li><p>test</p></li><li><b>test</b></li></ol><ul><li>test</li><li><b>test</b></li> </ul>',
   },
   {
     id: 1,

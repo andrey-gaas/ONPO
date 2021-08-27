@@ -1,3 +1,65 @@
-<div class="description-container">
-  asd
-</div>
+<section class="description-container">
+  <h2 class="title">{{course.title}}</h2>
+  <div class="info-container">
+    <div class="info-1">
+      <div class="photo">
+        <img src="/image/direction1.png" alt="{{course.title}}" />
+        <span>{{course.type}}</span>
+      </div>
+      <div class="price-and-stars">
+        <div class="price">
+          &#8381; {{course.price}}
+        </div>
+        <div class="stars">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <span>(отзывов: {{course.reviews.length}})</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-2">
+      <strong>Описание</strong>
+      <p>{{course.description}}</p>
+      <div class="links">
+        <a href="#">Учебный план и календарный учебный график 16 часов</a>
+        <a href="#">Учебный план и календарный учебный график 72 часов</a>
+      </div>
+    </div>
+  </div>
+  <div class="time-info">
+    <div class="item">
+      <div class="icon">
+        <img src="/image/icons/bulb_primary.svg" alt="calendar">
+      </div>
+      <div class="text">
+        <strong>Старт</strong>
+        -
+        {{course.start}}
+      </div>
+    </div>
+    <div class="item">
+      <div class="icon"><img src="/image/icons/clock_primary.svg" alt="calendar"></div>
+      <div class="text">
+        <strong>Количество часов</strong>
+        -
+        {{course.hours}}
+      </div>
+    </div>
+    <div class="item">
+      <div class="icon"><img src="/image/icons/calendar_primary.svg" alt="calendar"></div>
+      <div class="text">
+        <strong>Срок обучения</strong> - {{course.term}}
+      </div>
+    </div>
+  </div>
+  <div class="specification">
+    {{{course.specification}}}
+  </div>
+  <div class="button-container">
+    <button class="button color_red" id="button-application">Оставить заявку</button>
+  </div>
+</section>
