@@ -33,9 +33,29 @@ window.onload = () => {
 
   //accordion
 
-  let accordion = document.querySelector('.accordion_list')
-  if(accordion){
-    accordion.addEventListener('click', (e)=>{
+  let accordionList = document.querySelectorAll('.accordion_list')
+  let accordionBtnContainer = document.querySelector('.section_home_faq .direction')
+  let accordionBtn = document.querySelectorAll('.section_home_faq .direction .button__direction')
+
+  accordionBtnContainer.onclick = e => {
+    if(e.target.nodeName === 'BUTTON'){
+      accordionList.forEach( elem => {
+        elem.style.display = 'none'
+        if(elem.dataset.direction === e.target.id){
+          elem.style.display = 'block'
+        }
+      })
+      accordionBtn.forEach( elem =>{
+        elem.classList.remove('active')
+        if(elem.id === e.target.id){
+          elem.classList.add('active')
+        }
+      })
+    }
+  }
+
+  for(let i = 0; i < accordionList.length; i++){
+    accordionList[i].addEventListener('click', (e)=>{
       let targetElem = e.target
       if(targetElem.className == "title" || targetElem.id == "toggle_show"){
         let item = targetElem.parentNode.parentNode

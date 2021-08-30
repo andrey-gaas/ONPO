@@ -1,5 +1,5 @@
-<ul class="accordion_list">
-  {{#each this}}
+<ul class="accordion_list training" data-direction="training">
+  {{#each this.training}}
     <li class="accordion_item">
       <div class="top">
         <span class="title">
@@ -8,7 +8,22 @@
         <button id="toggle_show"></button>
       </div>
       <div class="text_wrap">
-        <p class="text">{{this.text}}</p>
+        <p class="text">{{toHTML this.text}}</p>
+      </div>
+    </li>
+  {{/each}}
+</ul>
+<ul class="accordion_list graduate" style="display: none;" data-direction="graduate">
+  {{#each this.graduate}}
+    <li class="accordion_item">
+      <div class="top">
+        <span class="title">
+          {{this.title}}
+        </span>
+        <button id="toggle_show"></button>
+      </div>
+      <div class="text_wrap">
+        <p class="text">{{toHTML this.text}}</p>
       </div>
     </li>
   {{/each}}

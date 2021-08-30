@@ -91,6 +91,7 @@
   }
 
   .information {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 40px;
@@ -104,9 +105,12 @@
 
     .links-container {
       display: none;
+      
 
       @include tablets {
         display: block;
+        position: sticky;
+        top: 130px;
         width: 230px;
       }
 
@@ -138,15 +142,14 @@
           background-color: $primary_color;
           border-radius: 50%;
         }
+        &.active a{
+          font-weight: bold;
+        }
       }
 
       a {
         text-decoration: none;
-        color: $black_color;
-
-        &.active {
-          font-weight: bold;
-        }
+        color: $black_color;   
       }
     }
 

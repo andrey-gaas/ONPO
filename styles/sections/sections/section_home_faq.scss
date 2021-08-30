@@ -8,10 +8,39 @@ section.section_home_faq{
     margin-bottom: 160px;
   }
   
-  &>.container>.title{
-    margin-bottom: 20px;
-    @include laptop{
-      margin-bottom: 40px;
+  &>.container{
+    &>.title{
+      margin-bottom: 20px;
+      @include laptop{
+        margin-bottom: 40px;
+      }
+    }
+
+    &>.direction{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      max-width: 350px;
+
+      .button__direction{
+        display: inline-block;
+        font-size: $fz_xsm;
+        line-height: 160%;
+        padding-bottom: 7px;
+        color: $gray_light_color;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        margin-right: 15px;
+        &.active{
+          color: $black_color;
+          border-bottom: 1px solid $primary_color;
+        }
+      }
     }
   }
+
+  
 }

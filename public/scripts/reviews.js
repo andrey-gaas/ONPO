@@ -13,6 +13,7 @@ window.onload = function() {
   const buttons = document.querySelectorAll('button[data-filter]');
   const reviewsList = document.querySelectorAll('article[data-filter]');
   const container = document.querySelector('.list');
+  const filteKeyList = ['','graduate', 'training', 'retraining']
 
   function filterData(type) {
     return function() {
@@ -29,15 +30,30 @@ window.onload = function() {
     }
   }
 
-  buttons[0].onclick = function() {
-    container.append(...reviewsList);
+  function chekSlide(event, type, touchEnd){
+    function getEvent(){
+      return (event.type.search('touch') !== -1) ? event.touches[0] : event;
+    }
+    let e = getEvent()
+    let shiftX = e.clientX;
+    
+    let fnCheck =  event => {
+      if((shiftX - event.clientX)**2 <= 225){
+        if(type !== ''){
+          filterData(type)();
+        }else{
+          container.append(...reviewsList);
+        }
+      }
+      e.target.removeEventListener(touchEnd, fnCheck)
+    }
+    e.target.addEventListener( touchEnd , fnCheck)
   }
 
-  buttons[1].onclick = filterData('graduate');
-
-  buttons[2].onclick = filterData('training');
-
-  buttons[3].onclick = filterData('retraining');
+  for(let i = 0; i<buttons.length; i++){
+    buttons[i].onmousedown = e => { chekSlide(e, filteKeyList[i], 'mouseup') }
+    buttons[i].ontouchstart = e => { chekSlide(e, filteKeyList[i], 'touchend') }
+  }
   // END FILTER
 
 

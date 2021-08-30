@@ -2417,12 +2417,14 @@ h2.home_subtitle {
 #reviews .form-container .grade .star {
   width: 15px;
   height: 15px;
+  margin-right: 5px;
   border: none;
   outline: none;
   background-color: inherit;
   background-image: url(/image/icons/star_empty.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 @media screen and (min-width: 1200px) {
   #reviews .form-container .grade .star {
@@ -2545,6 +2547,7 @@ h2.home_subtitle {
   }
 }
 #structure .information {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 40px;
@@ -2563,6 +2566,8 @@ h2.home_subtitle {
 @media screen and (min-width: 728px) {
   #structure .information .links-container {
     display: block;
+    position: sticky;
+    top: 130px;
     width: 230px;
   }
 }
@@ -2595,12 +2600,12 @@ h2.home_subtitle {
   background-color: #FF165D;
   border-radius: 50%;
 }
+#structure .information .links-container li.active a {
+  font-weight: bold;
+}
 #structure .information .links-container a {
   text-decoration: none;
   color: #252A34;
-}
-#structure .information .links-container a.active {
-  font-weight: bold;
 }
 #structure .information .info-container {
   margin-left: auto;
@@ -3079,6 +3084,9 @@ h2.home_subtitle {
 .component_header .container {
   display: flex;
   align-items: center;
+}
+.component_header .button__enterens {
+  width: 120px;
 }
 .component_header .logo {
   width: 40px;
@@ -5973,6 +5981,28 @@ section.section_home_faq > .container > .title {
   section.section_home_faq > .container > .title {
     margin-bottom: 40px;
   }
+}
+section.section_home_faq > .container > .direction {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  max-width: 350px;
+}
+section.section_home_faq > .container > .direction .button__direction {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 160%;
+  padding-bottom: 7px;
+  color: #BDBDBD;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+}
+section.section_home_faq > .container > .direction .button__direction.active {
+  color: #252A34;
+  border-bottom: 1px solid #FF165D;
 }
 
 section.home_info {

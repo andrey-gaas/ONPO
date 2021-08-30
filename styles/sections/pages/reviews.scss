@@ -340,12 +340,14 @@
       .star {
         width: 15px;
         height: 15px;
+        margin-right: 5px;
         border: none;
         outline: none;
         background-color: inherit;
         background-image: url(/image/icons/star_empty.svg);
         background-repeat: no-repeat;
         background-size: cover;
+        cursor: pointer;
 
         @include laptop {
           width: 20px;

@@ -140,7 +140,6 @@ export function initCoruselDefoult(selectCorusel){
       }else{
         homeDeffCorusel.destroy(true, true)
       }
-      console.log('tablet');
       homeDeffCorusel = new Swiper(selectCorusel, {
         // Optional parameters
         direction: "horizontal",
@@ -175,7 +174,6 @@ export function initCoruselDefoult(selectCorusel){
       }else{
         homeDeffCorusel.destroy(true, true)
       }
-      console.log('laptop');
       homeDeffCorusel = new Swiper(selectCorusel, {
         // Optional parameters
         direction: "horizontal",
