@@ -11,6 +11,7 @@ article.card_review{
 
   @include tablets{
     width: 334px;
+    height: min-content;
   }
 
   @include laptop{
@@ -144,16 +145,37 @@ article.card_review{
     }
   }
   & .review{
-    padding: 10px 0;
-    padding-right: 20px;
     margin-bottom: 50px;
+    .wpra_text{
+      max-height: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 40px;
+      transition: .2s all;
+      padding-top: 10px;
+      padding-right: 20px;
+      .review_text{
+        font-size: $fz_sm;
+        line-height: 157%;
+        @include desktop{
+          font-size: $fz_md;
+        }
+      }
+    }
+    .wrapper_togle_show_review{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
 
-    & .review_text{
-      font-size: $fz_sm;
-      line-height: 157%;
-
-      @include desktop{
-        font-size: $fz_md;
+      .toogle_show_review{  
+        background-color: transparent;
+        border:none;
+        border-bottom: 1px solid $primary_color;
+        font-size: $fz_sm;
+        color: $black_color;
+        line-height: 160%;
+        font-weight: bold;
+        cursor: pointer;
       }
     }
   }

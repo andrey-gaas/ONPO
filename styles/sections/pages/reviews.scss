@@ -34,14 +34,7 @@
     .list {
       display: flex;
       flex-wrap: wrap;
-
-      @include tablets {
-        margin-right: -20px;
-      }
-
-      @include desktop {
-        margin-right: -40px;
-      }
+      justify-content: space-between;
     }
 
     .card_review {
@@ -49,17 +42,15 @@
       width: 100%;
 
       @include tablets {
-        margin-right: 20px;
-        width: 334px;
+        width: calc(50% - 10px)
       }
 
       @include laptop {
-        width: 373px;
+        width: calc(33% - 13px)
       }
 
       @include desktop {
-        margin-right: 40px;
-        width: 453px;
+        width: calc(33% - 26px);
       }
     }
   }

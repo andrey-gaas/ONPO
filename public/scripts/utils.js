@@ -474,3 +474,21 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
   mediaQueryMobileMax.addListener(mediaMobile)
   mediaMobile(mediaQueryMobileMax)
 }
+
+
+export function initReviewsCommentShow(nodeReviewList){
+  let list = document.querySelector(nodeReviewList)
+  list.onclick = e => {
+    if(e.target.nodeName === 'BUTTUN' && e.target.className === 'toogle_show_review'){
+      let wrap = e.target.parentNode.parentNode.querySelector('.wpra_text')
+      if (wrap.style.maxHeight){
+        e.target.textContent = 'Развернуть'
+        wrap.style.maxHeight = null;
+      } else {
+        e.target.textContent = 'Свернуть'
+        wrap.style.maxHeight = wrap.scrollHeight + 10 + "px";
+      }
+    }
+  }
+
+}
