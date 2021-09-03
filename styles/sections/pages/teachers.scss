@@ -1,4 +1,13 @@
 #teachers {
+  overflow: hidden;
+  margin-bottom: 100px;
+  @include tablets{
+    margin-bottom: 120px;
+  }
+  @include laptop{
+    margin-bottom: 160px;
+  }
+  
   & > .container > h1.title{
     margin-top: 40px;
     font-size: $fz_lg;

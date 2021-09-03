@@ -17,6 +17,7 @@ section.home_section_direction{
   }
 
   .article_home_format{
+    overflow: hidden;
     margin-bottom: 100px;
 
     @include tablets{
@@ -95,7 +96,7 @@ section.home_section_direction{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+    overflow: hidden;
     
     &>.courses_list{
       display: none;

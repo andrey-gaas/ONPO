@@ -70,7 +70,7 @@ section.home_info{
         margin-bottom: 20px;
         width: 100%;
         @include tablets{
-          margin-right: -20px;
+          justify-content: space-between;
           flex-direction: row;
           flex-wrap: wrap;
           width: unset;
@@ -85,7 +85,7 @@ section.home_info{
         .organizator_item{
           margin-bottom: 20px;
           @include tablets{
-            margin-right: 20px;
+            
           }
           @include laptop{
             margin-right: 0;

@@ -98,6 +98,9 @@ h2.home_subtitle {
   }
 }
 
+#page_catalog {
+  overflow: hidden;
+}
 #page_catalog > .title {
   margin-top: 40px;
   font-size: 28px;
@@ -581,11 +584,6 @@ h2.home_subtitle {
     margin-bottom: 160px;
   }
 }
-@media screen and (min-width: 1520px) {
-  #courses .margin_bottom {
-    margin-bottom: 180px;
-  }
-}
 #courses > .container > h1.title {
   margin-top: 40px;
   font-size: 28px;
@@ -714,6 +712,10 @@ h2.home_subtitle {
     width: 240px;
   }
 }
+#courses .list-container {
+  overflow: hidden;
+  padding-bottom: 5px;
+}
 #courses .list-container > h2.title {
   margin-top: 40px;
   font-size: 16px;
@@ -740,6 +742,7 @@ h2.home_subtitle {
   #courses .list-container .list {
     flex-direction: row;
     margin-right: -20px;
+    margin-bottom: -20px;
     justify-content: flex-start;
     flex-wrap: wrap;
     align-content: stretch;
@@ -748,6 +751,7 @@ h2.home_subtitle {
 @media screen and (min-width: 1520px) {
   #courses .list-container .list {
     margin-right: -40px;
+    margin-bottom: -40px;
   }
 }
 #courses .list-container .list .card_wrapper {
@@ -756,6 +760,7 @@ h2.home_subtitle {
 @media screen and (min-width: 728px) {
   #courses .list-container .list .card_wrapper {
     margin-right: 20px;
+    margin-bottom: 20px;
     width: 333px;
   }
 }
@@ -768,6 +773,7 @@ h2.home_subtitle {
   #courses .list-container .list .card_wrapper {
     width: 453px;
     margin-right: 40px;
+    margin-bottom: 40px;
   }
 }
 #courses .list-container .list .card_wrapper .card {
@@ -1793,6 +1799,20 @@ h2.home_subtitle {
   }
 }
 
+#teachers {
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 728px) {
+  #teachers {
+    margin-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teachers {
+    margin-bottom: 160px;
+  }
+}
 #teachers > .container > h1.title {
   margin-top: 40px;
   font-size: 28px;
@@ -2115,16 +2135,7 @@ h2.home_subtitle {
 #reviews .reviews-list .list {
   display: flex;
   flex-wrap: wrap;
-}
-@media screen and (min-width: 728px) {
-  #reviews .reviews-list .list {
-    margin-right: -20px;
-  }
-}
-@media screen and (min-width: 1520px) {
-  #reviews .reviews-list .list {
-    margin-right: -40px;
-  }
+  justify-content: space-between;
 }
 #reviews .reviews-list .card_review {
   margin-top: 20px;
@@ -2132,19 +2143,17 @@ h2.home_subtitle {
 }
 @media screen and (min-width: 728px) {
   #reviews .reviews-list .card_review {
-    margin-right: 20px;
-    width: 334px;
+    width: calc(50% - 10px);
   }
 }
 @media screen and (min-width: 1200px) {
   #reviews .reviews-list .card_review {
-    width: 373px;
+    width: calc(33% - 13px);
   }
 }
 @media screen and (min-width: 1520px) {
   #reviews .reviews-list .card_review {
-    margin-right: 40px;
-    width: 453px;
+    width: calc(33% - 26px);
   }
 }
 #reviews .form-container {
@@ -5235,6 +5244,7 @@ article.card_review {
 @media screen and (min-width: 728px) {
   article.card_review {
     width: 334px;
+    height: min-content;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -5371,18 +5381,40 @@ article.card_review .course .stars_list .star img {
   height: 100%;
 }
 article.card_review .review {
-  padding: 10px 0;
-  padding-right: 20px;
   margin-bottom: 50px;
 }
-article.card_review .review .review_text {
+article.card_review .review .wpra_text {
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 40px;
+  transition: 0.2s all;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+article.card_review .review .wpra_text .review_text {
   font-size: 14px;
   line-height: 157%;
 }
 @media screen and (min-width: 1520px) {
-  article.card_review .review .review_text {
+  article.card_review .review .wpra_text .review_text {
     font-size: 16px;
   }
+}
+article.card_review .review .wrapper_togle_show_review {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+article.card_review .review .wrapper_togle_show_review .toogle_show_review {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #FF165D;
+  font-size: 14px;
+  color: #252A34;
+  line-height: 160%;
+  font-weight: bold;
+  cursor: pointer;
 }
 article.card_review .review_status {
   display: flex;
@@ -5768,6 +5800,7 @@ section.home_section_direction .container > .title {
   }
 }
 section.home_section_direction .article_home_format {
+  overflow: hidden;
   margin-bottom: 100px;
 }
 @media screen and (min-width: 728px) {
@@ -5862,6 +5895,7 @@ section.home_section_direction .article_home_courses {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  overflow: hidden;
 }
 section.home_section_direction .article_home_courses > .courses_list {
   display: none;
@@ -5958,6 +5992,332 @@ section.home_section_direction .cr_cor {
 @media screen and (min-width: 728px) {
   section.home_section_direction .cr_cor {
     display: none !important;
+  }
+}
+
+section.section_home_infographics {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics {
+    margin-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics {
+    margin-bottom: 160px;
+  }
+}
+section.section_home_infographics .no_wrap {
+  white-space: nowrap;
+}
+section.section_home_infographics .title_infographics {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .title_infographics {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  section.section_home_infographics .title_infographics {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .block__card_info {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+section.section_home_infographics .block__card_info .card_infogaraphics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .block__card_info .card_infogaraphics {
+    width: 334px;
+    border-radius: 30px;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .block__card_info .card_infogaraphics {
+    width: 570px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  section.section_home_infographics .block__card_info .card_infogaraphics {
+    width: 700px;
+    margin-bottom: 40px;
+    padding: 40px;
+  }
+}
+section.section_home_infographics .block__card_info .card_infogaraphics .title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 160%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .block__card_info .card_infogaraphics .title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .block__card_info .card_infogaraphics .title {
+    font-size: 28px;
+  }
+}
+section.section_home_infographics .block__card_info .card_infogaraphics .img {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .block__card_info .card_infogaraphics .img {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .block__card_info .card_infogaraphics .img {
+    height: 390px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  section.section_home_infographics .block__card_info .card_infogaraphics .img {
+    height: 480px;
+  }
+}
+section.section_home_infographics .block__card_info .card_infogaraphics .img img {
+  height: 100%;
+}
+section.section_home_infographics .block__card_info .card_infogaraphics .text {
+  display: block;
+  line-height: 1;
+}
+section.section_home_infographics .block__card_info .card_infogaraphics .text .count {
+  font-size: 28px;
+  color: #FF165D;
+  font-weight: bold;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .block__card_info .card_infogaraphics .text .count {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .block__card_info .card_infogaraphics .text .count {
+    font-size: 58px;
+  }
+}
+section.section_home_infographics .map {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .map {
+    margin-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .map {
+    margin-bottom: 160px;
+  }
+}
+section.section_home_infographics .map .article_map {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding: 20px 10px;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .map .article_map {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .map .article_map {
+    padding: 40px;
+  }
+}
+section.section_home_infographics .map .article_map .article__map_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.section_home_infographics .map .article_map .article__map_top .title_map {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .map .article_map .article__map_top .title_map {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .map .article_map .article__map_top .title_map {
+    font-size: 28px;
+  }
+}
+section.section_home_infographics .map .article_map .article__map_top .open_map {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 2px solid #252A34;
+  width: 16px;
+  height: 16px;
+  transition: 0.1s all;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .map .article_map .article__map_top .open_map {
+    display: none;
+  }
+}
+section.section_home_infographics .map .article_map .article__map_top .open_map::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 16px;
+  background-color: #FFFFFF;
+  top: -2px;
+  left: calc(50% - 2px);
+}
+section.section_home_infographics .map .article_map .article__map_top .open_map::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 4px;
+  background-color: #FFFFFF;
+  right: -2px;
+  top: calc(50% - 2px);
+}
+section.section_home_infographics .map .article_map .article__map_top .open_map.active {
+  border: 2px solid transparent;
+}
+section.section_home_infographics .map .article_map .article__map_top .open_map.active::before {
+  transform: rotate(-45deg);
+  background-color: #252A34;
+  height: 2px;
+  width: 20px;
+  top: calc(50% - 1px);
+  left: -4px;
+}
+section.section_home_infographics .map .article_map .article__map_top .open_map.active::after {
+  transform: rotate(-45deg);
+  background-color: #252A34;
+  width: 2px;
+  height: 20px;
+  left: calc(50% - 1px);
+  top: -4px;
+}
+section.section_home_infographics .map .article_map .img_map {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+section.section_home_infographics .map .article_map .img_map .wrapper {
+  width: 100%;
+}
+section.section_home_infographics .map .article_map .img_map img {
+  width: 100%;
+}
+section.section_home_infographics .map .article_map .img_map.active .wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .map .article_map .img_map.active .wrapper {
+    overflow: auto;
+  }
+}
+section.section_home_infographics .map .article_map .img_map.active .wrapper img {
+  width: auto;
+  min-height: 350px;
+  height: 50vh;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .map .article_map .img_map.active .wrapper img {
+    width: 100%;
+    height: auto;
+    min-height: unset;
+  }
+}
+section.section_home_infographics .article__advantages > .title {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .article__advantages > .title {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .article__advantages > .title {
+    margin-bottom: 40px;
+  }
+}
+section.section_home_infographics .article__advantages > .text {
+  margin-bottom: 10px;
+  line-height: 160%;
+  font-size: 14px;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .article__advantages > .text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 425px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .article__advantages > .text {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}
+section.section_home_infographics .article__advantages > .card__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -20px;
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .article__advantages > .card__list {
+    margin-bottom: 0;
+  }
+}
+section.section_home_infographics .article__advantages > .card__list .card_advantages {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .article__advantages > .card__list .card_advantages {
+    width: calc(25% - 15px);
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1520px) {
+  section.section_home_infographics .article__advantages > .card__list .card_advantages {
+    width: calc(25% - 30px);
   }
 }
 
@@ -6096,7 +6456,7 @@ section.home_info .container .organizators .organizator_list {
 }
 @media screen and (min-width: 728px) {
   section.home_info .container .organizators .organizator_list {
-    margin-right: -20px;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     width: unset;
@@ -6112,11 +6472,6 @@ section.home_info .container .organizators .organizator_list {
 }
 section.home_info .container .organizators .organizator_list .organizator_item {
   margin-bottom: 20px;
-}
-@media screen and (min-width: 728px) {
-  section.home_info .container .organizators .organizator_list .organizator_item {
-    margin-right: 20px;
-  }
 }
 @media screen and (min-width: 1200px) {
   section.home_info .container .organizators .organizator_list .organizator_item {
