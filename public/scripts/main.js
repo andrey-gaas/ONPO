@@ -1,7 +1,7 @@
 import Swiper from "/scripts/swiper.js";
 import {
   initFormSelect, initBtnScrollToTop, initDropMenu, 
-  initCoruselDefoult, initCoruselFromFilter
+  initCoruselDefoult, initCoruselFromFilter, initReviewsCommentShow
 } from "/scripts/utils.js"
 
 
@@ -31,6 +31,21 @@ window.onload = () => {
     },
   })
 
+  //map
+
+  let btnOpenMap = document.querySelector('button.open_map')
+  let mapWrapper = document.querySelector('div.img_map')
+
+  
+  btnOpenMap.onclick = e =>{
+    if(mapWrapper.classList.contains('active')){
+      mapWrapper.classList.remove('active')
+      btnOpenMap.classList.remove('active')
+    }else{
+      mapWrapper.classList.add('active')
+      btnOpenMap.classList.add('active')
+    }
+  }
   //accordion
 
   let accordionList = document.querySelectorAll('.accordion_list')
@@ -89,6 +104,10 @@ window.onload = () => {
   //init corusel
 
   initCoruselDefoult(".home_deff_corusel") 
+
+  //init review btn show
+
+  initReviewsCommentShow('.container__review')
 };
 
 

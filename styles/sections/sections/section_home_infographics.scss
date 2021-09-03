@@ -1,0 +1,279 @@
+section.section_home_infographics{
+  margin-bottom: 100px;
+  @include tablets{
+    margin-bottom: 120px;
+  }
+  @include laptop{
+    margin-bottom: 160px;
+  }
+  .no_wrap{
+    white-space: nowrap;
+  }
+  .title_infographics{
+    margin-bottom: 20px;
+    @include laptop{
+      margin-bottom: 40px;
+    }
+    @include desktop{
+      margin-bottom: 60px;
+    }
+  }
+  .block__card_info{
+    @include tablets{
+      display: flex;
+      justify-content: space-between;
+    }
+    .card_infogaraphics{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: $bd_rad_sm;
+      background-color: $white_color ;
+      margin-bottom: 20px;
+      padding: 10px;
+
+      @include tablets{
+        width: 334px;
+        border-radius: $bd_rad;
+        padding: 20px;
+      }
+      @include laptop{
+        width: 570px;
+      }
+      @include desktop{
+        width: 700px;
+        margin-bottom: 40px;
+        padding: 40px;
+      }
+      .title{
+        font-size: $fz_sm;
+        font-weight: bold;
+        line-height: 160%;
+        text-align: center;
+        margin-bottom: 10px;
+        @include tablets{
+          font-size: $fz_md;
+          margin-bottom: 20px;
+        }
+        @include laptop{
+          font-size: $fz_lg;
+        }
+      }
+      .img{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        @include tablets{
+          margin-bottom: 20px;
+        }
+        @include laptop{
+          height: 390px;
+          margin-bottom: 40px;
+        }
+        @include desktop{
+          height: 480px;
+        }
+        img{
+          height: 100%;
+        }
+      }
+      .text{
+        display: block;
+        line-height: 1;
+        .count{
+          font-size: $fz_lg;
+          color: $primary_color;
+          font-weight: bold;
+          @include tablets{
+            font-size: $fz_xl;
+          }
+          @include laptop{
+            font-size: $fz_mxl;
+          }
+        }
+      }
+    }
+  }
+  .map{
+    margin-bottom: 100px;
+    @include tablets{
+      margin-bottom: 120px;
+    }
+    @include laptop{
+      margin-bottom: 160px;
+    }
+    .article_map{
+      width: 100%;
+      background-color: $white_color;
+      border-radius: $bd_rad_sm;
+      padding: 20px 10px;
+      @include tablets{
+        padding: 20px;
+      }
+      @include laptop{
+        padding: 40px;
+      }
+      .article__map_top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title_map{
+          font-size: $fz_sm;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-bottom: 10px;
+          @include tablets{
+            font-size: $fz_md;
+            margin-bottom: 20px;
+          }
+          @include laptop{
+            font-size: $fz_lg;
+          }
+        }
+        .open_map{
+          position: relative;
+          cursor: pointer;
+          display: block;
+          background-color: transparent;
+          border-radius: 2px;
+          border: 2px solid $black_color;
+          width: 16px;
+          height: 16px;
+          transition: .1s all;
+          
+          @include tablets{
+            display: none;
+          }
+
+          &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 4px;
+            height: 16px;
+            background-color: $white_color;
+            top: -2px;
+            left: calc(50% - 2px);
+          }
+
+          &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 16px;
+            height: 4px;
+            background-color: $white_color;
+            right: -2px;
+            top: calc(50% - 2px);
+          }
+
+          &.active{
+            border: 2px solid transparent;
+            &::before{
+              transform: rotate(-45deg);
+              background-color: $black_color;
+              height: 2px;
+              width: 20px;
+              top: calc(50% - 1px);
+              left: -4px;
+            }
+            &::after{
+              transform: rotate(-45deg);
+              background-color: $black_color;
+              width: 2px;
+              height: 20px;
+              left: calc(50% - 1px);
+              top: -4px;
+            }
+          }
+        }
+      }
+      
+      .img_map{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        .wrapper{
+          width: 100%;
+        }
+
+        img{
+          width: 100%;
+        }
+        &.active{
+          .wrapper{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            @include tablets{
+              overflow: auto;
+            }
+            img{
+              width: auto;
+              min-height: 350px;
+              height: 50vh;
+              @include tablets{
+                width: 100%;
+                height: auto;
+                min-height: unset;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+  .article__advantages{
+    &>.title{
+      margin-bottom: 10px;
+      @include tablets{
+        margin-bottom: 20px;
+      }
+      @include laptop{
+        margin-bottom: 40px;
+      }
+    }
+    &>.text{
+      margin-bottom: 10px;
+      line-height: 160%;
+      font-size: $fz_sm;
+      @include tablets{
+        font-size: $fz_md;
+        margin-bottom: 20px;
+        width: 425px;
+      }
+      @include laptop{
+        font-size: 20px;
+        margin-bottom: 40px;
+      }
+    }
+    &>.card__list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: -20px;
+      @include laptop{
+        margin-bottom: 0;
+      }
+      .card_advantages{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+
+        @include laptop{
+          width: calc(25% - 15px);
+          margin-bottom: 0;
+        }
+        @include desktop{
+          width: calc(25% - 30px);
+
+        }
+      }
+    }
+  }
+}
