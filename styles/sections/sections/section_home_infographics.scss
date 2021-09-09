@@ -110,7 +110,7 @@ section.section_home_infographics{
       width: 100%;
       background-color: $white_color;
       border-radius: $bd_rad_sm;
-      padding: 20px 10px;
+      padding: 10px;
       @include tablets{
         padding: 20px;
       }
@@ -121,12 +121,13 @@ section.section_home_infographics{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .title_map{
+        margin-bottom: 10px;
+        .title_map,.title_map_desctop{
           font-size: $fz_sm;
           text-transform: uppercase;
           font-weight: bold;
-          margin-bottom: 10px;
           @include tablets{
+            display: none;
             font-size: $fz_md;
             margin-bottom: 20px;
           }
@@ -134,97 +135,208 @@ section.section_home_infographics{
             font-size: $fz_lg;
           }
         }
-        .open_map{
-          position: relative;
-          cursor: pointer;
-          display: block;
-          background-color: transparent;
-          border-radius: 2px;
-          border: 2px solid $black_color;
-          width: 16px;
-          height: 16px;
-          transition: .1s all;
-          
+        .title_map_desctop{
+          display: none;
           @include tablets{
-            display: none;
+            display: inline-block;
           }
-
-          &::after{
-            content: "";
-            display: block;
-            position: absolute;
-            width: 4px;
-            height: 16px;
-            background-color: $white_color;
-            top: -2px;
-            left: calc(50% - 2px);
-          }
-
-          &::before{
-            content: "";
-            display: block;
-            position: absolute;
-            width: 16px;
-            height: 4px;
-            background-color: $white_color;
-            right: -2px;
-            top: calc(50% - 2px);
+        }
+        .button__hide_list{
+          display: none;
+          background-color: transparent;
+          border: none;
+          width: 14px;
+          cursor: pointer;
+          svg{
+            width: 100%;
+            height: 100%;
           }
 
           &.active{
-            border: 2px solid transparent;
-            &::before{
-              transform: rotate(-45deg);
-              background-color: $black_color;
-              height: 2px;
-              width: 20px;
-              top: calc(50% - 1px);
-              left: -4px;
-            }
-            &::after{
-              transform: rotate(-45deg);
-              background-color: $black_color;
-              width: 2px;
-              height: 20px;
-              left: calc(50% - 1px);
-              top: -4px;
+            display: block;
+            @include tablets{
+              display: none;
             }
           }
         }
       }
-      
+      .wrapper_map_content{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        &.active{
+          .img_map{
+            position: absolute;
+            top:50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 0;
+          }
+          .place_list{
+            position: relative;
+            display: block;
+            z-index: 2;
+          }
+          .wrapper_place_list{
+            display: block;
+          }
+        }
+      }
       .img_map{
         width: 100%;
         display: flex;
         align-items: center;
         position: relative;
         overflow: hidden;
-        .wrapper{
+        .wrapper_map{
           width: 100%;
+          svg{
+            width: 100%;
+            height: 100%;
+          }
         }
-
-        img{
-          width: 100%;
-        }
-        &.active{
-          .wrapper{
-            overflow-x: scroll;
-            overflow-y: hidden;
-            @include tablets{
-              overflow: auto;
-            }
-            img{
-              width: auto;
-              min-height: 350px;
-              height: 50vh;
+        .wrapper_location_list{
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          .lacation_list{
+            .location_item{
+              position: absolute;
+              width: 11px;
+              height: 13px;
+              background-image: url(/image/location.svg);
+              background-size: contain;
+              cursor: pointer;
               @include tablets{
-                width: 100%;
-                height: auto;
-                min-height: unset;
+                width: 15px;
+                height: 17px;
+              }
+              @include laptop{
+                width: 28px;
+                height: 33px;
+              }
+              &.central{
+                top: 36%;
+                left: 14%;
+              }
+              &.southern{
+                top: 53.5%;
+                left: 8.5%;
+                @include laptop{
+                  top: 56%;
+                }
+              }
+              &.northwestern{
+                top: 29%;
+                left: 28%;
+              }
+              &.farEastern{
+                top: 45%;
+                left: 74%;
+              }
+              &.siberian{
+                top: 55%;
+                left: 53%;
+              }
+              &.urals{
+                top: 47%;
+                left: 38%;
+              }
+              &.volga{
+                top: 49%;
+                left: 22%;
               }
             }
           }
+        }
+      }
+      .wrapper_place_list{
+        width: 100%;
+        display: none;
+        @include tablets{
+          position: relative;
+          z-index: 1;
+          overflow: hidden;
+          border-radius: $bd_rad;
+          border: 1px solid $primary_color;
+          width: 395px;
+        }
+        @include laptop{
+          width: 420px;
+        }
+        .close_window_place_list{
 
+          display: none;
+          background-color: transparent;
+          border: none;
+          width: 14px;
+          cursor: pointer;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          z-index: 3;
+          svg{
+            width: 100%;
+            height: 100%;
+          }
+          @include tablets{
+            display: block;
+          }
+        }
+      }
+      .place_list{
+        display: none;
+        max-height: 50vh;
+        
+        background-color: rgba(255, 255, 255, 0.4);
+        overflow-x: auto;
+        @include tablets{
+          height: 355px;
+          width: 402px;
+          background-color: #fff;
+          
+          padding: 20px;
+        }
+        @include laptop{
+          width: 430px;
+        }
+        .title_place_list{
+          display: none;
+          font-size: $fz_sm;
+          line-height: 1.6;
+          text-transform: uppercase;
+          font-weight: bold;
+          @include tablets{
+            display: inline-block;
+            font-size: $fz_md;
+            margin-bottom: 20px;
+          }
+          @include laptop{
+            font-size: 20px;
+          }
+        }
+        .place_item{
+          padding-left: 20px;
+          margin-bottom: 10px;
+          background-image: url(/image/location.svg);
+          background-size: 11px 13px;
+          background-repeat: no-repeat;
+          background-position: left center;
+          font-size: $fz_sm;
+          line-height: 1.6;
+
+          &:last-child{
+            margin-bottom: 0;
+          }
+
+          @include tablets{
+            font-size: $fz_md;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            background-size: 14px 17px;
+          }
         }
       }
     }

@@ -6140,7 +6140,7 @@ section.section_home_infographics .map .article_map {
   width: 100%;
   background-color: #FFFFFF;
   border-radius: 15px;
-  padding: 20px 10px;
+  padding: 10px;
 }
 @media screen and (min-width: 728px) {
   section.section_home_infographics .map .article_map {
@@ -6156,78 +6156,71 @@ section.section_home_infographics .map .article_map .article__map_top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
-section.section_home_infographics .map .article_map .article__map_top .title_map {
+section.section_home_infographics .map .article_map .article__map_top .title_map, section.section_home_infographics .map .article_map .article__map_top .title_map_desctop {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 @media screen and (min-width: 728px) {
-  section.section_home_infographics .map .article_map .article__map_top .title_map {
+  section.section_home_infographics .map .article_map .article__map_top .title_map, section.section_home_infographics .map .article_map .article__map_top .title_map_desctop {
+    display: none;
     font-size: 16px;
     margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
-  section.section_home_infographics .map .article_map .article__map_top .title_map {
+  section.section_home_infographics .map .article_map .article__map_top .title_map, section.section_home_infographics .map .article_map .article__map_top .title_map_desctop {
     font-size: 28px;
   }
 }
-section.section_home_infographics .map .article_map .article__map_top .open_map {
-  position: relative;
-  cursor: pointer;
-  display: block;
-  background-color: transparent;
-  border-radius: 2px;
-  border: 2px solid #252A34;
-  width: 16px;
-  height: 16px;
-  transition: 0.1s all;
+section.section_home_infographics .map .article_map .article__map_top .title_map_desctop {
+  display: none;
 }
 @media screen and (min-width: 728px) {
-  section.section_home_infographics .map .article_map .article__map_top .open_map {
+  section.section_home_infographics .map .article_map .article__map_top .title_map_desctop {
+    display: inline-block;
+  }
+}
+section.section_home_infographics .map .article_map .article__map_top .button__hide_list {
+  display: none;
+  background-color: transparent;
+  border: none;
+  width: 14px;
+  cursor: pointer;
+}
+section.section_home_infographics .map .article_map .article__map_top .button__hide_list svg {
+  width: 100%;
+  height: 100%;
+}
+section.section_home_infographics .map .article_map .article__map_top .button__hide_list.active {
+  display: block;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .map .article_map .article__map_top .button__hide_list.active {
     display: none;
   }
 }
-section.section_home_infographics .map .article_map .article__map_top .open_map::after {
-  content: "";
-  display: block;
+section.section_home_infographics .map .article_map .wrapper_map_content {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+section.section_home_infographics .map .article_map .wrapper_map_content.active .img_map {
   position: absolute;
-  width: 4px;
-  height: 16px;
-  background-color: #FFFFFF;
-  top: -2px;
-  left: calc(50% - 2px);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 0;
 }
-section.section_home_infographics .map .article_map .article__map_top .open_map::before {
-  content: "";
+section.section_home_infographics .map .article_map .wrapper_map_content.active .place_list {
+  position: relative;
   display: block;
-  position: absolute;
-  width: 16px;
-  height: 4px;
-  background-color: #FFFFFF;
-  right: -2px;
-  top: calc(50% - 2px);
+  z-index: 2;
 }
-section.section_home_infographics .map .article_map .article__map_top .open_map.active {
-  border: 2px solid transparent;
-}
-section.section_home_infographics .map .article_map .article__map_top .open_map.active::before {
-  transform: rotate(-45deg);
-  background-color: #252A34;
-  height: 2px;
-  width: 20px;
-  top: calc(50% - 1px);
-  left: -4px;
-}
-section.section_home_infographics .map .article_map .article__map_top .open_map.active::after {
-  transform: rotate(-45deg);
-  background-color: #252A34;
-  width: 2px;
-  height: 20px;
-  left: calc(50% - 1px);
-  top: -4px;
+section.section_home_infographics .map .article_map .wrapper_map_content.active .wrapper_place_list {
+  display: block;
 }
 section.section_home_infographics .map .article_map .img_map {
   width: 100%;
@@ -6236,31 +6229,169 @@ section.section_home_infographics .map .article_map .img_map {
   position: relative;
   overflow: hidden;
 }
-section.section_home_infographics .map .article_map .img_map .wrapper {
+section.section_home_infographics .map .article_map .img_map .wrapper_map {
   width: 100%;
 }
-section.section_home_infographics .map .article_map .img_map img {
+section.section_home_infographics .map .article_map .img_map .wrapper_map svg {
   width: 100%;
+  height: 100%;
 }
-section.section_home_infographics .map .article_map .img_map.active .wrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
+section.section_home_infographics .map .article_map .img_map .wrapper_location_list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item {
+  position: absolute;
+  width: 11px;
+  height: 13px;
+  background-image: url(/image/location.svg);
+  background-size: contain;
+  cursor: pointer;
 }
 @media screen and (min-width: 728px) {
-  section.section_home_infographics .map .article_map .img_map.active .wrapper {
-    overflow: auto;
+  section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item {
+    width: 15px;
+    height: 17px;
   }
 }
-section.section_home_infographics .map .article_map .img_map.active .wrapper img {
-  width: auto;
-  min-height: 350px;
-  height: 50vh;
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item {
+    width: 28px;
+    height: 33px;
+  }
+}
+section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item.central {
+  top: 36%;
+  left: 14%;
+}
+section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item.southern {
+  top: 53.5%;
+  left: 8.5%;
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item.southern {
+    top: 56%;
+  }
+}
+section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item.northwestern {
+  top: 29%;
+  left: 28%;
+}
+section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item.farEastern {
+  top: 45%;
+  left: 74%;
+}
+section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item.siberian {
+  top: 55%;
+  left: 53%;
+}
+section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item.urals {
+  top: 47%;
+  left: 38%;
+}
+section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item.volga {
+  top: 49%;
+  left: 22%;
+}
+section.section_home_infographics .map .article_map .wrapper_place_list {
+  width: 100%;
+  display: none;
 }
 @media screen and (min-width: 728px) {
-  section.section_home_infographics .map .article_map .img_map.active .wrapper img {
-    width: 100%;
-    height: auto;
-    min-height: unset;
+  section.section_home_infographics .map .article_map .wrapper_place_list {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 30px;
+    border: 1px solid #FF165D;
+    width: 395px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .map .article_map .wrapper_place_list {
+    width: 420px;
+  }
+}
+section.section_home_infographics .map .article_map .wrapper_place_list .close_window_place_list {
+  display: none;
+  background-color: transparent;
+  border: none;
+  width: 14px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+}
+section.section_home_infographics .map .article_map .wrapper_place_list .close_window_place_list svg {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .map .article_map .wrapper_place_list .close_window_place_list {
+    display: block;
+  }
+}
+section.section_home_infographics .map .article_map .place_list {
+  display: none;
+  max-height: 50vh;
+  background-color: rgba(255, 255, 255, 0.4);
+  overflow-x: auto;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .map .article_map .place_list {
+    height: 355px;
+    width: 402px;
+    background-color: #fff;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .map .article_map .place_list {
+    width: 430px;
+  }
+}
+section.section_home_infographics .map .article_map .place_list .title_place_list {
+  display: none;
+  font-size: 14px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .map .article_map .place_list .title_place_list {
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.section_home_infographics .map .article_map .place_list .title_place_list {
+    font-size: 20px;
+  }
+}
+section.section_home_infographics .map .article_map .place_list .place_item {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  background-image: url(/image/location.svg);
+  background-size: 11px 13px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+section.section_home_infographics .map .article_map .place_list .place_item:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 728px) {
+  section.section_home_infographics .map .article_map .place_list .place_item {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    background-size: 14px 17px;
   }
 }
 section.section_home_infographics .article__advantages > .title {

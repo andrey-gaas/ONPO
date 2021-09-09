@@ -33,19 +33,94 @@ window.onload = () => {
 
   //map
 
-  let btnOpenMap = document.querySelector('button.open_map')
-  let mapWrapper = document.querySelector('div.img_map')
+  let localeIconsList = document.querySelector('.lacation_list')
+  let placeList = document.querySelector('.place_list')
+  let wrap = document.querySelector(".wrapper_map_content")
+  let btnHideList = document.querySelector('.button__hide_list')
+  let btnHideListDesktop = document.querySelector('.close_window_place_list')
+  let mapTitle = document.querySelector('.title_map')
+  let paintedItem
 
-  
-  btnOpenMap.onclick = e =>{
-    if(mapWrapper.classList.contains('active')){
-      mapWrapper.classList.remove('active')
-      btnOpenMap.classList.remove('active')
-    }else{
-      mapWrapper.classList.add('active')
-      btnOpenMap.classList.add('active')
+  let placeData = {
+    '#Central':{
+      title:'центральный </br>федеральный округ',
+      places:['г. Воронеж', 'г. Тула']
+    },
+    '#Urals':{
+      title:'уральский </br>федеральный округ',
+      places:['г. Мегион (ХМАО)', 'г. Новый Уренгой (ЯНАО)','г. Сургут','г. Тюмень','г. Челябинск','п. Незевай (Свердловская область)','пгт. Арти (Свердловская область)','пгт. Березово (ХМАО)','с. Викулово (Тюменская область)','с. Красноселькуп (ЯНАО)','г. Урай (ХМАО)','г. Губкинский (ЯНАО)']
+    },
+    '#Volga':{
+      title:'поволжский </br>федеральный округ',
+      places:['г. Заречный (Пензенская область)', 'г. Москва','пгт. Алексеевское (Республика Татарстан)','г. Сенгилей (Ульяновская область)','п. Чегдомын (Хабаровский край)','г. Нижний Новгород','г. Казань']
+    },
+    '#Southern':{
+      title:'северо - кавказский </br>федеральный округ',
+      places:['с. Степногутово (Ставропольский край)']
+    },
+    '#FarEastern':{
+      left: true,
+      title:'Дальне - восточный </br>федеральный округ',
+      places:['г. Алдан (Республика Саха (Якутия))','г. Биробиджан (ЕАО)','г. Владивосток (Приморский край)','г. Южно-Сахалинск','п. Чегдомын (Хабаровский край)','пгт. Палана (Камчатский край)','с. Кабанск (Республика Бурятия)','с. Каменское (Камчатский край)','с. Константиновка (Амурская область)','с. Чапчылган (Республика Саха (Якутия))','г. Благовещенск (Амурская область)','г. Хабаровск']
+    },
+    '#Northwestern':{
+      title:'северо - западный </br>федеральный округ',
+      places:['г. Псков', 'г. Выборг (Ленинградская область)']
+    },
+    '#Siberian':{
+      left: true,
+      title:'сибирский </br>федеральный округ',
+      places:['г. Бердск (Новосибирская область)', 'г. Иркутск','г. Искитим (Новосибирская область)','г. Красноярск','г. Кызыл (Респулика Тыва)','г. Новокузнецк (Кемеровская область)','г. Новосибирск','г. Обь (Новосибирская область)','с. Кызыл-Мажалык (Республика Тыва)','с. Убинское (Новосибирская область)','с. Усть-Ишим (Омская область)','с. Хову-Аксы (Республика Тыва)']
+    },
+  }
+
+  localeIconsList.onclick = e => {
+    if(e.target.classList.contains('location_item')){
+
+      if(paintedItem){
+        paintedItem.style.fill = '#eaeaea'
+        closeWindoPlaceList()
+      }
+
+      placeList.style.minHeight = wrap.offsetHeight - 1 + 'px'
+      wrap.classList.add('active')
+      if(placeData[e.target.dataset.locale].left){
+        wrap.style.justifyContent = 'flex-start'
+      }
+      btnHideList.classList.add('active')
+      paintedItem = document.querySelector(e.target.dataset.locale)
+      paintedItem.style.fill = '#3EC1D3'
+      mapTitle.innerHTML = placeData[e.target.dataset.locale].title
+
+      let title = document.createElement('h2')
+      title.classList.add('title_place_list')
+      title.innerHTML = placeData[e.target.dataset.locale].title
+      placeList.append( title )
+
+      placeData[e.target.dataset.locale].places.forEach( item => {
+        let li = document.createElement('li')
+        li.classList.add('place_item')
+        li.innerText = item
+        placeList.append(li)
+      })
+      
     }
   }
+  
+  let closeWindoPlaceList = () => {
+    wrap.classList.remove('active')
+    wrap.style.justifyContent = ''
+    btnHideList.classList.remove('active')
+    paintedItem.style.fill = '#eaeaea'
+    mapTitle.innerHTML = 'География обучения'
+    placeList.innerHTML = ''
+  }
+  btnHideList.onclick = closeWindoPlaceList
+  btnHideListDesktop.onclick = closeWindoPlaceList
+  
+  // <li class="place_item">
+  //       г. Алдан (Республика Саха (Якутия))
+  //     </li>
   //accordion
 
   let accordionList = document.querySelectorAll('.accordion_list')
