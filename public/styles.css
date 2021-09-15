@@ -1443,7 +1443,7 @@ h2.home_subtitle {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  margin-right: -20px;
+  justify-content: space-between;
 }
 @media screen and (min-width: 1200px) {
   #course .approach .list {
@@ -1457,8 +1457,7 @@ h2.home_subtitle {
 }
 #course .approach .card_advantages {
   margin-top: 20px;
-  margin-right: 20px;
-  width: 154px;
+  width: calc(50% - 10px);
 }
 @media screen and (min-width: 728px) {
   #course .approach .card_advantages {
@@ -2577,7 +2576,7 @@ h2.home_subtitle {
     display: block;
     position: sticky;
     top: 130px;
-    width: 230px;
+    width: 260px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -2594,6 +2593,20 @@ h2.home_subtitle {
   position: relative;
   padding-left: 20px;
   margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+@media screen and (min-width: 728px) {
+  #structure .information .links-container li {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #structure .information .links-container li {
+    margin-top: 20px;
+    font-size: 16px;
+  }
 }
 #structure .information .links-container li:first-child {
   margin-top: 0;
@@ -2622,7 +2635,7 @@ h2.home_subtitle {
 }
 @media screen and (min-width: 728px) {
   #structure .information .info-container {
-    width: 420px;
+    width: 405px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -2757,6 +2770,10 @@ h2.home_subtitle {
   #structure .information .info-container .list li {
     font-size: 16px;
   }
+}
+#structure .information .info-container .list li span {
+  color: #252A34;
+  font-weight: bold;
 }
 #structure .information .info-container .buttons-container {
   display: flex;
@@ -3651,13 +3668,16 @@ footer.footer .arrow_up {
 }
 
 .swiper-pagination {
+  overflow: hidden;
   height: 100%;
+  width: 150px;
   align-items: center;
   display: flex;
   justify-content: space-around;
 }
 
 .swiper-pagination-bullet {
+  flex-shrink: 0;
   position: relative;
   display: block;
   height: 15px;

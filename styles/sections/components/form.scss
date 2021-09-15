@@ -106,8 +106,8 @@ section.application-form{
                   position: absolute;
                   opacity: 0;
                   left: -10000px;
-  
-                  &:checked+label::before{
+                  
+                  &:checked + label::before{
                     opacity: 1;
                   }
                 }

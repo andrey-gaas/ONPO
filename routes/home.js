@@ -26,15 +26,15 @@ router.get('/', (req, res) => {
     })} ) */
     const direction = [{
       title: `Аспирантура<br/>гпнтб со ран`,
-      href: '#1',
+      href: '/graduate',
       img: 'direction3.png',
     },{
       title: `Повышение квалификации`,
-      href: '#2',
+      href: '/training',
       img: 'direction1.png',
     },{
       title: `Профессиональная переподготовка`,
-      href: '#3',
+      href: '/retraining',
       img: 'direction2.png',
     }]
 

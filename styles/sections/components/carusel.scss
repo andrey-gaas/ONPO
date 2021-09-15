@@ -97,13 +97,16 @@
 }
 
 .swiper-pagination{
+  overflow: hidden;
   height: 100%;
+  width: 150px;
   align-items: center;
   display: flex;
   justify-content: space-around;
 
 }
 .swiper-pagination-bullet{
+  flex-shrink: 0;
   position: relative;
   display: block;
   height: 15px;

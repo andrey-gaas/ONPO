@@ -360,7 +360,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: stretch;
-      margin-right: -20px;
+      justify-content: space-between;
 
       @include laptop {
         flex-wrap: nowrap;
@@ -373,8 +373,7 @@
 
     .card_advantages {
       margin-top: 20px;
-      margin-right: 20px;
-      width: 154px;
+      width: calc(50% - 10px);
 
       @include tablets {
         width: 334px;

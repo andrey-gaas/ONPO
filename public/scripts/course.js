@@ -1,4 +1,4 @@
-import { initBtnScrollToTop, initDropMenu } from "/scripts/utils.js"
+import { initReviewsCommentShow, initFormSelect, initBtnScrollToTop, initDropMenu, initCoruselDefoult } from "/scripts/utils.js"
 
 window.onload = function() {
   initDropMenu('#hide_menu', '#show_menu', '#drop_menu_mobile');
@@ -6,48 +6,18 @@ window.onload = function() {
   initBtnScrollToTop('#scrollToTop');
 
   // TEACHERS CAROUSEL
-  $(document).ready(function(){
-    $('.teachers-list').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: false,
-      dots: true,
-      appendDots: $('.teachers .pagination'),
-      responsive: [
-        {
-          breakpoint: 728,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerMode: false,
-          }
-        },
-      ],
-    });
-  });
-
-
+  initCoruselDefoult('.course_teacher_corusel')
+  
   // REVIEWS CAROUSEL
-  $(document).ready(function(){
-    $('.reviews-list').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: false,
-      dots: true,
-      appendDots: $('.reviews .pagination'),
-      responsive: [
-        {
-          breakpoint: 728,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerMode: false,
-          }
-        },
-      ],
-    });
-  });
+  initCoruselDefoult('.course_review_corusel')
 
+  // SELECT IN FORM
+
+  initFormSelect('.home_form_application')
+
+  // COMMENT SHOW
+
+  initReviewsCommentShow('.container__review')
 
   // ОСТАВИТЬ ЗАЯВКУ
   document

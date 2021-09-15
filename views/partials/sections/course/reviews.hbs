@@ -1,20 +1,23 @@
 <h2 class="title">Отзывы</h2>
 <div class="reviews">
+  <div class="container_out container__review">
+    <div class="swiper-container course_review_corusel">
+      <div class="swiper-wrapper">
+        {{#each reviews}}
+        <div class="swiper-slide">
+          <div class="container_iner">
+            {{>cards/card_review this}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      <div class="pagination_wrapper">
+        <div class="swiper-button-prev"></div>
 
-  <div class="carousel">
-    <div class="reviews-list carousel-list">
-      {{#each reviews}}
-        {{>cards/card_review this}}
-      {{/each}}
-    </div>
-    <div class="controls">
-      <div class="pagination"></div>
-    </div>
-  </div>
+        <div class="swiper-pagination"></div>
 
-  <div class="list">
-    {{#each reviews}}
-      {{>cards/card_review this}}
-    {{/each}}
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
   </div>
 </div>

@@ -2,7 +2,7 @@ import Swiper from "/scripts/swiper.js";
 
 export function initFormSelect (selectorNode){
   let formWithSelect = document.querySelector(selectorNode)
-  let selectCourse = []
+  // let selectCourse = []
 
   formWithSelect.onclick = e => {
     
@@ -14,17 +14,20 @@ export function initFormSelect (selectorNode){
       wrap.onclick = e => {
         e.stopPropagation()
         if(e.target.nodeName === 'LABEL'){
-          if(selectCourse.indexOf(e.target.innerText) !== -1){
-            selectCourse.splice( selectCourse.indexOf(e.target.innerText), 1)
-          }else{
-            selectCourse.push(e.target.innerText)
-          }
-          if(selectCourse.length === 0){
-            selectInput.innerHTML = 'Наименование образовательной прогрммы'
-          }else{
-            selectInput.innerHTML = selectCourse
-          }
+          selectInput.innerHTML = e.target.innerText
         }
+        // if(e.target.nodeName === 'LABEL'){
+        //   if(selectCourse.indexOf(e.target.innerText) !== -1){
+        //     selectCourse.splice( selectCourse.indexOf(e.target.innerText), 1)
+        //   }else{
+        //     selectCourse.push(e.target.innerText)
+        //   }
+        //   if(selectCourse.length === 0){
+        //     selectInput.innerHTML = 'Наименование образовательной прогрммы'
+        //   }else{
+        //     selectInput.innerHTML = selectCourse
+        //   }
+        // }
 
       }
 
@@ -75,6 +78,8 @@ export function initCoruselDefoult(selectCorusel){
     // If we need pagination
     pagination: {
       el: ".swiper-pagination",
+      dynamicBullets: true,
+      dynamicMainBullets: 2,
     },
 
     // Navigation arrows
@@ -115,6 +120,8 @@ export function initCoruselDefoult(selectCorusel){
         // If we need pagination
         pagination: {
           el: ".swiper-pagination",
+          dynamicBullets: true,
+          dynamicMainBullets: 2,
         },
     
         // Navigation arrows
@@ -149,6 +156,8 @@ export function initCoruselDefoult(selectCorusel){
         // If we need pagination
         pagination: {
           el: ".swiper-pagination",
+          dynamicBullets: true,
+          dynamicMainBullets: 2,
         },
     
         // Navigation arrows
@@ -183,6 +192,8 @@ export function initCoruselDefoult(selectCorusel){
         // If we need pagination
         pagination: {
           el: ".swiper-pagination",
+          dynamicBullets: true,
+          dynamicMainBullets: 2,
         },
     
         // Navigation arrows
@@ -226,6 +237,8 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
       // If we need pagination
       pagination: {
         el: ".swiper-pagination",
+        dynamicBullets: true,
+        dynamicMainBullets: 2,
       },
   
       // Navigation arrows
