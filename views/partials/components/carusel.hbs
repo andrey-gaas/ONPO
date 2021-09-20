@@ -14,13 +14,13 @@
               <span class="period"><span class="bold">Срок обучения</span> - {{this.data.period}}</span>
             </div>
             <div class="review">
-              {{ getStarsCourse this.data.review}}
-              <div class="count">({{this.data.review.length}} отзыва)</div>
+              {{getStarsReview this.data.stars}}
+              <div class="count">({{this.data.reviews.length}} отзыва)</div>
             </div>
           </div>
           <div class="price"><span>₽</span> {{this.data.price}}</div>
         </div>
-        <a href="{{item.data.id}}" class="button color_red size_norm">Подробнее</a>
+        <a href="/course/{{this.data.id}}" class="button color_red size_norm">Подробнее</a>
       </div>
 
       </div></div>

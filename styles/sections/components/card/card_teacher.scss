@@ -1,4 +1,5 @@
 article.card_teacher{
+  
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -24,9 +25,13 @@ article.card_teacher{
   }
   & .person{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid $gray_light_color;
+    margin-bottom: 10px;
+
+    @include laptop{
+      margin-bottom: 20px;
+    }
 
     & .img_block{
       width: 60px;
@@ -55,7 +60,7 @@ article.card_teacher{
 
       @include laptop{
         font-size: $fz_md;
-        padding-right: 25px;
+        padding-left: 15px;
       }
 
       & .last_name{
@@ -64,15 +69,13 @@ article.card_teacher{
       }
       & .first_name{
         line-height: 22px;
-        margin-bottom: 10px;
       }
-      & .position{
-        color: $gray_light_color;
-
-        @include laptop{
-          font-size: $fz_sm;
-        }
-      }
+    }
+    .position{
+      margin-top: 10px;
+      color: $gray_light_color;
+      font-size: $fz_sm;
+      
     }
   }
   & .course_list{
@@ -80,6 +83,12 @@ article.card_teacher{
     flex-direction: column;
     padding: 10px 0;
     border-bottom: 1px solid $gray_light_color;
+    border-top: 1px solid $gray_light_color;
+    margin-bottom: 20px;
+    @include laptop{
+      padding: 20px 0;
+      margin-bottom: 40px;
+    }
 
     & .course_item{
       position: relative;
@@ -117,11 +126,9 @@ article.card_teacher{
     }
   }
   & .education_list{
-    padding: 10px 0;
-    margin-bottom: 30px;
-
-    @include tablets{
-      margin-bottom: 40px;
+    margin-bottom: 10px;
+    @include laptop{
+      margin-bottom: 20px;
     }
     
     & .education_item{
@@ -138,7 +145,7 @@ article.card_teacher{
   }
   & .button{
     margin: auto;
-
+    margin-bottom: 0;
     @include tablets{
       font-size: $fz_sm;
     }

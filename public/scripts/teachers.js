@@ -17,10 +17,13 @@ window.onload = function() {
     return function() {
       container.innerHTML = '';
       const filteredTeachers = [];
-  
+      
       for(let i = 0; i < teachersList.length; i++) {
-        if (teachersList[i].dataset.filter === type) {
-          filteredTeachers.push(teachersList[i]);
+        let strArr = teachersList[i].dataset.filter.split(' ')
+        for(let str of strArr){
+          if (str === type) {
+            filteredTeachers.push(teachersList[i]);
+          }
         }
       }
   

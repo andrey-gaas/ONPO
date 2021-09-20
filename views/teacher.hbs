@@ -2,7 +2,9 @@
   <div class="container">
     <div class="paper">
       <div class="info-container">
-        <img src="{{teacher.img}}" alt="{{title}}" class="info__photo" />
+        <div class="img_block" style="background-image: url('{{teacher.img}}');">
+          <img src="{{teacher.img}}" alt="{{title}}" class="info__photo" />
+        </div>
         <div class="info__description">
           <div class="fullname">
             <div class="surname">{{teacher.surname}}</div>
@@ -10,28 +12,88 @@
           </div>
           
           <ul class="courses">
-            {{#each teacher.courses}}
+            {{#each teacher.course}}
               <li>
                 <a href="{{this.href}}" class="course">{{this.title}}</a>
               </li>
             {{/each}}
           </ul>
 
-          <div class="info">
+          <div class="info_laptop info">
+          <div>
+            <strong>Образование</strong> - {{teacher.education}}
+          </div>
+          {{#if teacher.academic}}
             <div>
-              <strong>Образование</strong> - {{teacher.status.education}}
+              <strong>Ученая степень</strong> - {{teacher.academic}}
             </div>
+          {{/if}}
+          <div>
+            <strong>Квалификация</strong> - {{teacher.qualification}}
+          </div>
+          <div>
+            <strong>Общий стаж работы / по специальности</strong> - {{teacher.experience}}
+          </div>
+          <div>
+            <strong>Должность</strong> - {{teacher.position}}
+          </div>
+        </div>
+        </div>
+        <div class="info_mobile info">
+          <div>
+            <strong>Образование</strong> - {{teacher.education}}
+          </div>
+          {{#if teacher.academic}}
             <div>
-              <strong>Место работы</strong> - {{teacher.placeWork}}
+              <strong>Ученая степень</strong> - {{teacher.academic}}
             </div>
-            <div>
-              <strong>Должность</strong> - {{teacher.position}}
-            </div>
+          {{/if}}
+          <div>
+            <strong>Квалификация</strong> - {{teacher.qualification}}
+          </div>
+          <div>
+            <strong>Общий стаж работы / по специальности</strong> - {{teacher.experience}}
+          </div>
+          <div>
+            <strong>Должность</strong> - {{teacher.position}}
           </div>
         </div>
       </div>
       <div class="description">
-        {{{teacher.description}}}
+        <div class="direction_training">
+          <h2 class="title">
+            Наименование направления подготовки и (или) специальности
+          </h2>
+          <ul class="list">
+            {{#each teacher.directionTraining}}
+            <li class="list_item">
+              <span class="index">
+                {{addOne @index}}
+              </span>
+              <span class="text">
+                {{this}}
+              </span>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="direction_training">
+          <h2 class="title">
+            Повышение квалификации и профессиональная переподготовка
+          </h2>
+          <ul class="list">
+            {{#each teacher.retraining}}
+            <li class="list_item">
+              <span class="index">
+                {{addOne @index}}
+              </span>
+              <span class="text">
+                {{this}}
+              </span>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
       </div>
     </div>
   </div>

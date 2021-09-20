@@ -1379,7 +1379,7 @@ h2.home_subtitle {
   #course .description-container .specification {
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
+    width: 790px;
     font-size: 16px;
   }
 }
@@ -1423,6 +1423,73 @@ h2.home_subtitle {
 }
 #course .description-container .specification ol li p, #course .description-container .specification ol li b {
   color: #252A34;
+}
+#course .description-container .specification .module, #course .description-container .specification .format {
+  margin-top: 40px;
+}
+#course .description-container .specification .module ul, #course .description-container .specification .format ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#course .description-container .specification .module li, #course .description-container .specification .format li {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#course .description-container .specification .module h2, #course .description-container .specification .format h2 {
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: #252A34;
+  text-align: center;
+}
+@media screen and (min-width: 728px) {
+  #course .description-container .specification .module h2, #course .description-container .specification .format h2 {
+    font-size: 28px;
+  }
+}
+#course .description-container .specification .module li {
+  list-style: none;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+#course .description-container .specification .module li:first-child {
+  margin-top: 0;
+}
+@media screen and (min-width: 728px) {
+  #course .description-container .specification .module li {
+    margin-top: 20px;
+  }
+}
+#course .description-container .specification .module li span {
+  display: inline-block;
+}
+#course .description-container .specification .module li .index {
+  font-size: 28px;
+  color: #FF165D;
+  margin-right: 10px;
+  font-weight: bold;
+}
+@media screen and (min-width: 728px) {
+  #course .description-container .specification .module li .index {
+    margin-right: 15px;
+  }
+}
+#course .description-container .specification .format li {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+@media screen and (min-width: 728px) {
+  #course .description-container .specification .format li {
+    margin-top: 20px;
+  }
+}
+#course .description-container .specification .format li:first-child {
+  margin-top: 0;
 }
 #course .description-container .button-container {
   align-self: center;
@@ -1627,6 +1694,12 @@ h2.home_subtitle {
   #course .document div {
     height: 500px;
   }
+}
+#course .teachers .container_iner {
+  height: 100%;
+}
+#course .teachers .container_iner .card_teacher {
+  height: 100%;
 }
 #course .teachers .teachers-list {
   margin-right: -20px;
@@ -1909,31 +1982,77 @@ h2.home_subtitle {
   #teacher .info-container {
     flex-direction: row;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
 }
-#teacher .info-container .info__photo {
+#teacher .info-container .img_block {
+  width: 100%;
+  height: 54vw;
   border-radius: 15px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 @media screen and (min-width: 728px) {
-  #teacher .info-container .info__photo {
-    width: 226px;
+  #teacher .info-container .img_block {
     border-radius: 30px;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
   }
 }
 @media screen and (min-width: 1200px) {
-  #teacher .info-container .info__photo {
-    width: 453px;
-    border-radius: 30px;
+  #teacher .info-container .img_block {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #teacher .info-container .img_block {
+    width: 450px;
+    height: 450px;
+  }
+}
+#teacher .info-container .img_block .info__photo {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0;
+  border-radius: 15px;
+}
+#teacher .info-container .info_laptop {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  #teacher .info-container .info_laptop {
+    display: block;
+    margin-top: 40px;
+  }
+}
+#teacher .info-container .info_mobile {
+  display: block;
+  margin-top: 10px;
+}
+@media screen and (min-width: 728px) {
+  #teacher .info-container .info_mobile {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teacher .info-container .info_mobile {
+    display: none;
   }
 }
 @media screen and (min-width: 728px) {
   #teacher .info-container .info__description {
     margin-left: 20px;
+    width: 428px;
   }
 }
 @media screen and (min-width: 1200px) {
   #teacher .info-container .info__description {
     margin-left: 40px;
+    width: 730px;
   }
 }
 #teacher .info-container .fullname {
@@ -2001,8 +2120,10 @@ h2.home_subtitle {
 #teacher .info-container .courses li a {
   color: #252A34;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bold;
   line-height: 160%;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 728px) {
   #teacher .info-container .courses li a {
@@ -2035,67 +2156,73 @@ h2.home_subtitle {
 #teacher .description {
   margin-top: 40px;
 }
-@media screen and (min-width: 728px) {
-  #teacher .description {
-    margin-top: 60px;
-  }
+#teacher .description .direction_training {
+  margin-top: 40px;
+}
+#teacher .description .direction_training:first-child {
+  margin-top: 0;
 }
 @media screen and (min-width: 1200px) {
-  #teacher .description {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media screen and (min-width: 1520px) {
-  #teacher .description {
-    margin-top: 80px;
-  }
-}
-#teacher .description h1 {
-  font-size: 16px;
-  text-align: center;
-}
-@media screen and (min-width: 728px) {
-  #teacher .description h1 {
-    font-size: 28px;
-  }
-}
-#teacher .description ol, #teacher .description ul {
-  margin-top: 20px;
-}
-@media screen and (min-width: 1520px) {
-  #teacher .description ol, #teacher .description ul {
+  #teacher .description .direction_training {
+    width: 1030px;
+    margin: 0 auto;
     margin-top: 40px;
   }
 }
-#teacher .description ol li, #teacher .description ul li {
-  margin-top: 10px;
-  margin-left: 20px;
-  font-size: 12px;
+#teacher .description .title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 728px) {
-  #teacher .description ol li, #teacher .description ul li {
-    font-size: 14px;
+  #teacher .description .title {
+    font-size: 22px;
+    width: 525px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1200px) {
-  #teacher .description ol li, #teacher .description ul li {
+  #teacher .description .title {
+    width: 740px;
+    font-size: 28px;
+  }
+}
+#teacher .description .list {
+  margin-top: 20px;
+}
+#teacher .description .list_item {
+  position: relative;
+  margin-top: 10px;
+}
+#teacher .description .list_item:first-child {
+  margin-top: 0;
+}
+#teacher .description .text {
+  font-size: 14px;
+  padding-left: 30px;
+  display: inline-block;
+}
+@media screen and (min-width: 1200px) {
+  #teacher .description .text {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 1520px) {
-  #teacher .description ol li, #teacher .description ul li {
-    margin-top: 20px;
+#teacher .description .index {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  font-weight: bold;
+  color: #FF165D;
+}
+@media screen and (min-width: 728px) {
+  #teacher .description .index {
+    font-size: 28px;
   }
 }
-#teacher .description ol li {
-  list-style: decimal;
-}
-#teacher .description ul li {
-  list-style: disc;
-}
-
 #reviews > .container > h1.title {
   margin-top: 40px;
   font-size: 28px;
@@ -3677,6 +3804,7 @@ footer.footer .arrow_up {
 }
 
 .swiper-pagination-bullet {
+  opacity: 0;
   flex-shrink: 0;
   position: relative;
   display: block;
@@ -3743,7 +3871,7 @@ footer.footer .arrow_up {
 }
 @media screen and (min-width: 1200px) {
   .slide_course .top .course .title {
-    width: 668px;
+    width: 800px;
     margin-bottom: 20px;
   }
 }
@@ -3756,7 +3884,7 @@ footer.footer .arrow_up {
   display: none;
   font-size: 14px;
   line-height: 160%;
-  width: 668px;
+  width: 800px;
   margin-bottom: 25px;
   font-weight: normal;
 }
@@ -4825,9 +4953,14 @@ article.card_teacher button {
 }
 article.card_teacher .person {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #BDBDBD;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  article.card_teacher .person {
+    margin-bottom: 20px;
+  }
 }
 article.card_teacher .person .img_block {
   width: 60px;
@@ -4857,7 +4990,7 @@ article.card_teacher .person .full_name {
 @media screen and (min-width: 1200px) {
   article.card_teacher .person .full_name {
     font-size: 16px;
-    padding-right: 25px;
+    padding-left: 15px;
   }
 }
 article.card_teacher .person .full_name .last_name {
@@ -4866,21 +4999,25 @@ article.card_teacher .person .full_name .last_name {
 }
 article.card_teacher .person .full_name .first_name {
   line-height: 22px;
-  margin-bottom: 10px;
 }
-article.card_teacher .person .full_name .position {
+article.card_teacher .person .position {
+  margin-top: 10px;
   color: #BDBDBD;
-}
-@media screen and (min-width: 1200px) {
-  article.card_teacher .person .full_name .position {
-    font-size: 14px;
-  }
+  font-size: 14px;
 }
 article.card_teacher .course_list {
   display: flex;
   flex-direction: column;
   padding: 10px 0;
   border-bottom: 1px solid #BDBDBD;
+  border-top: 1px solid #BDBDBD;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  article.card_teacher .course_list {
+    padding: 20px 0;
+    margin-bottom: 40px;
+  }
 }
 article.card_teacher .course_list .course_item {
   position: relative;
@@ -4918,12 +5055,11 @@ article.card_teacher .course_list .course_item::after {
   height: 15px;
 }
 article.card_teacher .education_list {
-  padding: 10px 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
-@media screen and (min-width: 728px) {
+@media screen and (min-width: 1200px) {
   article.card_teacher .education_list {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 article.card_teacher .education_list .education_item {
@@ -4938,6 +5074,7 @@ article.card_teacher .education_list .education_item .item {
 }
 article.card_teacher .button {
   margin: auto;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 728px) {
   article.card_teacher .button {
@@ -6848,6 +6985,7 @@ section.home_teacher .container_out {
   }
 }
 section.home_teacher .container_iner {
+  height: 100%;
   margin: 0 auto;
   width: 91.6%;
 }
@@ -6857,6 +6995,9 @@ section.home_teacher .container_iner {
     width: unset;
     margin: unset;
   }
+}
+section.home_teacher .container_iner .card_teacher {
+  height: 100%;
 }
 
 section.home_review .container > .title {

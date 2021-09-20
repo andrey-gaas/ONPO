@@ -106,6 +106,7 @@
 
 }
 .swiper-pagination-bullet{
+  opacity: 0;
   flex-shrink: 0;
   position: relative;
   display: block;
@@ -165,7 +166,7 @@
         }
 
         @include laptop{
-          width: 668px;
+          width: 800px;
           margin-bottom: 20px;
         }
         @include desktop{
@@ -177,7 +178,7 @@
         display: none;
         font-size: $fz_sm;
         line-height: 160%;
-        width: 668px;
+        width: 800px;
         margin-bottom: 25px;
         font-weight: normal;
         @include laptop{
