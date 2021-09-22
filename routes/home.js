@@ -377,6 +377,10 @@ router.get('/', (req, res) => {
       likes: [12, 11,3,2,5,12 ,2],
     }]
 
+    const { application } = req.query;
+
+    console.log(application);
+
     res.render('home', { 
       courses,
       direction,
@@ -389,6 +393,11 @@ router.get('/', (req, res) => {
       menu: true,
       script: 'main.js',
       title: 'Образовательные программы ГПНТБ СО РАН',
+      application: {
+        status: application,
+        success: application === 'success',
+        fail: application === 'fail',
+      },
     });
 });
 

@@ -1,0 +1,12 @@
+<div class="application-popup">
+  <div class="popup-container">
+    <button><img src="/image/icons/close.svg" alt="" /></button>
+    {{#if this.success}}
+      Заявка на обучение принята!
+    {{/if}}
+
+    {{#if this.fail}}
+      Ошибка! Попробуйте еще раз.
+    {{/if}}
+  </div>
+</div>
