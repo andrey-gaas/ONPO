@@ -1635,20 +1635,20 @@ h2.home_subtitle {
 }
 @media screen and (min-width: 728px) {
   #course .document {
-    width: 334px;
+    width: 512px;
     margin: 20px auto 0;
     border-radius: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   #course .document {
-    width: 374px;
+    width: 570px;
     margin-top: 40px;
   }
 }
 @media screen and (min-width: 1520px) {
   #course .document {
-    width: 454px;
+    width: 700px;
   }
 }
 #course .document h3 {
@@ -1683,17 +1683,13 @@ h2.home_subtitle {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  height: 300px;
   font-size: 28px;
   text-transform: uppercase;
   color: #FFFFFF;
-  background-color: #BDBDBD;
   border-radius: 60px;
 }
-@media screen and (min-width: 1520px) {
-  #course .document div {
-    height: 500px;
-  }
+#course .document div img {
+  width: 100%;
 }
 #course .teachers .container_iner {
   height: 100%;
@@ -2195,6 +2191,16 @@ h2.home_subtitle {
 #teacher .description .list_item {
   position: relative;
   margin-top: 10px;
+}
+@media screen and (min-width: 728px) {
+  #teacher .description .list_item {
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teacher .description .list_item {
+    margin-top: 20px;
+  }
 }
 #teacher .description .list_item:first-child {
   margin-top: 0;
@@ -2755,6 +2761,7 @@ h2.home_subtitle {
 #structure .information .links-container a {
   text-decoration: none;
   color: #252A34;
+  display: block;
 }
 #structure .information .info-container {
   margin-left: auto;
@@ -2823,6 +2830,20 @@ h2.home_subtitle {
 #structure .information .info-container .paper a {
   color: #2F80ED;
   text-decoration: none;
+  display: inline-block;
+}
+#structure .information .info-container .paper .linck_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+#structure .information .info-container .paper .document_list {
+  display: none;
+}
+#structure .information .info-container .paper .document_list.active {
+  display: block;
 }
 #structure .information .info-container .text {
   margin-top: 20px;
@@ -3251,6 +3272,17 @@ h2.home_subtitle {
     width: 60px;
   }
 }
+.component_header .wrpa_header_links {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: calc(100% - 40px);
+}
+@media screen and (min-width: 728px) {
+  .component_header .wrpa_header_links {
+    width: calc(100% - 60px);
+  }
+}
 .component_header .header-title {
   display: none;
   margin-left: 20px;
@@ -3321,7 +3353,6 @@ h2.home_subtitle {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 120px;
   padding-right: 7px;
   padding-left: 3px;
 }
@@ -4344,6 +4375,7 @@ section.application-form .container form .form_input.dropdown > input:focus::pla
   color: #FFFFFF;
 }
 section.application-form .container form .form_input.dropdown::after {
+  z-index: 2;
   display: block;
   position: absolute;
   content: "";
@@ -4359,7 +4391,7 @@ section.application-form .container form .form_input.dropdown .wrap_castom_scrol
   display: block;
   position: absolute;
   overflow: hidden;
-  z-index: 2;
+  z-index: 5;
   right: 0;
   top: calc(100% + 10px);
   width: 100%;
@@ -4477,21 +4509,12 @@ section.application-form .container form .form_input.dropdown .wrap_castom_scrol
   top: 15px;
   right: 6px;
 }
-section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-track-piece {
-  /* 4 - видимая часть трека */
-}
 section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-thumb {
   /* 5 - ползунок */
   background-color: #FF165D;
   width: 100%;
   height: 50px;
   border-radius: 10px;
-}
-section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-scrollbar-corner {
-  /* 6 - уголок */
-}
-section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list::-webkit-resizer {
-  /* 7 - изменение размеров */
 }
 section.application-form .container form .form_input.active > .wrap_castom_scrollbar {
   opacity: 1;
@@ -4509,6 +4532,8 @@ section.application-form .container form .form_input input, section.application-
   line-height: 160%;
   margin-bottom: 5px;
   padding-right: 25px;
+  z-index: 4;
+  position: relative;
   /* Firefox 19+ */
   /* Firefox 18- */
 }
@@ -4710,6 +4735,7 @@ article.card .header {
   padding: 10px;
   height: 200px;
   background-size: cover;
+  background-position: center;
 }
 @media screen and (min-width: 1200px) {
   article.card .header {
@@ -4966,9 +4992,15 @@ article.card_teacher .person .img_block {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: gray;
+  background-color: #BDBDBD;
   flex-shrink: 0;
   overflow: hidden;
+}
+article.card_teacher .person .img_block .image_bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 article.card_teacher .person .img_block > img {
   height: 100%;
@@ -5431,8 +5463,14 @@ article.card_review .person .img_block {
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
-  background-color: gray;
+  background-color: #BDBDBD;
   flex-shrink: 0;
+}
+article.card_review .person .img_block .image_bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 article.card_review .person .img_block > img {
   width: 100%;

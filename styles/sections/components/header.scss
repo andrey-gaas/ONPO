@@ -34,7 +34,16 @@
       width: 60px;
     }
   }
+  .wrpa_header_links{
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: calc(100% - 40px);
 
+    @include tablets{
+      width: calc(100% - 60px);
+    }
+  }
   .header-title {
     display: none;
     margin-left: 20px;
@@ -101,7 +110,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 120px;
+    //width: 120px;
     padding-right: 7px;
     padding-left: 3px;
 

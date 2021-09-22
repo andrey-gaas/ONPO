@@ -548,18 +548,18 @@
     border-radius: 15px;
 
     @include tablets {
-      width: 334px;
+      width: 512px;
       margin: 20px auto 0;
       border-radius: 30px;
     }
 
     @include laptop {
-      width: 374px;
+      width: 570px;
       margin-top: 40px;
     }
 
     @include desktop {
-      width: 454px;
+      width: 700px;
     }
 
     h3 {
@@ -592,15 +592,13 @@
       align-items: center;
       justify-content: center;
       margin-top: 20px;
-      height: 300px;
       font-size: $fz_lg;
       text-transform: uppercase;
       color: $white_color;
-      background-color: $gray_light_color;
       border-radius: 60px;
 
-      @include desktop {
-        height: 500px;
+      img{
+        width: 100%;
       }
     }
   }
