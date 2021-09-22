@@ -3166,7 +3166,7 @@ h2.home_subtitle {
   width: 100%;
   color: #252A34;
   border: 1px solid #FF165D;
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -3212,6 +3212,10 @@ h2.home_subtitle {
   .button.size_norm {
     width: 240px;
   }
+}
+
+.link_button {
+  text-decoration: none;
 }
 
 .component_header {

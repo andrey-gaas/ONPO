@@ -155,8 +155,6 @@ router.get('/', (req, res) => {
 
     const { application } = req.query;
 
-    console.log(application);
-
     res.render('home', { 
       courses,
       direction,

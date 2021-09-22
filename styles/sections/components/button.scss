@@ -7,7 +7,7 @@
   width: 100%;
   color: $black_color;
   border: 1px solid $primary_color;
-  text-decoration: none;
+  text-decoration: none !important;
   cursor:pointer;
   align-items: center;
   justify-content: center;
@@ -51,4 +51,8 @@
     }
   }
 
+}
+
+.link_button {
+  text-decoration: none;
 }
