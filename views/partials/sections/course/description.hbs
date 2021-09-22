@@ -52,12 +52,28 @@
     <div class="item">
       <div class="icon"><img src="/image/icons/calendar_primary.svg" alt="calendar"></div>
       <div class="text">
-        <strong>Срок обучения</strong> - {{course.term}}
+        <strong>Срок обучения</strong> - {{course.period}}
       </div>
     </div>
   </div>
   <div class="specification">
-    {{{course.specification}}}
+    <div class="module">
+      <h2>Темы программы</h2>
+      <ul>
+        {{#each course.module}}
+          <li>
+            <span class="index">{{addOne @index}}</span>
+            <span class="text">{{this}}</span>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="format">
+      <h2>Форма обучения</h2>
+      <ul>
+        <li>{{course.form}}</li>
+      </ul>
+    </div>
   </div>
   <div class="button-container">
     <button class="button color_red" id="button-application">Оставить заявку</button>

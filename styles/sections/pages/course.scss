@@ -290,7 +290,7 @@
       @include laptop {
         margin-left: auto;
         margin-right: auto;
-        width: 600px;
+        width: 790px;
         font-size: $fz_md;
       }
 
@@ -336,6 +336,72 @@
 
         p, b {
           color: $black_color;
+        }
+      }
+      .module, .format{
+        margin-top: 40px;
+        ul{
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        li{
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
+        h2{
+          font-weight: bold;
+          font-size: $fz_md;
+          text-transform: uppercase;
+          line-height: 1.6;
+          color: $black_color;
+          text-align: center;
+          @include tablets{
+            font-size: 28px;
+          }
+        }
+      }
+      .module{
+        li{
+          list-style: none;
+          margin-top: 15px;
+          display: flex;
+          align-items: center;
+
+          &:first-child{
+            margin-top: 0;
+          }
+
+          @include tablets{
+            margin-top: 20px;
+          }
+          span{
+            display: inline-block;
+          }
+          .index{
+            font-size: 28px;
+            color: $primary_color;
+            margin-right: 10px;
+            font-weight: bold;
+            @include tablets{
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+      .format{
+        li{
+          margin-left: 15px;
+
+          margin-top: 15px;
+          @include tablets{
+            margin-top: 20px;
+          }
+          &:first-child{
+            margin-top: 0;
+          }
         }
       }
     }
@@ -540,7 +606,12 @@
   }
 
   .teachers {
-
+    .container_iner{
+      height: 100%;
+      .card_teacher{
+        height: 100%;
+      }
+    }
     .teachers-list {
       margin-right: -20px;
     }
@@ -609,11 +680,11 @@
       @include desktop {
         margin-right: -40px;
       }
-
+      
       .card_teacher {
         margin-right: 20px;
         width: 334px;
-
+        
         @include laptop {
           width: 373px;
         }

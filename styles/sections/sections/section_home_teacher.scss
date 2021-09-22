@@ -19,6 +19,7 @@ section.home_teacher{
     width: 100%;
     margin: unset;
     margin-bottom: 20px;
+    
     @include tablets{
       width: 704px;
       margin: 0 auto;
@@ -34,12 +35,17 @@ section.home_teacher{
     }
   }
   .container_iner{
+    height: 100%;
     margin: 0 auto;
     width: 91.6%;
     @include tablets{
       display: block;
       width: unset;
       margin: unset;
+    }
+
+    .card_teacher{
+      height: 100%;
     }
   }
 }

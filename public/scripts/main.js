@@ -6,6 +6,19 @@ import {
 
 
 window.onload = () => {
+  //btn scroll
+
+  let containerBtnScrollToSection = document.querySelector('.container_btn_scroll_to_section')
+
+  containerBtnScrollToSection.onclick = e => {
+    if(e.target.nodeName === 'A'){
+      e.preventDefault()
+      let top = document.querySelector(e.target.hash).offsetTop - 120
+      window.scrollTo(  {top,  behavior: "smooth" })
+
+    }
+  }
+
   //init swiper item
 
   let homeMainCorusel = new Swiper(".home_main_corusel", {

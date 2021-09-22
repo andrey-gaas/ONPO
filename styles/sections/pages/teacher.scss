@@ -26,29 +26,71 @@
     @include tablets {
       flex-direction: row;
       align-items: flex-start;
+      flex-wrap: wrap;
     }
 
-    .info__photo {
-      border-radius: 15px;
+    @include laptop{
+      //flex-direction: column;
+    }
+    .img_block{
+      width: 100%;
+      height: 54vw;
+      border-radius: $bd_rad_sm;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
 
-      @include tablets {
-        width: 226px;
-        border-radius: 30px;
+      @include tablets{
+        border-radius: $bd_rad;
+        width: 200px;
+        height: 200px;
+        flex-shrink: 0;
+      }
+      @include laptop{
+        width: 350px;
+        height: 350px;
       }
 
-      @include laptop {
-        width: 453px;
-        border-radius: 30px;
+      @include desktop{
+        width: 450px;
+        height: 450px;
+      }
+
+      .info__photo {
+        max-width: 100%;
+        max-height: 100%;
+        opacity: 0;
+        border-radius: 15px;
       }
     }
+    .info_laptop{
+      display: none;
 
+      @include laptop{
+        display: block;
+        margin-top: 40px;
+      }
+    }
+    .info_mobile{
+      display: block;
+      margin-top: 10px;
+      @include tablets{
+        margin-top: 20px;
+      }
+      @include laptop{
+        display: none;
+      }
+    }
     .info__description {
       @include tablets {
         margin-left: 20px;
+        width: 428px;
       }
 
       @include laptop {
         margin-left: 40px;
+        width: 730px;
       }
     }
 
@@ -115,8 +157,10 @@
         a {
           color: $black_color;
           text-decoration: none;
-          font-size: $fz_xsm;
+          font-size: $fz_sm;
+          font-weight: bold;
           line-height: 160%;
+          text-transform: uppercase;
 
           @include tablets {
             font-size: $fz_sm;
@@ -150,62 +194,68 @@
 
   .description {
     margin-top: 40px;
-
-    @include tablets {
-      margin-top: 60px;
-    }
-
-    @include laptop {
-      width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    @include desktop {
-      margin-top: 80px;
-    }
-
-    h1 {
-      font-size: $fz_md;
-      text-align: center;
-
-      @include tablets {
-        font-size: $fz_lg;
+    .direction_training{
+      margin-top: 40px;
+      &:first-child{
+        margin-top: 0;
       }
-    }
-
-    ol, ul {
-      margin-top: 20px;
-
-      @include desktop {
+      @include laptop{
+        width: 1030px;
+        margin: 0 auto;
         margin-top: 40px;
       }
-      
-      li {
-        margin-top: 10px;
-        margin-left: 20px;
-        font-size: $fz_xsm;
+    }
+    .title{
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.6;
+      text-transform: uppercase;
 
-        @include tablets {
-          font-size: $fz_sm;
-        }
-
-        @include laptop {
-          font-size: $fz_md;
-        }
-
-        @include desktop {
-          margin-top: 20px;
-        }
+      @include tablets{
+        font-size: 22px;
+        width: 525px;
+        margin: 0 auto;
+      }
+      @include laptop{
+        width: 740px;
+        font-size: 28px;
       }
     }
-
-    ol li {
-      list-style: decimal;
+    .list{
+      margin-top: 20px;
     }
+    .list_item{
+      position: relative;
+      margin-top: 10px;
 
-    ul li {
-      list-style: disc;
+
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+    .text{
+      font-size: $fz_sm;
+      padding-left: 30px;
+      display: inline-block;
+      @include laptop{
+        font-size: $fz_md;
+      }
+    }
+    .index{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      font-size: $fz_lgs;
+      font-weight: bold;
+      color: $primary_color;
+
+      @include tablets{
+        font-size: $fz_lg;
+      }
+      @include laptop{
+      }
     }
   }
 }

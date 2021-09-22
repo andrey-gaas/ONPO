@@ -1,4 +1,4 @@
-<article class="card_teacher" {{#if categories}} data-filter="{{#each categories}}{{this}}{{/each}}"  {{/if}}>
+<article class="card_teacher" {{#if categories}} data-filter="{{#each categories}}{{this}} {{/each}}"  {{/if}}>
   <div class="person vcard">
     <div class="img_block">
       <img src="{{img}}" alt="{{surname}} {{name}} {{middlename}}" class="img photo">
@@ -6,30 +6,26 @@
     <div class="full_name n">
       <span class="last_name family-name">{{surname}}</span>
       <span class="first_name "><span class="given-name">{{name}}</span> <span class="additional-name">{{middlename}}</span></span>
-      <span class="position">{{position}}</span>
     </div>
+    
   </div>
-  <ul class="course_list">
-    {{#each courses}}
-      <a href="{{this.href}}" class="course_item">{{this.title}}</a>
-    {{/each}}
-  </ul>
   <ul class="education_list">
     <li class="education_item">
       <span class="item">Образование</span>
       -
-      <span class="status">{{status.education}}</span>
+      <span class="status">{{education}}</span>
     </li>
     <li class="education_item">
-      <span class="item">Стаж</span>
+      <span class="item">Квалификация</span>
       -
-      <span class="status">{{status.experience}}</span>
+      <span class="status">{{qualification}}</span>
     </li>
-    <li class="education_item">
-      <span class="item">Форма обучения</span>
-      -
-      <span class="status">{{status.form}}</span>
-    </li>
+    
+  </ul>
+  <ul class="course_list">
+    {{#each course}}
+      <a href="{{this.href}}" class="course_item">{{this.title}}</a>
+    {{/each}}
   </ul>
   <a href="/teachers/{{id}}" class="button size_norm">Подробнее</a>
 </article>
