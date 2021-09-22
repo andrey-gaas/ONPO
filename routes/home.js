@@ -140,6 +140,8 @@ router.get('/', (req, res) => {
     const teacher = teachers
     
 
+    const { application } = req.query;
+
     res.render('home', { 
       courses,
       direction,
@@ -152,6 +154,11 @@ router.get('/', (req, res) => {
       menu: true,
       script: 'main.js',
       title: 'Образовательные программы ГПНТБ СО РАН',
+      application: {
+        status: application,
+        success: application === 'success',
+        fail: application === 'fail',
+      },
     });
 });
 

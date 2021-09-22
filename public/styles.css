@@ -3187,7 +3187,7 @@ h2.home_subtitle {
   width: 100%;
   color: #252A34;
   border: 1px solid #FF165D;
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -3233,6 +3233,10 @@ h2.home_subtitle {
   .button.size_norm {
     width: 240px;
   }
+}
+
+.link_button {
+  text-decoration: none;
 }
 
 .component_header {
@@ -4572,6 +4576,52 @@ section.application-form .container form .agreement {
 }
 section.application-form .container form > .button {
   margin: 40px auto 0 auto;
+}
+
+.application-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.application-popup .popup-container {
+  position: relative;
+  margin: 40px 20px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  font-size: 14px;
+}
+@media screen and (min-width: 728px) {
+  .application-popup .popup-container {
+    padding: 40px;
+    font-size: 16px;
+    border-radius: 30px;
+  }
+}
+.application-popup .popup-container button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  border: none;
+  background-color: transparent;
+}
+@media screen and (min-width: 728px) {
+  .application-popup .popup-container button {
+    top: 20px;
+    right: 20px;
+    width: 15px;
+  }
+}
+.application-popup .popup-container button img {
+  width: 100%;
 }
 
 article.card_dirction {

@@ -80,10 +80,6 @@ app.use('/teachers', require('./routes/teachers'));
 app.use('/reviews', require('./routes/reviews'));
 app.use('/structure', require('./routes/structure'));
 
-// TEST ROUTES
-app.use('/dron', require('./routes/dron'));
-app.use('/test', require('./routes/testAlex'));
-
 const PORT = 3002;
 
 app.listen(PORT, () => {
