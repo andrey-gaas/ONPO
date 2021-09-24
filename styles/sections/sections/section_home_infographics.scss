@@ -99,13 +99,13 @@ section.section_home_infographics{
     }
   }
   .map{
-    margin-bottom: 100px;
-    @include tablets{
-      margin-bottom: 120px;
-    }
-    @include laptop{
-      margin-bottom: 160px;
-    }
+    // margin-bottom: 100px;
+    // @include tablets{
+    //   margin-bottom: 120px;
+    // }
+    // @include laptop{
+    //   margin-bottom: 160px;
+    // }
     .article_map{
       width: 100%;
       background-color: $white_color;

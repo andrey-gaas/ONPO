@@ -470,7 +470,8 @@
       margin-right: -20px;
 
       @include laptop {
-        flex-wrap: nowrap;
+        //flex-wrap: nowrap;
+
       }
 
       @include desktop {
@@ -495,7 +496,7 @@
       }
 
       @include laptop {
-        width: 275px;
+        width: 373px;
       }
 
       @include desktop {

@@ -417,7 +417,8 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
               })
             }else{
               filterCardList.forEach(item => {
-                if(item.dataset.filter.includes(targetFilter)){
+                console.log(item.dataset.filter, targetFilter, item.dataset.filter === targetFilter);
+                if(item.dataset.filter === targetFilter){
                   item.parentNode.style.display = ''
 
                   if(item.swiperWrap){

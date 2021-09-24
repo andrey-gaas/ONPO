@@ -13,8 +13,8 @@ router.get('/', (req, res) => {
 		courses: courses.filter(course => course.type === 'Повышение квалификации'),
 		teachers,
 		reviews,
+		specialOffer:false,
 	});
 });
 
 module.exports = router;
- 

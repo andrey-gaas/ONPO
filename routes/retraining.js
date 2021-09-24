@@ -13,6 +13,11 @@ router.get('/', (req, res) => {
 		courses: courses.filter(course => course.type === 'Профессиональная переподготовка'),
 		teachers,
 		reviews,
+		specialOffer:{
+			title:'Специальное предложение до конца октября 2021!',
+			text:'Успей получить новую профессию до конца года',
+			link:'/course/1',
+		},
 	});
 });
 

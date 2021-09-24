@@ -114,28 +114,28 @@ router.get('/', (req, res) => {
       surname: 'Туманик',
       middlename: 'Николаевна',
       position:'Заведующий отделом непрерывного профессионального образования',
-      education:'Кандидат технических наук',
+      education:'Кандидат исторических наук',
       phone:'(383) 373-06-58',
       email:'tumanik@gpntbsib.ru',
       image: '2.png'
     },{
-      name: 'Ирина',
-      surname: 'Гузенок',
-      middlename: 'Валерьевна',
-      position:'Заведующий отделом непрерывного профессионального образования',
-      education:'Кандидат технических наук',
+      name: 'Анастасия',
+      surname: 'Бегишева',
+      middlename: 'Михайловна',
+      position:'Главный специалист по учебно-методической работе',
+      education:'',
       phone:'(383) 373-06-58',
-      email:'guzenok@gpntbsib.ru',
-      image: '1.png'
+      email:'begisheva@gpntbsib.ru',
+      image: '3.png'
     },{
-      name: 'Екатерина',
-      surname: 'Туманик',
+      name: 'Анастасия',
+      surname: 'Cемыкина',
       middlename: 'Николаевна',
-      position:'Заведующий отделом непрерывного профессионального образования',
-      education:'Кандидат технических наук',
+      position:'Ведущий специалист по учебно-методической работе',
+      education:'',
       phone:'(383) 373-06-58',
-      email:'tumanik@gpntbsib.ru',
-      image: '2.png'
+      email:'semykina@gpntbsib.ru',
+      image: '4.png'
     }]
     const teacher = teachers
     

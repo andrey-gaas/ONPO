@@ -1,18 +1,17 @@
+{{#if specialOffer}}
 <section class="special-offer-container">
   <div class="container">
     <div class="description-container">
       <h2 class="description-title">
-        Специальное предложение для обладателей
-        читательского билета ГПНТБ СО РАН!
+        {{specialOffer.title}}
       </h2>
       <p class="description-text">
-        Создание приверженного покупателя,
-        анализируя результаты рекламной кампании,
-        переворачивает жизненный цикл продукции.
+        {{specialOffer.text}}
       </p>
     </div>
     <div class="button-container">
-      <button class="button">Узнать больше</button>
+      <a href="{{specialOffer.link}}" class="button">Узнать больше</a>
     </div>
   </div>
 </section>
+{{/if}}

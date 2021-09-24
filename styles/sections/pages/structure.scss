@@ -332,6 +332,10 @@
         @include laptop {
           flex-direction: row;
         }
+        span{
+          font-size: $fz_xsm;
+          font-weight: bold;
+        }
 
         .button {
           margin-top: 20px;

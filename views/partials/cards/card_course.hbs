@@ -1,4 +1,4 @@
-<article class="card card_courses_filter" data-filter="{{#each categories}}{{this}} {{/each}}">
+<article class="card card_courses_filter" data-filter="{{#each categories}}{{this}}{{/each}}">
     <header class="header" style="background-image: url(/image/courses/{{this.image}})">
       <div class="type">{{this.type}}</div>
       {{#if this.discount}}
@@ -17,7 +17,7 @@
           <div></div>
         </div>
         <div class="quantity">
-          (<a href="#">отзывов: {{this.reviews.length}}</a>)
+          (<a >отзывов: {{this.reviews.length}}</a>)
         </div>
       </div>
 

@@ -31,7 +31,7 @@ window.onload = function() {
    //scroll menu
 
   menu.onclick = e =>{
-    if(e.target.nodeName === 'A'){
+    if(e.target.nodeName === 'A' && e.target.hash && e.target.hash[0] === '#'){
 
       heightList = []
       sectionList.forEach( elem => {

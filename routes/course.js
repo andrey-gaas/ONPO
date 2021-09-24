@@ -7,7 +7,8 @@ router.get('/:id', (req, res) => {
 	const course = courses.find(course => course.id === +req.params.id);
 
 	const type = course.type === 'Повышение квалификации' ? 'Программы повышения квалификации' : 'Программы профессиональной переподготовки';
-	const documentImage =  course.type === 'Повышение квалификации' ? '1.png' : '2.png';
+	const document =  course.type === 'Повышение квалификации' ? 
+	{	img:'1.png',text:'Удостоверение о повышении	квалификации установленного образца'} : {	img:'2.png',text:'Диплом о профессиональной переподготовке установленного образца '	};
 
 	let rev = []
 	for(let review of reviews){
@@ -38,7 +39,7 @@ router.get('/:id', (req, res) => {
 		course,
 		teachers: teach,
 		reviews: rev,
-		documentImage,
+		document
 	});
 });
 
