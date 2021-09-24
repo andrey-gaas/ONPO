@@ -48,4 +48,27 @@ window.onload = function() {
     }
   }
 
+  //toggle document list
+
+  let listsDocuments = document.querySelectorAll('.document_list')
+  let btnToggleListDocumentContainer = document.querySelector('.buttons_toggle_list')
+
+  btnToggleListDocumentContainer.onclick = e => {
+    if(e.target.nodeName === 'BUTTON'){
+      listsDocuments.forEach( item => {
+        item.classList.remove('active')
+
+        if(item.dataset.key === e.target.dataset.key){
+          item.classList.add('active')
+        }
+      })
+      btnToggleListDocumentContainer.childNodes.forEach( item => {
+        if(item.nodeName === 'BUTTON'){
+          item.classList.remove('color_red')
+        }
+      })
+      e.target.classList.add('color_red')
+
+    }
+  }
 };

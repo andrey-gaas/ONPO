@@ -158,7 +158,8 @@
 
       a {
         text-decoration: none;
-        color: $black_color;   
+        color: $black_color;  
+        display: block; 
       }
       
     }
@@ -222,6 +223,22 @@
         a {
           color: $blue_color;
           text-decoration: none;
+          display: inline-block;
+        }
+        .linck_button{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color:$white_color;
+          font-size: $fz_md;
+        }
+
+        .document_list{
+          display: none;
+
+          &.active{
+            display: block;
+          }
         }
       }
 

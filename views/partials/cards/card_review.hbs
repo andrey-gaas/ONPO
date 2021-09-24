@@ -1,7 +1,13 @@
 <article class="card_review" data-filter="{{type}}">
   <div class="person">
     <div class="img_block">
-      <img src="{{user.img}}" alt="" class="img">
+      {{#if user.img}}
+        <div class="image_bg" style="background-image: url('/image/users/{{user.img}}');"></div>
+        <img src="/{{user.img}}" alt="" class="img">
+      {{else}}
+        <div class="image_bg"></div>
+        <img src="" alt="" class="img">
+      {{/if}}
     </div>
     <div class="full_name">
       <span class="last_name">{{getName user}}</span>

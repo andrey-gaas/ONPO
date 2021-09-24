@@ -1,7 +1,13 @@
 <article class="card_teacher" {{#if categories}} data-filter="{{#each categories}}{{this}} {{/each}}"  {{/if}}>
   <div class="person vcard">
     <div class="img_block">
-      <img src="{{img}}" alt="{{surname}} {{name}} {{middlename}}" class="img photo">
+      {{#if img}}
+        <div class="image_bg" style="background-image: url('/image/teacher/{{img}}');"></div>
+        <img src="/image/teacher/{{img}}" alt="{{surname}} {{name}} {{middlename}}" class="img photo">
+      {{else}}
+        <div class="image_bg"></div>
+        <img src="" alt="{{surname}} {{name}} {{middlename}}" class="img photo">
+      {{/if}}
     </div>
     <div class="full_name n">
       <span class="last_name family-name">{{surname}}</span>
@@ -24,7 +30,7 @@
   </ul>
   <ul class="course_list">
     {{#each course}}
-      <a href="{{this.href}}" class="course_item">{{this.title}}</a>
+      <a {{#if this.href}} href="/course/{{this.href}}" {{/if}} target="_blank" class="course_item">{{this.title}}</a>
     {{/each}}
   </ul>
   <a href="/teachers/{{id}}" class="button size_norm">Подробнее</a>

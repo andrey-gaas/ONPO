@@ -37,10 +37,17 @@ article.card_teacher{
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      background-color: gray;
+      background-color: $gray_light_color;
       flex-shrink: 0;
       overflow: hidden;
-      
+
+      .image_bg{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
       &>img{
         height: 100%;
         width: 100%;

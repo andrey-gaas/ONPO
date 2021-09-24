@@ -23,6 +23,7 @@ article.card {
     padding: 10px;
     height: 200px;
     background-size: cover;
+    background-position: center;
     @include laptop{
       padding: 20px;
     }

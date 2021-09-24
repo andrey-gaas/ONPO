@@ -6,19 +6,21 @@
       <a href="/">
         <img class="logo" src="/image/logo.svg" alt="" />
       </a>
-      {{#if menu}}
-        <nav class="menu container_btn_scroll_to_section">
-          <a href="#direction" class="btn_scroll_to_section">Образование</a>
-          <a href="#teachers" class="btn_scroll_to_section">Преподаватели</a>
-          <a href="#about" class="btn_scroll_to_section">Об организации</a>
-        </nav>
-      {{/if}}
+      <div class="wrpa_header_links">
+        {{#if menu}}
+          <nav class="menu container_btn_scroll_to_section">
+            <a href="#direction" class="btn_scroll_to_section">Образование</a>
+            <a href="#teachers" class="btn_scroll_to_section">Преподаватели</a>
+            <a href="#about" class="btn_scroll_to_section">Об организации</a>
+          </nav>
+        {{/if}}
 
-      {{#if headerTitle}}
-        <h2 class="header-title">{{headerTitle}}</h2>
-      {{/if}}
+        {{#if headerTitle}}
+          <h2 class="header-title">{{headerTitle}}</h2>
+        {{/if}}
 
-      <div class="search">
+
+      {{!-- <div class="search">
         <img class="icon" src="/image/icons/search.svg" alt="" />
         <input type="text" class="input"/>
       </div>
@@ -28,18 +30,20 @@
         <button class="button button__enterens">
           Войти
         </button>
-      </a>
+      </a> --}}
 
-      <div class="icons">
-        <button class="button-icon laptop-hide">
-          <img src="/image/icons/search.svg" alt="Search" />
-        </button>
-        <button class="button-icon laptop-hide">
-          <img src="/image/icons/logout.svg" alt="Logaut" />
-        </button>
-        <button class="button-icon" id="show_menu">
-          <img src="/image/icons/menu.svg" alt="Menu" />
-        </button>
+
+        <div class="icons">
+          {{!-- <button class="button-icon laptop-hide">
+            <img src="/image/icons/search.svg" alt="Search" />
+          </button>
+          <button class="button-icon laptop-hide">
+            <img src="/image/icons/logout.svg" alt="Logaut" />
+          </button> --}}
+          <button class="button-icon" id="show_menu">
+            <img src="/image/icons/menu.svg" alt="Menu" />
+          </button>
+        </div>
       </div>
     </div>
     <div class="drop_menu_mobile" id="drop_menu_mobile">

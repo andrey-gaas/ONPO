@@ -229,7 +229,12 @@
       position: relative;
       margin-top: 10px;
 
-
+      @include tablets{
+        margin-top: 15px;
+      }
+      @include laptop{
+        margin-top: 20px;
+      }
       &:first-child{
         margin-top: 0;
       }
