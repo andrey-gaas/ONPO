@@ -1,0 +1,111 @@
+#sign-in {
+  & > .container > h1.title{
+    margin-top: 40px;
+    font-size: $fz_lg;
+    line-height: 160%;
+    color: $black_color;
+
+    @include tablets{
+      font-size: $fz_xl;
+    }
+    @include laptop{
+      font-size: $fz_mxl;
+    }
+    @include desktop{
+      font-size: $fz_xxl;
+    }
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 450px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: $white_color;
+    box-shadow:
+      0px 4px 6px -4px rgba(24, 39, 75, 0.12),
+      0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+
+    @include tablets {
+      border-radius: 30px;
+    }
+
+    input {
+      margin-top: 20px;
+      padding: 5px 0;
+      font-size: $fz_md;
+      color: $black_color;
+      border: none;
+      border-bottom: 1px solid;
+      outline: none;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    span {
+      margin-top: 20px;
+      align-self: center;
+      font-size: $fz_md;
+      font-weight: bold;
+    }
+
+    .remember {
+      align-self: flex-end;
+      margin-top: 10px;
+      text-decoration: none;
+      color: $primary_color;
+    }
+
+    .button {
+      align-self: center;
+      margin-top: 60px;
+    }
+
+    .checkbox-container {
+      align-self: center;
+      margin-top: 40px;
+
+      .checkbox {
+        display: none;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        font-size: $fz_md;
+      }
+
+      .checkbox+label::before {
+        content: '';
+        display: block;
+        margin-right: 10px;
+        width: 17px;
+        height: 17px;
+        background-image: url(/image/icons/checkbox.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      .checkbox:checked+label::before {
+        background-image: url(/image/icons/checkbox-selected.svg);
+      }
+
+    }
+  }
+
+  .button.register {
+    align-self: center;
+    margin-top: 60px;
+  }
+}

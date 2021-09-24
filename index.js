@@ -79,6 +79,7 @@ app.use('/course', require('./routes/course'));
 app.use('/teachers', require('./routes/teachers'));
 app.use('/reviews', require('./routes/reviews'));
 app.use('/structure', require('./routes/structure'));
+app.use('/sign-in', require('./routes/sign-in'));
 
 const PORT = 3002;
 

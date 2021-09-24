@@ -39,18 +39,24 @@ $bd_rad_sm: 15px;
   margin: 0;
 }
 body{
-  padding-top: 83px;
   font-family: Gotham;
   font-weight: normal;
   background-color: $bg_color;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
   color: $black_color;
   line-height: 160%;
-  @include tablets{
-    padding-top: 104px;
+
+  &.padding {
+    padding-top: 83px;
+    @include tablets{
+      padding-top: 104px;
+    }
+  }
+
+  &.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
