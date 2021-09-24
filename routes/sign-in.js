@@ -4,8 +4,10 @@ const fetch = require('node-fetch');
 const router = Router();
 
 router.get('/', (req, res) => {
-	res.render('dron', {
-		title: 'Страница Андрея'
+	res.render('sign-in', {
+		layout: 'empty',
+		title: 'Страница Андрея',
+		script: 'sign-in.js',
 	});
 });
 

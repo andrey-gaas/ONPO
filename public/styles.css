@@ -28,21 +28,25 @@
 }
 
 body {
-  padding-top: 83px;
   font-family: Gotham;
   font-weight: normal;
   background-color: #F9F3F3;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
   color: #252A34;
   line-height: 160%;
 }
+body.padding {
+  padding-top: 83px;
+}
 @media screen and (min-width: 728px) {
-  body {
+  body.padding {
     padding-top: 104px;
   }
+}
+body.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 ul, li {
@@ -3184,6 +3188,106 @@ h2.home_subtitle {
   }
 }
 
+#sign-in > .container > h1.title {
+  margin-top: 40px;
+  font-size: 28px;
+  line-height: 160%;
+  color: #252A34;
+}
+@media screen and (min-width: 728px) {
+  #sign-in > .container > h1.title {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #sign-in > .container > h1.title {
+    font-size: 58px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #sign-in > .container > h1.title {
+    font-size: 78px;
+  }
+}
+#sign-in .column {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 450px;
+}
+#sign-in .form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+}
+@media screen and (min-width: 728px) {
+  #sign-in .form {
+    border-radius: 30px;
+  }
+}
+#sign-in .form input {
+  margin-top: 20px;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #252A34;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+}
+#sign-in .form input:first-child {
+  margin-top: 0;
+}
+#sign-in .form span {
+  margin-top: 20px;
+  align-self: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+#sign-in .form .remember {
+  align-self: flex-end;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #FF165D;
+}
+#sign-in .form .button {
+  align-self: center;
+  margin-top: 60px;
+}
+#sign-in .form .checkbox-container {
+  align-self: center;
+  margin-top: 40px;
+}
+#sign-in .form .checkbox-container .checkbox {
+  display: none;
+}
+#sign-in .form .checkbox-container label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+#sign-in .form .checkbox-container .checkbox + label::before {
+  content: "";
+  display: block;
+  margin-right: 10px;
+  width: 17px;
+  height: 17px;
+  background-image: url(/image/icons/checkbox.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+#sign-in .form .checkbox-container .checkbox:checked + label::before {
+  background-image: url(/image/icons/checkbox-selected.svg);
+}
+#sign-in .button.register {
+  align-self: center;
+  margin-top: 60px;
+}
+
 .button {
   display: flex;
   font-size: 14px;
@@ -3427,6 +3531,26 @@ h2.home_subtitle {
 @media screen and (min-width: 1200px) {
   .component_header .button {
     display: block;
+  }
+}
+
+.empty-header {
+  padding: 10px 0;
+}
+.empty-header .logo {
+  width: 40px;
+  height: 40px;
+}
+@media screen and (min-width: 728px) {
+  .empty-header .logo {
+    height: 60px;
+    width: 60px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  .empty-header .logo {
+    height: 80px;
+    width: 80px;
   }
 }
 
