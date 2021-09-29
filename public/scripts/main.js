@@ -1,11 +1,18 @@
 import Swiper from "/scripts/swiper.js";
 import {
   initFormSelect, initBtnScrollToTop, initDropMenu, 
-  initCoruselDefoult, initCoruselFromFilter, initReviewsCommentShow
+  initCoruselDefoult, initCoruselFromFilter, initReviewsCommentShow,
+  postData,
 } from "/scripts/utils.js"
 
 
 window.onload = () => {
+  // button close popup
+  document.querySelector('.application-popup button').onclick = function() {
+    this.parentNode.parentNode.classList.remove('visible');  //  ПРОБРАЛИСЬ К КОНТЕЙНЕРУ И УДАЛИЛИ КЛАСС
+  }
+
+
   //btn scroll
 
   let containerBtnScrollToSection = document.querySelector('.container_btn_scroll_to_section')
@@ -218,7 +225,6 @@ document.getElementById('send-application').onsubmit = function sendApplication(
   event.preventDefault();
 
   const form = event.target;
-  //console.log(form.name.value);
   let data = {
     name: form.name.value,
     email: form.email.value,
@@ -228,39 +234,20 @@ document.getElementById('send-application').onsubmit = function sendApplication(
     wishes: form.wishes.value,
   }
 
-  // let programList = [...document.querySelectorAll('#send-application .dropdown_list input')];
-  // programList = programList
-  //   .filter(program => program.checked)
-  //   .map(program => program.name);
+  const popup = document.querySelector('.application-popup');
+  const text = document.querySelector('.application-popup span');
 
-  // const data = JSON.stringify({
-  //   name: form.name.value,
-  //   email: form.email.value,
-  //   phone: form.phone.value,
-  //   location: form.location.value,
-  //   programList: programList,
-  //   educationForm: form.form_of_education.value,
-  //   wishes: form.wishes.value,
-  // });
-  
-  // XHR
-  console.log(data);
-  // fetch('/api/application2',
-  // {
-  //     method: "POST",
-  //     headers: {
-  //         "Content-Type": "application/json"
-  //     },
-  //     mode: "no-cors",
-  //     body: JSON.stringify({"aaa": "form"})
-  // })
-  const xhr = new XMLHttpRequest();
-  xhr.open('post', '/api/application2');
-  xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-  xhr.send( JSON.stringify(data) );
-
-  // xhr.onload = function() {
-  //   console.log(xhr.status);
-  //   console.log(xhr.responseText);
-  // }
+  // POST APPLICATION
+  postData('/api/application', data)
+    .then(result => {
+      if (result.success) {
+        text.innerText = 'Заявка на обучение принята!';
+        popup.classList.add('visible');
+      }
+    })
+    .catch(error => {
+      console.log(error.message);
+      text.innerText = 'Возникла ошибка при создании заявки, попробуйте еще раз.';
+      popup.classList.add('visible');
+    });
 }

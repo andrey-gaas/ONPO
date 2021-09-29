@@ -1,14 +1,19 @@
 .application-popup {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: flex-start;
   background-color: rgba(0, 0, 0, .3);
   z-index: 999;
+
+  &.visible {
+    display: flex;
+  }
 
   .popup-container {
     position: relative;

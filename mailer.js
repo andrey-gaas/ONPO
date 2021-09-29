@@ -9,7 +9,7 @@ module.exports = function(data, html) {
   return new Promise((resolve, reject) => {
 
     const mailConfig = {
-      from: { name: 'Оргкомитет Библиографического Конгресса', address: 'info@bibcongress.ru' },
+      from: { name: 'Оргкомитет Библиографического Конгресса', address: 'info@bibcongress.ru' }, // НУЖНО ИМЯ И АДРЕС
       to: data.email,
       subject: data.subject,
       text: data.text,

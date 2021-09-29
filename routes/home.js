@@ -159,9 +159,7 @@ router.get('/', (req, res) => {
     }]
     const teacher = teachers
     
-    const formRaioChekboxList = courses.map( item => { return {title:item.title, id: item.id,} })
-
-    const { application } = req.query;
+    const formRaioChekboxList = courses.map( item => ({title:item.title, id: item.id,}))
 
     res.render('home', { 
       courses,
@@ -176,11 +174,6 @@ router.get('/', (req, res) => {
       menu: true,
       script: 'main.js',
       title: 'Образовательные программы ГПНТБ СО РАН',
-      application: {
-        status: application,
-        success: application === 'success',
-        fail: application === 'fail',
-      },
     });
 });
 
