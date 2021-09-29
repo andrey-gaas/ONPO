@@ -214,50 +214,50 @@ window.onload = () => {
 // touchmove
 
 // sending an application
-/* document.getElementById('send-application').onsubmit = function sendApplication(event) {
+document.getElementById('send-application').onsubmit = function sendApplication(event) {
   event.preventDefault();
 
   const form = event.target;
-
-  let programList = [...document.querySelectorAll('#send-application .dropdown_list input')];
-  programList = programList
-    .filter(program => program.checked)
-    .map(program => program.name);
-
-  const data = JSON.stringify({
+  //console.log(form.name.value);
+  let data = {
     name: form.name.value,
     email: form.email.value,
     phone: form.phone.value,
     location: form.location.value,
-    programList: programList,
-    educationForm: form.form_of_education.value,
+    course: form.course.value,
     wishes: form.wishes.value,
-  });
+  }
+
+  // let programList = [...document.querySelectorAll('#send-application .dropdown_list input')];
+  // programList = programList
+  //   .filter(program => program.checked)
+  //   .map(program => program.name);
+
+  // const data = JSON.stringify({
+  //   name: form.name.value,
+  //   email: form.email.value,
+  //   phone: form.phone.value,
+  //   location: form.location.value,
+  //   programList: programList,
+  //   educationForm: form.form_of_education.value,
+  //   wishes: form.wishes.value,
+  // });
   
   // XHR
   console.log(data);
+  // fetch('/api/application2',
+  // {
+  //     method: "POST",
+  //     headers: {
+  //         "Content-Type": "application/json"
+  //     },
+  //     mode: "no-cors",
+  //     body: JSON.stringify({"aaa": "form"})
+  // })
   const xhr = new XMLHttpRequest();
-  xhr.open('post', '/api/application');
+  xhr.open('post', '/api/application2');
   xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-  xhr.send(data);
-
-  xhr.onload = function() {
-    console.log(xhr.status);
-    console.log(xhr.responseText);
-  }
-  fetch('/api/application2',
-  {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json"
-      },
-      mode: "no-cors",
-      body: JSON.stringify({"aaa": "form"})
-  })
-  // const xhr = new XMLHttpRequest();
-  // xhr.open('post', '/api/application2');
-  // xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-  // xhr.send('asdf');
+  xhr.send( JSON.stringify(data) );
 
   // xhr.onload = function() {
   //   console.log(xhr.status);
