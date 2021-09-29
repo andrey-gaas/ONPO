@@ -39,8 +39,18 @@ window.onload = () => {
     },
 
     // And if we need scrollbar 
-    scrollbar: {
-      el: ".swiper-scrollbar",
+    pagination: {
+      el: ".swiper-pagination",
+      type:'custom',
+      renderCustom: (swiper, current, total) => {
+        // let prev = ((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) 
+        // let next = (current+1)%(total) === 0 ? total : (current+1)%(total)
+        return `<div class="paggination_number">
+                  <span class="paggination_number_prev">${((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) }</span>
+                  <span class="paggination_number_currnet white">${current}</span>
+                  <span class="paggination_number_next">${(current+1)%(total) === 0 ? total : (current+1)%(total)}</span>
+                </div>`
+      },
     },
   })
 
@@ -131,9 +141,6 @@ window.onload = () => {
   btnHideList.onclick = closeWindoPlaceList
   btnHideListDesktop.onclick = closeWindoPlaceList
   
-  // <li class="place_item">
-  //       г. Алдан (Республика Саха (Якутия))
-  //     </li>
   //accordion
 
   let accordionList = document.querySelectorAll('.accordion_list')
@@ -238,5 +245,22 @@ window.onload = () => {
     console.log(xhr.status);
     console.log(xhr.responseText);
   }
+  fetch('/api/application2',
+  {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      mode: "no-cors",
+      body: JSON.stringify({"aaa": "form"})
+  })
+  // const xhr = new XMLHttpRequest();
+  // xhr.open('post', '/api/application2');
+  // xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+  // xhr.send('asdf');
+
+  // xhr.onload = function() {
+  //   console.log(xhr.status);
+  //   console.log(xhr.responseText);
+  // }
 }
- */

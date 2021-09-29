@@ -11,76 +11,31 @@
       <div class="form_input">
         <input type="text" name="phone" id="input_name2" placeholder="Контактный номер телефона">
       </div>
-      <div class="form_input dropdown">
-        <input type="text" name="location" id="input_name3" placeholder="Место жительства">
+
+      <div class="form_input dropdown init_yamps">
+        <input type="text" name="location" id="suggest" placeholder="Место жительства">
       </div>
-      <div class="form_input dropdown">
-        {{!-- <input type="text" name="phone" id="input_name" placeholder="Наименование образовательной прогрммы"> --}}
+      <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&load=SuggestView&onload=onLoad"></script>
+      <script>
+        function onLoad (ymaps) {
+            var suggestView = new ymaps.SuggestView('suggest');
+        }
+      </script>
+
+
+      <div class="form_input dropdown" id='form_input_select_course'>
         <div class="select_input">Наименование образовательной прогрммы</div>
         <div class="wrap_castom_scrollbar">
           <ul class="dropdown_list">
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course1" name="course" value="0">
-              <label for="course1">Библиотечно-информационная деятельность (252 часа, заочная)</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course2" name="course" value="1">
-              <label for="course2">Библиотечно-информационная деятельность (300 часов, заочная)</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course3" name="course" value="2">
-              <label for="course3">Библиотечно-информационная деятельность (300 часов, очно/заочная)</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course3" name="course" value="3">
-              <label for="course3">Библиотечно-педагогическая деятельность в образовательной организации общего образования: педагог-библиотекарь</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course4" name="course" value="yes">
-              <label for="course4">Администрирование в ИРБИС-64</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course5" name="course" value="yes">
-              <label for="course5">Библиографическое описание: общие требования и правила составления в соответствии с ГОСТ Р 7.0.100-2018</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course6" name="course" value="yes">
-              <label for="course6">Делопроизводство. Организация документирования управленческой деятельности в организации</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course7" name="course" value="yes">
-              <label for="course7">Культурно-досуговая деятельность библиотек в современных социокультурных условиях</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course8" name="course" value="yes">
-              <label for="course8">Организация библиотечно-информационного обслуживания инвалидов и лиц с ОВЗ</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course9" name="course" value="yes">
-              <label for="course9">Проектная и грантовая деятельность современной библиотеки (72 часа)</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course10" name="course" value="yes">
-              <label for="course10">Проектная и грантовая деятельность современной библиотеки (36 часов)</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course11" name="course" value="yes">
-              <label for="course11">Современные информационно-коммуникационные технологии. «Технологии «ИРБИС»</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course12" name="course" value="yes">
-              <label for="course12">Основы интеллектуальной собственности. Информационно-библиотечные ресурсы</label>
-            </li>
-            <li class="dropdown_item">
-              <input type="radio" class="custom-checkbox" id="course13" name="course" value="yes">
-              <label for="course13">«Цифровая образовательная среда»</label>
-          </li>
+            {{#each formRaioChekboxList}}
+              <li class="dropdown_item">
+                <input type="radio" class="custom-checkbox" id="course{{this.id}}" name="course" value="{{this.id}}" {{#if checked}}checked{{/if}}>
+                <label for="course{{this.id}}">{{this.title}}</label>
+              </li>
+            {{/each}}
           </ul>
         </div>
       </div>
-      {{!-- <div class="form_input dropdown">
-        <input type="text" name="form_of_education" id="input_name4" placeholder="Форма обучения">
-      </div> --}}
       <div class="form_input">
         <input type="text" name="wishes" id="input_name5" placeholder="Пожелания">
       </div>

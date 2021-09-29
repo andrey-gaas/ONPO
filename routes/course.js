@@ -31,9 +31,12 @@ router.get('/:id', (req, res) => {
 		teach = [teachers[1],teachers[0], teachers[2], teachers[3]]
 	}
 
+	const formRaioChekboxList = [{title:course.title, id: course.id, checked: true}]
+
 	res.render('course', {
 		title: course.title,
 		type,
+		formRaioChekboxList,
 		script: 'course.js',
 		headerTitle: 'Образовательные программы',
 		course,

@@ -41,6 +41,8 @@ export function initFormSelect (selectorNode){
     }
   
   }
+
+
 }
 
 export function initBtnScrollToTop (selectorNode){
@@ -78,8 +80,16 @@ export function initCoruselDefoult(selectCorusel){
     // If we need pagination
     pagination: {
       el: ".swiper-pagination",
-      dynamicBullets: true,
-      dynamicMainBullets: 2,
+      type:'custom',
+      renderCustom: (swiper, current, total) => {
+        // let prev = ((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) 
+        // let next = (current+1)%(total) === 0 ? total : (current+1)%(total)
+        return `<div class="paggination_number">
+                  <span class="paggination_number_prev">${((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) }</span>
+                  <span class="paggination_number_currnet">${current}</span>
+                  <span class="paggination_number_next">${(current+1)%(total) === 0 ? total : (current+1)%(total)}</span>
+                </div>`
+      },
     },
 
     // Navigation arrows
@@ -120,8 +130,17 @@ export function initCoruselDefoult(selectCorusel){
         // If we need pagination
         pagination: {
           el: ".swiper-pagination",
-          dynamicBullets: true,
-          dynamicMainBullets: 2,
+          type:'custom',
+          renderCustom: (swiper, current, total) => {
+  
+            // let prev = ((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) 
+            // let next = (current+1)%(total) === 0 ? total : (current+1)%(total)
+            return `<div class="paggination_number">
+                      <span class="paggination_number_prev">${((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) }</span>
+                      <span class="paggination_number_currnet">${current}</span>
+                      <span class="paggination_number_next">${(current+1)%(total) === 0 ? total : (current+1)%(total)}</span>
+                    </div>`
+          },
         },
     
         // Navigation arrows
@@ -156,8 +175,17 @@ export function initCoruselDefoult(selectCorusel){
         // If we need pagination
         pagination: {
           el: ".swiper-pagination",
-          dynamicBullets: true,
-          dynamicMainBullets: 2,
+          type:'custom',
+          renderCustom: (swiper, current, total) => {
+  
+            // let prev = ((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) 
+            // let next = (current+1)%(total) === 0 ? total : (current+1)%(total)
+            return `<div class="paggination_number">
+                      <span class="paggination_number_prev">${((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) }</span>
+                      <span class="paggination_number_currnet">${current}</span>
+                      <span class="paggination_number_next">${(current+1)%(total) === 0 ? total : (current+1)%(total)}</span>
+                    </div>`
+          },
         },
     
         // Navigation arrows
@@ -192,8 +220,17 @@ export function initCoruselDefoult(selectCorusel){
         // If we need pagination
         pagination: {
           el: ".swiper-pagination",
-          dynamicBullets: true,
-          dynamicMainBullets: 2,
+          type:'custom',
+          renderCustom: (swiper, current, total) => {
+  
+            // let prev = ((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) 
+            // let next = (current+1)%(total) === 0 ? total : (current+1)%(total)
+            return `<div class="paggination_number">
+                      <span class="paggination_number_prev">${((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) }</span>
+                      <span class="paggination_number_currnet">${current}</span>
+                      <span class="paggination_number_next">${(current+1)%(total) === 0 ? total : (current+1)%(total)}</span>
+                    </div>`
+          },
         },
     
         // Navigation arrows
@@ -237,8 +274,17 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
       // If we need pagination
       pagination: {
         el: ".swiper-pagination",
-        dynamicBullets: true,
-        dynamicMainBullets: 2,
+        type:'custom',
+        renderCustom: (swiper, current, total) => {
+
+          // let prev = ((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) 
+          // let next = (current+1)%(total) === 0 ? total : (current+1)%(total)
+          return `<div class="paggination_number">
+                    <span class="paggination_number_prev">${((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) }</span>
+                    <span class="paggination_number_currnet">${current}</span>
+                    <span class="paggination_number_next">${(current+1)%(total) === 0 ? total : (current+1)%(total)}</span>
+                  </div>`
+        },
       },
   
       // Navigation arrows
@@ -417,7 +463,6 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
               })
             }else{
               filterCardList.forEach(item => {
-                console.log(item.dataset.filter, targetFilter, item.dataset.filter === targetFilter);
                 if(item.dataset.filter === targetFilter){
                   item.parentNode.style.display = ''
 
@@ -431,9 +476,6 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
             }
             filterDate = targetFilter
           }
-
-          //swipert.virtual.update()
-          
         }
       }
     }

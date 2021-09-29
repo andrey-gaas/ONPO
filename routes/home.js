@@ -88,16 +88,36 @@ router.get('/', (req, res) => {
     }
     const carusel = [{
       type:'course',
-      data: courses[1]
+      data: {
+        "id": '../retraining',
+        "title": "Библиотечно-информационная деятельность",
+        "description": "Программа профессиональной переподготовки ориентирована на сотрудников библиотек, не имеющих профессионального образования по направлению «библиотечно-информационной деятельность»",
+        "stars": 10,
+        "reviews": [ 0, 1, 3, 4, 6, 12, 13, 14, 22, 25, 32, 36, 39 ],
+        "type": "Профессиональная переподготовка",
+        "start": "По мере набора групп",
+        "hours": "от 252 часов",
+        "period": "от 3 месяцев ",
+        "price": "от 12000",
+        "categories": [
+          "retraining"
+        ],
+      }
       },{
         type:'course',
-        data: courses[5]
+        data: courses[3]
+      },{
+        type:'course',
+        data: courses[17]
       },{
         type:'course',
         data: courses[8]
       },{
         type:'course',
-        data: courses[3]
+        data: courses[14]
+      },{
+        type:'course',
+        data: courses[10]
       }
     ]
     const organizators =[{
@@ -139,11 +159,13 @@ router.get('/', (req, res) => {
     }]
     const teacher = teachers
     
+    const formRaioChekboxList = courses.map( item => { return {title:item.title, id: item.id,} })
 
     const { application } = req.query;
 
     res.render('home', { 
       courses,
+      formRaioChekboxList,
       direction,
       format, 
       accordion,

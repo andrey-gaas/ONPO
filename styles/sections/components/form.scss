@@ -53,6 +53,10 @@ section.application-form{
         margin-bottom: 20px;
         position: relative;
 
+        &.init_yamps>ymaps{
+          color: $black_color;
+        }
+
         &.dropdown{
           &>input:focus::placeholder{
             color: $white_color;

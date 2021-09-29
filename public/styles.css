@@ -1390,8 +1390,10 @@ h2.home_subtitle {
   #course .description-container .specification {
     margin-left: auto;
     margin-right: auto;
-    width: 790px;
+    max-width: 790px;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 1520px) {
@@ -3897,6 +3899,43 @@ footer.footer .arrow_up {
   margin-bottom: 0;
 }
 
+.paggination_number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+@media screen and (min-width: 728px) {
+  .paggination_number {
+    padding: 0 20px;
+  }
+}
+.paggination_number .paggination_number_prev, .paggination_number .paggination_number_next {
+  font-size: 22px;
+  color: #BDBDBD;
+  font-weight: bold;
+}
+@media screen and (min-width: 728px) {
+  .paggination_number .paggination_number_prev, .paggination_number .paggination_number_next {
+    font-size: 28px;
+  }
+}
+.paggination_number .paggination_number_currnet {
+  font-size: 38px;
+  font-weight: bold;
+  color: #FF165D;
+  margin: 0 10px;
+}
+@media screen and (min-width: 728px) {
+  .paggination_number .paggination_number_currnet {
+    font-size: 50px;
+    margin: 0 20px;
+  }
+}
+.paggination_number .paggination_number_currnet.white {
+  color: #FFFFFF;
+}
+
 .pagination_wrapper {
   display: flex;
   width: 100%;
@@ -3962,7 +4001,6 @@ footer.footer .arrow_up {
 .swiper-pagination {
   overflow: hidden;
   height: 100%;
-  width: 150px;
   align-items: center;
   display: flex;
   justify-content: space-around;
@@ -4504,6 +4542,9 @@ section.application-form .container form .form_input {
   border-bottom: 1px solid #FFFFFF;
   margin-bottom: 20px;
   position: relative;
+}
+section.application-form .container form .form_input.init_yamps > ymaps {
+  color: #252A34;
 }
 section.application-form .container form .form_input.dropdown > input:focus::placeholder {
   color: #FFFFFF;

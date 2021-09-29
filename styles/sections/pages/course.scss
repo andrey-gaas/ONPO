@@ -290,8 +290,10 @@
       @include laptop {
         margin-left: auto;
         margin-right: auto;
-        width: 790px;
+        max-width: 790px;
         font-size: $fz_md;
+        display: flex;
+        flex-direction: column;
       }
 
       @include desktop {
