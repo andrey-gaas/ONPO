@@ -1527,7 +1527,8 @@ h2.home_subtitle {
 }
 @media screen and (min-width: 1200px) {
   #course .approach .list {
-    flex-wrap: nowrap;
+    margin-right: -20px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1520px) {
@@ -1546,14 +1547,15 @@ h2.home_subtitle {
 }
 @media screen and (min-width: 1200px) {
   #course .approach .card_advantages {
-    width: 275px;
+    width: 372px;
+    margin-right: 20px;
   }
 }
 @media screen and (min-width: 1520px) {
   #course .approach .card_advantages {
     margin-right: 40px;
     margin-top: 40px;
-    width: 330px;
+    width: 450px;
   }
 }
 #course .approach .card_advantages h1 {
@@ -2237,6 +2239,19 @@ h2.home_subtitle {
     font-size: 28px;
   }
 }
+#reviews .section__list_rewive {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 728px) {
+  #reviews .section__list_rewive {
+    margin-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #reviews .section__list_rewive {
+    margin-bottom: 160px;
+  }
+}
 #reviews > .container > h1.title {
   margin-top: 40px;
   font-size: 28px;
@@ -2275,41 +2290,60 @@ h2.home_subtitle {
 #reviews .reviews-list .list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+@media screen and (min-width: 728px) {
+  #reviews .reviews-list .list {
+    margin-right: -10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #reviews .reviews-list .list {
+    margin-right: -20px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #reviews .reviews-list .list {
+    margin-right: -40px;
+  }
 }
 #reviews .reviews-list .card_review {
   margin-top: 20px;
   width: 100%;
+  height: unset;
 }
 @media screen and (min-width: 728px) {
   #reviews .reviews-list .card_review {
     width: calc(50% - 10px);
+    margin-right: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
   #reviews .reviews-list .card_review {
     width: calc(33% - 13px);
+    margin-right: 20px;
   }
 }
 @media screen and (min-width: 1520px) {
   #reviews .reviews-list .card_review {
+    margin-right: 40px;
     width: calc(33% - 26px);
   }
 }
 #reviews .form-container {
-  margin: 100px 0;
+  margin-bottom: 100px 0;
   padding: 20px 0;
   color: #FFFFFF;
   background-color: #252A34;
 }
 @media screen and (min-width: 728px) {
   #reviews .form-container {
-    margin: 120px 0;
+    margin-bottom: 120px 0;
   }
 }
 @media screen and (min-width: 1200px) {
   #reviews .form-container {
-    margin: 160px 0;
+    margin-bottom: 160px 0;
     padding: 40px 0;
   }
 }
@@ -5484,27 +5518,25 @@ article.card_organizer .contact .email::before {
   }
 }
 .card_advantages h1 {
-  margin-top: 23px;
+  margin: auto 0;
+  padding: 23px 0;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 1.6;
   text-transform: uppercase;
 }
 @media screen and (min-width: 728px) {
   .card_advantages h1 {
     font-size: 16px;
-    line-height: 25px;
   }
 }
 @media screen and (min-width: 1200px) {
   .card_advantages h1 {
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1520px) {
   .card_advantages h1 {
-    font-size: 28px;
-    line-height: 44px;
+    font-size: 22px;
   }
 }
 .card_advantages p {
@@ -5837,6 +5869,7 @@ article.card_review .review .wrapper_togle_show_review .toogle_show_review {
   cursor: pointer;
 }
 article.card_review .review_status {
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   font-size: 16px;

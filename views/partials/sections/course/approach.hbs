@@ -4,16 +4,18 @@
   </h2>
 
   <div class="list">
+    {{#each course.advantages}}
     <article class="card_advantages">
       <img src="/image/icons/review_fire.svg" alt="" />
-      <h1>Синхронное обучение</h1>
-      <p>
+      <h1>{{this}}</h1>
+      {{!-- <p>
         Взаимодействие между студентом
         и преподавателем в режиме
         реального времени
-      </p>
+      </p> --}}
     </article>
-    <article class="card_advantages">
+    {{/each}}
+    {{!-- <article class="card_advantages">
       <img src="/image/icons/review_fire.svg" alt="" />
       <h1>Сопровождение</h1>
       <p>
@@ -36,7 +38,7 @@
         Обучение гарантирует большое количество
         практических заданий
       </p>
-    </article>
+    </article> --}}
   </div>
 
 

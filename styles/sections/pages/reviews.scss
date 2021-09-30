@@ -1,4 +1,13 @@
 #reviews {
+  .section__list_rewive{
+    margin-bottom: 100px;
+    @include tablets{
+      margin-bottom: 120px;
+    }
+    @include laptop{
+      margin-bottom: 160px;
+    }
+  }
   & > .container > h1.title{
     margin-top: 40px;
     font-size: $fz_lg;
@@ -34,39 +43,53 @@
     .list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: flex-start;
+
+      @include tablets{
+        margin-right: -10px;
+      }
+      @include laptop{
+        margin-right: -20px;
+      }
+      @include desktop{
+        margin-right: -40px;
+      }
     }
 
     .card_review {
       margin-top: 20px;
       width: 100%;
+      height: unset;
 
       @include tablets {
-        width: calc(50% - 10px)
+        width: calc(50% - 10px);
+        margin-right: 10px;
       }
 
       @include laptop {
-        width: calc(33% - 13px)
+        width: calc(33% - 13px);
+        margin-right: 20px;
       }
 
       @include desktop {
+        margin-right: 40px;
         width: calc(33% - 26px);
       }
     }
   }
 
   .form-container {
-    margin: 100px 0;
+    margin-bottom: 100px 0;
     padding: 20px 0;
     color: $white_color;
     background-color: $black_color;
 
     @include tablets {
-      margin: 120px 0;
+      margin-bottom: 120px 0;
     }
 
     @include laptop {
-      margin: 160px 0;
+      margin-bottom: 160px 0;
       padding: 40px 0;
     }
 

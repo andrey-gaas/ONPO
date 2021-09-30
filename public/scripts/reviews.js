@@ -7,7 +7,7 @@ window.onload = function() {
 
   initCoruselFromFilter(".home_courses_swiper_container", '.filter_list', '.card_courses_filter', '.filter_list .filter_item');
 
-  initFormSelect('.form-container');
+  // initFormSelect('.form-container');
 
   initReviewsCommentShow('.reviews-list>.list')
 
@@ -61,25 +61,25 @@ window.onload = function() {
 
   // STARS
 
-  let grade = 0;
-  const stars = document.querySelectorAll('button.star');
+  // let grade = 0;
+  // const stars = document.querySelectorAll('button.star');
 
-  function setStar(newGrade) {
-    return function() {
-      grade = newGrade;
+  // function setStar(newGrade) {
+  //   return function() {
+  //     grade = newGrade;
 
-      stars.forEach(elem => elem.classList.remove('active'));
+  //     stars.forEach(elem => elem.classList.remove('active'));
 
-      for (let i = 0; i < grade; i++) {
-        stars[i].classList.add('active');
-      }
-    }
-  }
+  //     for (let i = 0; i < grade; i++) {
+  //       stars[i].classList.add('active');
+  //     }
+  //   }
+  // }
 
-  stars[0].onclick = setStar(1);
-  stars[1].onclick = setStar(2);
-  stars[2].onclick = setStar(3);
-  stars[3].onclick = setStar(4);
-  stars[4].onclick = setStar(5);
+  // stars[0].onclick = setStar(1);
+  // stars[1].onclick = setStar(2);
+  // stars[2].onclick = setStar(3);
+  // stars[3].onclick = setStar(4);
+  // stars[4].onclick = setStar(5);
   // END STARS
 };

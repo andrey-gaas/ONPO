@@ -431,7 +431,8 @@
       justify-content: space-between;
 
       @include laptop {
-        flex-wrap: nowrap;
+        margin-right: -20px;
+        justify-content: center;
       }
 
       @include desktop {
@@ -442,19 +443,21 @@
     .card_advantages {
       margin-top: 20px;
       width: calc(50% - 10px);
+      
 
       @include tablets {
         width: 334px;
       }
 
       @include laptop {
-        width: 275px;
+        width: 372px;
+        margin-right: 20px;
       }
 
       @include desktop {
         margin-right: 40px;
         margin-top: 40px;
-        width: 330px;
+        width: 450px;
       }
 
       h1 {
