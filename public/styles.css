@@ -1956,6 +1956,7 @@ h2.home_subtitle {
 }
 @media screen and (min-width: 1520px) {
   #teachers .teachers-list .card_teacher {
+    margin-top: 40px;
     margin-right: 40px;
     width: 453px;
   }
@@ -2326,6 +2327,7 @@ h2.home_subtitle {
 }
 @media screen and (min-width: 1520px) {
   #reviews .reviews-list .card_review {
+    margin-top: 40px;
     margin-right: 40px;
     width: calc(33% - 37px);
   }
