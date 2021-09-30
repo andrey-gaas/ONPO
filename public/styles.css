@@ -2320,14 +2320,14 @@ h2.home_subtitle {
 }
 @media screen and (min-width: 1200px) {
   #reviews .reviews-list .card_review {
-    width: calc(33% - 13px);
+    width: calc(33% - 18px);
     margin-right: 20px;
   }
 }
 @media screen and (min-width: 1520px) {
   #reviews .reviews-list .card_review {
     margin-right: 40px;
-    width: calc(33% - 26px);
+    width: calc(33% - 37px);
   }
 }
 #reviews .form-container {
