@@ -1,49 +1,68 @@
 const { Router } = require('express');
-const { courses, teachers, reviews } = require('./data');
+const Mongo = require('../db');
 
 const router = Router();
 
 router.get('/:id', (req, res) => {
-	const course = courses.find(course => course.id === +req.params.id);
+	Mongo
+		.courses
+		.findOne({ id: +req.params.id })
+		.then(course => {
+			if (!course) {
+				return res.redirect('/error?code=404');
+			}
 
-	const type = course.type === 'Повышение квалификации' ? 'Программы повышения квалификации' : 'Программы профессиональной переподготовки';
-	const document =  course.type === 'Повышение квалификации' ? 
-	{	img:'1.png',text:'Удостоверение о повышении	квалификации установленного образца'} : {	img:'2.png',text:'Диплом о профессиональной переподготовке установленного образца '	};
+			const formRaioChekboxList = [{ title: course.title, id: course.id, checked: true }]
+			const type = course.type === 'Повышение квалификации' ? 'Программы повышения квалификации' : 'Программы профессиональной переподготовки';
+			const document =  course.type === 'Повышение квалификации' ? 
+				{	img: '1.png', text: 'Удостоверение о повышении	квалификации установленного образца' }
+				: {	img: '2.png', text: 'Диплом о профессиональной переподготовке установленного образца'	};
 
-	let rev = []
-	for(let review of reviews){
-		if(course.reviews.includes(review.id) ){
-			rev.push(review)
-		}
-	}
-	if(rev.length === 0){
-		rev = [reviews[7], reviews[22], reviews[11], reviews[4]]
-	}
-
-	
-	let teach = []
-	for(let teacher of teachers){
-		if(course.teachers.includes(teacher.id) ){
-			teach.push(teacher)
-		}
-	}
-	if(teach.length === 0){
-		teach = [teachers[1],teachers[0], teachers[2], teachers[3]]
-	}
-
-	const formRaioChekboxList = [{title:course.title, id: course.id, checked: true}]
-
-	res.render('course', {
-		title: course.title,
-		type,
-		formRaioChekboxList,
-		script: 'course.js',
-		headerTitle: 'Образовательные программы',
-		course,
-		teachers: teach,
-		reviews: rev,
-		document
-	});
+			// Загружаем список отзывов
+			Mongo
+				.reviews
+				.find({
+					'$or': course.reviews.map(id => ({ id }))
+				})
+				.toArray((error, reviews) => {
+					if (error) {
+						console.log(error.message);
+						console.log('Ошибка в /course/:id при загрузке отзывов');
+						return res.redirect('/error?code=500');
+					}
+					
+					// Загружаем список преподавателей
+					Mongo
+						.teachers
+						.find({
+							'$or': course.teachers.map(id => ({ id }))
+						})
+						.toArray((error, teachers) => {
+							if (error) {
+								console.log(error.message);
+								console.log('Ошибка в /course/:id при загрузке преподавателей');
+								return res.redirect('/error?code=500');
+							}
+							
+							res.render('course', {
+								title: course.title,
+								type,
+								formRaioChekboxList,
+								script: 'course.js',
+								headerTitle: 'Образовательные программы',
+								course,
+								teachers,
+								reviews,
+								document
+							});
+						});
+				});
+		})
+		.catch(error => {
+			console.log(error.message);
+			console.log('Ошибка в /course/:id при загрузке курсов');
+			return res.redirect('/error?code=500');
+		});
 });
 
 module.exports = router;
