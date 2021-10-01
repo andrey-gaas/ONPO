@@ -1,10 +1,11 @@
-   
 const { MongoClient } = require('mongodb');
 
 class Mongo {
   static database = null;
   static education = null;
   static courses = null;
+  static teachers = null;
+  static reviews = null;
 
   static connect() {
     const mongoClient = new MongoClient(
@@ -18,6 +19,8 @@ class Mongo {
       Mongo.database = database;
       Mongo.education = database.db('education');
       Mongo.courses = database.db('education').collection('courses');
+      Mongo.teachers = database.db('education').collection('teachers');
+      Mongo.reviews = database.db('education').collection('reviews');
     });
 
   }

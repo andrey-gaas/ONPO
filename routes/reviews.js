@@ -5,8 +5,8 @@ const router = Router();
 
 router.get('/', (req,  res) => {
 
-	Mongo.education
-		.collection('reviews')
+	Mongo
+		.reviews
 		.find({})
 		.toArray((error, reviews) => {
 			if (error) {

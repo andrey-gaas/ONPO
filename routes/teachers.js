@@ -1,12 +1,11 @@
 const { Router } = require('express');
-// const { courses, teachers, reviews } = require('./data');
 const Mongo = require('./../db');
 
 const router = Router();
 
 router.get('/', (req,  res) => {
-	Mongo.education
-		.collection('teachers')
+	Mongo
+		.teachers
 		.find({})
 		.toArray((error, teachers) => {
 			if (error) {
@@ -26,8 +25,8 @@ router.get('/', (req,  res) => {
 
 router.get('/:id', (req, res) => {
 	const id = +req.params.id;
-	Mongo.education
-		.collection('teachers')
+	Mongo
+		.teachers
 		.findOne({ id })
 		.then(teacher => {
 			if (!teacher) {
