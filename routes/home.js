@@ -8,7 +8,8 @@ router.get('/', (req, res) => {
 
     const direction = [{
       title: `Аспирантура<br/>гпнтб со ран`,
-      href: '/graduate',
+      //href: '/graduate',
+      href: '',
       img: 'direction3.png',
     },{
       title: `Повышение квалификации`,

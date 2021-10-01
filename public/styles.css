@@ -4636,7 +4636,6 @@ section.application-form .container form .form_input.dropdown .wrap_castom_scrol
 section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item input {
   position: absolute;
   opacity: 0;
-  left: -10000px;
 }
 section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item input:checked + label::before {
   opacity: 1;

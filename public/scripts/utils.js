@@ -1,17 +1,5 @@
 import Swiper from "/scripts/swiper.js";
 
-export async function postData(url, data) {
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data),
-  });
-
-  return await response.json();
-}
-
 export function initFormSelect (selectorNode){
   let formWithSelect = document.querySelector(selectorNode)
   // let selectCourse = []
@@ -559,4 +547,73 @@ export function initReviewsCommentShow(nodeReviewList){
     }
   }
 
+}
+
+export async function postData(url, data) {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data),
+  });
+
+  return await response.json();
+}
+
+export function showPopup (leadingInnerText){
+
+  let nodeApplicationPopup = document.createElement('div')
+  nodeApplicationPopup.classList.add('application-popup')
+  nodeApplicationPopup.innerHTML =
+    `
+      <div class="popup-container">
+        <button><img src="/image/icons/close.svg" alt="" /></button>
+        <span class="text"></span>
+      </div>
+    `
+  
+  document.body.append(nodeApplicationPopup);
+  
+
+  nodeApplicationPopup.querySelector('span').innerText = leadingInnerText
+  nodeApplicationPopup.classList.add('visible');
+
+  const buttonClosePopup =  nodeApplicationPopup.querySelector('button')
+
+  buttonClosePopup.onclick = function() {
+    nodeApplicationPopup.classList.remove('visible')
+
+    buttonClosePopup.onclick = null
+    nodeApplicationPopup.remove()
+  }
+}
+
+export function sendingAnAplication(nodeId){
+
+  document.getElementById(nodeId).onsubmit = function sendApplication(event) {
+    event.preventDefault();
+  
+    const form = event.target;
+    let data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      location: form.location.value,
+      course: form.course.value,
+      wishes: form.wishes.value,
+    }
+
+    // POST APPLICATION
+    postData('/api/application', data)
+      .then(result => {
+        if (result.success) {
+          showPopup('Заявка на обучение принята!')
+        }
+      })
+      .catch(error => {
+        console.log(error.message);
+        showPopup('Возникла ошибка при создании заявки, попробуйте еще раз')
+      });
+  }
 }

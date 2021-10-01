@@ -2,15 +2,12 @@ import Swiper from "/scripts/swiper.js";
 import {
   initFormSelect, initBtnScrollToTop, initDropMenu, 
   initCoruselDefoult, initCoruselFromFilter, initReviewsCommentShow,
-  postData,
+  sendingAnAplication,
 } from "/scripts/utils.js"
 
 
 window.onload = () => {
-  // button close popup
-  document.querySelector('.application-popup button').onclick = function() {
-    this.parentNode.parentNode.classList.remove('visible');  //  ПРОБРАЛИСЬ К КОНТЕЙНЕРУ И УДАЛИЛИ КЛАСС
-  }
+  
 
 
   //btn scroll
@@ -210,6 +207,8 @@ window.onload = () => {
   //init review btn show
 
   initReviewsCommentShow('.container__review')
+
+  sendingAnAplication('send-application')
 };
 
 
@@ -220,34 +219,3 @@ window.onload = () => {
 
 // touchmove
 
-// sending an application
-document.getElementById('send-application').onsubmit = function sendApplication(event) {
-  event.preventDefault();
-
-  const form = event.target;
-  let data = {
-    name: form.name.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    location: form.location.value,
-    course: form.course.value,
-    wishes: form.wishes.value,
-  }
-
-  const popup = document.querySelector('.application-popup');
-  const text = document.querySelector('.application-popup span');
-
-  // POST APPLICATION
-  postData('/api/application', data)
-    .then(result => {
-      if (result.success) {
-        text.innerText = 'Заявка на обучение принята!';
-        popup.classList.add('visible');
-      }
-    })
-    .catch(error => {
-      console.log(error.message);
-      text.innerText = 'Возникла ошибка при создании заявки, попробуйте еще раз.';
-      popup.classList.add('visible');
-    });
-}

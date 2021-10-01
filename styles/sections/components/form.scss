@@ -109,7 +109,7 @@ section.application-form{
                 input{
                   position: absolute;
                   opacity: 0;
-                  left: -10000px;
+                  // left: -10000px;
                   
                   &:checked + label::before{
                     opacity: 1;

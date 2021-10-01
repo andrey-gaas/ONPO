@@ -3,17 +3,17 @@
     <h1 class="home_title title">оставьте заявку</br> на обучение</h1>
     <form class="home_form_application" id="send-application" method="POST" action="/api/application">
       <div class="form_input">
-        <input type="text" name="name" id="input_name" placeholder="Фамилия, имя, отчество">
+        <input required type="text" name="name" id="input_name" placeholder="Фамилия, имя, отчество">
       </div>
       <div class="form_input">
-        <input type="text" name="email" id="input_name1" placeholder="E-mail">
+        <input required type="email" name="email" id="input_name1" placeholder="E-mail" required>
       </div>
       <div class="form_input">
-        <input type="text" name="phone" id="input_name2" placeholder="Контактный номер телефона">
+        <input required type="tel" name="phone" id="input_name2" placeholder="Контактный номер телефона">
       </div>
 
       <div class="form_input dropdown init_yamps">
-        <input type="text" name="location" id="suggest" placeholder="Место жительства">
+        <input required type="text" name="location" id="suggest" placeholder="Место проживания (город, регион)">
       </div>
       <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&load=SuggestView&onload=onLoad"></script>
       <script>
@@ -22,14 +22,13 @@
         }
       </script>
 
-
       <div class="form_input dropdown" id='form_input_select_course'>
-        <div class="select_input">Наименование образовательной прогрммы</div>
+        <div class="select_input">Наименование образовательной программы</div>
         <div class="wrap_castom_scrollbar">
           <ul class="dropdown_list">
             {{#each formRaioChekboxList}}
               <li class="dropdown_item">
-                <input type="radio" class="custom-checkbox" id="course{{this.id}}" name="course" value="{{this.id}}" {{#if checked}}checked{{/if}}>
+                <input required type="radio" class="custom-checkbox" id="course{{this.id}}" name="course" value="{{this.id}}" {{#if checked}}checked{{/if}}>
                 <label for="course{{this.id}}">{{this.title}}</label>
               </li>
             {{/each}}
