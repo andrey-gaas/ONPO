@@ -5,7 +5,7 @@ export function initFormSelect (selectorNode){
   // let selectCourse = []
 
   formWithSelect.onclick = e => {
-    
+
     if(e.target.classList.contains('select_input')){
       e.stopPropagation()
       let selectInput = e.target
@@ -39,9 +39,17 @@ export function initFormSelect (selectorNode){
       document.addEventListener('click', closeSelectWindow)
       e.target.parentNode.classList.toggle('active')
     }
-  
   }
 
+  //автоматически отображем выбранный ранее вариант.
+  let listInputsWithSelect = formWithSelect.course
+
+  for(let input of listInputsWithSelect){
+    if(input.checked){
+      let text = input.parentNode.querySelector('label').innerText
+      input.parentNode.parentNode.parentNode.parentNode.querySelector('.select_input').innerText = text
+    }
+  }
 
 }
 
