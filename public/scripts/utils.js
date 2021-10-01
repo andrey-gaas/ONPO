@@ -43,6 +43,9 @@ export function initFormSelect (selectorNode){
 
   //автоматически отображем выбранный ранее вариант.
   let listInputsWithSelect = formWithSelect.course
+  if(!formWithSelect.course.length){
+    listInputsWithSelect = [formWithSelect.course]
+  }
 
   for(let input of listInputsWithSelect){
     if(input.checked){
