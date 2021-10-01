@@ -549,16 +549,19 @@ export function initReviewsCommentShow(nodeReviewList){
 
 }
 
-export async function postData(url, data) {
-  const response = await fetch(url, {
+export function postData(url, data) {
+  return fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data),
-  });
-
-  return await response.json();
+  })
+    .then(response => response.json())
+    .catch(error => {
+      console.log(error.message);
+      return new Error(error.message);
+    });
 }
 
 export function showPopup (leadingInnerText){
@@ -609,11 +612,15 @@ export function sendingAnAplication(nodeId){
       .then(result => {
         if (result.success) {
           showPopup('Заявка на обучение принята!')
+        } else {
+          showPopup('Возникла ошибка при создании заявки, попробуйте еще раз')
         }
       })
       .catch(error => {
         console.log(error.message);
         showPopup('Возникла ошибка при создании заявки, попробуйте еще раз')
       });
+
+    // result.then(res => console.log(res))
   }
 }

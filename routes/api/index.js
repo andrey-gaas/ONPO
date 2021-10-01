@@ -14,11 +14,13 @@ router.post('/application', (req, res) => {
   const { name, email, phone, location, course, wishes } = req.body;
 
   sendMail(message, template(name, email, phone, location, course, wishes))
-    .then(() => res.status(200).send({ success: true }))
+    .then(() => {
+      res.status(200).send({ success: true })
+    })
     .catch(error => {
       console.log(error.message);
       console.log('ОШИБКА В "POST /application"');
-      res.status(500).send({ success: false });
+      res.send({ success: false });
     });
 });
 
