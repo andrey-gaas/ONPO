@@ -208,7 +208,9 @@ window.onload = () => {
 
   initReviewsCommentShow('.container__review')
 
-  sendingAnAplication('send-application')
+  //sendAplication
+
+  sendingAnAplication('#send-application')
 };
 
 

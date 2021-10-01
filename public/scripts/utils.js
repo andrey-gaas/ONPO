@@ -605,9 +605,8 @@ export function showPopup (leadingInnerText){
 
 export function sendingAnAplication(nodeId){
 
-  document.getElementById(nodeId).onsubmit = function sendApplication(event) {
+  document.querySelector(nodeId).onsubmit = function sendApplication(event) {
     event.preventDefault();
-  
     const form = event.target;
     let data = {
       name: form.name.value,
