@@ -6,7 +6,7 @@ const router = Router();
 router.post('/application', (req, res) => {
 
   const message = {
-    email: 'Gaas@gpntbsib.ru',  // СЮДА EMAIL КУДА СЛАТЬ
+    email: 'begisheva@gpntbsib.ru',
     subject: 'Заявка на обучение',
     text: ``,
   };
