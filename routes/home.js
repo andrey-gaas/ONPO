@@ -2,8 +2,6 @@ const { Router } = require('express');
 const Mongo = require('../db');
 const router = Router();
 
-// const { teachers, reviews, courses } = require('./data');
-
 
 router.get('/', (req, res) => {
 
