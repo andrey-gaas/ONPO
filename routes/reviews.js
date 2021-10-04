@@ -1,16 +1,29 @@
 const { Router } = require('express');
-const { courses, teachers, reviews } = require('./data');
+const Mongo = require('./../db');
 
 const router = Router();
 
 router.get('/', (req,  res) => {
 
-	res.render('reviews', {
-		title: 'Отзывы',
-		script: 'reviews.js',
-		headerTitle: 'Отзывы',
-		reviews,
-	});
+	Mongo
+		.reviews
+		.find({})
+		.toArray((error, reviews) => {
+			if (error) {
+				console.log(error.message);
+				console.log('Ошибка в /reviews');
+				return res.redirect('/error?code=500');
+			}
+			
+			res.render('reviews', {
+				title: 'Отзывы',
+				script: 'reviews.js',
+				headerTitle: 'Отзывы',
+				reviews,
+			});
+		});
+
+	
 });
 
 module.exports = router;
