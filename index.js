@@ -1,7 +1,10 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const Mongo = require('./db');
 
 const app = express();
+
+Mongo.connect();
 
 const hbs = exphbs.create({
   defaultLayout: 'main',
