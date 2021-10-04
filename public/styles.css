@@ -3326,6 +3326,47 @@ h2.home_subtitle {
   margin-top: 60px;
 }
 
+#error .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#error .title_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#error .title_container .title {
+  display: inline-block;
+  color: #FF165D;
+  margin-right: 10px;
+}
+@media screen and (min-width: 728px) {
+  #error .title_container .title {
+    margin-right: 20px;
+  }
+}
+#error .title_container .text {
+  display: inline-block;
+}
+#error .decription {
+  margin-bottom: 40px;
+}
+#error .button_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+#error .button_container .button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 728px) {
+  #error .button_container .button {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
 .button {
   display: flex;
   font-size: 14px;
@@ -3341,6 +3382,7 @@ h2.home_subtitle {
   justify-content: center;
   transition: all 0.2s;
   background-color: #FFFFFF;
+  font-family: Gotham;
 }
 @media screen and (min-width: 728px) {
   .button {

@@ -1,0 +1,40 @@
+#error{
+  .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .title_container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .title{
+      display: inline-block;
+      color: $primary_color;
+      margin-right: 10px;
+      @include tablets{
+        margin-right: 20px;
+      }
+    }
+    .text{
+      display: inline-block;
+    }
+  }
+  .decription{
+    margin-bottom: 40px;
+  }
+  .button_container{
+    display: flex;
+    flex-wrap: wrap;
+
+    .button{
+      margin-right: 10px;
+      margin-bottom: 10px;
+      @include tablets{
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+      
+    }
+  }
+}

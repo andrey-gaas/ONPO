@@ -1,7 +1,13 @@
-<div id="teacher">
+<div id="error">
   <div class="container">
-    <h1 class="title">{{error.code}}</h1>
-    <span class="text">{{error.text}}</span>
-    <p class="decription">{{error.description }}</p>
+    <div class="title_container">
+      <h1 class="home_title title">{{error.code}}</h1>
+      <h2 class="home_subtitle text">{{error.text}}</h2>
+    </div>
+    <p class="decription">{{toHTML error.description}}</p>
+    <div class="button_container">
+      <button onclick="history.back();" id="button_back" class="button size_norm">Назад</button>
+      <a href="/" class="button size_norm">Главная</a>
+    </div>
   </div>
 </div>
