@@ -1,5 +1,4 @@
 const { Router } = require('express');
-const Mongo = require('../db');
 const CourseApi = require('../services/Course');
 const TeacherApi = require('../services/Teacher');
 const ReviewApi = require('../services/Review');
