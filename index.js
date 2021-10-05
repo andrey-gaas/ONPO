@@ -16,12 +16,18 @@ const hbs = exphbs.create({
     getName: obj=> `${obj.surname} ${obj.name[0].toUpperCase()}. ${obj.middlename?obj.middlename[0].toUpperCase()+'.' : "" }`,
     getDate: time => {
       let date = new Date(time)
+
+      const monthNames = ["января", "февраля", "марта", "апреля", "мая", "июня",
+        "июля", "августа", "сентября", "октября", "ноября", "декабря"
+      ];
+      
+      let res = `${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()} г.`
       let options = {
         day: 'numeric',
         month: 'long',
         year: 'numeric',
       }
-      return date.toLocaleString("ru-RU", options)
+      return res //date.toLocaleString("ru-RU", options)
     }
   }
 });
