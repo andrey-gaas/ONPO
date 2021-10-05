@@ -21,7 +21,7 @@ const hbs = exphbs.create({
         month: 'long',
         year: 'numeric',
       }
-      return date.toLocaleString("ru", options)
+      return date.toLocaleString("ru-RU", options)
     }
   }
 });
