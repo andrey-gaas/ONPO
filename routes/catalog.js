@@ -1,7 +1,5 @@
 const { Router } = require('express');
 const CourseApi = require('../services/Course');
-const TeacherApi = require('../services/Teacher');
-const ReviewApi = require('../services/Review');
 const router = Router();
 
 router.get('/', async (req, res) => {
