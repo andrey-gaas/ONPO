@@ -1,9 +1,11 @@
 const { Router } = require('express');
-const Mongo = require('../db');
+const CourseApi = require('../services/Course');
+const TeacherApi = require('../services/Teacher');
+const ReviewApi = require('../services/Review');
 const router = Router();
 
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
 
     const direction = [{
       title: `Аспирантура<br/>гпнтб со ран`,
@@ -124,93 +126,73 @@ router.get('/', (req, res) => {
       image: '4.png'
     }]
 
-    // Загружаем список курсов
-    Mongo
-      .courses
-      .find({})
-      .toArray((error, courses) => {
-        if (error) {
-          console.log(error.message);
-          console.log('Ошибка в "/", при загрузке курсов');
-          return res.redirect('/error?code=500');
+    try {
+      const courses = await CourseApi.get({});
+      const reviews = await ReviewApi.get({});
+      const teachers = await TeacherApi.get({});
+
+      const formRaioChekboxList = courses.map( item => ({title:item.title, id: item.id,}));
+
+      const carusel = [
+        {
+          type:'course',
+          data: {
+            "id": '../retraining',
+            "title": "Библиотечно-информационная деятельность",
+            "description": "Программа профессиональной переподготовки ориентирована на сотрудников библиотек, не имеющих профессионального образования по направлению «библиотечно-информационной деятельность»",
+            "stars": 10,
+            "reviews": [ 0, 1, 3, 4, 6, 12, 13, 14, 22, 25, 32, 36, 39 ],
+            "type": "Профессиональная переподготовка",
+            "start": "По мере набора групп",
+            "hours": "от 252 часов",
+            "period": "от 3 месяцев ",
+            "price": "от 12000",
+            "categories": [
+              "retraining"
+            ],
+          }
+        },
+        {
+          type:'course',
+          data: courses[3]
+        },
+        {
+          type:'course',
+          data: courses[17]
+        },
+        {
+          type:'course',
+          data: courses[8]
+        },
+        {
+          type:'course',
+          data: courses[14]
+        },
+        {
+          type:'course',
+          data: courses[10]
         }
-        const formRaioChekboxList = courses.map( item => ({title:item.title, id: item.id,}))
+      ]
 
-        // Далее преподавателей
-        Mongo
-          .teachers
-          .find({})
-          .toArray((error, teacher) => {
-            if (error) {
-              console.log(error.message);
-              console.log('Ошибка в "/", при загрузке преподавателей');
-              return res.redirect('/error?code=500');
-            }
-
-            // Далее отзывы
-            Mongo
-              .reviews
-              .find({})
-              .toArray((error, reviews) => {
-                if (error) {
-                  console.log(error.message);
-                  console.log('Ошибка в "/", при загрузке отзывов');
-                  return res.redirect('/error?code=500');
-                }
-
-                
-                const carusel = [{
-                  type:'course',
-                  data: {
-                    "id": '../retraining',
-                    "title": "Библиотечно-информационная деятельность",
-                    "description": "Программа профессиональной переподготовки ориентирована на сотрудников библиотек, не имеющих профессионального образования по направлению «библиотечно-информационной деятельность»",
-                    "stars": 10,
-                    "reviews": [ 0, 1, 3, 4, 6, 12, 13, 14, 22, 25, 32, 36, 39 ],
-                    "type": "Профессиональная переподготовка",
-                    "start": "По мере набора групп",
-                    "hours": "от 252 часов",
-                    "period": "от 3 месяцев ",
-                    "price": "от 12000",
-                    "categories": [
-                      "retraining"
-                    ],
-                  }
-                  },{
-                    type:'course',
-                    data: courses[3]
-                  },{
-                    type:'course',
-                    data: courses[17]
-                  },{
-                    type:'course',
-                    data: courses[8]
-                  },{
-                    type:'course',
-                    data: courses[14]
-                  },{
-                    type:'course',
-                    data: courses[10]
-                  }
-                ]
-
-                res.render('home', { 
-                  courses,
-                  formRaioChekboxList,
-                  direction,
-                  format, 
-                  accordion,
-                  carusel,
-                  organizators, 
-                  teacher, 
-                  reviews,
-                  menu: true,
-                  script: 'main.js',
-                  title: 'Образовательные программы ГПНТБ СО РАН',
-                });
-              });
-          });
+      res.render('home', { 
+        courses,
+        formRaioChekboxList,
+        direction,
+        format, 
+        accordion,
+        carusel,
+        organizators, 
+        teacher: teachers, 
+        reviews,
+        menu: true,
+        script: 'main.js',
+        title: 'Образовательные программы ГПНТБ СО РАН',
       });
+    } catch(error) {
+      console.log('Ошибка в "/"');
+      console.log(error.message);
+      res.redirect('/error?code=500');
+    }
 });
 
 module.exports = router;
