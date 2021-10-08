@@ -27,7 +27,9 @@
 
   <div class="list">
     {{#each reviews}}
-      {{>cards/card_review this}}
+      <div class="card_wrapper">
+        {{>cards/card_review this}}
+      </div>
     {{/each}}
   </div>
 </div>

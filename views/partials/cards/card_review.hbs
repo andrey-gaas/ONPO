@@ -1,4 +1,4 @@
-<article class="card_review" data-filter="{{type}}">
+<article class="card_review" data-filter="{{course.category}}">
   <div class="person">
     <div class="img_block">
       {{#if user.img}}
@@ -12,12 +12,12 @@
     <div class="full_name">
       <span class="last_name">{{getName user}}</span>
 
-      <span class="position">{{library}}</span>
+      <span class="position">{{user.library}}</span>
       {{!-- <span class="position">{{place}}</span> --}}
     </div>
   </div>
   <div class="course">
-    <a class="course_item">{{course}}</a>
+    <a class="course_item">{{course.title}}</a>
     {{getStarsReview stars}}
   </div>
   <div class="review">

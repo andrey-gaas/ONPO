@@ -1928,6 +1928,7 @@ h2.home_subtitle {
 #teachers .teachers-list .list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 @media screen and (min-width: 728px) {
   #teachers .teachers-list .list {
@@ -2335,7 +2336,7 @@ h2.home_subtitle {
 }
 @media screen and (min-width: 728px) {
   #reviews .reviews-list .list {
-    margin-right: -10px;
+    margin-right: -20px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -2348,28 +2349,39 @@ h2.home_subtitle {
     margin-right: -40px;
   }
 }
-#reviews .reviews-list .card_review {
-  margin-top: 20px;
+#reviews .reviews-list .card_wrapper {
   width: 100%;
-  height: unset;
+  margin-top: 20px;
 }
 @media screen and (min-width: 728px) {
-  #reviews .reviews-list .card_review {
-    width: calc(50% - 10px);
-    margin-right: 10px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #reviews .reviews-list .card_review {
-    width: calc(33% - 18px);
+  #reviews .reviews-list .card_wrapper {
+    width: unset;
     margin-right: 20px;
   }
 }
 @media screen and (min-width: 1520px) {
-  #reviews .reviews-list .card_review {
-    margin-top: 40px;
+  #reviews .reviews-list .card_wrapper {
     margin-right: 40px;
-    width: calc(33% - 37px);
+    margin-top: 40px;
+  }
+}
+#reviews .reviews-list .card_wrapper .card_review {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 728px) {
+  #reviews .reviews-list .card_wrapper .card_review {
+    width: 334px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #reviews .reviews-list .card_wrapper .card_review {
+    width: 373px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #reviews .reviews-list .card_wrapper .card_review {
+    width: 453px;
   }
 }
 #reviews .form-container {
