@@ -92,6 +92,19 @@ app.use('/structure', require('./routes/structure'));
 app.use('/sign-in', require('./routes/sign-in'));
 app.use('/error', require('./routes/error'));
 
+//Error routes
+
+app.use(function(req, res, next){
+  res.status(404);
+  res.redirect('/error?code=404');
+});
+
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+  res.redirect('/error?code=500');
+});
+
 const PORT = 3002;
 
 app.listen(PORT, () => {

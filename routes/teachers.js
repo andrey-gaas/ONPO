@@ -26,6 +26,10 @@ router.get('/:id', async (req, res) => {
 	try {
 		const teacher = await TeacherApi.getOne(id);
 
+		if (!teacher) {
+			return res.redirect('/error?code=404');
+		}
+
 		res.render('teacher', {
 			title: `${teacher.surname} ${teacher.name} ${teacher.middlename}`,
 			script: 'teacher.js',
