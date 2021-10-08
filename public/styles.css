@@ -1939,24 +1939,38 @@ h2.home_subtitle {
     margin-right: -40px;
   }
 }
-#teachers .teachers-list .card_teacher {
-  margin-top: 20px;
+#teachers .teachers-list .card_wrapper {
   width: 100%;
+  margin-top: 20px;
 }
 @media screen and (min-width: 728px) {
-  #teachers .teachers-list .card_teacher {
+  #teachers .teachers-list .card_wrapper {
+    width: unset;
     margin-right: 20px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #teachers .teachers-list .card_wrapper {
+    margin-right: 40px;
+    margin-top: 40px;
+  }
+}
+#teachers .teachers-list .card_wrapper .card_teacher {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 728px) {
+  #teachers .teachers-list .card_wrapper .card_teacher {
     width: 334px;
   }
 }
 @media screen and (min-width: 1200px) {
-  #teachers .teachers-list .card_teacher {
+  #teachers .teachers-list .card_wrapper .card_teacher {
     width: 373px;
   }
 }
 @media screen and (min-width: 1520px) {
-  #teachers .teachers-list .card_teacher {
-    margin-right: 40px;
+  #teachers .teachers-list .card_wrapper .card_teacher {
     width: 453px;
   }
 }

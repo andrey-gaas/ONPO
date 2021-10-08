@@ -9,9 +9,9 @@
         <button class="filter_item active" data-filter="all">
           Все преподаватели
         </button>
-        <button class="filter_item" data-filter="graduate">
+        {{!-- <button class="filter_item" data-filter="graduate">
           Аспирантура
-        </button>
+        </button> --}}
         <button class="filter_item" data-filter="training">
           Повышение квалификации
         </button>
@@ -25,7 +25,9 @@
 
   <div class="list">
     {{#each teachers}}
-      {{>cards/card_teacher this}}
+      <div class="card_wrapper">
+        {{>cards/card_teacher this}}
+      </div>
     {{/each}}
   </div>
 </div>

@@ -272,7 +272,7 @@ export function initCoruselDefoult(selectCorusel){
   mediaMobile(mediaQueryMobileMax)
 }
 
-export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCards, selectFilterBtnList){
+export function initCoruselFromFilter(selectSlide, selectFilter, selectFilterCards, selectFilterBtnList){
   let homeCourseCorusel = document.querySelector(selectSlide)
   if(homeCourseCorusel){
 
@@ -314,7 +314,7 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
   //filter
 
   let filterBtnList = document.querySelectorAll(selectFilterBtnList)
-  let filterCardList = document.querySelectorAll(selectFilerCards)
+  let filterCardList = document.querySelectorAll(selectFilterCards)
   let filter = document.querySelector(selectFilter)
   let filterDate = 'all'
   let isFilterWidthBig = (filter.clientWidth > filter.parentNode.clientWidth)
@@ -474,9 +474,11 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilerCard
               })
             }else{
               filterCardList.forEach(item => {
-                if(item.dataset.filter === targetFilter){
+                if( (item.dataset.filter.indexOf(targetFilter) !== -1) &&
+                    (item.dataset.filter.indexOf(targetFilter) === 0 || 
+                    item.dataset.filter.indexOf(' ' + targetFilter) !== -1)
+                ){
                   item.parentNode.style.display = ''
-
                   if(item.swiperWrap){
                     homeCourseCorusel.appendSlide (item.swiperWrap )
                   }
@@ -575,7 +577,7 @@ export function postData(url, data) {
     });
 }
 
-export function showPopup (leadingInnerText){
+export function showPopup (showText){
 
   let nodeApplicationPopup = document.createElement('div')
   nodeApplicationPopup.classList.add('application-popup')
@@ -590,7 +592,7 @@ export function showPopup (leadingInnerText){
   document.body.append(nodeApplicationPopup);
   
 
-  nodeApplicationPopup.querySelector('span').innerText = leadingInnerText
+  nodeApplicationPopup.querySelector('span').innerText = showText
   nodeApplicationPopup.classList.add('visible');
 
   const buttonClosePopup =  nodeApplicationPopup.querySelector('button')
