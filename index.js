@@ -95,14 +95,33 @@ app.use('/error', require('./routes/error'));
 //Error routes
 
 app.use(function(req, res, next){
-  res.status(404);
-  res.redirect('/error?code=404');
+  res
+    .status(404)
+    .render('error', {
+      error: {
+        code: 404,
+        text: "Страница не найдена",
+        description: "Страница, на которую вы перешли, не существует. <br>Возможно она была перенесена или ещё не создана.",
+      },
+      title: 'Ошибка',
+      headerTitle: 'Кажется что-то пошло не так',
+      script: 'error.js',
+    });
 });
 
 app.use(function(err, req, res, next) {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
-  res.redirect('/error?code=500');
+  res
+    .status(500)
+    .render('error', {
+      error: {
+        code: 500,
+        text:"Ошибка сервера",
+        description:"На сервере произошла непредвиденная ошибка. <br>Повторите запрос позже, если ошибка повторится сообщете об этом по почте. <br> email: begisheva@gpntbsib.ru",
+      },
+      title: 'Ошибка',
+      headerTitle: 'Кажется что-то пошло не так',
+      script: 'error.js',
+    });
 });
 
 const PORT = 3002;
