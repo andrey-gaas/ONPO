@@ -7145,6 +7145,9 @@ section.home_info .container .organizators .organizator_list .organizator_item {
     margin-bottom: 0;
   }
 }
+section.home_info .container .organizators .organizator_list .organizator_item .card_organizer {
+  height: 100%;
+}
 section.home_info .container .contact > .title {
   margin-bottom: 20px;
 }
