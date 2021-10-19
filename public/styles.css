@@ -3930,21 +3930,21 @@ footer.footer .social__list .social_item:last-child {
 }
 footer.footer .social__list .social_item > a {
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 25px;
+  height: 25px;
   text-decoration: none;
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
 }
-footer.footer .social__list .social_item > a.fb {
-  background-image: url(image/icons/fb_white.svg);
+footer.footer .social__list .social_item > a.ytb {
+  background-image: url(image/icons/ytb.svg);
 }
 footer.footer .social__list .social_item > a.in {
-  background-image: url(image/icons/in_white.svg);
+  background-image: url(image/icons/in.svg);
 }
-footer.footer .social__list .social_item > a.tw {
-  background-image: url(image/icons/tw_white.svg);
+footer.footer .social__list .social_item > a.vk {
+  background-image: url(image/icons/vk.svg);
 }
 footer.footer .title_ogr {
   font-size: 14px;

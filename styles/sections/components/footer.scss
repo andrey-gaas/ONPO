@@ -56,21 +56,20 @@ footer.footer{
 
       &>a{
         display: block;
-        width: 16px;
-        height: 16px;
+        width: 25px;
+        height: 25px;
         text-decoration: none;
         background-size: contain;
         background-position: center center;
         background-repeat: no-repeat;
-        
-        &.fb{
-          background-image: url(image/icons/fb_white.svg);
+        &.ytb{
+          background-image: url(image/icons/ytb.svg);
         }
         &.in{
-          background-image: url(image/icons/in_white.svg);
+          background-image: url(image/icons/in.svg);
         }
-        &.tw{
-          background-image: url(image/icons/tw_white.svg);
+        &.vk{
+          background-image: url(image/icons/vk.svg);
         }
       }
       
