@@ -38,9 +38,9 @@ window.onload = function() {
         heightList.push(elem.getBoundingClientRect().top + pageYOffset)
         heightList.push(elem.getBoundingClientRect().bottom + pageYOffset)
       } )
-
       e.preventDefault()
       let scrollTo = (document.querySelector(e.target.hash)).getBoundingClientRect().top + pageYOffset - (window.innerHeight*0.3)
+      
       window.scrollTo({
         top: scrollTo,
         behavior: "smooth"
@@ -51,6 +51,7 @@ window.onload = function() {
   //toggle document list
 
   let listsDocuments = document.querySelectorAll('.document_list')
+  listsDocuments[0].classList.add('active')
   let btnToggleListDocumentContainer = document.querySelector('.buttons_toggle_list')
 
   btnToggleListDocumentContainer.onclick = e => {
