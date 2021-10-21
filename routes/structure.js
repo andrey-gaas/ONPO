@@ -1,17 +1,16 @@
-//const { structure } = require('./data');
 const PagesApi = require('../services/Pages');
 
 const { Router } = require('express'); 
 const router = Router();
 
-console.log(PagesApi.getOne);
-
 router.get('/', async (req,  res) => {
 	
 	try {
 		const structure = await PagesApi.getOne('structure')
+		const { organizators } = await PagesApi.getOne("home")
 		res.render('structure', {
 			structure,
+			organizators,
 			title: 'Отдел непрерывного профессионального образования',
 			script: 'structure.js',
 			headerTitle: 'Cведения о структурном подразделении',
