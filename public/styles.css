@@ -574,6 +574,600 @@ h2.home_subtitle {
     align-self: flex-end;
   }
 }
+#page_graduate .head > .container > .title {
+  margin-top: 40px;
+  font-size: 22px;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .head > .container > .title {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .head > .container > .title {
+    font-size: 58px;
+  }
+}
+#page_graduate .head .description {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 160%;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .head .description {
+    width: 423px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .head .description {
+    margin-top: 40px;
+    width: 570px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .head .description {
+    width: 823px;
+    font-size: 28px;
+  }
+}
+#page_graduate .head .organizers {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .head .organizers {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .head .organizers {
+    flex-wrap: nowrap;
+    margin-top: 40px;
+  }
+}
+#page_graduate .head .organizers .card_organizer {
+  margin-top: 20px;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .head .organizers .card_organizer {
+    width: 334px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .head .organizers .card_organizer {
+    width: 275px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .head .organizers .card_organizer {
+    width: 330px;
+  }
+}
+#page_graduate .photo-background {
+  margin-top: 40px;
+  height: 200px;
+  background-image: url(/image/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .photo-background {
+    margin-top: 80px;
+    height: 316px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .photo-background {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .photo-background {
+    height: 600px;
+  }
+}
+#page_graduate .information {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .information {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 80px;
+  }
+}
+#page_graduate .information .links-container {
+  display: none;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .information .links-container {
+    display: block;
+    position: sticky;
+    top: 130px;
+    width: 260px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .information .links-container {
+    width: 310px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .information .links-container {
+    width: 380px;
+  }
+}
+#page_graduate .information .links-container li {
+  position: relative;
+  padding-left: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .information .links-container li {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .information .links-container li {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+}
+#page_graduate .information .links-container li:first-child {
+  margin-top: 0;
+}
+#page_graduate .information .links-container li::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #FF165D;
+  border-radius: 50%;
+}
+#page_graduate .information .links-container li.active a {
+  font-weight: bold;
+}
+#page_graduate .information .links-container a {
+  text-decoration: none;
+  color: #252A34;
+  display: block;
+}
+#page_graduate .information .info-container {
+  margin-left: auto;
+  width: 100%;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .information .info-container {
+    width: 405px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .information .info-container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .information .info-container {
+    width: 946px;
+  }
+}
+#page_graduate .information .info-container h2.title {
+  margin-top: 100px;
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+#page_graduate .information .info-container h2.title:first-child {
+  margin-top: 0;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .information .info-container h2.title {
+    margin-top: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .information .info-container h2.title {
+    margin-top: 160px;
+    font-size: 28px;
+  }
+}
+#page_graduate .information .info-container .paper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .information .info-container .paper {
+    padding: 20px 10px;
+    border-radius: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .information .info-container .paper {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .information .info-container .paper {
+    margin-top: 40px;
+    padding: 40px;
+  }
+}
+#page_graduate .information .info-container .paper a {
+  color: #2F80ED;
+  text-decoration: none;
+  display: inline-block;
+}
+#page_graduate .information .info-container .paper .linck_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+#page_graduate .information .info-container .paper .document_list {
+  display: none;
+}
+#page_graduate .information .info-container .paper .document_list.active {
+  display: block;
+}
+#page_graduate .information .info-container .text {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 160%;
+}
+#page_graduate .information .info-container .text:first-child {
+  margin-top: 0;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .information .info-container .text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .information .info-container .text {
+    font-size: 16px;
+  }
+}
+#page_graduate .information .info-container .text a {
+  color: #2F80ED;
+  text-decoration: none;
+}
+#page_graduate .information .info-container .subtitle {
+  margin-top: 40px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .information .info-container .subtitle {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .information .info-container .subtitle {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .information .info-container .subtitle {
+    margin-top: 80px;
+    font-size: 28px;
+  }
+}
+#page_graduate .information .info-container .subtitle:first-child {
+  margin-top: 0;
+}
+#page_graduate .information .info-container .list {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+#page_graduate .information .info-container .list:first-child {
+  margin-top: 0;
+}
+#page_graduate .information .info-container .list li {
+  margin-top: 10px;
+  font-size: 12px;
+  list-style-type: disc;
+  color: #2F80ED;
+}
+#page_graduate .information .info-container .list li:first-child {
+  margin-top: 0;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .information .info-container .list li {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .information .info-container .list li {
+    font-size: 16px;
+  }
+}
+#page_graduate .information .info-container .list li span {
+  color: #252A34;
+  font-weight: bold;
+}
+#page_graduate .information .info-container .buttons-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .information .info-container .buttons-container {
+    flex-direction: row;
+  }
+}
+#page_graduate .information .info-container .buttons-container span {
+  font-size: 12px;
+  font-weight: bold;
+}
+#page_graduate .information .info-container .buttons-container .button {
+  margin-top: 20px;
+}
+#page_graduate .information .info-container .buttons-container .button:first-child {
+  margin-top: 0;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .information .info-container .buttons-container .button {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .information .info-container .buttons-container .button {
+    margin-top: 0;
+    margin-left: 40px;
+    width: 330px;
+  }
+  #page_graduate .information .info-container .buttons-container .button:first-child {
+    margin-left: 0;
+  }
+}
+#page_graduate .information .info-container .right-button {
+  align-self: flex-end;
+  margin-top: 40px;
+  width: 162px;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .information .info-container .right-button {
+    width: 240px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .information .info-container .right-button {
+    align-self: flex-start;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .information .info-container .right-button {
+    align-self: flex-end;
+    margin-top: 60px;
+  }
+}
+#page_graduate .contacts {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .contacts {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .contacts {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
+}
+#page_graduate .contacts h2.title {
+  font-size: 22px;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .contacts h2.title {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .contacts h2.title {
+    font-size: 38px;
+  }
+}
+#page_graduate .contacts .grid {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .contacts .grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+#page_graduate .contacts .work-schedule {
+  margin-top: 20px;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .contacts .work-schedule {
+    margin-top: 40px;
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .contacts .work-schedule {
+    width: 450px;
+  }
+}
+#page_graduate .contacts h3.title {
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .contacts h3.title {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .contacts h3.title {
+    font-size: 28px;
+  }
+}
+#page_graduate .contacts .address {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 160%;
+  font-style: normal;
+}
+#page_graduate .contacts .address::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 17px;
+  background-image: url(image/icons/geo_accent.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .contacts .address {
+    margin-top: 40px;
+  }
+}
+#page_graduate .contacts .schedule {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+#page_graduate .contacts .schedule::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 17px;
+  background-image: url(image/icons/clock_accent.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#page_graduate .contacts .schedule div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 160%;
+}
+#page_graduate .contacts .schedule span {
+  width: 125px;
+}
+#page_graduate .contacts .schedule span.red {
+  color: red;
+}
+#page_graduate .contacts .phone {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+#page_graduate .contacts .phone::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 17px;
+  background-image: url(image/icons/phone.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#page_graduate .contacts .phone a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #252A34;
+}
+#page_graduate .contacts .email {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 30px;
+}
+#page_graduate .contacts .email::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 17px;
+  background-image: url(image/icons/email.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#page_graduate .contacts .email a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #252A34;
+}
+#page_graduate .contacts .map {
+  margin-top: 20px;
+  min-height: 250px;
+  background-image: url(/image/address-map.png);
+  background-repeat: no-repeat;
+  background-position: -145px -60px;
+  background-size: 150%;
+  border-radius: 15px;
+}
+@media screen and (min-width: 728px) {
+  #page_graduate .contacts .map {
+    width: 334px;
+    background-size: 200%;
+    background-position: -230px 15px;
+    border-radius: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #page_graduate .contacts .map {
+    width: 668px;
+    background-size: 120%;
+    background-position: -120px -42px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  #page_graduate .contacts .map {
+    width: 823px;
+    background-size: 100%;
+    background-position: 0px -8px;
+  }
+}
 
 #courses .margin_bottom {
   margin-bottom: 100px;

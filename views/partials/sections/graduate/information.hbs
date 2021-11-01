@@ -1,0 +1,55 @@
+<section class="information container">
+  <div class="links-container">
+    <ul>
+      {{#each this.navMenu}}
+        <li class="{{#if this.active}}active{{/if}}">
+          <a href="{{this.href}}" target="_blank">
+            {{this.title}}
+          </a>
+        </li>
+      {{/each}}
+      
+    </ul>
+  </div>
+  <div class="info-container">
+    {{#each this.papers}}
+      <h2 class="title" id="{{this.href}}">
+        {{this.title}}
+      </h2>
+      <div class="paper">
+        {{#each this.paper}}
+          {{#if this.typeText}}
+            <p class="text">
+              {{toHTML this.text}}
+            </p>
+          {{/if}}
+          {{#if this.typeSubtitle}}
+            <h3 class="subtitle">{{this.text}}</h3>
+          {{/if}}
+          {{#if this.typeHtml}}
+            {{toHTML this.text}}
+          {{/if}}
+          {{#if this.typeLinks}}
+            <ul {{#if this.dataKey}} data-key="{{this.dataKey}}" class="list document_list" {{else}} class="list" {{/if}} >
+              {{#if this.title}}
+                <span>
+                  <b>{{this.title}}</b>
+                </span>
+              {{/if}}
+              {{#each this.linksList}}
+                <li>
+                  <a {{#if this.href}} href="{{this.href}}" {{/if}} target="_blank">
+                    {{this.text}}
+                  </a>
+                  {{#if this.subHtml}}
+                    {{toHTML this.subHtml}}
+                  {{/if}}
+                </li>
+              {{/each}}
+            </ul>
+          {{/if}}
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
+</section>

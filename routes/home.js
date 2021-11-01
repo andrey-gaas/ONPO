@@ -10,8 +10,7 @@ router.get('/', async (req, res) => {
 
     const direction = [{
       title: `Аспирантура<br/>гпнтб со ран`,
-      //href: '/graduate',
-      href: '',
+      href: '/graduate',
       img: 'direction3.png',
     },{
       title: `Повышение квалификации`,

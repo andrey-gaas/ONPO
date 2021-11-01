@@ -1,21 +1,19 @@
 import { initBtnScrollToTop, initDropMenu } from "/scripts/utils.js"
 
 window.onload = function() {
-  
   initDropMenu('#hide_menu', '#show_menu', '#drop_menu_mobile');
 
   initBtnScrollToTop('#scrollToTop');
 
   //nav menu
-
-  let menu = document.querySelector('nav.navigation')
-  let sectionList = document.querySelectorAll('section.content-container')
+  let menu = document.querySelector('.links-container') 
+  let sectionList = document.querySelectorAll('div.paper')
   let heightList = []
   sectionList.forEach( elem => {
     heightList.push(elem.getBoundingClientRect().top + pageYOffset)
     heightList.push(elem.getBoundingClientRect().bottom + pageYOffset)
   } )
-  
+
   document.onscroll = function(){
     for(let i = 0; i < heightList.length / 2; i++){
       if( heightList[i*2] < (window.pageYOffset + window.innerHeight/2) && 
@@ -30,19 +28,19 @@ window.onload = function() {
     }
   }
 
-  //scroll menu
+   //scroll menu
 
   menu.onclick = e =>{
-    if(e.target.nodeName === 'A'){
+    if(e.target.nodeName === 'A' && e.target.hash && e.target.hash[0] === '#'){
 
       heightList = []
       sectionList.forEach( elem => {
         heightList.push(elem.getBoundingClientRect().top + pageYOffset)
         heightList.push(elem.getBoundingClientRect().bottom + pageYOffset)
       } )
-
       e.preventDefault()
       let scrollTo = (document.querySelector(e.target.hash)).getBoundingClientRect().top + pageYOffset - (window.innerHeight*0.3)
+      
       window.scrollTo({
         top: scrollTo,
         behavior: "smooth"
