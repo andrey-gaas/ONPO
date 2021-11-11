@@ -1,4 +1,4 @@
-import { initReviewsCommentShow, initBtnScrollToTop, initDropMenu, initCoruselFromFilter, initFormSelect } from "/scripts/utils.js"
+import { showGlass, initReviewsCommentShow, initBtnScrollToTop, initDropMenu, initCoruselFromFilter, initFormSelect } from "/scripts/utils.js"
 
 window.onload = function() {
   initDropMenu('#hide_menu', '#show_menu', '#drop_menu_mobile');
@@ -11,4 +11,5 @@ window.onload = function() {
 
   initReviewsCommentShow('.reviews-list>.list')
 
+  showGlass()
 };

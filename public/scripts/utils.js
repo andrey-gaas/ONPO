@@ -82,10 +82,18 @@ export function initDropMenu (selectCloseBtn, selectOpenBtn, selectMenuMobile){
 
 export function initCoruselDefoult(selectCorusel){
 
-  let homeDeffCorusel = new Swiper(selectCorusel, {
+  window.Swiper = window.Swiper ? window.Swiper : {}
+
+  window.Swiper.setting = {
+    mobile:{slidesPerView: 1},
+    tablet:{slidesPerView: 2},
+    laptop:{slidesPerView: 3},
+  }
+
+  window.Swiper.homeDeffCorusel = new Swiper(selectCorusel, {
     // Optional parameters
     direction: "horizontal",
-    slidesPerView: 1,
+    slidesPerView: window.Swiper.setting.mobile.slidesPerView,
     loop: true,
 
     // If we need pagination
@@ -114,6 +122,7 @@ export function initCoruselDefoult(selectCorusel){
       el: ".swiper-scrollbar",
     },
   })
+  let homeDeffCorusel = window.Swiper.homeDeffCorusel
 
 
   //media
@@ -132,10 +141,12 @@ export function initCoruselDefoult(selectCorusel){
       }else{
         homeDeffCorusel.destroy(true, true)
       }
-      homeDeffCorusel = new Swiper(selectCorusel, {
+
+      window.Swiper = window.Swiper ? window.Swiper : {}
+      window.Swiper.homeDeffCorusel = new Swiper(selectCorusel, {
         // Optional parameters
         direction: "horizontal",
-        slidesPerView: 1,
+        slidesPerView: window.Swiper.setting.mobile.slidesPerView,
         loop: true,
     
         // If we need pagination
@@ -165,6 +176,7 @@ export function initCoruselDefoult(selectCorusel){
           el: ".swiper-scrollbar",
         },
       })
+      homeDeffCorusel = window.Swiper.homeDeffCorusel
     }
   }
 
@@ -177,10 +189,12 @@ export function initCoruselDefoult(selectCorusel){
       }else{
         homeDeffCorusel.destroy(true, true)
       }
-      homeDeffCorusel = new Swiper(selectCorusel, {
+
+      window.Swiper = window.Swiper ? window.Swiper : {}
+      window.Swiper.homeDeffCorusel = new Swiper(selectCorusel, {
         // Optional parameters
         direction: "horizontal",
-        slidesPerView: 2,
+        slidesPerView: window.Swiper.setting.tablet.slidesPerView,
         loop: true,
     
         // If we need pagination
@@ -210,6 +224,7 @@ export function initCoruselDefoult(selectCorusel){
           el: ".swiper-scrollbar",
         },
       })
+      homeDeffCorusel = window.Swiper.homeDeffCorusel
     }
   }
 
@@ -222,10 +237,12 @@ export function initCoruselDefoult(selectCorusel){
       }else{
         homeDeffCorusel.destroy(true, true)
       }
-      homeDeffCorusel = new Swiper(selectCorusel, {
+
+      window.Swiper = window.Swiper ? window.Swiper : {}
+      window.Swiper.homeDeffCorusel = new Swiper(selectCorusel, {
         // Optional parameters
         direction: "horizontal",
-        slidesPerView: 3,
+        slidesPerView: window.Swiper.setting.laptop.slidesPerView,
         loop: true,
     
         // If we need pagination
@@ -255,6 +272,8 @@ export function initCoruselDefoult(selectCorusel){
           el: ".swiper-scrollbar",
         },
       })
+      homeDeffCorusel = window.Swiper.homeDeffCorusel
+
     }
   }
 
@@ -276,6 +295,8 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilterCar
   let homeCourseCorusel = document.querySelector(selectSlide)
   if(homeCourseCorusel){
 
+    //window.Swiper = window.Swiper ? window.Swiper : {}
+    //window.Swiper.
     homeCourseCorusel = new Swiper(selectSlide, {
       // Optional parameters
       direction: "horizontal",
@@ -309,6 +330,7 @@ export function initCoruselFromFilter(selectSlide, selectFilter, selectFilterCar
         el: ".swiper-scrollbar",
       },
     })
+    //homeCourseCorusel = window.Swiper.homeCourseCorusel
   }
 
   //filter
@@ -636,3 +658,105 @@ export function sendingAnAplication(nodeId){
     // result.then(res => console.log(res))
   }
 }
+
+export function showGlass(selectCorusel){
+  let btnWrap = document.querySelector('.button-icon.glass')
+  let btnColorBW = document.querySelector('.glass_btn.color_bw')
+  let btnColorWB = document.querySelector('.glass_btn.color_wb')
+  let btnColorDeff = document.querySelector('.glass_btn.color_deff')
+  let btnText150 = document.querySelector('.glass_btn.text_150')
+  let btnTextNorm = document.querySelector('.glass_btn.text_norm')
+  let isX150 = false
+  btnWrap.onclick= _=>{
+    document.querySelector('.glass__wrap').classList.toggle('active')
+  }
+  btnColorBW.onclick= _=>{
+    document.body.classList.remove('white_black')
+    document.body.classList.toggle('black_white')
+  }
+
+  btnColorWB.onclick= _=>{
+    document.body.classList.remove('black_white')
+    document.body.classList.toggle('white_black')
+  }
+
+  btnColorDeff.onclick= _=>{
+    document.body.classList.remove('white_black')
+    document.body.classList.remove('black_white')
+  }
+
+  let textFunction = _=>{
+    if(isX150){
+      window.Swiper.setting.laptop.slidesPerView = 3
+      isX150 = false
+      if(selectCorusel){
+        reRenderDeffCorusel(selectCorusel, {deff:3,tab:2,mob:1})
+      }
+    }else{
+      window.Swiper.setting.laptop.slidesPerView = 2
+      isX150 = true
+      if(selectCorusel){
+        reRenderDeffCorusel(selectCorusel, {deff:2,tab:2,mob:1} )
+      }
+    }
+  }
+
+  btnText150.onclick =_=>{
+    document.body.classList.toggle('x_150')
+    textFunction()
+  } 
+
+  btnTextNorm.onclick= _=>{
+    isX150 = true
+    document.body.classList.remove('x_150')
+    textFunction()
+  }
+  function reRenderDeffCorusel(selectCorusel, setting){
+    if(Array.isArray( window.Swiper.homeDeffCorusel )){
+      for(let i = 0; i <  window.Swiper.homeDeffCorusel.length; i++){
+        window.Swiper.homeDeffCorusel[i].destroy(true, true)
+      }
+    }else{
+      window.Swiper.homeDeffCorusel.destroy(true, true)
+    }
+  
+    let slidesPerView = setting.deff
+    if( document.body.offsetWidth < 728 ){ slidesPerView = setting.mob }
+    if( document.body.offsetWidth < 1200 ){ slidesPerView = setting.tab }
+    console.log(slidesPerView, setting);
+    window.Swiper.homeDeffCorusel = new Swiper(selectCorusel, {
+      // Optional parameters
+      direction: "horizontal",
+      slidesPerView,
+      loop: true,
+  
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+        type:'custom',
+        renderCustom: (swiper, current, total) => {
+  
+          // let prev = ((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) 
+          // let next = (current+1)%(total) === 0 ? total : (current+1)%(total)
+          return `<div class="paggination_number">
+                    <span class="paggination_number_prev">${((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) }</span>
+                    <span class="paggination_number_currnet">${current}</span>
+                    <span class="paggination_number_next">${(current+1)%(total) === 0 ? total : (current+1)%(total)}</span>
+                  </div>`
+        },
+      },
+  
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  
+      // And if we need scrollbar 
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    })
+  }
+}
+

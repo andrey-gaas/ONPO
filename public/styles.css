@@ -48,6 +48,455 @@ body.flex {
   flex-direction: column;
   justify-content: space-between;
 }
+body.black_white {
+  background-color: #fff !important;
+}
+body.black_white * {
+  filter: grayscale(1) !important;
+  box-shadow: none !important;
+}
+body.black_white * a {
+  text-decoration: underline !important;
+}
+body.black_white header {
+  border-bottom: 1px solid #000;
+}
+body.black_white section.application-form .container form .form_input.active > .wrap_castom_scrollbar {
+  position: relative;
+}
+body.black_white .slide_course .button {
+  border: 1px solid white;
+}
+body.black_white article.card,
+body.black_white article.card_format,
+body.black_white article.card_teacher,
+body.black_white article.card_review,
+body.black_white .component_header .drop_menu_mobile,
+body.black_white article.card_organizer {
+  border: 1px solid black;
+}
+@media screen and (min-width: 1200px) {
+  body.x_150 article.card,
+body.x_150 article.card_format,
+body.x_150 article.card_teacher,
+body.x_150 article.card_review,
+body.x_150 article.card_organizer,
+body.x_150 #structure .head .organizers .card_organizer,
+body.x_150 #courses .list-container .list .card_wrapper,
+body.x_150 #teachers .teachers-list .card_wrapper .card_teacher,
+body.x_150 #reviews .reviews-list .card_wrapper .card_review,
+body.x_150 #page_catalog .list .card_wrapper {
+    width: 570px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  body.x_150 article.card,
+body.x_150 article.card_format,
+body.x_150 article.card_teacher,
+body.x_150 article.card_review,
+body.x_150 article.card_organizer,
+body.x_150 #structure .head .organizers .card_organizer,
+body.x_150 #courses .list-container .list .card_wrapper,
+body.x_150 #teachers .teachers-list .card_wrapper .card_teacher,
+body.x_150 #reviews .reviews-list .card_wrapper .card_review,
+body.x_150 #page_catalog .list .card_wrapper {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body.x_150 section.home_info .container .contact .wrap_mab_date {
+    max-height: 1030px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  body.x_150 section.home_info .container .contact .wrap_mab_date {
+    max-height: 1050px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body.x_150 #structure .head .organizers {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1520px) {
+  body.x_150 #structure .head .organizers {
+    flex-wrap: wrap;
+  }
+}
+body.x_150 .component_header .drop_menu_mobile {
+  width: 470px;
+}
+@media screen and (min-width: 1200px) {
+  body.x_150 .component_header .drop_menu_mobile {
+    width: 470px;
+  }
+}
+@media screen and (min-width: 1520px) {
+  body.x_150 .component_header .drop_menu_mobile {
+    width: 470px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body.x_150 section.home_info .container .contact .wrap_mab_date .date {
+    max-width: 453px;
+    width: 453px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body.x_150 section.home_info .container .contact .wrap_mab_date .date .time_work .time_work_item .time {
+    width: 160px;
+  }
+}
+body.x_150 section.home_info .container .contact .wrap_mab_date {
+  height: unset;
+}
+body.x_150 section.section_home_infographics .map .article_map .article__map_top .title_map {
+  font-size: 21px !important;
+}
+body.x_150 h1.home_title, body.x_150 section.section_main .title {
+  font-size: 30px !important;
+}
+@media screen and (min-width: 728px) {
+  body.x_150 h1.home_title, body.x_150 section.section_main .title {
+    font-size: 50px !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body.x_150 h1.home_title, body.x_150 section.section_main .title {
+    font-size: 50px !important;
+  }
+}
+@media screen and (min-width: 1520px) {
+  body.x_150 h1.home_title, body.x_150 section.section_main .title {
+    font-size: 64px !important;
+  }
+}
+body.x_150 .button.size_norm {
+  width: 250px !important;
+}
+body.x_150 h2.home_subtitle,
+body.x_150 .title_map,
+body.x_150 section.section_home_infographics .map .article_map .article__map_top .title_map_desctop,
+body.x_150 .slide_course .top .course .title,
+body.x_150 footer.footer .title {
+  font-size: 25px !important;
+}
+@media screen and (min-width: 728px) {
+  body.x_150 h2.home_subtitle,
+body.x_150 .title_map,
+body.x_150 section.section_home_infographics .map .article_map .article__map_top .title_map_desctop,
+body.x_150 .slide_course .top .course .title,
+body.x_150 footer.footer .title {
+    font-size: 38px !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body.x_150 h2.home_subtitle,
+body.x_150 .title_map,
+body.x_150 section.section_home_infographics .map .article_map .article__map_top .title_map_desctop,
+body.x_150 .slide_course .top .course .title,
+body.x_150 footer.footer .title {
+    font-size: 47px !important;
+  }
+}
+@media screen and (min-width: 1520px) {
+  body.x_150 h2.home_subtitle,
+body.x_150 .title_map,
+body.x_150 section.section_home_infographics .map .article_map .article__map_top .title_map_desctop,
+body.x_150 .slide_course .top .course .title,
+body.x_150 footer.footer .title {
+    font-size: 50px !important;
+  }
+}
+body.x_150 .card_infogaraphics .title {
+  line-height: 1.3 !important;
+  font-size: 33px !important;
+}
+@media screen and (min-width: 728px) {
+  body.x_150 .card_infogaraphics .title {
+    font-size: 28px !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body.x_150 .card_infogaraphics .title {
+    font-size: 37px !important;
+  }
+}
+@media screen and (min-width: 1520px) {
+  body.x_150 .card_infogaraphics .title {
+    font-size: 42px !important;
+  }
+}
+body.x_150 article.card_dirction .title {
+  line-height: 1.3 !important;
+  font-size: 22px !important;
+}
+@media screen and (min-width: 728px) {
+  body.x_150 article.card_dirction .title {
+    font-size: 26px !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body.x_150 article.card_dirction .title {
+    font-size: 28px !important;
+  }
+}
+@media screen and (min-width: 1520px) {
+  body.x_150 article.card_dirction .title {
+    font-size: 36px !important;
+  }
+}
+body.x_150 .accordion_list .accordion_item .top .title,
+body.x_150 section.section_home_infographics .map .article_map .place_list .place_item,
+body.x_150 .component_header .menu a,
+body.x_150 .slide_course .top .course .description,
+body.x_150 .slide_course .top .course .date > span,
+body.x_150 .button,
+body.x_150 #structure .information .links-container li,
+body.x_150 #structure .information .info-container .text,
+body.x_150 #structure .information .info-container .paper a,
+body.x_150 #structure .information .info-container .list,
+body.x_150 #structure .information .info-container .buttons-container span,
+body.x_150 #structure .information .info-container .list li span,
+body.x_150 #structure .contacts .address,
+body.x_150 #structure .contacts .schedule div,
+body.x_150 #structure .contacts .phone a,
+body.x_150 #structure .contacts .email a,
+body.x_150 #page_graduate .information .links-container li,
+body.x_150 #page_graduate .information .info-container .text,
+body.x_150 #page_graduate .information .info-container .list,
+body.x_150 #page_graduate .information .info-container .list li,
+body.x_150 footer.footer .title_ogr,
+body.x_150 section.application-form .container form .agreement,
+body.x_150 .filter .slider .filter_list .filter_item,
+body.x_150 article.card_format .left .title,
+body.x_150 article.card .description > .title,
+body.x_150 article.card .description .info > .item,
+body.x_150 .accordion_list .accordion_item .text_wrap .text,
+body.x_150 article.card_teacher .person .full_name,
+body.x_150 article.card_teacher .education_list .education_item,
+body.x_150 article.card_teacher .course_list .course_item,
+body.x_150 article.card_review .person .full_name,
+body.x_150 article.card_review .course .course_item,
+body.x_150 article.card_review .review .wpra_text .review_text,
+body.x_150 article.card_review .review .wrapper_togle_show_review .toogle_show_review,
+body.x_150 article.card_review .review_status,
+body.x_150 section.application-form .container form .form_input input, body.x_150 section.application-form .container form .form_input .select_input,
+body.x_150 article.card .description > .review,
+body.x_150 section.section_home_faq > .container > .direction .button__direction,
+body.x_150 article.card_organizer .person .name,
+body.x_150 article.card_organizer .person .education,
+body.x_150 article.card_organizer .person .position,
+body.x_150 article.card_organizer .contact,
+body.x_150 section.home_info .container .contact .wrap_mab_date > .subtitle,
+body.x_150 section.home_info .container .contact .wrap_mab_date .date,
+body.x_150 .component_header .drop_menu_mobile > .container .linc_list a.linc,
+body.x_150 section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label,
+body.x_150 article.card .header > .type {
+  line-height: 1.6 !important;
+  font-size: 21px !important;
+}
+@media screen and (min-width: 728px) {
+  body.x_150 .accordion_list .accordion_item .top .title,
+body.x_150 section.section_home_infographics .map .article_map .place_list .place_item,
+body.x_150 .component_header .menu a,
+body.x_150 .slide_course .top .course .description,
+body.x_150 .slide_course .top .course .date > span,
+body.x_150 .button,
+body.x_150 #structure .information .links-container li,
+body.x_150 #structure .information .info-container .text,
+body.x_150 #structure .information .info-container .paper a,
+body.x_150 #structure .information .info-container .list,
+body.x_150 #structure .information .info-container .buttons-container span,
+body.x_150 #structure .information .info-container .list li span,
+body.x_150 #structure .contacts .address,
+body.x_150 #structure .contacts .schedule div,
+body.x_150 #structure .contacts .phone a,
+body.x_150 #structure .contacts .email a,
+body.x_150 #page_graduate .information .links-container li,
+body.x_150 #page_graduate .information .info-container .text,
+body.x_150 #page_graduate .information .info-container .list,
+body.x_150 #page_graduate .information .info-container .list li,
+body.x_150 footer.footer .title_ogr,
+body.x_150 section.application-form .container form .agreement,
+body.x_150 .filter .slider .filter_list .filter_item,
+body.x_150 article.card_format .left .title,
+body.x_150 article.card .description > .title,
+body.x_150 article.card .description .info > .item,
+body.x_150 .accordion_list .accordion_item .text_wrap .text,
+body.x_150 article.card_teacher .person .full_name,
+body.x_150 article.card_teacher .education_list .education_item,
+body.x_150 article.card_teacher .course_list .course_item,
+body.x_150 article.card_review .person .full_name,
+body.x_150 article.card_review .course .course_item,
+body.x_150 article.card_review .review .wpra_text .review_text,
+body.x_150 article.card_review .review .wrapper_togle_show_review .toogle_show_review,
+body.x_150 article.card_review .review_status,
+body.x_150 section.application-form .container form .form_input input, body.x_150 section.application-form .container form .form_input .select_input,
+body.x_150 article.card .description > .review,
+body.x_150 section.section_home_faq > .container > .direction .button__direction,
+body.x_150 article.card_organizer .person .name,
+body.x_150 article.card_organizer .person .education,
+body.x_150 article.card_organizer .person .position,
+body.x_150 article.card_organizer .contact,
+body.x_150 section.home_info .container .contact .wrap_mab_date > .subtitle,
+body.x_150 section.home_info .container .contact .wrap_mab_date .date,
+body.x_150 .component_header .drop_menu_mobile > .container .linc_list a.linc,
+body.x_150 section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label,
+body.x_150 article.card .header > .type {
+    font-size: 21px !important;
+  }
+}
+@media screen and (min-width: 728px) {
+  body.x_150 .accordion_list .accordion_item .top .title,
+body.x_150 section.section_home_infographics .map .article_map .place_list .place_item,
+body.x_150 .component_header .menu a,
+body.x_150 .slide_course .top .course .description,
+body.x_150 .slide_course .top .course .date > span,
+body.x_150 .button,
+body.x_150 #structure .information .links-container li,
+body.x_150 #structure .information .info-container .text,
+body.x_150 #structure .information .info-container .paper a,
+body.x_150 #structure .information .info-container .list,
+body.x_150 #structure .information .info-container .buttons-container span,
+body.x_150 #structure .information .info-container .list li span,
+body.x_150 #structure .contacts .address,
+body.x_150 #structure .contacts .schedule div,
+body.x_150 #structure .contacts .phone a,
+body.x_150 #structure .contacts .email a,
+body.x_150 #page_graduate .information .links-container li,
+body.x_150 #page_graduate .information .info-container .text,
+body.x_150 #page_graduate .information .info-container .list,
+body.x_150 #page_graduate .information .info-container .list li,
+body.x_150 footer.footer .title_ogr,
+body.x_150 section.application-form .container form .agreement,
+body.x_150 .filter .slider .filter_list .filter_item,
+body.x_150 article.card_format .left .title,
+body.x_150 article.card .description > .title,
+body.x_150 article.card .description .info > .item,
+body.x_150 .accordion_list .accordion_item .text_wrap .text,
+body.x_150 article.card_teacher .person .full_name,
+body.x_150 article.card_teacher .education_list .education_item,
+body.x_150 article.card_teacher .course_list .course_item,
+body.x_150 article.card_review .person .full_name,
+body.x_150 article.card_review .course .course_item,
+body.x_150 article.card_review .review .wpra_text .review_text,
+body.x_150 article.card_review .review .wrapper_togle_show_review .toogle_show_review,
+body.x_150 article.card_review .review_status,
+body.x_150 section.application-form .container form .form_input input, body.x_150 section.application-form .container form .form_input .select_input,
+body.x_150 article.card .description > .review,
+body.x_150 section.section_home_faq > .container > .direction .button__direction,
+body.x_150 article.card_organizer .person .name,
+body.x_150 article.card_organizer .person .education,
+body.x_150 article.card_organizer .person .position,
+body.x_150 article.card_organizer .contact,
+body.x_150 section.home_info .container .contact .wrap_mab_date > .subtitle,
+body.x_150 section.home_info .container .contact .wrap_mab_date .date,
+body.x_150 .component_header .drop_menu_mobile > .container .linc_list a.linc,
+body.x_150 section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label,
+body.x_150 article.card .header > .type {
+    font-size: 24px !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body.x_150 .accordion_list .accordion_item .top .title,
+body.x_150 section.section_home_infographics .map .article_map .place_list .place_item,
+body.x_150 .component_header .menu a,
+body.x_150 .slide_course .top .course .description,
+body.x_150 .slide_course .top .course .date > span,
+body.x_150 .button,
+body.x_150 #structure .information .links-container li,
+body.x_150 #structure .information .info-container .text,
+body.x_150 #structure .information .info-container .paper a,
+body.x_150 #structure .information .info-container .list,
+body.x_150 #structure .information .info-container .buttons-container span,
+body.x_150 #structure .information .info-container .list li span,
+body.x_150 #structure .contacts .address,
+body.x_150 #structure .contacts .schedule div,
+body.x_150 #structure .contacts .phone a,
+body.x_150 #structure .contacts .email a,
+body.x_150 #page_graduate .information .links-container li,
+body.x_150 #page_graduate .information .info-container .text,
+body.x_150 #page_graduate .information .info-container .list,
+body.x_150 #page_graduate .information .info-container .list li,
+body.x_150 footer.footer .title_ogr,
+body.x_150 section.application-form .container form .agreement,
+body.x_150 .filter .slider .filter_list .filter_item,
+body.x_150 article.card_format .left .title,
+body.x_150 article.card .description > .title,
+body.x_150 article.card .description .info > .item,
+body.x_150 .accordion_list .accordion_item .text_wrap .text,
+body.x_150 article.card_teacher .person .full_name,
+body.x_150 article.card_teacher .education_list .education_item,
+body.x_150 article.card_teacher .course_list .course_item,
+body.x_150 article.card_review .person .full_name,
+body.x_150 article.card_review .course .course_item,
+body.x_150 article.card_review .review .wpra_text .review_text,
+body.x_150 article.card_review .review .wrapper_togle_show_review .toogle_show_review,
+body.x_150 article.card_review .review_status,
+body.x_150 section.application-form .container form .form_input input, body.x_150 section.application-form .container form .form_input .select_input,
+body.x_150 article.card .description > .review,
+body.x_150 section.section_home_faq > .container > .direction .button__direction,
+body.x_150 article.card_organizer .person .name,
+body.x_150 article.card_organizer .person .education,
+body.x_150 article.card_organizer .person .position,
+body.x_150 article.card_organizer .contact,
+body.x_150 section.home_info .container .contact .wrap_mab_date > .subtitle,
+body.x_150 section.home_info .container .contact .wrap_mab_date .date,
+body.x_150 .component_header .drop_menu_mobile > .container .linc_list a.linc,
+body.x_150 section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label,
+body.x_150 article.card .header > .type {
+    font-size: 24px !important;
+  }
+}
+body.white_black {
+  background-color: #000 !important;
+}
+body.white_black * {
+  filter: grayscale(1) !important;
+  box-shadow: none !important;
+  background-color: #000 !important;
+  color: white !important;
+}
+body.white_black * a {
+  text-decoration: underline !important;
+}
+body.white_black header {
+  border-bottom: 1px solid #fff;
+}
+body.white_black section.application-form .container form .form_input.active > .wrap_castom_scrollbar {
+  position: relative;
+}
+body.white_black .slide_course .button {
+  border: 1px solid black;
+}
+body.white_black article.card,
+body.white_black article.card_format,
+body.white_black article.card_teacher,
+body.white_black article.card_review,
+body.white_black .component_header .drop_menu_mobile,
+body.white_black article.card_organizer,
+body.white_black article.card_dirction .bgc_wrap {
+  border: 1px solid white;
+}
+body.white_black #show_menu img {
+  background-color: #fff !important;
+}
+body.white_black #show_menu img * {
+  background-color: #fff !important;
+}
+body.white_black .swiper-container.bg_image.home_main_corusel,
+body.white_black .wrapper_map_content {
+  background-color: transparent !important;
+}
+body.white_black .swiper-container.bg_image.home_main_corusel *,
+body.white_black .wrapper_map_content * {
+  background-color: transparent !important;
+}
+body.white_black .swiper-container.bg_image.home_main_corusel .place_list,
+body.white_black .wrapper_map_content .place_list {
+  background-color: #000 !important;
+}
 
 ul, li {
   list-style: none;
@@ -4202,11 +4651,6 @@ h2.home_subtitle {
     margin-left: 80px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .component_header .icons {
-    width: 35px;
-  }
-}
 .component_header .icons .button-icon {
   background: none;
   border: none;
@@ -4251,6 +4695,15 @@ h2.home_subtitle {
   border: none;
   outline: none;
 }
+.component_header .glass {
+  margin-right: 20px;
+  width: 37px;
+  height: 30px;
+}
+.component_header .glass img {
+  width: 100% !important;
+  height: 100% !important;
+}
 .component_header .button {
   display: none;
   margin-left: 80px;
@@ -4279,6 +4732,72 @@ h2.home_subtitle {
     height: 80px;
     width: 80px;
   }
+}
+
+.glass__wrap {
+  display: none;
+  margin: 20px 0;
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  left: 4.2%;
+  z-index: 150;
+}
+@media screen and (min-width: 728px) {
+  .glass__wrap {
+    left: calc(50% - 344px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .glass__wrap {
+    left: calc(50% - 580px);
+  }
+}
+@media screen and (min-width: 1520px) {
+  .glass__wrap {
+    left: calc(50% - 720px);
+  }
+}
+.glass__wrap.active {
+  display: flex;
+}
+.glass__wrap .container {
+  margin: 0;
+}
+.glass__wrap .galss__block {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #BDBDBD;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.glass__wrap .galss__block .btn_glas__container {
+  margin-bottom: 20px;
+}
+.glass__wrap .galss__block .btn_glas__container .glass_btn {
+  font-size: 22px;
+  padding: 8px;
+  font-weight: bold;
+}
+.glass__wrap .galss__block .btn_glas__container .glass_btn.color_wb {
+  background-color: #000 !important;
+  color: white !important;
+}
+.glass__wrap .galss__block .btn_glas__container .glass_btn.color_bw {
+  background-color: #fff !important;
+  color: black !important;
+}
+.glass__wrap .galss__block .btn_glas__container:last-child {
+  margin-bottom: 0;
+}
+.glass__wrap .galss__block .glas__title {
+  margin-bottom: 6px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.glass__wrap .galss__block .glas__title:last-child {
+  margin-bottom: 0;
 }
 
 .component_header .drop_menu_mobile {
@@ -7372,6 +7891,9 @@ section.section_home_infographics .map .article_map .img_map .wrapper_location_l
   left: 0;
   bottom: 0;
   right: 0;
+}
+section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list {
+  height: 100%;
 }
 section.section_home_infographics .map .article_map .img_map .wrapper_location_list .lacation_list .location_item {
   position: absolute;

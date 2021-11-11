@@ -118,7 +118,7 @@
       margin-left: 80px;
     }
     @include laptop{
-      width: 35px;
+      //width: 35px;
     }
     
     .button-icon {
@@ -171,7 +171,15 @@
       outline: none;
     }
   }
-
+  .glass{
+    margin-right: 20px;
+    width: 37px;
+    height: 30px;
+    img{
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
   .button {
     display: none;
     margin-left: 80px;
@@ -197,6 +205,72 @@
     @include desktop {
       height: 80px;
       width: 80px;
+    }
+  }
+}
+
+.glass__wrap{
+  display: none;
+  margin: 20px 0;
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  left: 4.2%; 
+  z-index: 150;
+  @include tablets{
+    left: calc(50% - 344px);
+  }
+  @include laptop{
+    left: calc(50% - 580px);
+  }
+  @include desktop{
+    left: calc(50% - 720px);
+  }
+  &.active{
+    display: flex;
+  }
+
+  .container{
+    margin: 0;
+  }
+
+  .galss__block{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border:1px solid $gray_light_color;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    
+    .btn_glas__container{
+      margin-bottom: 20px;
+      .glass_btn{
+        font-size: 22px;
+        padding: 8px;
+        font-weight: bold;
+
+        &.color_wb{
+          background-color: #000 !important;
+          color: white !important;
+        }
+        &.color_bw{
+          background-color: #fff !important;
+          color:black !important;
+        }
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .glas__title{
+      margin-bottom: 6px;
+      font-size: 22px;
+      font-weight: bold;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
   }
 }

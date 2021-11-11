@@ -2,7 +2,7 @@ import Swiper from "/scripts/swiper.js";
 import {
   initFormSelect, initBtnScrollToTop, initDropMenu, 
   initCoruselDefoult, initCoruselFromFilter, initReviewsCommentShow,
-  sendingAnAplication,
+  sendingAnAplication,showGlass
 } from "/scripts/utils.js"
 
 
@@ -211,6 +211,9 @@ window.onload = () => {
   //sendAplication
 
   sendingAnAplication('#send-application')
+
+  //showGlass
+  showGlass('.home_deff_corusel')
 };
 
 

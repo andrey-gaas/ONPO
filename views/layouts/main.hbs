@@ -34,10 +34,11 @@
 
 
         <div class="icons">
-          {{!-- <button class="button-icon laptop-hide">
-            <img src="/image/icons/search.svg" alt="Search" />
+          <button class="button-icon glass">
+            <img src="/image/glass.png" alt="glass" />
           </button>
-          <button class="button-icon laptop-hide">
+
+          {{!-- <button class="button-icon laptop-hide">
             <img src="/image/icons/logout.svg" alt="Logaut" />
           </button> --}}
           <button class="button-icon" id="show_menu">
@@ -70,6 +71,33 @@
       </div>
     </div>
   </header>
+  <div class="glass__wrap">
+    <div class="container">
+      <div class="galss__block">
+        <div class="glas__title">Цветовая схема</div>
+        <div class="btn_glas__container">
+          <button class="glass_btn color_deff">
+            Обычная
+          </button>
+          <button class="glass_btn color_bw">
+            Чёрно-белая
+          </button>
+          <button class="glass_btn color_wb">
+            Иниверсия
+          </button>
+        </div>
+        <div class="glas__title">Размер текста</div>
+        <div class="btn_glas__container">
+          <button class="glass_btn text_norm">
+            Обычный
+          </button>
+          <button class="glass_btn text_150">
+            Большой текст
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   {{{ body }}}
   {{>components/footer}}
 </body>
