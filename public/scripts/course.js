@@ -6,10 +6,7 @@ window.onload = function() {
   initBtnScrollToTop('#scrollToTop');
 
   // TEACHERS CAROUSEL
-  initCoruselDefoult('.course_teacher_corusel')
-  
-  // REVIEWS CAROUSEL
-  initCoruselDefoult('.course_review_corusel')
+  initCoruselDefoult('.course__corusel')
 
   // SELECT IN FORM
 
@@ -23,7 +20,7 @@ window.onload = function() {
 
   sendingAnAplication('#send-application')
 
-  showGlass('.course_teacher_corusel')
+  showGlass('.course__corusel')
 
 
   document

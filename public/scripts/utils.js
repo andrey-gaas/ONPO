@@ -660,41 +660,137 @@ export function sendingAnAplication(nodeId){
 }
 
 export function showGlass(selectCorusel){
+
+  
   let btnWrap = document.querySelector('.button-icon.glass')
-  let btnColorBW = document.querySelector('.glass_btn.color_bw')
-  let btnColorWB = document.querySelector('.glass_btn.color_wb')
-  let btnColorDeff = document.querySelector('.glass_btn.color_deff')
+  let btnColorBW = document.querySelector('.glass_btn#color_bw')
+  let btnColorWB = document.querySelector('.glass_btn#color_wb')
+  let btnColorDeff = document.querySelector('.glass_btn#color_deff')
   let btnText150 = document.querySelector('.glass_btn.text_150')
+  let btnText125 = document.querySelector('.glass_btn.text_125')
   let btnTextNorm = document.querySelector('.glass_btn.text_norm')
+  let btnNoImg = document.querySelector('#no_img_chekbox')
+  let btnSpaceDeff = document.querySelector('#letter_space_deff')
+  let btnSpaceX2 = document.querySelector('#letter_space_x_2')
+  let btnSpaceX3 = document.querySelector('#letter_space_x_3')
+  let btnDeffSetting = document.querySelector('#deff_btn')
+  
   let isX150 = false
+
+  if(localStorage.getItem('style_color') === 'WB'){
+    document.body.classList.add('white_black')
+  }
+  if(localStorage.getItem('style_color') === 'BW'){
+    document.body.classList.add('black_white')
+  }
+  if(localStorage.getItem('style_text') === 'x_150'){
+    document.body.classList.add('x_150')
+    isX150 = true
+    reRenderDeffCorusel(selectCorusel, {deff:2,tab:2,mob:1})
+  }
+  if(localStorage.getItem('style_text') === 'x_125'){
+    document.body.classList.add('x_125')
+    isX150 = true
+    reRenderDeffCorusel(selectCorusel, {deff:2,tab:2,mob:1})
+  }
+  if(localStorage.getItem('style_letter_space') === 'X2'){
+    document.body.classList.add('letter_space_x2')
+  }
+  if(localStorage.getItem('style_letter_space') === 'X3'){
+    document.body.classList.add('letter_space_x3')
+  }
+
   btnWrap.onclick= _=>{
     document.querySelector('.glass__wrap').classList.toggle('active')
   }
+
   btnColorBW.onclick= _=>{
     document.body.classList.remove('white_black')
     document.body.classList.toggle('black_white')
+
+    if(localStorage.getItem('style_color') === 'BW'){
+      localStorage.removeItem('style_color')
+    }else{
+      localStorage.setItem('style_color', 'BW')
+    }
+  }
+
+  btnSpaceDeff.onclick= _=>{
+    document.body.classList.remove('letter_space_x2')
+    document.body.classList.remove('letter_space_x3')
+    
+    localStorage.removeItem('style_letter_space')
+    
+  }
+  btnSpaceX2.onclick= _=>{
+    document.body.classList.remove('letter_space_x3')
+    document.body.classList.toggle('letter_space_x2')
+
+    if(localStorage.getItem('style_letter_space') === 'X2'){
+      localStorage.removeItem('style_letter_space')
+    }else{
+      localStorage.setItem('style_letter_space', 'X2')
+    }
+  }
+  btnSpaceX3.onclick= _=>{
+    document.body.classList.remove('letter_space_x2')
+    document.body.classList.toggle('letter_space_x3')
+
+    if(localStorage.getItem('style_letter_space') === 'X3'){
+      localStorage.removeItem('style_letter_space')
+    }else{
+      localStorage.setItem('style_letter_space', 'X3')
+    }
   }
 
   btnColorWB.onclick= _=>{
     document.body.classList.remove('black_white')
     document.body.classList.toggle('white_black')
+
+    if(localStorage.getItem('style_color') === 'WB'){
+      localStorage.removeItem('style_color')
+    }else{
+      localStorage.setItem('style_color', 'WB')
+    }
   }
 
   btnColorDeff.onclick= _=>{
     document.body.classList.remove('white_black')
     document.body.classList.remove('black_white')
+    localStorage.removeItem('style_color')
   }
 
-  let textFunction = _=>{
-    if(isX150){
-      window.Swiper.setting.laptop.slidesPerView = 3
-      isX150 = false
+  btnDeffSetting.onclick= _=>{
+    document.body.classList.remove('white_black')
+    document.body.classList.remove('black_white')
+    localStorage.removeItem('style_color')
+
+    document.body.classList.remove('letter_space_x2')
+    document.body.classList.remove('letter_space_x3')
+    localStorage.removeItem('style_letter_space')
+
+    isX150 = false
+    document.body.classList.remove('x_150')
+    document.body.classList.remove('x_125')
+    textFunction(true)
+    localStorage.removeItem('style_text')
+
+    localStorage.removeItem('style_img')
+    btnNoImg.classList.remove('active')
+    document.body.classList.remove('no_img')
+  }
+  let textFunction = isX =>{
+    if(isX){
+      if(window.Swiper){
+        window.Swiper.setting.laptop.slidesPerView = 3
+      }
       if(selectCorusel){
         reRenderDeffCorusel(selectCorusel, {deff:3,tab:2,mob:1})
       }
     }else{
-      window.Swiper.setting.laptop.slidesPerView = 2
-      isX150 = true
+      if(window.Swiper){
+        window.Swiper.setting.laptop.slidesPerView = 2
+      }
       if(selectCorusel){
         reRenderDeffCorusel(selectCorusel, {deff:2,tab:2,mob:1} )
       }
@@ -702,61 +798,104 @@ export function showGlass(selectCorusel){
   }
 
   btnText150.onclick =_=>{
+    document.body.classList.remove('x_125')
     document.body.classList.toggle('x_150')
-    textFunction()
+    if(localStorage.getItem('style_text') === 'x_150'){
+      localStorage.removeItem('style_text')
+      textFunction(true)
+      isX150 = false
+    }else{
+      localStorage.setItem('style_text', 'x_150')
+      if(isX150 === false){
+        textFunction(false)
+        isX150 = true
+      }
+    }
   } 
 
-  btnTextNorm.onclick= _=>{
-    isX150 = true
+  btnText125.onclick = _=>{
     document.body.classList.remove('x_150')
-    textFunction()
+    document.body.classList.toggle('x_125')
+    
+    if(localStorage.getItem('style_text') === 'x_125'){
+      localStorage.removeItem('style_text')
+      textFunction(true)
+      isX150 = false
+    }else{
+      localStorage.setItem('style_text', 'x_125')
+      if(isX150 === false){
+        textFunction(false)
+        isX150 = true
+      }
+    }
+  }
+
+  btnTextNorm.onclick= _=>{
+    isX150 = false
+    document.body.classList.remove('x_150')
+    document.body.classList.remove('x_125')
+    textFunction(true)
+
+    localStorage.removeItem('style_text')
   }
   function reRenderDeffCorusel(selectCorusel, setting){
-    if(Array.isArray( window.Swiper.homeDeffCorusel )){
-      for(let i = 0; i <  window.Swiper.homeDeffCorusel.length; i++){
-        window.Swiper.homeDeffCorusel[i].destroy(true, true)
+    if(window.Swiper){
+      if(Array.isArray( window.Swiper.homeDeffCorusel )){
+        for(let i = 0; i <  window.Swiper.homeDeffCorusel.length; i++){
+          window.Swiper.homeDeffCorusel[i].destroy(true, true)
+        }
+      }else{
+        window.Swiper.homeDeffCorusel.destroy(true, true)
       }
-    }else{
-      window.Swiper.homeDeffCorusel.destroy(true, true)
-    }
-  
-    let slidesPerView = setting.deff
-    if( document.body.offsetWidth < 728 ){ slidesPerView = setting.mob }
-    if( document.body.offsetWidth < 1200 ){ slidesPerView = setting.tab }
-    console.log(slidesPerView, setting);
-    window.Swiper.homeDeffCorusel = new Swiper(selectCorusel, {
-      // Optional parameters
-      direction: "horizontal",
-      slidesPerView,
-      loop: true,
-  
-      // If we need pagination
-      pagination: {
-        el: ".swiper-pagination",
-        type:'custom',
-        renderCustom: (swiper, current, total) => {
-  
-          // let prev = ((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) 
-          // let next = (current+1)%(total) === 0 ? total : (current+1)%(total)
-          return `<div class="paggination_number">
-                    <span class="paggination_number_prev">${((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) }</span>
-                    <span class="paggination_number_currnet">${current}</span>
-                    <span class="paggination_number_next">${(current+1)%(total) === 0 ? total : (current+1)%(total)}</span>
-                  </div>`
+    
+      let slidesPerView = setting.deff
+      if( document.body.offsetWidth < 728 ){ slidesPerView = setting.mob }
+      if( document.body.offsetWidth < 1200 ){ slidesPerView = setting.tab }
+      window.Swiper.homeDeffCorusel = new Swiper(selectCorusel, {
+        // Optional parameters
+        direction: "horizontal",
+        slidesPerView,
+        loop: true,
+    
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          type:'custom',
+          renderCustom: (swiper, current, total) => {
+    
+            // let prev = ((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) 
+            // let next = (current+1)%(total) === 0 ? total : (current+1)%(total)
+            return `<div class="paggination_number">
+                      <span class="paggination_number_prev">${((current+total-1)%(total)) === 0 ? total : ((current+total-1)%(total)) }</span>
+                      <span class="paggination_number_currnet">${current}</span>
+                      <span class="paggination_number_next">${(current+1)%(total) === 0 ? total : (current+1)%(total)}</span>
+                    </div>`
+          },
         },
-      },
-  
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-  
-      // And if we need scrollbar 
-      scrollbar: {
-        el: ".swiper-scrollbar",
-      },
-    })
+    
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    
+        // And if we need scrollbar 
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      })
+    }
+  }
+
+  btnNoImg.onclick = _=>{
+    btnNoImg.classList.toggle('active')
+    document.body.classList.toggle('no_img')
+
+    if(localStorage.getItem('style_img') === 'no_image'){
+      localStorage.removeItem('style_img')
+    }else{
+      localStorage.setItem('style_img', 'no_image')
+    }
   }
 }
 

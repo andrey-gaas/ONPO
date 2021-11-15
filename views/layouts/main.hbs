@@ -70,34 +70,54 @@
         </ul>
       </div>
     </div>
-  </header>
-  <div class="glass__wrap">
-    <div class="container">
-      <div class="galss__block">
-        <div class="glas__title">Цветовая схема</div>
-        <div class="btn_glas__container">
-          <button class="glass_btn color_deff">
-            Обычная
-          </button>
-          <button class="glass_btn color_bw">
-            Чёрно-белая
-          </button>
-          <button class="glass_btn color_wb">
-            Иниверсия
-          </button>
-        </div>
-        <div class="glas__title">Размер текста</div>
-        <div class="btn_glas__container">
-          <button class="glass_btn text_norm">
-            Обычный
-          </button>
-          <button class="glass_btn text_150">
-            Большой текст
-          </button>
+    <div class="glass__wrap">
+      <div class="container">
+        <div class="galss__block">
+          
+          <div class="btn_glas__container">
+            <div class="glas__title">Цветовая схема</div>
+            <button class="glass_btn" id="color_deff"></button>
+            <button class="glass_btn" id="color_bw"></button>
+            <button class="glass_btn" id="color_wb"></button>
+          </div>
+          <div class="btn_glas__container">
+            <div class="glas__title">Изображения</div>
+            <button class="glass_chebox" id="no_img_chekbox"></button>
+          </div>
+          <div class="btn_glas__container">
+            <div class="glas__title">Размер текста</div>
+            <button class="glass_btn text_norm">
+              a
+            </button>
+            <button class="glass_btn text_125">
+              a
+            </button>
+            <button class="glass_btn text_150">
+              a
+            </button>
+          </div>
+          <div class="btn_glas__container">
+            <div class="glas__title">Раостояние между буквами</div>
+            <button class="button glas_letter_space" id="letter_space_deff">
+              Нормальное
+            </button>
+            <button class="button glas_letter_space" id="letter_space_x_2">
+              Большое
+            </button>
+            <button class="button glas_letter_space" id="letter_space_x_3">
+              Очень большое
+            </button>
+          </div>
+          <div class="btn_glas__container">
+            <button class="button glas_letter_space" id="deff_btn">
+              Сброс настроек
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </header>
+  
   {{{ body }}}
   {{>components/footer}}
 </body>

@@ -110,6 +110,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     //width: 120px;
     padding-right: 7px;
     padding-left: 3px;
@@ -211,65 +212,166 @@
 
 .glass__wrap{
   display: none;
-  margin: 20px 0;
-  position: fixed;
-  top: 70px;
+  position: absolute;
+  top: 100%;
   width: 100%;
-  left: 4.2%; 
   z-index: 150;
-  @include tablets{
-    left: calc(50% - 344px);
-  }
-  @include laptop{
-    left: calc(50% - 580px);
-  }
-  @include desktop{
-    left: calc(50% - 720px);
-  }
+  
   &.active{
     display: flex;
   }
 
-  .container{
-    margin: 0;
-  }
-
   .galss__block{
-    padding: 10px;
+    padding: 30px 53px;
     display: flex;
+    margin-bottom: -20px;
+    width: 100%;
+    box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
     flex-direction: column;
-    border:1px solid $gray_light_color;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.95);
-    
+    //border:1px solid $gray_light_color;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #F2F2F2;
+    @include laptop{
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
     .btn_glas__container{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       margin-bottom: 20px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      #deff_btn{
+        margin-left: 0;
+        height: unset;
+        padding: 5px 10px;
+        width: 230px;
+      }
       .glass_btn{
         font-size: 22px;
         padding: 8px;
         font-weight: bold;
-
-        &.color_wb{
-          background-color: #000 !important;
-          color: white !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 15px;
+        border:1px solid #000;
+        box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+        margin-right: 10px;
+        cursor: pointer;
+        &::after{
+          display: block;
+          content: "";
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
         }
-        &.color_bw{
+        &:last-child{
+          margin-right: 0;
+        }
+        
+        &#color_wb{
+          
+          background-color: black !important;
+          &::after{
+            background-color: #fff !important;
+          }
+        }
+        &#color_bw{
           background-color: #fff !important;
-          color:black !important;
+          &::after{
+            background-color: black !important;
+          }
+        }
+        &#color_deff{
+          filter:unset !important;
+          background-color: $primary_color !important;
+          &::after{
+            background-color: $white_color !important;
+          }
+        }
+
+        &.text_norm{
+          font-size: 16px !important; 
+          &::after{
+            display: none;
+          }
+        }
+        &.text_150{
+          font-size: 24px !important;
+          &::after{
+            display: none;
+          }
+        }
+        &.text_125{
+          font-size: 20px !important;
+          &::after{
+            display: none;
+          }
         }
       }
-
-      &:last-child{
-        margin-bottom: 0;
+    }
+    .glas_letter_space{
+      margin-left: 10px;
+      height: unset;
+      padding: 5px 10px;
+      width: 180px;
+      display: block;
+      margin-bottom: 10px;
+      &#letter_space_deff{
+        letter-spacing: normal;
+      }
+      &#letter_space_x_2{
+        letter-spacing: 2px;
+      }
+      &#letter_space_x_3{
+        letter-spacing: 4px;
+        width: 220px;
       }
     }
     .glas__title{
       margin-bottom: 6px;
       font-size: 22px;
       font-weight: bold;
-
+      margin-right: 20px;
       &:last-child{
         margin-bottom: 0;
+      }
+    }
+    .glass_chebox{
+      width: 40px;
+      height: 22px;
+      position: relative;
+      background-color: $primary_color;
+      border: none;
+      border-radius: 40px;
+      transition: all .3s;
+      cursor: pointer;
+      &::after{
+        top: calc(50% - 8px);
+        right: 4px;
+        transition: all .3s;
+        display: block;
+        content:"";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #fefefe;
+        border-radius: 50%;
+      }
+
+      &.active{
+        background-color: $gray_light_color;
+
+        &::after{
+          right: 20px;
+        }
       }
     }
   }

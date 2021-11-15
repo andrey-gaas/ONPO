@@ -59,7 +59,40 @@ body{
     justify-content: space-between;
   }
 
-  
+  &.no_img{
+    section.section_main > .container
+    {
+      align-items: center;
+    }
+    .button_wrap{
+      justify-content: center;
+    }
+    section.section_main .title{
+      text-align: center;
+    }
+    section.section_main .main_img,
+    section.section_home_infographics .block__card_info .card_infogaraphics .img,
+    article.card_organizer .img_block,
+    section.home_info .container .contact .wrap_mab_date .map,
+    article.card_teacher .person .img_block,
+    article.card_review .person .img_block,
+    #structure .photo-background,
+    #structure .contacts .map,
+    #teacher .info-container .img_block,
+    #course .document div,
+    #course .description-container .info-container .info-1 .photo
+    {
+      display: none;;
+    }
+    article.card .header{
+      background-image: none !important;
+      height: unset;
+    }
+    .swiper-container.bg_image{
+      background-image: none;
+      background-color: #4c5058;
+    }
+  }
 
   &.black_white{
     background-color: #fff !important;
@@ -154,7 +187,9 @@ body{
       font-size: 21px !important;
     }
 
-    h1.home_title, section.section_main .title{
+    h1.home_title, section.section_main .title,
+    #teacher .info-container .fullname .surname
+    {
       font-size: 30px !important;
       @include tablets{
         font-size: 50px !important;
@@ -173,7 +208,10 @@ body{
     .title_map, 
     section.section_home_infographics .map .article_map .article__map_top .title_map_desctop,
     .slide_course .top .course .title,
-    footer.footer .title
+    footer.footer .title,
+    #teacher .info-container .fullname,
+    #teacher .description .title,
+    #course .description-container .specification .module h2, #course .description-container .specification .format h2
     {
       font-size: 25px !important;
       @include tablets{
@@ -199,7 +237,9 @@ body{
         font-size: 42px !important;
       }
     }
-    article.card_dirction .title{
+    article.card_dirction .title,
+    .card_advantages h1
+    {
       line-height: 1.3 !important;
       font-size: 22px !important;
       @include tablets{
@@ -259,7 +299,21 @@ body{
     section.home_info .container .contact .wrap_mab_date .date,
     .component_header .drop_menu_mobile > .container .linc_list a.linc,
     section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label,
-    article.card .header > .type
+    article.card .header > .type,
+    #teacher .info-container .courses li a,
+    #teacher .info-container .info,
+    #teacher .description .text,
+    #course .description-container .info-container .info-1 .photo span,
+    #course .description-container .info-container .info-2,
+    #course .description-container .time-info,
+    #course .description-container .specification,
+    #course .description-container .specification,
+    #course .description-container .specification .module h2, #course .description-container .specification .format h2,
+    #course .learning-map .item p,
+    #course .document h3,
+    #course .document p,
+    article.card_review .person .full_name .position,
+    .slide_course .top .course .review .count
     {
       line-height: 1.6 !important;
       font-size: 21px !important;
@@ -271,6 +325,212 @@ body{
       }
       @include laptop{
         font-size: 24px !important;
+      }
+    }
+  }
+
+  &.x_125{
+    article.card,
+    article.card_format,
+    article.card_teacher,
+    article.card_review,
+    article.card_organizer,
+    #structure .head .organizers .card_organizer,
+    #courses .list-container .list .card_wrapper,
+    #teachers .teachers-list .card_wrapper .card_teacher,
+    #reviews .reviews-list .card_wrapper .card_review,
+    #page_catalog .list .card_wrapper
+    {
+      @include laptop{
+        width: 570px;
+      }
+      @include desktop{
+        width: 700px;
+      }
+    }
+
+    section.home_info .container .contact .wrap_mab_date{
+      @include laptop{
+        max-height: 1030px;
+      }
+      @include desktop{
+        max-height: 1050px;
+      }
+    }
+    
+    #structure .head .organizers{
+      @include laptop{
+        flex-wrap: wrap;
+      }
+      @include desktop{
+        flex-wrap: wrap;
+      }
+    }
+    .component_header .drop_menu_mobile{
+      width: 470px;
+      @include laptop{
+        width: 470px;
+      }
+      @include desktop{
+        width: 470px;
+      }
+    }
+    section.home_info .container .contact .wrap_mab_date .date{
+      @include laptop{
+        max-width: 453px;
+        width: 453px;
+      }
+    }
+    section.home_info .container .contact .wrap_mab_date .date .time_work .time_work_item .time{
+      @include laptop{
+        width: 160px;
+      }
+    }
+    section.home_info .container .contact .wrap_mab_date{
+      height: unset;
+    }
+    section.section_home_infographics .map .article_map .article__map_top .title_map{
+      font-size: 18px !important;
+    }
+
+    h1.home_title, section.section_main .title,
+    #teacher .info-container .fullname .surname
+    {
+      font-size: 25px !important;
+      @include tablets{
+        font-size: 42px !important;
+      }
+      @include laptop{
+        font-size: 42px !important;
+      }
+      @include desktop{
+        font-size: 54px !important;
+      }
+    }
+    .button.size_norm{
+      width: 250px !important;
+    }
+    h2.home_subtitle, 
+    .title_map, 
+    section.section_home_infographics .map .article_map .article__map_top .title_map_desctop,
+    .slide_course .top .course .title,
+    footer.footer .title,
+    #teacher .info-container .fullname,
+    #teacher .description .title,
+    #course .description-container .specification .module h2, #course .description-container .specification .format h2
+    {
+      font-size: 21px !important;
+      @include tablets{
+        font-size: 32px !important;
+      }
+      @include laptop{
+        font-size: 40px !important;
+      }
+      @include desktop{
+        font-size: 42px !important;
+      }
+    }
+    .card_infogaraphics .title{
+      line-height: 1.3 !important;
+      font-size: 28px !important;
+      @include tablets{
+        font-size: 24px !important;
+      }
+      @include laptop{
+        font-size: 31px !important;
+      }
+      @include desktop{
+        font-size: 35px !important;
+      }
+    }
+    article.card_dirction .title,
+    .card_advantages h1
+    {
+      line-height: 1.3 !important;
+      font-size: 19px !important;
+      @include tablets{
+        font-size: 22px !important;
+      }
+      @include laptop{
+        font-size: 24px !important;
+      }
+      @include desktop{
+        font-size: 30px !important;
+      }
+    }
+
+    .accordion_list .accordion_item .top .title,
+    section.section_home_infographics .map .article_map .place_list .place_item,
+    .component_header .menu a,
+    .slide_course .top .course .description,
+    .slide_course .top .course .date > span,
+    .button,
+    #structure .information .links-container li,
+    #structure .information .info-container .text,
+    #structure .information .info-container .paper a,
+    #structure .information .info-container .list,
+    #structure .information .info-container .buttons-container span,
+    #structure .information .info-container .list li span,
+    #structure .contacts .address,
+    #structure .contacts .schedule div,
+    #structure .contacts .phone a,
+    #structure .contacts .email a,
+    #page_graduate .information .links-container li,
+    #page_graduate .information .info-container .text,
+    #page_graduate .information .info-container .list,
+    #page_graduate .information .info-container .list li,
+    footer.footer .title_ogr,
+    section.application-form .container form .agreement,
+    .filter .slider .filter_list .filter_item,
+    article.card_format .left .title,
+    article.card .description > .title,
+    article.card .description .info > .item,
+    .accordion_list .accordion_item .text_wrap .text,
+    article.card_teacher .person .full_name,
+    article.card_teacher .education_list .education_item,
+    article.card_teacher .course_list .course_item,
+    article.card_review .person .full_name,
+    article.card_review .course .course_item,
+    article.card_review .review .wpra_text .review_text,
+    article.card_review .review .wrapper_togle_show_review .toogle_show_review,
+    article.card_review .review_status,
+    section.application-form .container form .form_input input, section.application-form .container form .form_input .select_input,
+    article.card .description > .review,
+    section.section_home_faq > .container > .direction .button__direction,
+    article.card_organizer .person .name,
+    article.card_organizer .person .education,
+    article.card_organizer .person .position,
+    article.card_organizer .contact,
+    section.home_info .container .contact .wrap_mab_date > .subtitle,
+    section.home_info .container .contact .wrap_mab_date .date,
+    .component_header .drop_menu_mobile > .container .linc_list a.linc,
+    section.application-form .container form .form_input.dropdown .wrap_castom_scrollbar .dropdown_list .dropdown_item label,
+    article.card .header > .type,
+    #teacher .info-container .courses li a,
+    #teacher .info-container .info,
+    #teacher .description .text,
+    #course .description-container .info-container .info-1 .photo span,
+    #course .description-container .info-container .info-2,
+    #course .description-container .time-info,
+    #course .description-container .specification,
+    #course .description-container .specification,
+    #course .description-container .specification .module h2, #course .description-container .specification .format h2,
+    #course .learning-map .item p,
+    #course .document h3,
+    #course .document p,
+    article.card_review .person .full_name .position,
+    .slide_course .top .course .review .count
+    {
+      line-height: 1.6 !important;
+      font-size: 18px !important;
+      @include tablets{
+        font-size: 18px !important;
+      }
+      @include tablets{
+        font-size: 20px !important;
+      }
+      @include laptop{
+        font-size: 20px !important;
       }
     }
   }
@@ -301,12 +561,17 @@ body{
     article.card_review,
     .component_header .drop_menu_mobile,
     article.card_organizer,
-    article.card_dirction .bgc_wrap
+    article.card_dirction .bgc_wrap,
+    .glass__wrap .galss__block .btn_glas__container .glass_btn,
+    .glass__wrap .galss__block,
+    #no_img_chekbox
     {
       border: 1px solid white;
     }
 
-    #show_menu img{
+    #show_menu img,
+    .component_header .icons
+    {
       background-color: #fff !important;
       *{
         background-color: #fff !important;
@@ -322,6 +587,22 @@ body{
       .place_list{
         background-color: #000 !important;
       }
+    }
+    .glass__wrap{
+      background-color: transparent !important;
+    }
+  }
+
+  &.letter_space_x2{
+    letter-spacing: 2px;
+    *{
+      letter-spacing: 2px;
+    }
+  }
+  &.letter_space_x3{
+    letter-spacing: 4px;
+    *{
+      letter-spacing: 4px;
     }
   }
 }
