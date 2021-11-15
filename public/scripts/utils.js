@@ -779,6 +779,7 @@ export function showGlass(selectCorusel){
     btnNoImg.classList.remove('active')
     document.body.classList.remove('no_img')
   }
+
   let textFunction = isX =>{
     if(isX){
       if(window.Swiper){
@@ -849,8 +850,8 @@ export function showGlass(selectCorusel){
       }
     
       let slidesPerView = setting.deff
-      if( document.body.offsetWidth < 728 ){ slidesPerView = setting.mob }
       if( document.body.offsetWidth < 1200 ){ slidesPerView = setting.tab }
+      if( document.body.offsetWidth < 728 ){ slidesPerView = setting.mob }
       window.Swiper.homeDeffCorusel = new Swiper(selectCorusel, {
         // Optional parameters
         direction: "horizontal",
