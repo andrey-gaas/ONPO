@@ -5348,6 +5348,9 @@ h2.home_subtitle {
 .glass__wrap .galss__block .btn_glas__container:last-child {
   margin-bottom: 0;
 }
+.glass__wrap .galss__block .btn_glas__container.w100 {
+  width: 100%;
+}
 .glass__wrap .galss__block .btn_glas__container #deff_btn {
   margin-left: 0;
   height: unset;

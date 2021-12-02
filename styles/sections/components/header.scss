@@ -245,6 +245,9 @@
       &:last-child{
         margin-bottom: 0;
       }
+      &.w100{
+        width: 100%;
+      }
       #deff_btn{
         margin-left: 0;
         height: unset;
