@@ -4,7 +4,7 @@ const { Router } = require('express');
 const router = Router();
 
 router.get('/', async (req, res) => {
-	const graduate = await PagesApi.getOne('graduate')
+	const graduate = await PagesApi.getOne('graduate');
 
 	res.render('graduate', {
 		graduate,
