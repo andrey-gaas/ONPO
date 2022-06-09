@@ -1,7 +1,7 @@
 const mailer = require('nodemailer');
 
 const transporter = mailer.createTransport({
-  host: 'webproxy.gpntbsib.ru',
+  host: 'mail.spsl.nsc.ru',
   port: 25,
 });
 
